@@ -96,44 +96,42 @@ python compare.py -k 6 "your question"
 
 ## Evaluation
 
-Three questions were tested head-to-head. Here is an honest assessment of each system based on observed results.
+Four questions were tested head-to-head across both systems.
 
 ### Results summary
 
-| Question type | Winner | Reason |
-|---|---|---|
-| Broad synthesis ("How is ML applied to quantum computing?") | **Wiki** | Pulled 5 distinct concept pages; RAG still flooded from one paper despite MMR |
-| Specific paper lookup ("What technique does the rhombus qubit use?") | **RAG** | Found verbatim details from the paper; Wiki blended two papers and named the wrong technique |
-| Experimental results across papers | Neither | Both struggled; papers in dataset were mostly theoretical |
+| # | Question type | Winner | Reason |
+|---|---|---|---|
+| 1 | Experimental results across papers | Neither | Papers in dataset were mostly theoretical — data problem, not a system problem |
+| 2 | Broad synthesis — first run ("How is ML applied to quantum computing?") | **Wiki** | Retrieved 5 distinct concept pages; RAG flooded from one paper (pre-MMR) |
+| 3 | Specific paper lookup ("What technique does the rhombus qubit use?") | **RAG** | Found verbatim details; Wiki conflated two similar papers and named the wrong technique |
+| 4 | Broad synthesis — second run ("How is ML applied to quantum computing?") | **RAG** | MMR now working; Wiki retrieved duplicate pages and pulled off-topic results due to weak TF-IDF retrieval |
 
-### When to use RAG
+**Final score: RAG 2 — Wiki 1 — Draw 1**
 
-- **Specific, narrow questions** targeting one paper or one finding
-- When **source fidelity matters** — RAG returns verbatim paper text, so it cannot invent details that aren't there
-- When you need **fast setup** — ingest is just embedding, no LLM calls required
-- When the corpus changes frequently — re-indexing is cheap
+### Verdict for physics paper Q&A
 
-### When to use LLM Wiki
+**RAG with MMR is the better approach for this use case.** Here is why:
 
-- **Broad synthesis questions** that span multiple papers ("What are the main approaches to X?")
-- When you want **structured, readable answers** — Wiki pages are pre-written in clean prose
-- When the corpus is **stable** — the upfront ingest cost (100 LLM calls) is paid once
-- When you want knowledge to **compound** — adding new papers enriches existing concept pages
+Physics papers are dense with specific terminology, equations, methods, and results. The questions most worth asking — "what did this paper find?", "what method was used?", "what are the experimental parameters?" — all require faithfulness to the source text. RAG preserves that. Wiki rewrites it, and in a field as precise as physics, rewriting introduces errors.
+
+Wiki's core weakness showed up consistently: its TF-IDF retrieval cannot understand question intent the way embedding search can, and its synthesis step blends papers that use similar terminology but make different claims. In physics, conflating two papers is worse than returning no answer.
+
+Wiki's theoretical advantage — cross-paper synthesis — did not materialise in practice because the concept pages were too general and the retrieval too noisy to focus on the right concepts for a given question.
+
+**RAG is recommended** unless your questions are deliberately broad overviews ("summarise all approaches to quantum error correction") where faithfulness to individual papers matters less than a high-level map of the field.
 
 ### Key tradeoffs
 
 | | RAG | LLM Wiki |
 |---|---|---|
-| Setup time | Fast (embedding only) | Slow (one LLM call per paper) |
+| Setup time | Fast — embedding only, no LLM calls | Slow — one LLM call per paper |
 | Query time | Fast | Moderate |
-| Source fidelity | High — verbatim text | Lower — LLM rewrites and may blend papers |
-| Cross-paper synthesis | Weak — retrieves chunks, not concepts | Strong — synthesis is done at build time |
-| Hallucination risk | Low at retrieval; risk at generation | Higher — synthesis can conflate similar papers |
-| Best question type | Specific lookup | Broad synthesis |
-
-### Honest verdict
-
-Neither approach dominates. RAG is safer and more faithful to sources; Wiki produces more readable and connected answers but introduces a synthesis step where information can be lost or confused. In production, the two are often combined: RAG for retrieval, with a Wiki-style pre-processing layer to enrich the chunks before embedding.
+| Source fidelity | High — verbatim paper text | Lower — LLM rewrites and can blend papers |
+| Retrieval quality | Strong — semantic embedding search | Weaker — TF-IDF keyword matching |
+| Hallucination risk | Low at retrieval; only at generation | Higher — synthesis step introduces errors |
+| Cross-paper synthesis | Weaker — retrieves chunks, not concepts | Stronger in theory; inconsistent in practice |
+| Best question type | Specific lookup, factual, paper-targeted | Broad overview of a well-defined concept |
 
 ---
 
