@@ -1,0 +1,2073 @@
+{
+  "2605.06666v1": {
+    "title": "The Kubo-Thermalization Correspondence",
+    "url": "http://arxiv.org/abs/2605.06666v1",
+    "concepts": [
+      {
+        "name": "Kubo-Thermalization Correspondence",
+        "contribution": "describes the linear response of a spin-bath system to an external drive, providing a universal form for the magnetization in the long-time limit."
+      },
+      {
+        "name": "Fermi's Golden Rule",
+        "contribution": "used to calculate the individual transition rates between energy levels, connecting to the Kubo-Thermalization correspondence"
+      },
+      {
+        "name": "Detuned Rabi Frequency",
+        "contribution": "plays a crucial role in determining the magnetization in the long-time limit, as it affects the energy splitting between the spin states."
+      },
+      {
+        "name": "Spin-Bath Interaction",
+        "contribution": "a key component of the system-bath interaction, allowing for the thermalization of the spin with the bath and leading to the Kubo-Thermalization correspondence"
+      }
+    ]
+  },
+  "2605.06661v1": {
+    "title": "Pro-Tensor Network",
+    "url": "http://arxiv.org/abs/2605.06661v1",
+    "concepts": [
+      {
+        "name": "Tensor Network",
+        "contribution": "A mathematical framework for describing many-body systems in quantum physics, particularly useful for large-scale systems where direct calculations become computationally intractable."
+      },
+      {
+        "name": "Pro-Tensor Network",
+        "contribution": "An extension of tensor networks to any monoidal category, allowing for the study of many-body systems in different mathematical frameworks and potentially leading to new insights and applications."
+      },
+      {
+        "name": "Enriched Category Theory",
+        "contribution": "A branch of mathematics that generalizes traditional categories by adding a structure to objects and morphisms, enabling the description of complex systems like quantum systems in terms of abstract mathematical concepts."
+      },
+      {
+        "name": "Distributor (or Bimodule)",
+        "contribution": "An object in enriched category theory that plays a central role in the study of pro-tensor networks, providing a way to describe how categories interact and can be composed."
+      }
+    ]
+  },
+  "2605.06653v1": {
+    "title": "From Baby Universes to Narain Moduli: Topological Boundary Averaging in SymTFTs",
+    "url": "http://arxiv.org/abs/2605.06653v1",
+    "concepts": [
+      {
+        "name": "Topological Ensemble",
+        "contribution": "A mathematical framework for describing the statistics of physical systems with topological defects, such as wormholes and cosmic strings."
+      },
+      {
+        "name": "SymTFT",
+        "contribution": "A formalism for constructing ensemble averages from topological boundary conditions in string theory."
+      },
+      {
+        "name": "Hartle-Hawking State",
+        "contribution": "A particular state in the gravitational path integral that serves as a reference point for computing ensemble averages in the context of eternal inflation and cosmic string formation."
+      },
+      {
+        "name": "Cosmic String Ensemble",
+        "contribution": "An ensemble average over all possible topological defects, including cosmic strings, that can form from the gravitational path integral."
+      }
+    ]
+  },
+  "2605.06636v1": {
+    "title": "What You Don't Know Won't Hurt You: Self-Consistent Hierarchical Inference with Unknown Follow-up Selection Strategies",
+    "url": "http://arxiv.org/abs/2605.06636v1",
+    "concepts": [
+      {
+        "name": "Follow-up Observations in Astronomy",
+        "contribution": "This paper discusses the importance of considering follow-up observations in Bayesian inference for astronomy, particularly when dealing with contaminated data and rare systems."
+      },
+      {
+        "name": "Bayesian Inference for Astronomy",
+        "contribution": "The paper presents a framework for Bayesian inference that accounts for follow-up observations, allowing for improved constraints on astrophysical parameters and population properties."
+      },
+      {
+        "name": "Contamination in Astronomical Data",
+        "contribution": "This paper highlights the challenges of dealing with contamination in astronomical data, including the potential for flexible models to overfit or 'eat' the true signal."
+      }
+    ]
+  },
+  "2605.06633v1": {
+    "title": "Machine Learning Approaches to Building Quantum Circuits for Sets of Matrices",
+    "url": "http://arxiv.org/abs/2605.06633v1",
+    "concepts": [
+      {
+        "name": "Quantum Computing",
+        "contribution": "This paper explores the decomposition of quantum circuits using machine learning methods, which is a key area in the development of quantum computing technology."
+      },
+      {
+        "name": "Machine Learning",
+        "contribution": "The paper utilizes machine learning techniques to analyze and solve problems related to quantum circuits, allowing for more efficient and accurate decompositions."
+      },
+      {
+        "name": "Quantum Circuit Decomposition",
+        "contribution": "The research focuses on developing a method to decompose quantum circuits into simpler components, which is essential for the practical implementation of quantum computing technology."
+      },
+      {
+        "name": "Cartan Decomposition",
+        "contribution": "The paper introduces the Cartan decomposition as a fundamental mathematical tool for parameterizing diagonal operators in quantum computing, enabling more efficient and accurate decompositions of quantum circuits."
+      }
+    ]
+  },
+  "2605.06626v1": {
+    "title": "Integrable perturbations of polynomial Hamiltonian systems",
+    "url": "http://arxiv.org/abs/2605.06626v1",
+    "concepts": [
+      {
+        "name": "Hamiltonian Systems",
+        "contribution": "This paper provides a new method for normalizing Hamiltonian systems, which is useful for understanding the behavior of these systems near resonance points."
+      },
+      {
+        "name": "Perturbation Theory",
+        "contribution": "The authors use perturbation theory to study the effects of small changes in the Hamiltonian on the behavior of the system, and provide a new approach for normalizing the Hamiltonian."
+      },
+      {
+        "name": "Normal Form",
+        "contribution": "The paper introduces a new normalization method that transforms the Hamiltonian into a simpler form, making it easier to analyze the behavior of the system."
+      },
+      {
+        "name": "Resonance Points",
+        "contribution": "The authors focus on understanding the behavior of systems near resonance points, where the frequencies of the oscillators are related in a simple way."
+      }
+    ]
+  },
+  "2605.06613v1": {
+    "title": "The Phases of the Scalar S-Matrix Island",
+    "url": "http://arxiv.org/abs/2605.06613v1",
+    "concepts": [
+      {
+        "name": "S-matrix bootstrap",
+        "contribution": "A method for testing the consistency of scattering amplitudes in quantum field theories, providing bounds on physical parameters such as couplings and masses."
+      },
+      {
+        "name": "Effective Field Theory (EFT)",
+        "contribution": "A framework for describing the behavior of fundamental particles and forces at low energies, often used to model real-world systems and make predictions about future experiments."
+      },
+      {
+        "name": "Scattering amplitudes",
+        "contribution": "Mathematical expressions that describe the probability of scattering events in particle physics, providing a complete description of the interactions between particles."
+      }
+    ]
+  },
+  "2605.06602v1": {
+    "title": "Quasi-homogeneous black hole geometrothermodynamics in Einstein-Maxwell theory",
+    "url": "http://arxiv.org/abs/2605.06602v1",
+    "concepts": [
+      {
+        "name": "Quasi-homogeneous thermodynamics",
+        "contribution": "Provides a consistent, Legendre-invariant description of black holes in Einstein-Maxwell theory by incorporating quasi-homogeneous coefficients into the metric structure of the equilibrium space."
+      },
+      {
+        "name": "Legendre invariant metrics",
+        "contribution": "General expressions for the Legendre invariant metrics that can be applied to any thermodynamic system, either homogeneous or quasi-homogeneous."
+      },
+      {
+        "name": "Black hole thermodynamics",
+        "contribution": "Explores the phase transition structure of black holes in Einstein-Maxwell theory and its relation to curvature singularities of the metric."
+      },
+      {
+        "name": "Metric geometry",
+        "contribution": "Uses Riemannian geometric tools to describe thermodynamic systems, providing a unified framework for understanding their behavior."
+      }
+    ]
+  },
+  "2605.06579v1": {
+    "title": "Practical Log-Depth Quantum State Preparation and Circuit Verification via Tree Tensor Network Compilation",
+    "url": "http://arxiv.org/abs/2605.06579v1",
+    "concepts": [
+      {
+        "name": "Tensor Networks",
+        "contribution": "This paper introduces a new method for decomposing Matrix Product States (MPS) into log-depth state preparation circuits using tensor networks."
+      },
+      {
+        "name": "Matrix Product States",
+        "contribution": "The authors use MPS as the basis for their decomposition method, which allows for efficient preparation of quantum states on noisy intermediate-scale quantum (NISQ) devices."
+      },
+      {
+        "name": "Noisy Intermediate-Scale Quantum (NISQ) Devices",
+        "contribution": "The authors demonstrate the feasibility of using log-depth state preparation circuits on NISQ devices, which is a crucial step towards large-scale quantum computing."
+      },
+      {
+        "name": "Quantum Error Mitigation",
+        "contribution": "The paper also explores the potential application of this decomposition method to quantum error mitigation, which is essential for large-scale quantum computing applications."
+      }
+    ]
+  },
+  "2605.06577v1": {
+    "title": "Entanglement generation in a two-body Schrödinger--Newton model",
+    "url": "http://arxiv.org/abs/2605.06577v1",
+    "concepts": [
+      {
+        "name": "Entanglement Entropy",
+        "contribution": "This paper explores the dynamics of entanglement entropy in various initial conditions for a two-particle system, including Gaussian wavepackets and stationary profiles."
+      },
+      {
+        "name": "Von Neumann Entanglement Entropy",
+        "contribution": "The paper analyzes the evolution of von Neumann entanglement entropy SvN(t) across different initial conditions, revealing the effects of kinetic spreading and collision-induced distortion on entanglement dynamics."
+      },
+      {
+        "name": "Schmidt Spectrum",
+        "contribution": "This paper investigates the Schmidt spectrum of the two-particle system, showing that stationary profiles suppress the transfer of weight into higher Schmidt modes compared to Gaussian packets."
+      },
+      {
+        "name": "Gravitational Self-Interaction",
+        "contribution": "The paper demonstrates how the gravitational self-interaction affects the dynamics of the two-particle system, leading to entanglement generation and increased entanglement entropy in certain initial conditions."
+      }
+    ]
+  },
+  "2605.06569v1": {
+    "title": "Equidistribution of Eigenfunctions of Quantum Cat Maps",
+    "url": "http://arxiv.org/abs/2605.06569v1",
+    "concepts": [
+      {
+        "name": "Equidistribution of Eigenfunctions",
+        "contribution": "This paper establishes the equidistribution of eigenfunctions for certain matrix sequences, including the Arithmetic Mean - Geometric Mean (AM-GM) sequence."
+      },
+      {
+        "name": "Matrix Sequences and Equidistribution",
+        "contribution": "The study of matrix sequences and their properties is a crucial aspect of number theory, with applications in algebraic geometry, Diophantine analysis, and other areas of mathematics."
+      },
+      {
+        "name": "Arithmetic Mean - Geometric Mean (AM-GM) Sequence",
+        "contribution": "The AM-GM sequence is a fundamental example in number theory that exhibits equidistribution properties for certain matrix sequences."
+      },
+      {
+        "name": "Varnad's Theorem",
+        "contribution": "This paper generalizes Varnad's theorem, which states that the eigenfunctions of the AM-GM sequence are uniformly distributed modulo 1/N."
+      }
+    ]
+  },
+  "2605.06566v1": {
+    "title": "A Unified SU(2) Framework for Vector Beam Transformations and Complex Beam Shaping",
+    "url": "http://arxiv.org/abs/2605.06566v1",
+    "concepts": [
+      {
+        "name": "SU(2) Plate",
+        "contribution": "A plate that performs an SU(2) operation, which is a rotation of the polarization state by a certain angle."
+      },
+      {
+        "name": "D-Plate",
+        "contribution": "A type of plate that performs an SU(2) operation with spatially varying parameters."
+      },
+      {
+        "name": "Quantum Walk",
+        "contribution": "A quantum mechanical system that moves in a discrete time and space, often used to model random walks."
+      },
+      {
+        "name": "Orbital Angular Momentum (OAM)",
+        "contribution": "A measure of the angular momentum of a particle or object, which can be used to describe its rotation or orbit."
+      }
+    ]
+  },
+  "2605.06560v1": {
+    "title": "$F_K/F_π$ as a precision test of a new four flavor Domain Wall Fermion action",
+    "url": "http://arxiv.org/abs/2605.06560v1",
+    "concepts": [
+      {
+        "name": "Chiral Symmetry",
+        "contribution": "This paper explores the chiral symmetry in lattice QCD using Domain Wall Fermions, which is a theoretical framework used to study the strong nuclear force."
+      },
+      {
+        "name": "Lattice QCD",
+        "contribution": "The authors use Lattice QCD with Domain Wall Fermions to simulate chiral fermions on the lattice, allowing for precise calculations of physical quantities such as quark masses and couplings."
+      },
+      {
+        "name": "Domain Wall Fermions",
+        "contribution": "Domain Wall Fermions are a type of fermion used in Lattice QCD, which helps to reduce the effects of near-zero modes and improve the accuracy of simulations."
+      },
+      {
+        "name": "First-Row CKM Unitarity Tests",
+        "contribution": "The paper's results contribute to the precision of first-row CKM unitarity tests, which are used to constrain the Standard Model of particle physics and search for new physics beyond it."
+      }
+    ]
+  },
+  "2605.06550v1": {
+    "title": "Hadrons in $\\mathcal{N}=2$ supersymmetric QCD from non-Abelian string on 2D black hole",
+    "url": "http://arxiv.org/abs/2605.06550v1",
+    "concepts": [
+      {
+        "name": "Witten's Large N Approximation",
+        "contribution": "A method used to study the behavior of gauge theories at large values of the coupling constant, relevant for understanding the behavior of the Coulomb branch in SQCD."
+      },
+      {
+        "name": "SQCD (Supersymmetric QCD)",
+        "contribution": "A theoretical framework that combines supersymmetry and quantum chromodynamics to study strong interactions and confinement."
+      },
+      {
+        "name": "Liouville Theory",
+        "contribution": "A two-dimensional gravitational theory that describes the behavior of string theory at large distances from the origin, relevant for understanding the behavior of the Coulomb branch in SQCD."
+      }
+    ]
+  },
+  "2605.06547v1": {
+    "title": "Affine Subcode Ensemble Decoding for Degeneracy-Aware Quantum Error Correction",
+    "url": "http://arxiv.org/abs/2605.06547v1",
+    "concepts": [
+      {
+        "name": "Stabilizer Codes",
+        "contribution": "This paper introduces stabilizer codes and their importance in quantum error correction, building on the work of D. Gottesman."
+      },
+      {
+        "name": "Quantum Error Correction",
+        "contribution": "The paper discusses the challenges and techniques for quantum error correction, including the role of stabilizer codes and the use of machine learning methods."
+      },
+      {
+        "name": "LDPC Codes",
+        "contribution": "This paper explores linear block codes (LDPC) as a tool for quantum error correction, introducing the concept of degeneracy sets and their applications."
+      },
+      {
+        "name": "Belief Propagation Decoding",
+        "contribution": "The authors propose a new decoding algorithm using belief propagation, which is particularly effective in reducing the impact of non-convergent errors on quantum code performance."
+      }
+    ]
+  },
+  "2605.06543v1": {
+    "title": "A Rayleigh criterion for mechanical instability: inducing activity by chemo-mechanical coupling",
+    "url": "http://arxiv.org/abs/2605.06543v1",
+    "concepts": [
+      {
+        "name": "Stochastic Dynamics",
+        "contribution": "This paper explores the use of stochastic dynamics in chemically driven systems to generate sustained mechanical activity."
+      },
+      {
+        "name": "Linear Regime",
+        "contribution": "The linear regime is characterized by negative friction, which indicates a rotational current and a sustained activity with cyclic motion."
+      },
+      {
+        "name": "Saturation Regime",
+        "contribution": "In the saturation regime, the probe dynamics break down due to the negative friction, leading to an unstable steady state."
+      },
+      {
+        "name": "Active Regime",
+        "contribution": "The active regime is characterized by a sustained mechanical activity, where the probe moves on a limit cycle and exhibits a bimodal velocity distribution."
+      }
+    ]
+  },
+  "2605.06542v1": {
+    "title": "de Sitter Wavefunction from Quadrangular Polylogarithms: Chain Graphs",
+    "url": "http://arxiv.org/abs/2605.06542v1",
+    "concepts": [
+      {
+        "name": "Coprime Numbers",
+        "contribution": "This paper explores the properties and applications of coprime numbers, particularly in the context of multiple polylogarithms and chain wavefunctions."
+      },
+      {
+        "name": "Multiple Polylogarithms",
+        "contribution": "The paper discusses the structure and behavior of multiple polylogarithm functions, including their coproduct formula and recursion relations."
+      },
+      {
+        "name": "Chain Wavefunctions",
+        "contribution": "This paper focuses on the wavefunction coefficients for n-site chains, establishing a recursion relation for these coefficients and its connection to Rudenko's coproduct formula."
+      },
+      {
+        "name": "Coproduct Formula",
+        "contribution": "The paper derives and analyzes the coproduct formula for quadrangular polylogarithms, providing a new understanding of their structure and behavior."
+      }
+    ]
+  },
+  "2605.06504v1": {
+    "title": "Eigenstates with Infinite Position Moments",
+    "url": "http://arxiv.org/abs/2605.06504v1",
+    "concepts": [
+      {
+        "name": "Schrödinger Equation",
+        "contribution": "This paper discusses the existence and properties of bound states, critical potentials, and dimensionality in Schrödinger operators, building on recent advances in the field."
+      },
+      {
+        "name": "Critical Potentials",
+        "contribution": "The authors investigate the conditions under which a potential is critical, meaning it has a virtual level, and provide new results on the existence of bound states at threshold in two-particle systems."
+      },
+      {
+        "name": "Dimensionality",
+        "contribution": "The paper explores how dimensionality affects the properties of Schrödinger operators, including the existence of bound states and critical potentials."
+      },
+      {
+        "name": "Ground State Existence",
+        "contribution": "The authors provide conditions for the existence of ground states in one-body systems, including the role of dimensionality and potential shape."
+      }
+    ]
+  },
+  "2605.06497v1": {
+    "title": "The Hagedorn Temperature as a Nonequilibrium Dynamical Bottleneck in String Thermodynamics",
+    "url": "http://arxiv.org/abs/2605.06497v1",
+    "concepts": [
+      {
+        "name": "Anticommutator",
+        "contribution": "The anticommutator is a mathematical operation that combines two operators in a way that ensures their commutativity."
+      },
+      {
+        "name": "Frîchet Derivative",
+        "contribution": "The Frîchet derivative is a mathematical object that describes the rate of change of an operator in response to a perturbation."
+      },
+      {
+        "name": "Nonequilibrium Temperature Evolution",
+        "contribution": "This paper explores the dynamics of temperature evolution in nonequilibrium systems, focusing on the role of quantum fluctuations and entanglement."
+      },
+      {
+        "name": "Quantum Fluctuations",
+        "contribution": "Quantum fluctuations are temporary and random changes in energy that occur at the quantum level, giving rise to phenomena such as quantum uncertainty and entanglement."
+      }
+    ]
+  },
+  "2605.06473v1": {
+    "title": "Engineering a driven-dissipative bath of altermagnetic quantum magnons for controlling classical dynamics of spins hosting spin waves, domain walls, or skyrmions",
+    "url": "http://arxiv.org/abs/2605.06473v1",
+    "concepts": [
+      {
+        "name": "Landau-Lifshitz-Gilbert Equation",
+        "contribution": "Describes the dynamics of classical localized spins in ferromagnetic materials and their interactions with each other and the environment."
+      },
+      {
+        "name": "Altermagnetism",
+        "contribution": "A new class of magnetic materials that exhibit non-trivial spin and crystal rotation symmetries, leading to novel properties and potential applications."
+      },
+      {
+        "name": "Quantum Magnons",
+        "contribution": "Excitations of quantum localized spins hosted by the AMI layer in altermagnetic materials, which can be manipulated and controlled using magnetic fields and other techniques."
+      },
+      {
+        "name": "Inertial Spin Dynamics",
+        "contribution": "A new area of research that investigates the effects of inertial forces on spin dynamics in ferromagnetic materials, leading to a deeper understanding of spin transport and quantum information science."
+      }
+    ]
+  },
+  "2605.06465v1": {
+    "title": "Non-planar corrections in the symmetric orbifold",
+    "url": "http://arxiv.org/abs/2605.06465v1",
+    "concepts": [
+      {
+        "name": "Non-Perturbative Effects in AdS/CFT",
+        "contribution": "This paper explores the non-perturbative corrections to the spectrum of bosonic and fermionic states in the context of AdS/CFT correspondence. It shows that these corrections are not only significant but also distinct between different types of states, indicating a breakdown of the expected degeneracy at large twist angles."
+      },
+      {
+        "name": "Degenerate States and Mode Number Conservation",
+        "contribution": "The paper analyzes the conservation of mode number under the action of ˜Q2 and ˜S2, which leads to the conclusion that intermediate states |χ⟩ should have the same number of magnons as the state |ϕm⟩ they are related to. This constraint significantly reduces the possible contributions from these states."
+      },
+      {
+        "name": "Non-Perturbative Corrections and Wick Contractions",
+        "contribution": "The paper investigates how non-perturbative corrections arise from Wick contractions of fundamental fields, leading to significant differences between bosonic and fermionic states. These differences persist even at large twist angles, indicating a breakdown of the expected degeneracy."
+      }
+    ]
+  },
+  "2605.06461v1": {
+    "title": "Quantum spin dynamics of heavy quarks and polarization observables in relativistic heavy-ion collisions",
+    "url": "http://arxiv.org/abs/2605.06461v1",
+    "concepts": [
+      {
+        "name": "Relativistic Heavy Ion Collider (RHIC)",
+        "contribution": "Theoretical framework for heavy-quark spin relaxation in the RHIC environment."
+      },
+      {
+        "name": "Quantum Spin Density Matrix",
+        "contribution": "A mathematical framework for describing the dynamics of heavy quarks in a QCD medium."
+      },
+      {
+        "name": "Magnetic Field Generation",
+        "contribution": "Early-time electromagnetic field generation and its impact on heavy-quark spin relaxation."
+      },
+      {
+        "name": "Heavy Quark Spin Relaxation",
+        "contribution": "Theoretical calculation of heavy-quark spin polarization evolution in the presence of a QCD medium"
+      }
+    ]
+  },
+  "2605.06452v1": {
+    "title": "Tight Contraction Rates for Primitive Channels under Quantum $f$-Divergences",
+    "url": "http://arxiv.org/abs/2605.06452v1",
+    "concepts": [
+      {
+        "name": "Quantum Channel Capacity",
+        "contribution": "This paper investigates the relationship between quantum channel capacity and contraction coefficients for f-divergences, providing new insights into the properties of quantum Markov processes."
+      },
+      {
+        "name": "Contraction Coefficients",
+        "contribution": "The authors introduce a new framework for analyzing contraction coefficients for f-divergences, allowing for a more nuanced understanding of the behavior of quantum channels under different divergence measures."
+      },
+      {
+        "name": "Data Processing Inequalities",
+        "contribution": "This paper establishes strong data processing inequalities for channels and bayesian networks, providing new bounds on the contraction coefficients of quantum channels and their applications in ergodic theory."
+      },
+      {
+        "name": "Quantum Doeblin Coefficients",
+        "contribution": "The authors introduce a new concept, quantum Doeblin coefficients, which provide a measure of the contractivity of quantum channels under different divergence measures, with implications for understanding quantum information processing and thermodynamics."
+      }
+    ]
+  },
+  "2605.06436v1": {
+    "title": "Criticality around the Spinodal Point of First-Order Quantum Phase Transitions",
+    "url": "http://arxiv.org/abs/2605.06436v1",
+    "concepts": [
+      {
+        "name": "First-Order Phase Transition",
+        "contribution": "This paper explores the dynamics of first-order phase transitions in quantum systems, including finite-time scaling and the Kibble-Zurek mechanism."
+      },
+      {
+        "name": "Finite-Time Scaling",
+        "contribution": "The authors develop a theory for finite-time scaling in systems driven by a time-dependent external field, which reveals universal scaling laws across different quantum models."
+      },
+      {
+        "name": "Kibble-Zurek Mechanism",
+        "contribution": "This paper applies the Kibble-Zurek mechanism to predict the onset of chaos and dynamical hysteresis in driven quantum systems, shedding light on the role of nucleation and critical slowing down."
+      },
+      {
+        "name": "Quantum Annealing",
+        "contribution": "The authors examine the applicability of quantum annealing to solve problems that are currently unsolvable with current many-body approximation methods, highlighting its limitations in certain regimes."
+      }
+    ]
+  },
+  "2605.06430v1": {
+    "title": "Revisiting the multi-mode rhombus circuit as a biased-noise qubit",
+    "url": "http://arxiv.org/abs/2605.06430v1",
+    "concepts": [
+      {
+        "name": "Topological Quantum Computing",
+        "contribution": "This work analyzes a single rhombus qubit as an archetypal protected qubit for topologically protected quantum computing architectures."
+      },
+      {
+        "name": "Flux Noise",
+        "contribution": "The paper characterizes the relaxation and dephasing times of the soft-rhombus qubit, identifying flux noise as a main limiting source of relaxation at low frequencies."
+      },
+      {
+        "name": "Rhombus Qubit",
+        "contribution": "This work presents a full circuit description and noise model for the rhombus qubit, highlighting its potential for topological protection and its limitations due to charge-parity protected regime."
+      },
+      {
+        "name": "Protected Quantum Computing",
+        "contribution": "By understanding the degree of protection and optimal parameter regimes for the rhombus qubit, this work contributes to the design of topologically protected quantum computing architectures."
+      }
+    ]
+  },
+  "2605.06429v1": {
+    "title": "$\\mathsf{GL}_N(\\mathbb{C})$ Brownian motion and stochastic PDE on entire functions",
+    "url": "http://arxiv.org/abs/2605.06429v1",
+    "concepts": [
+      {
+        "name": "GLN(C) Brownian motion",
+        "contribution": "The convergence of GLN(C) Brownian motion on the space of symmetric functions with compact support, and its relation to stochastic processes on entire functions."
+      },
+      {
+        "name": "Stochastic evolution on Nevanlinna functions",
+        "contribution": "A general framework for describing stochastic evolutions on entire functions, illustrated by the example of GLN(C) Brownian motion."
+      },
+      {
+        "name": "Feller-Markov process",
+        "contribution": "An abstract Feller-Markov process constructed from a tower of consistent Feller processes using the method of intertwiners of Borodin and Olshanski."
+      },
+      {
+        "name": "Non-intersection property",
+        "contribution": "A crucial property used to derive the singular log-interacting SDE for the dynamics of GLN(C) Brownian motion, obtained from certain Lyapunov functions."
+      }
+    ]
+  },
+  "2605.06427v1": {
+    "title": "Multitime memory beyond the quantum regression theorem in sequential measurement statistics",
+    "url": "http://arxiv.org/abs/2605.06427v1",
+    "concepts": [
+      {
+        "name": "Open Quantum Systems",
+        "contribution": "This paper investigates the non-Markovianity of sequential measurements in open quantum systems, highlighting the importance of considering multitime correlations and memory across interventions."
+      },
+      {
+        "name": "Quantum Process Tomography",
+        "contribution": "The authors employ quantum process tomography to reconstruct the dynamical map and propagators associated with the system-pseudomode coupling, enabling a detailed analysis of non-Markovianity and QRT violations."
+      },
+      {
+        "name": "P-Divisibility",
+        "contribution": "The paper explores the relationship between P-divisibility of the dynamics and two-time non-Markovianity, demonstrating that both quantifiers probe different aspects of memory in open quantum systems."
+      },
+      {
+        "name": "Non-Markovian Quantum Metrology",
+        "contribution": "By investigating the impact of system-bath correlations on sequential measurements, this paper contributes to our understanding of non-Markovian quantum metrology and its applications in quantum information science."
+      }
+    ]
+  },
+  "2605.06425v1": {
+    "title": "Comparative Study of Potts Machine Dynamics and Performance for Max-k-Cut",
+    "url": "http://arxiv.org/abs/2605.06425v1",
+    "concepts": [
+      {
+        "name": "Phase Transition",
+        "contribution": "This study investigates the phase transition of Potts machine models as hyperparameters are varied, revealing a critical point at which the system undergoes a drastic change in behavior."
+      },
+      {
+        "name": "Dynamical Stability",
+        "contribution": "The authors examine the dynamical stability of the five Potts machine models and find that certain configurations exhibit metastability, where the optimal solution is not reached within a fixed number of time steps."
+      },
+      {
+        "name": "Optimization Performance",
+        "contribution": "The paper assesses the optimization performance of the five Potts machine models on various Max-k-Cut benchmark problems, demonstrating that specific configurations exhibit improved success rates and relative optimality gaps."
+      }
+    ]
+  },
+  "2605.06424v1": {
+    "title": "Finite-Time Optimal Control by Noisy Traps",
+    "url": "http://arxiv.org/abs/2605.06424v1",
+    "concepts": [
+      {
+        "name": "Nonequilibrium Thermodynamics",
+        "contribution": "Studies the behavior of systems that are not in thermal equilibrium, exploring the interplay between heat, work, and dissipation."
+      },
+      {
+        "name": "Stochastic Control Theory",
+        "contribution": "A branch of control theory that deals with the control of stochastic systems, taking into account the inherent randomness and uncertainty of these systems."
+      },
+      {
+        "name": "Multiscale Methods",
+        "contribution": "A set of mathematical techniques used to analyze complex systems by considering different scales and time regimes, from fast to slow processes."
+      },
+      {
+        "name": "Optimal Control Theory",
+        "contribution": "A field of control theory that aims to find the best possible control policy for a given system, often using optimization techniques and taking into account constraints and objectives."
+      }
+    ]
+  },
+  "2605.06418v1": {
+    "title": "On the non-radial oscillations of realistic anisotropic neutron stars: Axial modes",
+    "url": "http://arxiv.org/abs/2605.06418v1",
+    "concepts": [
+      {
+        "name": "Quasinormal Modes",
+        "contribution": "The study investigates the quasinormal modes of anisotropic neutron stars, which are coupled gravitational and fluid degrees of freedom."
+      },
+      {
+        "name": "Axial Modes",
+        "contribution": "The paper focuses on axial quasi-normal modes, which exhibit exceptionally short damping times in the microsecond range and sustain high oscillation frequencies."
+      },
+      {
+        "name": "Gravitational Waves",
+        "contribution": "The analysis reveals that gravitational-wave observations could directly probe the dense, anisotropic interiors of neutron stars through their coupled axial ringing."
+      }
+    ]
+  },
+  "2605.06414v1": {
+    "title": "A Residual-Based Quantum Linear System Algorithm with Dynamic Stopping and Applications to Elliptic PDEs",
+    "url": "http://arxiv.org/abs/2605.06414v1",
+    "concepts": [
+      {
+        "name": "Quantum Linear System Algebra (QLSA)",
+        "contribution": "This paper introduces a quantum ODE solver for QLSA, providing a first-order simulation scale and efficient measurement-based solution strategies."
+      },
+      {
+        "name": "Dynamical Systems",
+        "contribution": "The accumulator ODE is used to model the relaxation dynamics of the Galerkin solution in QLSA, demonstrating exponential stability with constant overhead."
+      },
+      {
+        "name": "Quantum Mechanics",
+        "contribution": "This paper leverages quantum ODE solvers to solve QLSA problems, providing a new connection between quantum mechanics and linear system algebra."
+      },
+      {
+        "name": "Non-Unitary Dynamics",
+        "contribution": "The accumulator ODE model handles non-unitary dynamics, allowing for efficient simulation of the solution relaxation process in QLSA."
+      }
+    ]
+  },
+  "2605.06412v1": {
+    "title": "GTMDs, orbital angular momentum, and pretzelosity",
+    "url": "http://arxiv.org/abs/2605.06412v1",
+    "concepts": [
+      {
+        "name": "Flavor Sum Rule",
+        "contribution": "The flavor sum rule is proven by calculating the quark flavor distribution and showing that it equals N_q. This result is derived from the wave function normalization in Eq. (10) and SU(4) spin-flavor factors."
+      },
+      {
+        "name": "Momentum Sum Rule",
+        "contribution": "The momentum sum rule is proven by evaluating the model expression for the unpolarized TMD and showing that it equals N_q A_2 M Z d3k h t^2 0 + √k^2t^2 1 i. This result is derived from the equation of motion in coordinate space and the conservation of the energy-momentum tensor."
+      },
+      {
+        "name": "Ji Spin Sum Rule",
+        "contribution": "The Ji spin sum rule is proven by manipulating the model expression for H_q(x, 0, 0) + E_q(x, 0, 0) and showing that it equals P_q A_2 Z d3k h t^2 0 + √k^2t^2 1 i. This result is derived from the conservation of the energy-momentum tensor and the derivative of K(⃗ρ)."
+      }
+    ]
+  },
+  "2605.06410v1": {
+    "title": "Spin and Quadrupole Sectors in Nonrelativistic Gravity",
+    "url": "http://arxiv.org/abs/2605.06410v1",
+    "concepts": [
+      {
+        "name": "Galilean Expansion",
+        "contribution": "This paper explores the Galilean expansion of general relativity, a non-relativistic limit that captures the low-energy behavior of gravitational fields."
+      },
+      {
+        "name": "ADM Variables",
+        "contribution": "The paper uses the Arnowitt-Deser-Misner (ADM) variables to describe the Galilean expansion, which provides a compact and efficient way to analyze the field equations."
+      },
+      {
+        "name": "Stationary Vacuum Solutions",
+        "contribution": "The paper focuses on stationary vacuum solutions in the Galilean expansion, exploring the weak and strong branches of the solution space that capture slow and rapid rotational effects, respectively."
+      },
+      {
+        "name": "Kerr Metric",
+        "contribution": "The paper uses the Kerr metric as a reference solution to compare with the Galilean expansion, providing insight into the behavior of rotating black holes in the non-relativistic limit."
+      }
+    ]
+  },
+  "2605.06399v1": {
+    "title": "A polar-factor retraction on the symplectic Stiefel manifold with closed-form inverse",
+    "url": "http://arxiv.org/abs/2605.06399v1",
+    "concepts": [
+      {
+        "name": "Symplectic Stiefel Manifold",
+        "contribution": "A mathematical object used in physics and engineering to describe the geometry of symplectic systems, particularly in the context of Hamiltonian mechanics."
+      },
+      {
+        "name": "Riemannian Optimization",
+        "contribution": "A mathematical framework for optimizing functions on Riemannian manifolds, which includes the symplectic Stiefel manifold. It provides a powerful tool for solving problems in physics, engineering, and other fields."
+      },
+      {
+        "name": "Skew-Hamiltonian Structure",
+        "contribution": "A mathematical concept used to describe the geometry of symplectic systems, particularly in the context of Hamiltonian mechanics. It is an extension of the classical Hamiltonian structure to non-commutative and non-associative settings."
+      },
+      {
+        "name": "Polar Decomposition",
+        "contribution": "A mathematical concept used to decompose a matrix into a product of an orthogonal matrix and another matrix, which can be useful in various applications such as optimization and signal processing."
+      }
+    ]
+  },
+  "2605.06397v1": {
+    "title": "Photonic-Implemented Efficient Deep Quantum Neural Network via Virtual-Driven Hilbert Space Expansion",
+    "url": "http://arxiv.org/abs/2605.06397v1",
+    "concepts": [
+      {
+        "name": "Quantum Neural Network",
+        "contribution": "A quantum neural network is a type of artificial intelligence that uses quantum computing to process and analyze data, offering potential advantages in terms of speed and accuracy over classical neural networks."
+      },
+      {
+        "name": "Generative Adversarial Networks (GANs)",
+        "contribution": "GANs are a type of machine learning algorithm used for generative modeling, which can generate new data that resembles existing data. In this paper, GANs are implemented on a quantum neural network chip."
+      },
+      {
+        "name": "Quantum Generative Adversarial Networks (QGANs)",
+        "contribution": "QGANs are a type of generative adversarial networks that use quantum computing to generate new data. In this paper, QGANs are implemented on a quantum neural network chip, demonstrating its capabilities in generating high-fidelity images."
+      },
+      {
+        "name": "Gibbs State Generation",
+        "contribution": "Gibbs state generation is a process of preparing a quantum system in a specific state, which is essential for studying many-body physics and quantum thermodynamics. In this paper, a quantum generative diffusion model (QGDM) is implemented on a quantum neural network chip to generate Gibbs states."
+      }
+    ]
+  },
+  "2605.06396v1": {
+    "title": "Dynamical cooling driven by self-similar fronts in the 2D nonlinear Schrödinger model",
+    "url": "http://arxiv.org/abs/2605.06396v1",
+    "concepts": [
+      {
+        "name": "Self-similarity",
+        "contribution": "This paper introduces self-similar solutions to the vorticity dynamics, which describe the evolution of the norm |Wg|∞ as a function of time. The solutions are found for different ranges of g, including g > 1/2 (first-kind self-similarity), -1/2 < g < 1/2 (second-kind self-similarity), and g < -1/2 (third-kind self-similarity). These solutions describe the asymptotic behavior of the vorticity norm as time approaches infinity."
+      },
+      {
+        "name": "Vorticity dynamics",
+        "contribution": "The vorticity dynamics is a generalized vorticity equation that describes the evolution of the norm |Wg|∞ as a function of time and frequency. The equation is derived from the original vorticity equation for wave action conservation, but with a generalized weighting parameter g. The vorticity dynamics is used to study the asymptotic behavior of the norm |Wg|∞ as time approaches infinity."
+      },
+      {
+        "name": "Traveling wave solutions",
+        "contribution": "The paper introduces traveling wave solutions to the vorticity dynamics, which describe the convergence towards a self-similar profile as time approaches infinity. The solutions are found for different ranges of g and describe the asymptotic behavior of the norm |Wg|∞ as time approaches infinity."
+      }
+    ]
+  },
+  "2605.06394v1": {
+    "title": "Lecture Notes on Statistical Physics and Neural Networks",
+    "url": "http://arxiv.org/abs/2605.06394v1",
+    "concepts": [
+      {
+        "name": "Free Energy Density",
+        "contribution": "The free energy density is a measure of the thermodynamic stability of a system, and it can be used to determine the phase transitions in a system."
+      },
+      {
+        "name": "Partition Function",
+        "contribution": "The partition function is a mathematical object that describes the equilibrium properties of a physical system."
+      },
+      {
+        "name": "Spin Model",
+        "contribution": "A spin model is a type of statistical mechanical model that describes the behavior of magnetic materials, such as ferromagnets and antiferromagnets."
+      },
+      {
+        "name": "Phase Transition",
+        "contribution": "A phase transition is a fundamental concept in physics that describes the change from one state to another, often characterized by a critical point where the system undergoes a sudden change in behavior."
+      }
+    ]
+  },
+  "2605.06379v1": {
+    "title": "Systematic Extraction of Exact Yang-Mills Solutions via Algebraic Tensor Ring Decomposition",
+    "url": "http://arxiv.org/abs/2605.06379v1",
+    "concepts": [
+      {
+        "name": "Bifurcation in Yang-Mills Theory",
+        "contribution": "This paper introduces a new method for studying bifurcations in Yang-Mills theory, allowing for the classification of physical branches and the identification of stable solutions."
+      },
+      {
+        "name": "Temporal Deformation of Cartan Fields",
+        "contribution": "The authors develop a framework for dynamically generating temporal deformations of Cartan fields in SU(3) Yang-Mills theory, leading to the emergence of coherent resonance states."
+      },
+      {
+        "name": "Algebraic Ring Framework",
+        "contribution": "This paper demonstrates the versatility of an algebraic ring framework in solving problems in non-Abelian gauge theories, including the classification of physical branches and the identification of stable solutions."
+      }
+    ]
+  },
+  "2605.06372v1": {
+    "title": "Coherence limitations of a Fourier-engineered $\\cos(2\\varphi)$ transmon qubit",
+    "url": "http://arxiv.org/abs/2605.06372v1",
+    "concepts": [
+      {
+        "name": "Josephson Junction",
+        "contribution": "A fundamental component in superconducting qubits, enabling quantum computing and related applications."
+      },
+      {
+        "name": "Superconducting Qubit",
+        "contribution": "A microscopic circuit that uses the Meissner effect to store and manipulate quantum information, essential for quantum computing and metrology."
+      },
+      {
+        "name": "Fourier Engineering",
+        "contribution": "A technique used to engineer the energy-phase relation of a superconducting qubit, enabling controlled manipulation of its quantum states."
+      }
+    ]
+  },
+  "2605.06321v1": {
+    "title": "Gravitational Lensing of Gravitational Waves from Astrophysical Sources: Theory, Detection, and Applications",
+    "url": "http://arxiv.org/abs/2605.06321v1",
+    "concepts": [
+      {
+        "name": "Geometric Optics",
+        "contribution": "Gravitational waves in geometric optics regime: GW propagates along null geodesics, deflection angle is given by equation (24), and lensing effect can lead to multiple images of a single GW signal."
+      },
+      {
+        "name": "Lens Equation",
+        "contribution": "Scaled lens equation (26) relates source position β to observed angular position θ. Solution for θ may not be unique due to lensing effects."
+      },
+      {
+        "name": "Deflection Potential",
+        "contribution": "Deflection potential ψ is related to scaled deflection angle ˜α(θ) through equation (29), and can be solved numerically using software such as Lenstronomy, PyAutoLens, or Lenstool."
+      },
+      {
+        "name": "Flux Ratio",
+        "contribution": "Flux ratio between observed and emitted GWs is estimated using equation (32). This allows for estimation of amplitude of GW strain in lens plane."
+      }
+    ]
+  },
+  "2605.06312v1": {
+    "title": "Ablation Removal of Transport-Blocking Defects in Surface-Electrode Ion Traps",
+    "url": "http://arxiv.org/abs/2605.06312v1",
+    "concepts": [
+      {
+        "name": "Ion Traps",
+        "contribution": "This paper discusses the use of ion traps in quantum computing and information processing, including the development of a high-fidelity quantum matter-link between ion-trap microchip modules."
+      },
+      {
+        "name": "Quantum Computing",
+        "contribution": "The authors explore the application of surface-electrode ion traps for scalable quantum information processing, including techniques for minimizing electric-field noise and reducing heating rates."
+      },
+      {
+        "name": "Nanosecond Laser Ablation",
+        "contribution": "The paper investigates the use of nanosecond laser ablation for cleaning microfabricated ion traps, including the ablation thresholds for various materials and the effectiveness of this technique for removing contamination."
+      },
+      {
+        "name": "Surface-Electrode Ion Traps",
+        "contribution": "This research focuses on the design and implementation of surface-electrode ion traps, including their application in quantum information processing and the development of techniques for minimizing noise and heating rates."
+      }
+    ]
+  },
+  "2605.06297v1": {
+    "title": "Macroscopic entanglement between two magnon modes via two-tone driving of a superconducting qubit",
+    "url": "http://arxiv.org/abs/2605.06297v1",
+    "concepts": [
+      {
+        "name": "Cavity Quantum Electrodynamics",
+        "contribution": "The study of the interaction between matter and electromagnetic fields in cavities, enabling the manipulation of quantum states."
+      },
+      {
+        "name": "Magnetoelectric Coupling",
+        "contribution": "A phenomenon where magnetic and electric dipoles interact, allowing for the transfer of energy between magnons and photons."
+      },
+      {
+        "name": "Spin-Orbit Coupling",
+        "contribution": "A quantum mechanical effect that mixes spin and orbital angular momenta, giving rise to new physics in spintronics and optomagnonics."
+      },
+      {
+        "name": "Quantum Magnonics",
+        "contribution": "A field of study that explores the interaction between magnons and electromagnetic fields, enabling the manipulation of quantum states in ferromagnetic insulators."
+      }
+    ]
+  },
+  "2605.06296v1": {
+    "title": "From flat to narrow bands: Engineering quantum emission in a one-dimensional Lieb lattice",
+    "url": "http://arxiv.org/abs/2605.06296v1",
+    "concepts": [
+      {
+        "name": "Single Photon Emission",
+        "contribution": "This paper demonstrates the tunability of single photon emission by controlling the competition between coupling strength and engineered bandwidth in a modified 1D Lieb lattice."
+      },
+      {
+        "name": "Quantum Dynamics",
+        "contribution": "The authors provide a unified physical picture of the emitter's dynamics, from long-lived bound-state trapping to Markovian decay, governed by the competition between coupling strength and engineered bandwidth."
+      },
+      {
+        "name": "Tunable Quantum Devices",
+        "contribution": "This paper showcases the potential for parameter control in single photon sources, enabling fast spontaneous emission while maintaining minimal long-time population."
+      },
+      {
+        "name": "Many-Body Localization",
+        "contribution": "The modified 1D Lieb lattice system is a paradigmatic example of many-body localization, where the engineered bandwidth and coupling strength play crucial roles in determining the emitter's dynamics."
+      }
+    ]
+  },
+  "2605.06287v1": {
+    "title": "Half-Spacetime Gauging of 2-Group Symmetry in 3d",
+    "url": "http://arxiv.org/abs/2605.06287v1",
+    "concepts": [
+      {
+        "name": "Anomaly theory",
+        "contribution": "A mathematical framework for understanding the anomalies in a quantum field theory, specifically in the context of gauge symmetries."
+      },
+      {
+        "name": "Gauge symmetry",
+        "contribution": "A fundamental concept in physics that describes the symmetry of a physical system under the action of a group of transformations, such as rotations or translations."
+      },
+      {
+        "name": "Condensation defect",
+        "contribution": "A mathematical object that appears in certain quantum field theories and represents the effect of a gauge symmetry on the theory's partition function."
+      },
+      {
+        "name": "Half-spacetime gauging",
+        "contribution": "A method for extending gauge symmetries to higher-dimensional spaces by summing over connections on half-spacetimes with Dirichlet boundary conditions."
+      }
+    ]
+  },
+  "2605.06284v1": {
+    "title": "Local distillation from Reed Muller codes unfolding",
+    "url": "http://arxiv.org/abs/2605.06284v1",
+    "concepts": [
+      {
+        "name": "Quantum Reed Muller codes",
+        "contribution": "This paper introduces a new planar layout for Quantum Reed Muller codes, improving the efficiency of quantum error correction in QRM4(1, 1)"
+      },
+      {
+        "name": "Planar layouts",
+        "contribution": "The authors provide a systematic approach to deriving planar layouts for larger Quantum Reed Muller codes using the cartesian product structure"
+      },
+      {
+        "name": "Gray code ordering",
+        "contribution": "A Gray code ordering is used to unfold two coordinates on a single axis, enabling efficient physical realization of quantum error correction circuits"
+      }
+    ]
+  },
+  "2605.06271v1": {
+    "title": "A Comparative Study of Mass Extraction Schemes and $π^\\pm-ρ^\\pm$ Mixing",
+    "url": "http://arxiv.org/abs/2605.06271v1",
+    "concepts": [
+      {
+        "name": "Magnetic Field in Quantum Chromodynamics",
+        "contribution": "Discusses the effects of a magnetic field on quark propagators and meson masses in QCD, including the Landau-level structure and its implications for hadronic physics."
+      },
+      {
+        "name": "Rest-Mass Extraction Scheme",
+        "contribution": "Introduces a new scheme for extracting meson masses from the RPA kernel at zero spatial momentum, providing a natural baseline for comparison with other schemes."
+      },
+      {
+        "name": "Landau-Level Projection",
+        "contribution": "Discusses the importance of projecting Landau levels onto physical states to obtain quasiparticle excitations and their properties in a magnetic field."
+      },
+      {
+        "name": "Gauge-Invariant Meson Mass Formula",
+        "contribution": "Presents a gauge-invariant formula for meson masses, taking into account the effects of the magnetic field on the quark propagators and providing a basis for further theoretical and experimental studies."
+      }
+    ]
+  },
+  "2605.06263v1": {
+    "title": "Beating noise in frequency estimation with squeezing and memory in continuous-variable systems",
+    "url": "http://arxiv.org/abs/2605.06263v1",
+    "concepts": [
+      {
+        "name": "Non-Markovian Dynamics",
+        "contribution": "Non-Markovian dynamics refer to quantum systems that exhibit temporal correlations between measurement outcomes, allowing for the temporary recovery of quantum coherence."
+      },
+      {
+        "name": "Squeezing",
+        "contribution": "Squeezing is a technique used in quantum optics to enhance the precision of measurements by exploiting the correlations between quadratures of a light field."
+      },
+      {
+        "name": "Cavity-Optomechanics",
+        "contribution": "Cavity-optomechanics is an emerging area of research that explores the interaction between light and mechanical systems, enabling new techniques for precision measurement and quantum control."
+      }
+    ]
+  },
+  "2605.06251v1": {
+    "title": "Meromorphic Quantum Computing",
+    "url": "http://arxiv.org/abs/2605.06251v1",
+    "concepts": []
+  },
+  "2605.06249v1": {
+    "title": "Finite-size general security for differential phase shift keying via variable-length quantum key distribution",
+    "url": "http://arxiv.org/abs/2605.06249v1",
+    "concepts": [
+      {
+        "name": "Quantum Key Distribution",
+        "contribution": "This paper proposes a quantum key distribution protocol that uses relativistic effects to secure the communication channel, enabling secure data transmission over long distances."
+      },
+      {
+        "name": "Relativistic Quantum Key Distribution",
+        "contribution": "The proposed protocol leverages relativistic effects to ensure secure communication, making it suitable for applications requiring high-speed data transfer."
+      },
+      {
+        "name": "Quantum Channel",
+        "contribution": "A quantum channel is used to transmit the quantum states between Alice and Bob, enabling them to encode and decode their respective keys."
+      },
+      {
+        "name": "Mach-Zehnder Interferometer",
+        "contribution": "The Mach-Zehnder interferometer is used to perform interference on the incoming signal, allowing Alice and Bob to measure the correlations between their signals."
+      }
+    ]
+  },
+  "2605.06224v1": {
+    "title": "Modular wedge localization, Majorana fields and the Tsirelson limit of the Bell-CHSH inequality",
+    "url": "http://arxiv.org/abs/2605.06224v1",
+    "concepts": [
+      {
+        "name": "Tomita-Takesaki Modular Operator",
+        "contribution": "The Tomita-Takesaki modular operator is a fundamental concept in C*-algebras and has been used to study the properties of quantum systems, including the Bell-CHSH inequality. This paper derives a rapidity-space formula for the vacuum Bell-CHSH correlator using the Bisognano-Wichmann theorem and modular wedge localization. The result shows that the value is below 2√2 with the Tsirelson value being the supremum reached by spectral concentration near ω=0 or equivalently near λ^2(ω)=1."
+      },
+      {
+        "name": "Majorana Field",
+        "contribution": "The Majorana field is a type of fermionic field that has been used to study the properties of quantum systems, including the Bell-CHSH inequality. In this paper, we derive a rapidity-space formula for the vacuum Bell-CHSH correlator using the Bisognano-Wichmann theorem and modular wedge localization for the massive Majorana field in 1+1 dimensions."
+      },
+      {
+        "name": "Bell-CHSH Inequality",
+        "contribution": "The Bell-CHSH inequality is a fundamental concept in quantum mechanics that describes the limits of local realism. This paper studies the violation of the Bell-CHSH inequality for the massive Majorana field in 1+1 dimensions using modular wedge localization."
+      },
+      {
+        "name": "Bisognano-Wichmann Theorem",
+        "contribution": "The Bisognano-Wichmann theorem is a fundamental result in quantum field theory that describes the properties of the vacuum state. In this paper, we use the Bisognano-Wichmann theorem and modular wedge localization to derive a rapidity-space formula for the vacuum Bell-CHSH correlator."
+      }
+    ]
+  },
+  "2605.06193v1": {
+    "title": "Causal self-dual nonlinear electrodynamics from the Born-Infeld theory",
+    "url": "http://arxiv.org/abs/2605.06193v1",
+    "concepts": [
+      {
+        "name": "Self-Duality",
+        "contribution": "This paper explores the concept of self-duality in nonlinear electrodynamics, its relation to T¯T-like deformations, and its applications in diverse dimensions."
+      },
+      {
+        "name": "Duality Rotations",
+        "contribution": "The authors revisit duality rotations in supersymmetric nonlinear electrodynamics, demonstrating their relevance to various theories, including the ModMax theory."
+      },
+      {
+        "name": "TT Perturbations",
+        "contribution": "This paper connects generalized Born-Infeld models with T¯T-like deformations and current-squared flows, providing new insights into the emergence of nonlinear electrodynamic theories."
+      }
+    ]
+  },
+  "2605.06178v1": {
+    "title": "Universal Analog Quantum Simulation",
+    "url": "http://arxiv.org/abs/2605.06178v1",
+    "concepts": [
+      {
+        "name": "Quantum Simulation",
+        "contribution": "Describes the use of quantum computers to simulate complex quantum systems, enabling the study of phenomena that are difficult or impossible to investigate using classical computers."
+      },
+      {
+        "name": "Parametrized Analog Hamiltonian",
+        "contribution": "A method for implementing a controlled version of a target many-body Hamiltonian on an analog quantum computer, allowing for the simulation of complex quantum systems with reduced computational resources."
+      },
+      {
+        "name": "Out-of-Time-Order Correlator (OTOC)",
+        "contribution": "A measure used to quantify the loss of coherence in quantum systems due to decoherence or other environmental interactions, providing insight into the robustness of quantum information and control."
+      }
+    ]
+  },
+  "2605.06171v1": {
+    "title": "Quantum phase diagrams for bosons in hexagonal optical potentials: A continuous-space quantum Monte Carlo study",
+    "url": "http://arxiv.org/abs/2605.06171v1",
+    "concepts": [
+      {
+        "name": "Bose-Einstein Condensates",
+        "contribution": "This paper discusses the quantum phase diagram of bosons in a honeycomb optical lattice, exploring the effects of interactions and tunneling on the system's behavior."
+      },
+      {
+        "name": "Optical Lattices",
+        "contribution": "The research examines the properties of bosons in a honeycomb optical lattice, including the impact of lattice depth and chemical potential on the system's phase diagram."
+      },
+      {
+        "name": "Many-Body Localization",
+        "contribution": "Although not directly addressed, the paper touches on the idea of many-body localization in the context of quantum phases of matter and its relation to the Bose-Hubbard model."
+      }
+    ]
+  },
+  "2605.06167v1": {
+    "title": "Matrix encoding method in variational algorithm of calculating eigenvalues and generalized eigenvalues",
+    "url": "http://arxiv.org/abs/2605.06167v1",
+    "concepts": [
+      {
+        "name": "Quantum Algorithm for Calculating Eigenvalues",
+        "contribution": "A new quantum algorithm for calculating eigenvalues of matrices A and B, which is more efficient than existing methods."
+      },
+      {
+        "name": "Generalized Eigenvalue Problem",
+        "contribution": "The paper solves the generalized eigenvalue problem, a fundamental problem in linear algebra and control theory."
+      },
+      {
+        "name": "Optimization Algorithm for Finding Eigenvalues",
+        "contribution": "A new optimization algorithm is presented to find the eigenvalues of matrices A and B with high accuracy."
+      },
+      {
+        "name": "Quantum Computing and Machine Learning",
+        "contribution": "The paper demonstrates the potential of quantum computing in solving complex machine learning problems, such as generalized eigenvalue problems."
+      }
+    ]
+  },
+  "2605.06159v1": {
+    "title": "Non-abelian field cohomology, its relation with spontaneous symmetry breaking and Morse's Theorem",
+    "url": "http://arxiv.org/abs/2605.06159v1",
+    "concepts": [
+      {
+        "name": "Spontaneous Symmetry Breaking",
+        "contribution": "This paper demonstrates how spontaneous symmetry breaking modifies the BRST cohomology of a gauge theory, creating matter-like combinations of gauge and scalar fields."
+      },
+      {
+        "name": "Morse Functional",
+        "contribution": "The authors construct a gauge fixing that yields an on-shell Gribov operator containing a positive mass term proportional to ν2β, solved by the Morse functional in a theory with spontaneous symmetry breaking."
+      },
+      {
+        "name": "BRST Cohomology",
+        "contribution": "The paper shows how BRST cohomology is modified by spontaneous symmetry breaking, leading to matter-like combinations of gauge and scalar fields."
+      },
+      {
+        "name": "Gribov Problem",
+        "contribution": "The authors solve the on-shell Gribov problem in the broken phase for perturbative energies below the symmetry breaking scale using a Morse functional constructed from a dimension 2 functional."
+      }
+    ]
+  },
+  "2605.06147v1": {
+    "title": "Cosmological Dynamics of a Non-Canonical Generalised Brans-Dicke Theory",
+    "url": "http://arxiv.org/abs/2605.06147v1",
+    "concepts": [
+      {
+        "name": "Accelerating Expansion",
+        "contribution": "The paper explores the possibility of an accelerating expansion of the universe due to a scalar field, which is a deviation from the standard model of gravity. The effects of this acceleration are studied on various cosmological scales, including the evolution of the matter-radiation equality. The results show that the acceleration can be significant for certain values of the coupling parameter, and the paper discusses the implications of these findings."
+      },
+      {
+        "name": "Scalar-Tensor Theory",
+        "contribution": "The paper develops a scalar-tensor theory of gravity, which is an alternative to general relativity. The theory includes a scalar field that interacts with matter and radiation, and the paper studies its effects on various cosmological phenomena, such as the evolution of the universe and the formation of structure."
+      },
+      {
+        "name": "Matter-Radiation Equality",
+        "contribution": "The paper explores the concept of matter-radiation equality, which is a critical point in the evolution of the universe where the matter density and radiation density are equal. The authors study the effects of an accelerating expansion on this point and discuss its implications for our understanding of the early universe."
+      },
+      {
+        "name": "Cosmological Constant",
+        "contribution": "The paper discusses the possibility of a cosmological constant, which is a measure of the energy density of the vacuum. The authors explore the effects of a non-zero cosmological constant on the evolution of the universe and discuss its implications for our understanding of dark energy."
+      }
+    ]
+  },
+  "2605.06138v1": {
+    "title": "Probing the density dependence of nuclear symmetry energy through isospin transport in heavy-ion reactions",
+    "url": "http://arxiv.org/abs/2605.06138v1",
+    "concepts": [
+      {
+        "name": "Isospin Transport Ratio",
+        "contribution": "Measures the equilibration of neutron and proton populations in heavy ion collisions, sensitive to nuclear symmetry energy."
+      },
+      {
+        "name": "Nuclear Equation of State",
+        "contribution": "Describes the relationship between density and symmetry energy in nuclear matter, crucial for understanding heavy ion collisions and their connection to astrophysical and condensed-matter phenomena."
+      },
+      {
+        "name": "Heavy Ion Collisions",
+        "contribution": "Experimental technique used to study nuclear properties and equation of state by smashing atomic nuclei at relativistic energies."
+      },
+      {
+        "name": "Quasi-Projectile (QP)",
+        "contribution": "Reference frame used in heavy ion collisions, defined as the center-of-mass frame of the system before equilibration occurs, providing a robust observable for studying isospin transport and nuclear symmetry energy."
+      }
+    ]
+  },
+  "2605.06131v1": {
+    "title": "Hugoniot Relation for Multi-Temperature Euler Equations of Compressible Plasma Flows",
+    "url": "http://arxiv.org/abs/2605.06131v1",
+    "concepts": [
+      {
+        "name": "Polytropic gas law",
+        "contribution": "The polytropic gas law is a mathematical model that describes the behavior of ideal gases under certain conditions. In this paper, we apply the polytropic gas law to derive the Hugoniot curve for vanishing viscosity shock waves."
+      },
+      {
+        "name": "Hugoniot curve",
+        "contribution": "The Hugoniot curve is a mathematical surface that describes the boundary between the pre-shock and post-shock regions of a shock wave. In this paper, we derive the Hugoniot curve for vanishing viscosity shock waves using the polytropic gas law."
+      },
+      {
+        "name": "Vanishing viscosity",
+        "contribution": "The vanishing viscosity assumption is a mathematical model that represents the limit as the viscosity of a fluid approaches zero. In this paper, we apply this assumption to derive the Hugoniot curve for shock waves."
+      },
+      {
+        "name": "Entropy production",
+        "contribution": "The entropy production theorem states that the total entropy change of a system is equal to the entropy production rate. In this paper, we prove that the Hugoniot curve for vanishing viscosity shock waves satisfies the entropy production theorem."
+      }
+    ]
+  },
+  "2605.06122v1": {
+    "title": "Variationally Compressing Quantum Circuits to Approximate Nonadiabatic Molecular Quantum Dynamics",
+    "url": "http://arxiv.org/abs/2605.06122v1",
+    "concepts": [
+      {
+        "name": "Quantum Trotter Error",
+        "contribution": "Theoretical and numerical analysis of the error introduced by approximating kinetic operators using compressed ansatz structures, highlighting its impact on accuracy and computational resources."
+      },
+      {
+        "name": "Fast-Forwarding in Quantum Simulation",
+        "contribution": "Experimental demonstration of fast-forwarding for near-term quantum hardware, showcasing the feasibility of compressed Trotter terms for simulating nonadiabatic dynamics with reduced resource requirements."
+      },
+      {
+        "name": "Variational Circuit Compression",
+        "contribution": "Development and optimization of compressed ansatz structures for approximating kinetic and potential operators in quantum simulations, enabling efficient simulation of complex systems with reduced computational overhead."
+      }
+    ]
+  },
+  "2605.06101v1": {
+    "title": "Syndrome resampling enhances quantum error correction thresholds",
+    "url": "http://arxiv.org/abs/2605.06101v1",
+    "concepts": [
+      {
+        "name": "Quantum Error Correction",
+        "contribution": "This paper demonstrates real-time and low-latency quantum error correction with superconducting qubits, a crucial step towards large-scale quantum computing."
+      },
+      {
+        "name": "Superconducting Qubits",
+        "contribution": "The researchers use trapped-ion quantum computers to benchmark logical three-qubit quantum Fourier transform encoded in the Steane code."
+      },
+      {
+        "name": "Quantum Computing",
+        "contribution": "This paper contributes to the development of large-scale quantum computing by demonstrating better-than-physical error rates for quantum error correction."
+      }
+    ]
+  },
+  "2605.06099v1": {
+    "title": "Non-relativistic limit of generalized relativistic Pauli operators by Feynman-Kac formulae",
+    "url": "http://arxiv.org/abs/2605.06099v1",
+    "concepts": [
+      {
+        "name": "Pauli Operator",
+        "contribution": "A self-adjoint operator acting on L2(R3; C2) under a strong restriction, representing the Hamiltonian of a quantum spin system with a vector potential."
+      },
+      {
+        "name": "Spin Process",
+        "contribution": "A random process describing the spin component of a quantum system, used to introduce randomness in path integral calculations."
+      },
+      {
+        "name": "Poisson Process",
+        "contribution": "A Poisson process with intensity 1 is used to generate a sequence of random variables that simulate the evolution of the spin system."
+      },
+      {
+        "name": "Path Integral Representation",
+        "contribution": "A path integral representation is derived for e-tHZ2(a,b) using the spin process and Poisson process, allowing for the calculation of quantum expectations in the non-relativistic limit."
+      }
+    ]
+  },
+  "2605.06093v1": {
+    "title": "Singularity Resolution in Quantum Cosmology via Page-Wootters Formalism",
+    "url": "http://arxiv.org/abs/2605.06093v1",
+    "concepts": [
+      {
+        "name": "Quantum Mechanics and Relational Framework",
+        "contribution": "This paper introduces a relational framework that resolves the classical singularity within quantum mechanics by correlating the clock and the remaining degree of freedom, allowing for a nonsingular description of the universe."
+      },
+      {
+        "name": "Parameter Space Constraints",
+        "contribution": "The paper imposes constraints on the parameter space to ensure that the probability density remains positive definite, ensuring physical regions of the parameter space where the model is valid."
+      },
+      {
+        "name": "Correlation between Clock and Remaining Degree of Freedom",
+        "contribution": "The correlation between the clock and the remaining degree of freedom gives rise to an effective notion of dynamics, allowing for the emergence of relational dynamics within quantum mechanics."
+      }
+    ]
+  },
+  "2605.06079v1": {
+    "title": "Accessory Parameter of Confluent Heun Equations, Voros Periods and classical irregular conformal blocks",
+    "url": "http://arxiv.org/abs/2605.06079v1",
+    "concepts": [
+      {
+        "name": "Accessory Parameter",
+        "contribution": "A formal power series-valued implicit function that gives the classical limit of a (regular or irregular) conformal block, derived from the Voros period associated with an appropriate cycle."
+      },
+      {
+        "name": "Voros Period",
+        "contribution": "A quantity that characterizes the monodromy data of a Schrèdinger-type equation, related to the Borel sum of a conformal block."
+      },
+      {
+        "name": "Conformal Block",
+        "contribution": "A mathematical object that encodes information about a two-dimensional conformal field theory, related to the accessory parameter and Voros period."
+      },
+      {
+        "name": "Heun Equation",
+        "contribution": "A doubly confluent differential equation used as an example in this paper to demonstrate the method for deriving the accessory parameter from the Voros period."
+      }
+    ]
+  },
+  "2605.06075v1": {
+    "title": "Probing critical phases in quasiperiodic systems via subsystem information capacity",
+    "url": "http://arxiv.org/abs/2605.06075v1",
+    "concepts": [
+      {
+        "name": "Steady-state entanglement entropy",
+        "contribution": "A quantitative measure of the distribution of entanglement in a quantum system, which can reveal the internal structure of critical phases and distinguish them from non-critical phases."
+      },
+      {
+        "name": "Critical phase",
+        "contribution": "A regime in a many-body system where the correlations between degrees of freedom are power-law correlated with distance, leading to emergent quantum phases of matter. The SIC can be used to identify critical phases and distinguish them from non-critical phases."
+      },
+      {
+        "name": "Extended Harper model",
+        "contribution": "A solvable model that supports a phase transition between extended and localized states, which serves as a benchmark for studying criticality in one-dimensional systems. The SIC can be used to study the internal structure of this critical phase."
+      },
+      {
+        "name": "Spin-orbit coupled atomic chain",
+        "contribution": "A model that combines spin-orbit coupling with quasiperiodic on-site potentials, which hosts a range of phases including extended, localized, and critical regimes. The SIC can be used to study the internal structure of these critical phases."
+      }
+    ]
+  },
+  "2605.06022v1": {
+    "title": "Lattice fermion formulation via Physics-Informed Neural Networks: Ginsparg-Wilson relation and Overlap fermions",
+    "url": "http://arxiv.org/abs/2605.06022v1",
+    "concepts": [
+      {
+        "name": "Physics-Informed Neural Networks",
+        "contribution": "This paper introduces the use of Physics-Informed Neural Networks to systemically construct, optimize, and theoretically explore lattice fermions."
+      },
+      {
+        "name": "Ginsparg-Wilson relation",
+        "contribution": "The paper demonstrates that a neural network can learn the overlap mapping from the Wilson kernel and recover the Ginsparg-Wilson relation as a soft constraint."
+      },
+      {
+        "name": "Doubler decoupling conditions",
+        "contribution": "The paper integrates doubler decoupling conditions into the loss function to treat the formulation of the Dirac operator as a constraint-driven optimization problem."
+      },
+      {
+        "name": "Machine-assisted algebraic discovery",
+        "contribution": "The paper elevates this framework from operator construction to machine-assisted algebraic discovery, finding alternative GW-type algebraic structures within a generalized polynomial ansatz."
+      }
+    ]
+  },
+  "2605.06019v1": {
+    "title": "Geometric Means and Lebesgue-type Decomposition of Completely Positive Maps",
+    "url": "http://arxiv.org/abs/2605.06019v1",
+    "concepts": [
+      {
+        "name": "Operator Mean",
+        "contribution": "This paper introduces the operator mean as a generalization of the geometric and harmonic means, providing a framework for comparing positive operators in Banach spaces."
+      },
+      {
+        "name": "Kubo-Ando Theory",
+        "contribution": "The Kubo-Ando theory provides a mathematical foundation for the comparison of positive operators, including the introduction of operator means such as geometric and harmonic means."
+      },
+      {
+        "name": "Choi Matrix",
+        "contribution": "The Choi matrix is a fundamental tool in the study of operator means, providing a representation of every CP map and enabling the comparison of operators through their matrix representations."
+      }
+    ]
+  },
+  "2605.06008v1": {
+    "title": "Dzyaloshinskii-Moriya interaction as a coherence diagnostic for chirality-induced spin selectivity",
+    "url": "http://arxiv.org/abs/2605.06008v1",
+    "concepts": [
+      {
+        "name": "Chirality-induced spin selectivity",
+        "contribution": "This paper explores the phenomenon of chirality-induced spin selectivity, which refers to the selective interaction between electrons and chiral molecules. The authors develop a theoretical framework for understanding this effect, including the role of exchange interactions and the impact of environmental factors on the spin polarization of individual molecules. This research has significant implications for the development of quantum computing and spintronics technologies."
+      },
+      {
+        "name": "Quantum computing",
+        "contribution": "This paper demonstrates the potential for chirality-induced spin selectivity to be used in quantum computing applications, such as quantum error correction and quantum teleportation. The authors propose a novel approach to harnessing this effect using chiral molecules as quantum bits. This research advances our understanding of the fundamental principles underlying quantum computation."
+      },
+      {
+        "name": "Spintronics",
+        "contribution": "This paper highlights the importance of spintronics in the development of new technologies, including quantum computing and spin-based devices. The authors explore the potential for chirality-induced spin selectivity to be used in spintronics applications, such as spin transfer torque and magnetoresistance. This research has significant implications for the advancement of spintronics technologies."
+      },
+      {
+        "name": "Exchange interactions",
+        "contribution": "This paper develops a theoretical framework for understanding exchange interactions in chiral molecules, including the role of orbital hybridization and environmental factors. The authors propose a new approach to calculating exchange energies using a combination of density functional theory and Monte Carlo simulations. This research advances our understanding of the fundamental principles underlying spintronics technologies."
+      }
+    ]
+  },
+  "2605.06001v1": {
+    "title": "Ultraviolet-Finite Perturbative Expansion of Quantum Gravity at Null Infinity",
+    "url": "http://arxiv.org/abs/2605.06001v1",
+    "concepts": [
+      {
+        "name": "Null Infinity",
+        "contribution": "A fundamental object in the study of gravitational waves, where the spacetime is asymptotically flat and the curvature is zero."
+      },
+      {
+        "name": "Finiteness of Perturbative Series",
+        "contribution": "The absence of ultraviolet divergences in the perturbative series, making it free of renormalization, a key feature of the Null-Infinity-Set-Up (NFS) formulation."
+      },
+      {
+        "name": "Asymptotic Quantization",
+        "contribution": "A framework for quantizing gravitational theories, which relies on the asymptotic flatness of spacetime at null infinity and provides a well-defined phase space for physical observables."
+      },
+      {
+        "name": "BCFW Recursion",
+        "contribution": "An analytic tool for computing scattering amplitudes in particle physics, which has been extended to gravitational theories using the Null-Infinity-Set-Up (NFS) formulation."
+      }
+    ]
+  },
+  "2605.05961v1": {
+    "title": "Passive Imaging with Quantum Advantage",
+    "url": "http://arxiv.org/abs/2605.05961v1",
+    "concepts": [
+      {
+        "name": "Quantum Estimation Theory",
+        "contribution": "This paper applies quantum estimation theory to develop a new method for super-resolution imaging, which improves the resolution of optical images beyond the diffraction limit."
+      },
+      {
+        "name": "Optical Tomography",
+        "contribution": "The authors use optical tomography to reconstruct the frequency components of light from an image, enabling the recovery of detailed spatial information from a limited number of measurements."
+      },
+      {
+        "name": "Super-Resolution Imaging",
+        "contribution": "The paper focuses on developing a new method for super-resolution imaging that leverages quantum estimation theory and optical tomography to achieve higher resolution than traditional methods."
+      },
+      {
+        "name": "Far-Field Linear Optical Imaging",
+        "contribution": "The authors explore the application of far-field linear optical imaging techniques, which enable the recovery of detailed spatial information from a limited number of measurements in far-field settings."
+      }
+    ]
+  },
+  "2605.05942v1": {
+    "title": "Architecture Shape Governs QNN Trainability: Jacobian Null Space Growth and Parameter Efficiency",
+    "url": "http://arxiv.org/abs/2605.05942v1",
+    "concepts": [
+      {
+        "name": "CP1 Geometry",
+        "contribution": "The CP1 geometry of a single-qubit state space forces all P gradient directions to share a common global phase, confining the column space of the coefficient matching Jacobian J."
+      },
+      {
+        "name": "Spectral Knee",
+        "contribution": "A threshold-free measure of the number of genuinely exploitable gradient directions, shifting rightward with each extra FM layer and frozen at the theoretical rank ceiling for trainable blocks route."
+      },
+      {
+        "name": "Interpolation Threshold",
+        "contribution": "Once the parameter count P exceeds the training set size ntrain, the system becomes overdetermined and gradient descent finds an interpolating solution, a purely classical phenomenon with no dependence on quantum structure."
+      },
+      {
+        "name": "Larocca Underparameterization Regime",
+        "contribution": "A regime where adding encoding layers increases the parameter demand faster than the added parameters satisfy it, resulting in plateaus or decreased performance."
+      }
+    ]
+  },
+  "2605.05916v1": {
+    "title": "Squeezed Gravitons and One-Loop Self-Energy under Light-Cone Smearing",
+    "url": "http://arxiv.org/abs/2605.05916v1",
+    "concepts": [
+      {
+        "name": "Renormalization Group",
+        "contribution": "This paper applies the renormalization group to study the impact of light-cone smearing on UV divergences in momentum-space integrals."
+      },
+      {
+        "name": "Feynman Parameterization",
+        "contribution": "The Feynman parameterization is used to simplify the integral and remove the UV divergence, introducing the smearing parameter ⟨ˆσ2 1⟩."
+      },
+      {
+        "name": "Exponential Integral",
+        "contribution": "The exponential integral E1(x) appears as a result of integrating over s in the limit s →0, leading to a logarithmic divergence."
+      }
+    ]
+  },
+  "2605.05914v1": {
+    "title": "Quantum-enhanced Large Language Models on Quantum Hardware via Cayley Unitary Adapters",
+    "url": "http://arxiv.org/abs/2605.05914v1",
+    "concepts": [
+      {
+        "name": "Quantum Neural Networks",
+        "contribution": "This paper explores the application of quantum computing to neural networks, specifically in the context of language models."
+      },
+      {
+        "name": "Cayley Transform",
+        "contribution": "The authors utilize the Cayley transform to convert a block-diagonal unitary into a more efficient form that can be applied to projection layers"
+      },
+      {
+        "name": "Knowledge Distillation",
+        "contribution": "The paper employs knowledge distillation to transfer the parameters of a larger teacher model to smaller student models, improved with the addition of quantum-inspired adapters."
+      }
+    ]
+  },
+  "2605.05903v1": {
+    "title": "Trace anomaly, effective approach, and gravitational potential",
+    "url": "http://arxiv.org/abs/2605.05903v1",
+    "concepts": [
+      {
+        "name": "Trace Anomaly",
+        "contribution": "A measure of the difference between the predicted and observed behavior of a physical system, often used to describe the effects of quantum gravity on gravitational interactions."
+      },
+      {
+        "name": "Black Hole Physics",
+        "contribution": "The study of the properties and behavior of black holes, which are regions of spacetime where gravity is so strong that not even light can escape."
+      },
+      {
+        "name": "Schwarzschild Metric",
+        "contribution": "A solution to Einstein's field equations describing the spacetime around a spherical, non-rotating mass, such as a star or black hole."
+      },
+      {
+        "name": "Effective Field Theory",
+        "contribution": "An approach used to describe and predict the behavior of physical systems by incorporating known interactions and symmetries into a simplified model, often at energies far removed from those at which the fundamental theory is expected to be valid."
+      }
+    ]
+  },
+  "2605.05881v1": {
+    "title": "Surface-Code Thresholds and Qubit Footprints in Shuttling-Based Spin-Qubit Railways",
+    "url": "http://arxiv.org/abs/2605.05881v1",
+    "concepts": [
+      {
+        "name": "Rotated Surface Code",
+        "contribution": "A type of topological code that encodes a single logical qubit into an n-qubit system housed in a square lattice, with stabilizers corresponding to each face (or plaquette) of the lattice."
+      },
+      {
+        "name": "Stabilizer Code",
+        "contribution": "A class of quantum error correction codes that use stabilizers to detect and correct errors, with applications in quantum computing and quantum communication."
+      },
+      {
+        "name": "Shutting Down a Quantum Computer",
+        "contribution": "The process of intentionally shutting down a quantum computer to terminate the execution of a program or to erase the quantum states stored on the qubits."
+      }
+    ]
+  },
+  "2605.05841v1": {
+    "title": "Non-Abelian String-Breaking Dynamics on a Qudit Quantum Computer",
+    "url": "http://arxiv.org/abs/2605.05841v1",
+    "concepts": [
+      {
+        "name": "String Breaking",
+        "contribution": "Paper introduces a new method to observe string breaking dynamics in a (2+1)-dimensional lattice gauge theory using a trapped-ion quantum computer."
+      },
+      {
+        "name": "Quantum Simulation",
+        "contribution": "The paper demonstrates the application of quantum simulation techniques to study complex physics systems, including string-breaking dynamics in gauge theories."
+      },
+      {
+        "name": "Lattice Gauge Theory",
+        "contribution": "The research utilizes lattice gauge theory as a theoretical framework to understand the behavior of strings and other fundamental particles in high-energy physics."
+      },
+      {
+        "name": "Trapped-Ion Quantum Computer",
+        "contribution": "The authors employ a trapped-ion quantum computer as a experimental platform to investigate string-breaking dynamics and its applications in physics."
+      }
+    ]
+  },
+  "2605.05830v1": {
+    "title": "Three wave mixing vacuum squeezing generation in a SNAIL-based Traveling-Wave Parametric Amplifier with alternated flux polarity",
+    "url": "http://arxiv.org/abs/2605.05830v1",
+    "concepts": [
+      {
+        "name": "Josephson junction",
+        "contribution": "This paper explores the properties of Josephson junctions in a superconducting quantum circuit, specifically their role in enabling quantum computing and simulation applications."
+      },
+      {
+        "name": "Superconducting quantum interference device (SQUID)",
+        "contribution": "The authors demonstrate the use of SQUIDs to measure the output of a superconducting quantum circuit, providing insights into the behavior of these devices in complex systems."
+      },
+      {
+        "name": "Quantum error correction",
+        "contribution": "This paper discusses the challenges and opportunities of implementing quantum error correction techniques in superconducting quantum circuits, highlighting the need for robust protocols to mitigate decoherence and errors."
+      },
+      {
+        "name": "Cryogenic engineering",
+        "contribution": "The authors highlight the importance of cryogenic engineering in enabling the development and operation of superconducting quantum circuits at extremely low temperatures, requiring advanced cooling systems and materials science expertise."
+      }
+    ]
+  },
+  "2605.05827v1": {
+    "title": "Pontus-Mpemba effect in cavity quantum electrodynamics",
+    "url": "http://arxiv.org/abs/2605.05827v1",
+    "concepts": [
+      {
+        "name": "Quantum Pontus-Mpemba Effect",
+        "contribution": "A novel phenomenon where a sudden quench of cavity decay rate leads to accelerated relaxation in the dissipative Jaynes-Cummings model, with implications for quantum information processing and thermodynamics."
+      },
+      {
+        "name": "Dissipative Jaynes-Cummings Model",
+        "contribution": "A theoretical framework describing the interaction between a two-level atom and a cavity mode, which is widely used to study quantum optics and quantum computing phenomena."
+      },
+      {
+        "name": "Cavity Quantum Electrodynamics",
+        "contribution": "A field of study that combines quantum mechanics and electromagnetism to describe the behavior of light-matter interactions in cavities or resonators."
+      },
+      {
+        "name": "Quantum Information Processing",
+        "contribution": "A rapidly developing field that seeks to harness and control quantum systems for information storage, transmission, and processing, with potential applications in quantum computing, cryptography, and communication."
+      }
+    ]
+  },
+  "2605.05821v1": {
+    "title": "Quasi-normal modes of a multi-dimensional rotating Kerr black hole",
+    "url": "http://arxiv.org/abs/2605.05821v1",
+    "concepts": [
+      {
+        "name": "Null Vielbein",
+        "contribution": "A null vielbein is a mathematical construct used in differential geometry and theoretical physics to describe the geometry of spacetime. In this context, it is used as an auxiliary tool to simplify calculations and derive new results."
+      },
+      {
+        "name": "Spin Coefficients",
+        "contribution": "Spin coefficients are quantities that arise in the study of spinor-valued connections on principal bundles. They play a crucial role in the development of the Newman-Penrose formalism and are used to describe the behavior of spinors in curved spacetime."
+      },
+      {
+        "name": "Weyl Scalar",
+        "contribution": "The Weyl scalar is a quantity that describes the curvature of spacetime. It is defined as the trace of the Ricci tensor and is an important invariant in differential geometry and general relativity."
+      }
+    ]
+  },
+  "2605.05817v1": {
+    "title": "Classical General Relativity as a Non-Conservative Action-Dependent Field Theory",
+    "url": "http://arxiv.org/abs/2605.05817v1",
+    "concepts": [
+      {
+        "name": "Tetrad",
+        "contribution": "The tetrad eI is a conformal frame field used in the study of gravitation and general relativity, which is decomposed into a conformal factor and a field ˜eI with fixed determinant."
+      },
+      {
+        "name": "Spin Connection",
+        "contribution": "The spin connection ωI J is a gauge field that appears in the study of general relativity and gravitational physics, and is used to describe the connection between the tangent space and the orthonormal frame."
+      },
+      {
+        "name": "Herglotz Lagrangian",
+        "contribution": "The Herglotz Lagrangian is an action functional that incorporates a scaling symmetry of degree one, which is constructed from a scalar field Φ and its conjugate f."
+      },
+      {
+        "name": "Scaling Symmetry",
+        "contribution": "A scaling symmetry of degree one is a transformation that preserves the form of an action functional, while also preserving the physical properties of the system being described."
+      }
+    ]
+  },
+  "2605.05816v1": {
+    "title": "Massive hybrid stars within the extended three-flavor quark-meson diquark model",
+    "url": "http://arxiv.org/abs/2605.05816v1",
+    "concepts": [
+      {
+        "name": "Quark Gluon Plasma",
+        "contribution": "Describes the state of matter that is thought to have existed in the early universe, characterized by the deconfinement of quarks and gluons."
+      },
+      {
+        "name": "Chiral Effective Theory (chEFT)",
+        "contribution": "A theoretical framework used to describe the behavior of hadrons at low energies, taking into account the effects of chiral symmetry breaking."
+      },
+      {
+        "name": "PQCD",
+        "contribution": "A perturbative approach to Quantum Chromodynamics (QCD), used to calculate properties of hadrons and nuclei at high energies."
+      },
+      {
+        "name": "Strange Quark Condensate",
+        "contribution": "A theoretical construct that describes the behavior of strange quarks in nuclear matter, relevant for understanding the properties of hybrid stars."
+      }
+    ]
+  },
+  "2605.05815v1": {
+    "title": "Room temperature Purcell enhanced single erbium ions in silicon-carbide-on-insulator microring resonators",
+    "url": "http://arxiv.org/abs/2605.05815v1",
+    "concepts": [
+      {
+        "name": "Spin-photon interface",
+        "contribution": "This paper introduces a new spin-photon interface in silicon carbide, enabling coherent control of single spins with high-fidelity and long-lived coherence."
+      },
+      {
+        "name": "Single-color centers in silicon carbide",
+        "contribution": "The authors demonstrate the fabrication and integration of scalable single color centers in silicon carbide, paving the way for integrated quantum and nonlinear photonics."
+      },
+      {
+        "name": "Purcell enhancement of single-photon emitters",
+        "contribution": "This paper reports the first observation of Purcell enhancement of single-photon emitters in silicon, enabling efficient optical communication over long distances."
+      }
+    ]
+  },
+  "2605.05785v1": {
+    "title": "Optical Pulling Force in Carbon Nanotubes: Manifestation of Nonlocal Conductivity",
+    "url": "http://arxiv.org/abs/2605.05785v1",
+    "concepts": [
+      {
+        "name": "Optical Force in Carbon Nanotubes",
+        "contribution": "This paper introduces a theory for the optical force acting on carbon nanotubes (CNTs) with nonlocal conductivity, taking into account edge effects due to finite length."
+      },
+      {
+        "name": "Nonlocal Conductivity",
+        "contribution": "The theory considers spatial dispersion, a nonlocal effect that arises from the finite size of CNTs and leads to a non-conservative force."
+      },
+      {
+        "name": "Spatial Dispersion",
+        "contribution": "This paper explores the impact of spatial dispersion on the optical force in CNTs, showing its significance for understanding the behavior of these nanostructures."
+      },
+      {
+        "name": "Carbon Nanotubes",
+        "contribution": "The work focuses on achiral CNTs in vacuum, but future generalizations can be made to more complex structures, such as suspended CNTs or CNTs in different environments."
+      }
+    ]
+  },
+  "2605.05783v1": {
+    "title": "Isomer depletion via nuclear excitation by inelastic electron scattering",
+    "url": "http://arxiv.org/abs/2605.05783v1",
+    "concepts": [
+      {
+        "name": "Isomer Depletion via NEIES",
+        "contribution": "This paper explores the process of isomer depletion via Nuclear Electric Excitation and Scattering (NEIES), which involves the excitation of a nucleus at an isomeric state through NEIES and subsequent decay to the ground state. The authors investigate the NEIES cross sections for various isotopes and their effects on isomer depletion. This work has significant implications for energy storage materials, as it provides insight into the mechanisms underlying the depleting of nuclear isomers."
+      },
+      {
+        "name": "Nuclear Electric Excitation and Scattering (NEIES)",
+        "contribution": "This paper introduces Nuclear Electric Excitation and Scattering (NEIES) as a process that excites a nucleus through the interaction with an incoming electron. The authors discuss the selection rules, angular momentum quantum numbers, and energy dependence of NEIES cross sections for various nuclear transitions."
+      },
+      {
+        "name": "Energy Storage Materials",
+        "contribution": "This research contributes to the understanding of energy storage materials by investigating the isomer depletion via NEIES. The study of isomer deple- tion mechanisms provides valuable insights into the long-term stability and performance of these materials, which are crucial for various applications in fields such as medicine, industry, and nuclear energy."
+      },
+      {
+        "name": "Isomeric States",
+        "contribution": "This paper focuses on the study of isomeric states, specifically their decay modes and mechanisms. The authors explore the role of NEIES in the depleting of nuclear isomers and its implications for energy storage materials. Understanding the behavior of isomeric states is essential for optimizing the performance and longevity of these materials."
+      }
+    ]
+  },
+  "2605.05764v1": {
+    "title": "Weighted Phase-Space Paths for Exact Wigner Dynamics",
+    "url": "http://arxiv.org/abs/2605.05764v1",
+    "concepts": [
+      {
+        "name": "Wigner Function",
+        "contribution": "The Wigner function is a mathematical representation of the quantum state, which is used to describe the quantum system in phase space. This paper explores the properties and applications of the Wigner function, particularly in the context of exact dynamics and dynamical nonclassicality."
+      },
+      {
+        "name": "Moyal Residual",
+        "contribution": "The Moyal residual is a correction term that arises in the evolution of the Wigner function, which represents the difference between the exact dynamics and the Fokker-Planck closure. This paper studies the properties and importance of the Moyal residual in understanding dynamical nonclassicality."
+      },
+      {
+        "name": "Signed Path Representation",
+        "contribution": "The signed path representation is a new formulation of the Wigner function, which takes into account the sign of the contributions to the Wigner function. This paper explores the properties and applications of this representation, particularly in understanding dynamical nonclassicality."
+      },
+      {
+        "name": "Fluctuation Relations",
+        "contribution": "This paper introduces a new type of fluctuation relation that compares forward and reversed weighted path contributions, rather than just positive probabilities. This relation provides insights into the nature of quantum dynamics and can be used to diagnose dynamical nonclassicality."
+      }
+    ]
+  },
+  "2605.05721v1": {
+    "title": "Electronic and Photonic Integration of Single Quantum Emitters in 2D Materials",
+    "url": "http://arxiv.org/abs/2605.05721v1",
+    "concepts": [
+      {
+        "name": "Vertical Graphene/hBN/WSe2 Tunnel-Junction LED",
+        "contribution": "Demonstrates the fabrication and operation of an atomically thin quantum light-emitting diode (QLED) based on a vertical graphene/hBN/WSe2 heterostructure, showing electrical excitation of monolayer WSe2 with localized emission near threshold."
+      },
+      {
+        "name": "Lateral Split-Gate p-i-n Junction",
+        "contribution": "Introduces an electrostatically defined junction for confining electron-hole overlap to a designed intrinsic in-plane recombination zone, enabling deterministic and electrically driven single-photon emission from localized defects in monolayer TMDs."
+      },
+      {
+        "name": "Double-Barrier Vertical Graphene/hBN/WSe2 LED",
+        "contribution": "Explores the effect of thin hBN tunnel barriers on carrier injection and defect emission in a vertical graphene/hBN/WSe2 heterostructure, demonstrating the potential for narrowband, antibunched emission from localized defects."
+      }
+    ]
+  },
+  "2605.05663v1": {
+    "title": "Scalar-Field Reconstruction of Ricci--Gauss--Bonnet Dark Energy in Hořava--Lifshitz Cosmology",
+    "url": "http://arxiv.org/abs/2605.05663v1",
+    "concepts": [
+      {
+        "name": "Holographic Principle",
+        "contribution": "The holographic principle is a theoretical framework in physics that proposes that the information contained in a region of spacetime can be encoded on its surface. This paper applies the holographic principle to the study of dark energy and its relation to Hoêva-Lifshitz gravity."
+      },
+      {
+        "name": "Hoêva-Lifshitz Gravity",
+        "contribution": "Hoêva-Lifshitz gravity is a theoretical framework that describes the behavior of gravity at high energies and densities. This paper uses Hoêva-Lifshitz gravity to model dark energy and its relation to the universe's evolution."
+      },
+      {
+        "name": "Dark Energy",
+        "contribution": "Dark energy is a hypothetical form of energy that is thought to be responsible for the accelerating expansion of the universe. This paper studies the properties of dark energy in the context of Hoêva-Lifshitz gravity and its relation to the holographic principle."
+      },
+      {
+        "name": "Ricci-Gauss-Bonnet Theories",
+        "contribution": "The Ricci-Gauss-Bonnet theories are a class of gravitational theories that describe the behavior of spacetime in terms of curvature and topology. This paper applies these theories to study dark energy and its relation to Hoêva-Lifshitz gravity."
+      }
+    ]
+  },
+  "2605.05658v1": {
+    "title": "Quantum-classical solvation hydrodynamics: Hamiltonian functionals and dissipation",
+    "url": "http://arxiv.org/abs/2605.05658v1",
+    "concepts": [
+      {
+        "name": "Hamiltonian Mechanics",
+        "contribution": "This paper establishes a Hamiltonian framework for modeling mixed quantum-classical hydrodynamics, providing a unified approach to understanding the dynamics of fluid flows and scalar function transport."
+      },
+      {
+        "name": "Poisson Brackets",
+        "contribution": "The authors develop a systematic method for adding transported functions to Hamiltonian hydrodynamic systems, utilizing the Poisson bracket structure to capture the necessary equations of motion."
+      },
+      {
+        "name": "Hydrodynamic Closure",
+        "contribution": "This paper presents a novel approach to closing the mixed quantum-classical Koopman model within a Hamiltonian framework, providing a consistent and rigorous methodology for modeling complex fluid flows and scalar function transport."
+      },
+      {
+        "name": "Lie-Poisson Systems",
+        "contribution": "The authors demonstrate that the extended Poisson bracket structure introduced in this paper satisfies the defining properties of Lie-Poisson systems, ensuring the validity and consistency of the resulting equations of motion."
+      }
+    ]
+  },
+  "2605.05635v1": {
+    "title": "Adaptive ray tracing and photon ring signatures of rotating dark-matter-dressed black holes",
+    "url": "http://arxiv.org/abs/2605.05635v1",
+    "concepts": [
+      {
+        "name": "Black Hole Physics",
+        "contribution": "This paper explores the effects of dark matter on rotating black hole spacetimes, providing new insights into their behavior and appearance."
+      },
+      {
+        "name": "General Relativity",
+        "contribution": "The paper uses general relativity to describe the metric and other fundamental aspects of rotating black hole spacetimes in the presence of dark matter."
+      },
+      {
+        "name": "Numerical Methods",
+        "contribution": "The authors employ numerical methods to simulate the behavior of photons emitted by a observer screen placed near a rotating black hole, allowing them to study the effects of dark matter on the observed image."
+      }
+    ]
+  },
+  "2605.05634v1": {
+    "title": "Relativistic mean-field study of the neutron star inner crust using the asymmetric finite difference method",
+    "url": "http://arxiv.org/abs/2605.05634v1",
+    "concepts": [
+      {
+        "name": "Effective Nucleon Mass",
+        "contribution": "An increase in effective nucleon mass tends to diminish the nucleon density in the central region, producing an effect comparable to that of increasing the symmetry energy slope L while maintaining the effective mass."
+      },
+      {
+        "name": "Symmetry Energy Slope",
+        "contribution": "The parameter set with a larger symmetry energy slope generally exhibits a higher neutron density at the surface, whereas a smaller slope yields a higher central density."
+      },
+      {
+        "name": "Inner Crust Environment",
+        "contribution": "Extremely neutron-rich nuclei like 950Sn exhibit complex nucleon density distributions that arise from quantum shell effects and the interplay between different nuclear forces."
+      }
+    ]
+  },
+  "2605.05633v1": {
+    "title": "Eigenstate-Selective Entangled Two-Photon Absorption in Monolayer WSe$_2$",
+    "url": "http://arxiv.org/abs/2605.05633v1",
+    "concepts": [
+      {
+        "name": "Pumping Rate Modulation",
+        "contribution": "This paper introduces a novel method for tuning the pumping rate of cross-circular biphoton states, which is controlled by the Bell phase and results in a zero excitation to dark eigenstates at φ = π."
+      },
+      {
+        "name": "Exchange Symmetry",
+        "contribution": "The model exploits the exchange symmetry within the configuration basis to enforce a zero excitation to dark eigenstates at φ = π, which is a novel feature of this paper."
+      },
+      {
+        "name": "Spectral Detuning",
+        "contribution": "This paper shows that spectral detuning can be used to suppress excitation to bright eigenstates, and that the combination of spectral detuning and exchange symmetry results in a suppression of excitation to dark eigenstates at φ = π."
+      },
+      {
+        "name": "Geometric Coupling Efficiency",
+        "contribution": "The paper introduces geometric coupling efficiencies as a measure of how strongly each eigenstate couples to the cross-circular sector, which are used to quantify the pumping rate modulation."
+      }
+    ]
+  },
+  "2605.05631v1": {
+    "title": "Wandering Exponents and the Free Energy of the High-Dimensional Elastic Polymer",
+    "url": "http://arxiv.org/abs/2605.05631v1",
+    "concepts": [
+      {
+        "name": "Wandering Exponent",
+        "contribution": "The wandering exponent is a measure of how fast a polymer chain moves in space and time, and it has implications for our understanding of transport phenomena in disordered systems."
+      },
+      {
+        "name": "Diffusivity",
+        "contribution": "A model is considered diffusive if its wandering exponent is 1/2, meaning that the chain moves at a moderate pace. This is in contrast to superdiffusive models, which exhibit faster-than-average motion."
+      },
+      {
+        "name": "Superdiffusivity",
+        "contribution": "In superdiffusive models, the wandering exponent exceeds 1/2, indicating that the polymer chain moves more quickly than average. This can lead to enhanced transport properties and unique behaviors."
+      },
+      {
+        "name": "Quenched Free Energy",
+        "contribution": "The quenched free energy is a measure of the average energy of a system with randomly distributed parameters. In this paper, we use the Parisi functional to compute the asymptotic free energy of a polymer chain model."
+      }
+    ]
+  },
+  "2605.05625v1": {
+    "title": "Quantum Kernels for Parity-Structured Classification: A Hybrid Pipeline",
+    "url": "http://arxiv.org/abs/2605.05625v1",
+    "concepts": [
+      {
+        "name": "Quantum Machine Learning",
+        "contribution": "This paper proposes a quantum machine learning approach that leverages the exponential capacity of quantum circuits to capture complex combinatorial structures, outperforming classical baseline methods on parity-structured classification tasks."
+      },
+      {
+        "name": "Parity Complexity",
+        "contribution": "The paper reveals a phase transition around n=9, where binary encoding alone suffices for low-n values, but the quantum ZZ kernel provides a growing advantage as n increases, highlighting the importance of representation design in quantum machine learning."
+      },
+      {
+        "name": "Kernel Methods",
+        "contribution": "This work demonstrates that quantum machine learning models are indeed kernel methods, leveraging the feature Hilbert space to capture complex relationships between data points and outperforming classical baseline methods on supervised learning tasks."
+      },
+      {
+        "name": "Quantum Advantage",
+        "contribution": "The paper does not claim a general 'quantum advantage' in complexity-theoretic terms but rather highlights the importance of representation design in quantum machine learning, demonstrating a proof-of-concept on synthetic data and paving the way for future research."
+      }
+    ]
+  },
+  "2605.05624v1": {
+    "title": "The General Structure of Trilinear Equations",
+    "url": "http://arxiv.org/abs/2605.05624v1",
+    "concepts": [
+      {
+        "name": "Tomimatsu-Sato Spacetime",
+        "contribution": "The Tomimatsu-Sato spacetime is a type of axially symmetric black hole solution in general relativity, first introduced by Akio Tomimatsu and Hiroshi Sato in 1972. This paper provides an example of the YTSF integrable structure in the context of Tomimatsu-Sato geometry."
+      },
+      {
+        "name": "YTSF Integrable Structure",
+        "contribution": "The YTSF (Yang-Tau-Soliton Functional) integrable structure is a mathematical framework for studying nonlinear evolution equations. This paper demonstrates its application to the stationary axisymmetric Einstein field equations, providing an example of its realization in Tomimatsu-Sato geometry."
+      },
+      {
+        "name": "Soliton Equations",
+        "contribution": "Soliton equations are a type of nonlinear partial differential equation that describe the propagation of solitons, stable waves with finite energy. This paper uses soliton theory as a background to study the YTSF integrable structure in the context of Tomimatsu-Sato geometry."
+      },
+      {
+        "name": "Gravitational Field Equations",
+        "contribution": "The gravitational field equations are a set of nonlinear partial differential equations that describe the motion of mass and energy in curved spacetime. This paper uses the YTSF integrable structure to study the solutions to these equations, specifically in the context of Tomimatsu-Sato geometry."
+      }
+    ]
+  },
+  "2605.05617v1": {
+    "title": "Static-Field Tunneling Ionization in Space-Fractional Quantum Mechanics",
+    "url": "http://arxiv.org/abs/2605.05617v1",
+    "concepts": [
+      {
+        "name": "Tunneling Ionization",
+        "contribution": "The paper presents a new tunneling ionization model that incorporates the nonlocal nature of the kinetic energy, leading to a more accurate description of strong-field physics."
+      },
+      {
+        "name": "Fractional Power-Law Dispersion",
+        "contribution": "The model introduces a parameter α that governs the dispersion relation, allowing for a smooth transition from classical to quantum behavior and providing a new framework for understanding nonlocal transport effects."
+      },
+      {
+        "name": "Nonlocal Kinetic Energy",
+        "contribution": "The paper explores the implications of nonlocal kinetic energy on tunneling ionization, highlighting its importance in understanding the complex dynamics involved in strong-field physics."
+      },
+      {
+        "name": "Strong-Field Physics",
+        "contribution": "The model is embedded within the broader framework of strong-field physics, ensuring continuity with established theories and providing a foundation for further research on continuum dynamics and recollision-based phenomena."
+      }
+    ]
+  },
+  "2605.05608v1": {
+    "title": "Dynamical Signatures of Floquet Topology in Wave Packet Dynamics",
+    "url": "http://arxiv.org/abs/2605.05608v1",
+    "concepts": [
+      {
+        "name": "Floquet Topology",
+        "contribution": "A theoretical framework for understanding the topological properties of periodic systems under time-dependent perturbations."
+      },
+      {
+        "name": "Zak Phase",
+        "contribution": "A quantification of the topological charge of a system, related to its Floquet Hamiltonian and used as a bulk invariant."
+      },
+      {
+        "name": "Band Inversion",
+        "contribution": "A transition in a periodic system's band structure, resulting from changes in the Floquet Hamiltonian and leading to distinct dynamical behavior."
+      },
+      {
+        "name": "Time-Dependent Quantum Systems",
+        "contribution": "Systems where the Hamiltonian or other parameters change with time, requiring a description of their evolution over parameter space."
+      }
+    ]
+  },
+  "2605.05605v1": {
+    "title": "Mixed Global Dynamics of the Forced Vibro-Impact Oscillator with Coulomb Friction and its Symplectic Structure, KAM Tori, and Persistence",
+    "url": "http://arxiv.org/abs/2605.05605v1",
+    "concepts": [
+      {
+        "name": "Filippov differential inclusion",
+        "contribution": "Provides a rigorous framework for modeling the forced vibro-impact oscillator, including the Filippov set-valued vector field F and its associated inequalities."
+      },
+      {
+        "name": "Lift construction",
+        "contribution": "Establishes the conjugacy between the lifted flow and the original Filippov flow, restricted to non-sticking trajectories, through a universal-cover construction."
+      },
+      {
+        "name": "KAM theorem for elliptic non-sticking periodic orbits",
+        "contribution": "Proves the existence of invariant smooth closed curves around any elliptic non-resonant non-degenerate non-sticking T-periodic orbit using the KAM theorem, with measure complement O(δ5/2)."
+      },
+      {
+        "name": "Saddle-center bifurcation",
+        "contribution": "Characterizes the parameter-dependent saddle-center value and establishes a non-degenerate bifurcation at f = 4(2F + Rω2 - Fπ)/π2, with explicit local normal form derived by the Morse lemma."
+      }
+    ]
+  },
+  "2605.05604v1": {
+    "title": "Temporal Coarse-Graining as the Origin of Macroscopic Friction in Quantum Spin Chains via Data-Driven Liouvillian Extraction",
+    "url": "http://arxiv.org/abs/2605.05604v1",
+    "concepts": [
+      {
+        "name": "Liouvillian",
+        "contribution": "A mathematical framework for describing the evolution of quantum systems."
+      },
+      {
+        "name": "Temporal Coarse-Graining",
+        "contribution": "The process of averaging out high-frequency fluctuations to reveal macroscopic behavior."
+      },
+      {
+        "name": "Einstein Relation",
+        "contribution": "A fundamental connection between transport coefficients and the diffusion coefficient in materials."
+      }
+    ]
+  },
+  "2605.05589v1": {
+    "title": "Galois Solvability of Finite-Size Bethe Solutions in the Heisenberg Chain",
+    "url": "http://arxiv.org/abs/2605.05589v1",
+    "concepts": [
+      {
+        "name": "Bethe Ansatz",
+        "contribution": "A mathematical approach used to solve exactly solvable quantum many-body systems, including the Heisenberg chain. This paper extends the known symbolic ground states of the Heisenberg chain to up to the ten-site case, revealing that finite-size Bethe solutions can rapidly develop unsolvable algebraic complexity despite the integrability of the underlying model."
+      },
+      {
+        "name": "Galois Groups",
+        "contribution": "A mathematical concept used to determine the solvability of polynomial equations. In this paper, it is used to analyze the irreducible polynomials that govern the Bethe roots and their unsolvability for chains of eight or more sites."
+      },
+      {
+        "name": "Heisenberg Chain",
+        "contribution": "A one-dimensional quantum many-body system with antiferromagnetic interactions. This paper presents explicit symbolic ground states for this model up to the ten-site case, providing insight into the behavior of finite-size Bethe solutions and their limitations."
+      },
+      {
+        "name": "Quantum Integrability",
+        "contribution": "A property of quantum many-body systems that allows them to be exactly solved. This paper explores the relationship between integrability and exact solvability, demonstrating that these concepts are distinct despite the integrability of certain models."
+      }
+    ]
+  },
+  "2605.05565v1": {
+    "title": "Squeezed spectra and back-to-back correlations of protons and antiprotons at RHIC energies",
+    "url": "http://arxiv.org/abs/2605.05565v1",
+    "concepts": [
+      {
+        "name": "Squeezing effect in heavy-ion collisions",
+        "contribution": "The squeezing effect is a phenomenon observed in relativistic heavy-ion collisions where particle interactions within the medium induce an in-medium mass modification, leading to squeezed back-to-back correlations of particle-antiparticle pairs."
+      },
+      {
+        "name": "In-medium mass modification",
+        "contribution": "An in-medium mass modification refers to a change in the mass of particles within the hot and dense matter created in relativistic heavy-ion collisions, which can lead to various effects such as squeezing back-to-back correlations and changes in single-particle invariant momentum distributions."
+      },
+      {
+        "name": "Back-to-back correlation",
+        "contribution": "A back-to-back correlation refers to a phenomenon where two particles are found in the opposite direction of each other, often observed in relativistic heavy-ion collisions. The squeezing effect can lead to an increase in back-to-back correlations due to in-medium mass modifications."
+      },
+      {
+        "name": "Heavy-ion collision experiments",
+        "contribution": "Heavy-ion collision experiments aim to study the properties of the quark-gluon plasma created in these collisions, including the effects of in-medium mass modifications and squeezing back-to-back correlations. The RHIC (Relativistic Heavy Ion Collider) at Brookhaven National Laboratory is one such experiment."
+      }
+    ]
+  },
+  "2605.05537v1": {
+    "title": "Implications of the LISA stochastic signal from eccentric stellar mass black hole binaries in vacuum",
+    "url": "http://arxiv.org/abs/2605.05537v1",
+    "concepts": [
+      {
+        "name": "Stochastic Gravitational Wave Background",
+        "contribution": "This paper explores the detection and analysis of stochastic gravitational wave background signals from eccentric stellar black hole binaries in the LISA band."
+      },
+      {
+        "name": "Eccentric Stellar Black Hole Binaries",
+        "contribution": "The study focuses on the characteristics of eccentric sBBHs, including their initial orbital frequencies, eccentricities, and thermal distributions."
+      },
+      {
+        "name": "LISA Sensitivity and Detection Thresholds",
+        "contribution": "This paper evaluates the sensitivity of LISA to detect stochastic signals from eccentric sBBHs and assesses the impact of Galactic foreground noise on signal detection."
+      },
+      {
+        "name": "Bayesian Inference and Model Parameters",
+        "contribution": "The authors perform a comprehensive Bayesian analysis to estimate the initial eccentricity, orbital frequency, and other model parameters of detected sBBHs."
+      }
+    ]
+  }
+}

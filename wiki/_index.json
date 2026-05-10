@@ -1,0 +1,1442 @@
+{
+  "ADM Variables": {
+    "path": "wiki\\adm_variables.md",
+    "paper_count": 1
+  },
+  "Accelerating Expansion": {
+    "path": "wiki\\accelerating_expansion.md",
+    "paper_count": 1
+  },
+  "Accessory Parameter": {
+    "path": "wiki\\accessory_parameter.md",
+    "paper_count": 1
+  },
+  "Active Regime": {
+    "path": "wiki\\active_regime.md",
+    "paper_count": 1
+  },
+  "Algebraic Ring Framework": {
+    "path": "wiki\\algebraic_ring_framework.md",
+    "paper_count": 1
+  },
+  "Altermagnetism": {
+    "path": "wiki\\altermagnetism.md",
+    "paper_count": 1
+  },
+  "Anomaly theory": {
+    "path": "wiki\\anomaly_theory.md",
+    "paper_count": 1
+  },
+  "Anticommutator": {
+    "path": "wiki\\anticommutator.md",
+    "paper_count": 1
+  },
+  "Arithmetic Mean - Geometric Mean (AM-GM) Sequence": {
+    "path": "wiki\\arithmetic_mean_geometric_mean_am_gm_sequence.md",
+    "paper_count": 1
+  },
+  "Asymptotic Quantization": {
+    "path": "wiki\\asymptotic_quantization.md",
+    "paper_count": 1
+  },
+  "Axial Modes": {
+    "path": "wiki\\axial_modes.md",
+    "paper_count": 1
+  },
+  "BCFW Recursion": {
+    "path": "wiki\\bcfw_recursion.md",
+    "paper_count": 1
+  },
+  "BRST Cohomology": {
+    "path": "wiki\\brst_cohomology.md",
+    "paper_count": 1
+  },
+  "Back-to-back correlation": {
+    "path": "wiki\\back_to_back_correlation.md",
+    "paper_count": 1
+  },
+  "Band Inversion": {
+    "path": "wiki\\band_inversion.md",
+    "paper_count": 1
+  },
+  "Bayesian Inference and Model Parameters": {
+    "path": "wiki\\bayesian_inference_and_model_parameters.md",
+    "paper_count": 1
+  },
+  "Bayesian Inference for Astronomy": {
+    "path": "wiki\\bayesian_inference_for_astronomy.md",
+    "paper_count": 1
+  },
+  "Belief Propagation Decoding": {
+    "path": "wiki\\belief_propagation_decoding.md",
+    "paper_count": 1
+  },
+  "Bell-CHSH Inequality": {
+    "path": "wiki\\bell_chsh_inequality.md",
+    "paper_count": 1
+  },
+  "Bethe Ansatz": {
+    "path": "wiki\\bethe_ansatz.md",
+    "paper_count": 1
+  },
+  "Bifurcation in Yang-Mills Theory": {
+    "path": "wiki\\bifurcation_in_yang_mills_theory.md",
+    "paper_count": 1
+  },
+  "Bisognano-Wichmann Theorem": {
+    "path": "wiki\\bisognano_wichmann_theorem.md",
+    "paper_count": 1
+  },
+  "Black Hole Physics": {
+    "path": "wiki\\black_hole_physics.md",
+    "paper_count": 2
+  },
+  "Black hole thermodynamics": {
+    "path": "wiki\\black_hole_thermodynamics.md",
+    "paper_count": 1
+  },
+  "Bose-Einstein Condensates": {
+    "path": "wiki\\bose_einstein_condensates.md",
+    "paper_count": 1
+  },
+  "CP1 Geometry": {
+    "path": "wiki\\cp1_geometry.md",
+    "paper_count": 1
+  },
+  "Carbon Nanotubes": {
+    "path": "wiki\\carbon_nanotubes.md",
+    "paper_count": 1
+  },
+  "Cartan Decomposition": {
+    "path": "wiki\\cartan_decomposition.md",
+    "paper_count": 1
+  },
+  "Cavity Quantum Electrodynamics": {
+    "path": "wiki\\cavity_quantum_electrodynamics.md",
+    "paper_count": 2
+  },
+  "Cavity-Optomechanics": {
+    "path": "wiki\\cavity_optomechanics.md",
+    "paper_count": 1
+  },
+  "Cayley Transform": {
+    "path": "wiki\\cayley_transform.md",
+    "paper_count": 1
+  },
+  "Chain Wavefunctions": {
+    "path": "wiki\\chain_wavefunctions.md",
+    "paper_count": 1
+  },
+  "Chiral Effective Theory (chEFT)": {
+    "path": "wiki\\chiral_effective_theory_cheft.md",
+    "paper_count": 1
+  },
+  "Chiral Symmetry": {
+    "path": "wiki\\chiral_symmetry.md",
+    "paper_count": 1
+  },
+  "Chirality-induced spin selectivity": {
+    "path": "wiki\\chirality_induced_spin_selectivity.md",
+    "paper_count": 1
+  },
+  "Choi Matrix": {
+    "path": "wiki\\choi_matrix.md",
+    "paper_count": 1
+  },
+  "Condensation defect": {
+    "path": "wiki\\condensation_defect.md",
+    "paper_count": 1
+  },
+  "Conformal Block": {
+    "path": "wiki\\conformal_block.md",
+    "paper_count": 1
+  },
+  "Contamination in Astronomical Data": {
+    "path": "wiki\\contamination_in_astronomical_data.md",
+    "paper_count": 1
+  },
+  "Contraction Coefficients": {
+    "path": "wiki\\contraction_coefficients.md",
+    "paper_count": 1
+  },
+  "Coprime Numbers": {
+    "path": "wiki\\coprime_numbers.md",
+    "paper_count": 1
+  },
+  "Coproduct Formula": {
+    "path": "wiki\\coproduct_formula.md",
+    "paper_count": 1
+  },
+  "Correlation between Clock and Remaining Degree of Freedom": {
+    "path": "wiki\\correlation_between_clock_and_remaining_degree_of_freedom.md",
+    "paper_count": 1
+  },
+  "Cosmic String Ensemble": {
+    "path": "wiki\\cosmic_string_ensemble.md",
+    "paper_count": 1
+  },
+  "Cosmological Constant": {
+    "path": "wiki\\cosmological_constant.md",
+    "paper_count": 1
+  },
+  "Critical Potentials": {
+    "path": "wiki\\critical_potentials.md",
+    "paper_count": 1
+  },
+  "Critical phase": {
+    "path": "wiki\\critical_phase.md",
+    "paper_count": 1
+  },
+  "Cryogenic engineering": {
+    "path": "wiki\\cryogenic_engineering.md",
+    "paper_count": 1
+  },
+  "D-Plate": {
+    "path": "wiki\\d_plate.md",
+    "paper_count": 1
+  },
+  "Dark Energy": {
+    "path": "wiki\\dark_energy.md",
+    "paper_count": 1
+  },
+  "Data Processing Inequalities": {
+    "path": "wiki\\data_processing_inequalities.md",
+    "paper_count": 1
+  },
+  "Deflection Potential": {
+    "path": "wiki\\deflection_potential.md",
+    "paper_count": 1
+  },
+  "Degenerate States and Mode Number Conservation": {
+    "path": "wiki\\degenerate_states_and_mode_number_conservation.md",
+    "paper_count": 1
+  },
+  "Detuned Rabi Frequency": {
+    "path": "wiki\\detuned_rabi_frequency.md",
+    "paper_count": 1
+  },
+  "Diffusivity": {
+    "path": "wiki\\diffusivity.md",
+    "paper_count": 1
+  },
+  "Dimensionality": {
+    "path": "wiki\\dimensionality.md",
+    "paper_count": 1
+  },
+  "Dissipative Jaynes-Cummings Model": {
+    "path": "wiki\\dissipative_jaynes_cummings_model.md",
+    "paper_count": 1
+  },
+  "Distributor (or Bimodule)": {
+    "path": "wiki\\distributor_or_bimodule.md",
+    "paper_count": 1
+  },
+  "Domain Wall Fermions": {
+    "path": "wiki\\domain_wall_fermions.md",
+    "paper_count": 1
+  },
+  "Double-Barrier Vertical Graphene/hBN/WSe2 LED": {
+    "path": "wiki\\double_barrier_vertical_graphene_hbn_wse2_led.md",
+    "paper_count": 1
+  },
+  "Doubler decoupling conditions": {
+    "path": "wiki\\doubler_decoupling_conditions.md",
+    "paper_count": 1
+  },
+  "Duality Rotations": {
+    "path": "wiki\\duality_rotations.md",
+    "paper_count": 1
+  },
+  "Dynamical Stability": {
+    "path": "wiki\\dynamical_stability.md",
+    "paper_count": 1
+  },
+  "Dynamical Systems": {
+    "path": "wiki\\dynamical_systems.md",
+    "paper_count": 1
+  },
+  "Eccentric Stellar Black Hole Binaries": {
+    "path": "wiki\\eccentric_stellar_black_hole_binaries.md",
+    "paper_count": 1
+  },
+  "Effective Field Theory": {
+    "path": "wiki\\effective_field_theory.md",
+    "paper_count": 1
+  },
+  "Effective Field Theory (EFT)": {
+    "path": "wiki\\effective_field_theory_eft.md",
+    "paper_count": 1
+  },
+  "Effective Nucleon Mass": {
+    "path": "wiki\\effective_nucleon_mass.md",
+    "paper_count": 1
+  },
+  "Einstein Relation": {
+    "path": "wiki\\einstein_relation.md",
+    "paper_count": 1
+  },
+  "Energy Storage Materials": {
+    "path": "wiki\\energy_storage_materials.md",
+    "paper_count": 1
+  },
+  "Enriched Category Theory": {
+    "path": "wiki\\enriched_category_theory.md",
+    "paper_count": 1
+  },
+  "Entanglement Entropy": {
+    "path": "wiki\\entanglement_entropy.md",
+    "paper_count": 1
+  },
+  "Entropy production": {
+    "path": "wiki\\entropy_production.md",
+    "paper_count": 1
+  },
+  "Equidistribution of Eigenfunctions": {
+    "path": "wiki\\equidistribution_of_eigenfunctions.md",
+    "paper_count": 1
+  },
+  "Exchange Symmetry": {
+    "path": "wiki\\exchange_symmetry.md",
+    "paper_count": 1
+  },
+  "Exchange interactions": {
+    "path": "wiki\\exchange_interactions.md",
+    "paper_count": 1
+  },
+  "Exponential Integral": {
+    "path": "wiki\\exponential_integral.md",
+    "paper_count": 1
+  },
+  "Extended Harper model": {
+    "path": "wiki\\extended_harper_model.md",
+    "paper_count": 1
+  },
+  "Far-Field Linear Optical Imaging": {
+    "path": "wiki\\far_field_linear_optical_imaging.md",
+    "paper_count": 1
+  },
+  "Fast-Forwarding in Quantum Simulation": {
+    "path": "wiki\\fast_forwarding_in_quantum_simulation.md",
+    "paper_count": 1
+  },
+  "Feller-Markov process": {
+    "path": "wiki\\feller_markov_process.md",
+    "paper_count": 1
+  },
+  "Fermi's Golden Rule": {
+    "path": "wiki\\fermi_s_golden_rule.md",
+    "paper_count": 1
+  },
+  "Feynman Parameterization": {
+    "path": "wiki\\feynman_parameterization.md",
+    "paper_count": 1
+  },
+  "Filippov differential inclusion": {
+    "path": "wiki\\filippov_differential_inclusion.md",
+    "paper_count": 1
+  },
+  "Finite-Time Scaling": {
+    "path": "wiki\\finite_time_scaling.md",
+    "paper_count": 1
+  },
+  "Finiteness of Perturbative Series": {
+    "path": "wiki\\finiteness_of_perturbative_series.md",
+    "paper_count": 1
+  },
+  "First-Order Phase Transition": {
+    "path": "wiki\\first_order_phase_transition.md",
+    "paper_count": 1
+  },
+  "First-Row CKM Unitarity Tests": {
+    "path": "wiki\\first_row_ckm_unitarity_tests.md",
+    "paper_count": 1
+  },
+  "Flavor Sum Rule": {
+    "path": "wiki\\flavor_sum_rule.md",
+    "paper_count": 1
+  },
+  "Floquet Topology": {
+    "path": "wiki\\floquet_topology.md",
+    "paper_count": 1
+  },
+  "Fluctuation Relations": {
+    "path": "wiki\\fluctuation_relations.md",
+    "paper_count": 1
+  },
+  "Flux Noise": {
+    "path": "wiki\\flux_noise.md",
+    "paper_count": 1
+  },
+  "Flux Ratio": {
+    "path": "wiki\\flux_ratio.md",
+    "paper_count": 1
+  },
+  "Follow-up Observations in Astronomy": {
+    "path": "wiki\\follow_up_observations_in_astronomy.md",
+    "paper_count": 1
+  },
+  "Fourier Engineering": {
+    "path": "wiki\\fourier_engineering.md",
+    "paper_count": 1
+  },
+  "Fractional Power-Law Dispersion": {
+    "path": "wiki\\fractional_power_law_dispersion.md",
+    "paper_count": 1
+  },
+  "Free Energy Density": {
+    "path": "wiki\\free_energy_density.md",
+    "paper_count": 1
+  },
+  "Fr\u00eechet Derivative": {
+    "path": "wiki\\fr_chet_derivative.md",
+    "paper_count": 1
+  },
+  "GLN(C) Brownian motion": {
+    "path": "wiki\\gln_c_brownian_motion.md",
+    "paper_count": 1
+  },
+  "Galilean Expansion": {
+    "path": "wiki\\galilean_expansion.md",
+    "paper_count": 1
+  },
+  "Galois Groups": {
+    "path": "wiki\\galois_groups.md",
+    "paper_count": 1
+  },
+  "Gauge symmetry": {
+    "path": "wiki\\gauge_symmetry.md",
+    "paper_count": 1
+  },
+  "Gauge-Invariant Meson Mass Formula": {
+    "path": "wiki\\gauge_invariant_meson_mass_formula.md",
+    "paper_count": 1
+  },
+  "General Relativity": {
+    "path": "wiki\\general_relativity.md",
+    "paper_count": 1
+  },
+  "Generalized Eigenvalue Problem": {
+    "path": "wiki\\generalized_eigenvalue_problem.md",
+    "paper_count": 1
+  },
+  "Generative Adversarial Networks (GANs)": {
+    "path": "wiki\\generative_adversarial_networks_gans.md",
+    "paper_count": 1
+  },
+  "Geometric Coupling Efficiency": {
+    "path": "wiki\\geometric_coupling_efficiency.md",
+    "paper_count": 1
+  },
+  "Geometric Optics": {
+    "path": "wiki\\geometric_optics.md",
+    "paper_count": 1
+  },
+  "Gibbs State Generation": {
+    "path": "wiki\\gibbs_state_generation.md",
+    "paper_count": 1
+  },
+  "Ginsparg-Wilson relation": {
+    "path": "wiki\\ginsparg_wilson_relation.md",
+    "paper_count": 1
+  },
+  "Gravitational Field Equations": {
+    "path": "wiki\\gravitational_field_equations.md",
+    "paper_count": 1
+  },
+  "Gravitational Self-Interaction": {
+    "path": "wiki\\gravitational_self_interaction.md",
+    "paper_count": 1
+  },
+  "Gravitational Waves": {
+    "path": "wiki\\gravitational_waves.md",
+    "paper_count": 1
+  },
+  "Gray code ordering": {
+    "path": "wiki\\gray_code_ordering.md",
+    "paper_count": 1
+  },
+  "Gribov Problem": {
+    "path": "wiki\\gribov_problem.md",
+    "paper_count": 1
+  },
+  "Ground State Existence": {
+    "path": "wiki\\ground_state_existence.md",
+    "paper_count": 1
+  },
+  "Half-spacetime gauging": {
+    "path": "wiki\\half_spacetime_gauging.md",
+    "paper_count": 1
+  },
+  "Hamiltonian Mechanics": {
+    "path": "wiki\\hamiltonian_mechanics.md",
+    "paper_count": 1
+  },
+  "Hamiltonian Systems": {
+    "path": "wiki\\hamiltonian_systems.md",
+    "paper_count": 1
+  },
+  "Hartle-Hawking State": {
+    "path": "wiki\\hartle_hawking_state.md",
+    "paper_count": 1
+  },
+  "Heavy Ion Collisions": {
+    "path": "wiki\\heavy_ion_collisions.md",
+    "paper_count": 1
+  },
+  "Heavy Quark Spin Relaxation": {
+    "path": "wiki\\heavy_quark_spin_relaxation.md",
+    "paper_count": 1
+  },
+  "Heavy-ion collision experiments": {
+    "path": "wiki\\heavy_ion_collision_experiments.md",
+    "paper_count": 1
+  },
+  "Heisenberg Chain": {
+    "path": "wiki\\heisenberg_chain.md",
+    "paper_count": 1
+  },
+  "Herglotz Lagrangian": {
+    "path": "wiki\\herglotz_lagrangian.md",
+    "paper_count": 1
+  },
+  "Heun Equation": {
+    "path": "wiki\\heun_equation.md",
+    "paper_count": 1
+  },
+  "Holographic Principle": {
+    "path": "wiki\\holographic_principle.md",
+    "paper_count": 1
+  },
+  "Ho\u00eava-Lifshitz Gravity": {
+    "path": "wiki\\ho_va_lifshitz_gravity.md",
+    "paper_count": 1
+  },
+  "Hugoniot curve": {
+    "path": "wiki\\hugoniot_curve.md",
+    "paper_count": 1
+  },
+  "Hydrodynamic Closure": {
+    "path": "wiki\\hydrodynamic_closure.md",
+    "paper_count": 1
+  },
+  "In-medium mass modification": {
+    "path": "wiki\\in_medium_mass_modification.md",
+    "paper_count": 1
+  },
+  "Inertial Spin Dynamics": {
+    "path": "wiki\\inertial_spin_dynamics.md",
+    "paper_count": 1
+  },
+  "Inner Crust Environment": {
+    "path": "wiki\\inner_crust_environment.md",
+    "paper_count": 1
+  },
+  "Interpolation Threshold": {
+    "path": "wiki\\interpolation_threshold.md",
+    "paper_count": 1
+  },
+  "Ion Traps": {
+    "path": "wiki\\ion_traps.md",
+    "paper_count": 1
+  },
+  "Isomer Depletion via NEIES": {
+    "path": "wiki\\isomer_depletion_via_neies.md",
+    "paper_count": 1
+  },
+  "Isomeric States": {
+    "path": "wiki\\isomeric_states.md",
+    "paper_count": 1
+  },
+  "Isospin Transport Ratio": {
+    "path": "wiki\\isospin_transport_ratio.md",
+    "paper_count": 1
+  },
+  "Ji Spin Sum Rule": {
+    "path": "wiki\\ji_spin_sum_rule.md",
+    "paper_count": 1
+  },
+  "Josephson Junction": {
+    "path": "wiki\\josephson_junction.md",
+    "paper_count": 1
+  },
+  "Josephson junction": {
+    "path": "wiki\\josephson_junction.md",
+    "paper_count": 1
+  },
+  "KAM theorem for elliptic non-sticking periodic orbits": {
+    "path": "wiki\\kam_theorem_for_elliptic_non_sticking_periodic_orbits.md",
+    "paper_count": 1
+  },
+  "Kernel Methods": {
+    "path": "wiki\\kernel_methods.md",
+    "paper_count": 1
+  },
+  "Kerr Metric": {
+    "path": "wiki\\kerr_metric.md",
+    "paper_count": 1
+  },
+  "Kibble-Zurek Mechanism": {
+    "path": "wiki\\kibble_zurek_mechanism.md",
+    "paper_count": 1
+  },
+  "Knowledge Distillation": {
+    "path": "wiki\\knowledge_distillation.md",
+    "paper_count": 1
+  },
+  "Kubo-Ando Theory": {
+    "path": "wiki\\kubo_ando_theory.md",
+    "paper_count": 1
+  },
+  "Kubo-Thermalization Correspondence": {
+    "path": "wiki\\kubo_thermalization_correspondence.md",
+    "paper_count": 1
+  },
+  "LDPC Codes": {
+    "path": "wiki\\ldpc_codes.md",
+    "paper_count": 1
+  },
+  "LISA Sensitivity and Detection Thresholds": {
+    "path": "wiki\\lisa_sensitivity_and_detection_thresholds.md",
+    "paper_count": 1
+  },
+  "Landau-Level Projection": {
+    "path": "wiki\\landau_level_projection.md",
+    "paper_count": 1
+  },
+  "Landau-Lifshitz-Gilbert Equation": {
+    "path": "wiki\\landau_lifshitz_gilbert_equation.md",
+    "paper_count": 1
+  },
+  "Larocca Underparameterization Regime": {
+    "path": "wiki\\larocca_underparameterization_regime.md",
+    "paper_count": 1
+  },
+  "Lateral Split-Gate p-i-n Junction": {
+    "path": "wiki\\lateral_split_gate_p_i_n_junction.md",
+    "paper_count": 1
+  },
+  "Lattice Gauge Theory": {
+    "path": "wiki\\lattice_gauge_theory.md",
+    "paper_count": 1
+  },
+  "Lattice QCD": {
+    "path": "wiki\\lattice_qcd.md",
+    "paper_count": 1
+  },
+  "Legendre invariant metrics": {
+    "path": "wiki\\legendre_invariant_metrics.md",
+    "paper_count": 1
+  },
+  "Lens Equation": {
+    "path": "wiki\\lens_equation.md",
+    "paper_count": 1
+  },
+  "Lie-Poisson Systems": {
+    "path": "wiki\\lie_poisson_systems.md",
+    "paper_count": 1
+  },
+  "Lift construction": {
+    "path": "wiki\\lift_construction.md",
+    "paper_count": 1
+  },
+  "Linear Regime": {
+    "path": "wiki\\linear_regime.md",
+    "paper_count": 1
+  },
+  "Liouville Theory": {
+    "path": "wiki\\liouville_theory.md",
+    "paper_count": 1
+  },
+  "Liouvillian": {
+    "path": "wiki\\liouvillian.md",
+    "paper_count": 1
+  },
+  "Mach-Zehnder Interferometer": {
+    "path": "wiki\\mach_zehnder_interferometer.md",
+    "paper_count": 1
+  },
+  "Machine Learning": {
+    "path": "wiki\\machine_learning.md",
+    "paper_count": 1
+  },
+  "Machine-assisted algebraic discovery": {
+    "path": "wiki\\machine_assisted_algebraic_discovery.md",
+    "paper_count": 1
+  },
+  "Magnetic Field Generation": {
+    "path": "wiki\\magnetic_field_generation.md",
+    "paper_count": 1
+  },
+  "Magnetic Field in Quantum Chromodynamics": {
+    "path": "wiki\\magnetic_field_in_quantum_chromodynamics.md",
+    "paper_count": 1
+  },
+  "Magnetoelectric Coupling": {
+    "path": "wiki\\magnetoelectric_coupling.md",
+    "paper_count": 1
+  },
+  "Majorana Field": {
+    "path": "wiki\\majorana_field.md",
+    "paper_count": 1
+  },
+  "Many-Body Localization": {
+    "path": "wiki\\many_body_localization.md",
+    "paper_count": 2
+  },
+  "Matrix Product States": {
+    "path": "wiki\\matrix_product_states.md",
+    "paper_count": 1
+  },
+  "Matrix Sequences and Equidistribution": {
+    "path": "wiki\\matrix_sequences_and_equidistribution.md",
+    "paper_count": 1
+  },
+  "Matter-Radiation Equality": {
+    "path": "wiki\\matter_radiation_equality.md",
+    "paper_count": 1
+  },
+  "Metric geometry": {
+    "path": "wiki\\metric_geometry.md",
+    "paper_count": 1
+  },
+  "Momentum Sum Rule": {
+    "path": "wiki\\momentum_sum_rule.md",
+    "paper_count": 1
+  },
+  "Morse Functional": {
+    "path": "wiki\\morse_functional.md",
+    "paper_count": 1
+  },
+  "Moyal Residual": {
+    "path": "wiki\\moyal_residual.md",
+    "paper_count": 1
+  },
+  "Multiple Polylogarithms": {
+    "path": "wiki\\multiple_polylogarithms.md",
+    "paper_count": 1
+  },
+  "Multiscale Methods": {
+    "path": "wiki\\multiscale_methods.md",
+    "paper_count": 1
+  },
+  "Nanosecond Laser Ablation": {
+    "path": "wiki\\nanosecond_laser_ablation.md",
+    "paper_count": 1
+  },
+  "Noisy Intermediate-Scale Quantum (NISQ) Devices": {
+    "path": "wiki\\noisy_intermediate_scale_quantum_nisq_devices.md",
+    "paper_count": 1
+  },
+  "Non-Markovian Dynamics": {
+    "path": "wiki\\non_markovian_dynamics.md",
+    "paper_count": 1
+  },
+  "Non-Markovian Quantum Metrology": {
+    "path": "wiki\\non_markovian_quantum_metrology.md",
+    "paper_count": 1
+  },
+  "Non-Perturbative Corrections and Wick Contractions": {
+    "path": "wiki\\non_perturbative_corrections_and_wick_contractions.md",
+    "paper_count": 1
+  },
+  "Non-Perturbative Effects in AdS/CFT": {
+    "path": "wiki\\non_perturbative_effects_in_ads_cft.md",
+    "paper_count": 1
+  },
+  "Non-Unitary Dynamics": {
+    "path": "wiki\\non_unitary_dynamics.md",
+    "paper_count": 1
+  },
+  "Non-intersection property": {
+    "path": "wiki\\non_intersection_property.md",
+    "paper_count": 1
+  },
+  "Nonequilibrium Temperature Evolution": {
+    "path": "wiki\\nonequilibrium_temperature_evolution.md",
+    "paper_count": 1
+  },
+  "Nonequilibrium Thermodynamics": {
+    "path": "wiki\\nonequilibrium_thermodynamics.md",
+    "paper_count": 1
+  },
+  "Nonlocal Conductivity": {
+    "path": "wiki\\nonlocal_conductivity.md",
+    "paper_count": 1
+  },
+  "Nonlocal Kinetic Energy": {
+    "path": "wiki\\nonlocal_kinetic_energy.md",
+    "paper_count": 1
+  },
+  "Normal Form": {
+    "path": "wiki\\normal_form.md",
+    "paper_count": 1
+  },
+  "Nuclear Electric Excitation and Scattering (NEIES)": {
+    "path": "wiki\\nuclear_electric_excitation_and_scattering_neies.md",
+    "paper_count": 1
+  },
+  "Nuclear Equation of State": {
+    "path": "wiki\\nuclear_equation_of_state.md",
+    "paper_count": 1
+  },
+  "Null Infinity": {
+    "path": "wiki\\null_infinity.md",
+    "paper_count": 1
+  },
+  "Null Vielbein": {
+    "path": "wiki\\null_vielbein.md",
+    "paper_count": 1
+  },
+  "Numerical Methods": {
+    "path": "wiki\\numerical_methods.md",
+    "paper_count": 1
+  },
+  "Open Quantum Systems": {
+    "path": "wiki\\open_quantum_systems.md",
+    "paper_count": 1
+  },
+  "Operator Mean": {
+    "path": "wiki\\operator_mean.md",
+    "paper_count": 1
+  },
+  "Optical Force in Carbon Nanotubes": {
+    "path": "wiki\\optical_force_in_carbon_nanotubes.md",
+    "paper_count": 1
+  },
+  "Optical Lattices": {
+    "path": "wiki\\optical_lattices.md",
+    "paper_count": 1
+  },
+  "Optical Tomography": {
+    "path": "wiki\\optical_tomography.md",
+    "paper_count": 1
+  },
+  "Optimal Control Theory": {
+    "path": "wiki\\optimal_control_theory.md",
+    "paper_count": 1
+  },
+  "Optimization Algorithm for Finding Eigenvalues": {
+    "path": "wiki\\optimization_algorithm_for_finding_eigenvalues.md",
+    "paper_count": 1
+  },
+  "Optimization Performance": {
+    "path": "wiki\\optimization_performance.md",
+    "paper_count": 1
+  },
+  "Orbital Angular Momentum (OAM)": {
+    "path": "wiki\\orbital_angular_momentum_oam.md",
+    "paper_count": 1
+  },
+  "Out-of-Time-Order Correlator (OTOC)": {
+    "path": "wiki\\out_of_time_order_correlator_otoc.md",
+    "paper_count": 1
+  },
+  "P-Divisibility": {
+    "path": "wiki\\p_divisibility.md",
+    "paper_count": 1
+  },
+  "PQCD": {
+    "path": "wiki\\pqcd.md",
+    "paper_count": 1
+  },
+  "Parameter Space Constraints": {
+    "path": "wiki\\parameter_space_constraints.md",
+    "paper_count": 1
+  },
+  "Parametrized Analog Hamiltonian": {
+    "path": "wiki\\parametrized_analog_hamiltonian.md",
+    "paper_count": 1
+  },
+  "Parity Complexity": {
+    "path": "wiki\\parity_complexity.md",
+    "paper_count": 1
+  },
+  "Partition Function": {
+    "path": "wiki\\partition_function.md",
+    "paper_count": 1
+  },
+  "Path Integral Representation": {
+    "path": "wiki\\path_integral_representation.md",
+    "paper_count": 1
+  },
+  "Pauli Operator": {
+    "path": "wiki\\pauli_operator.md",
+    "paper_count": 1
+  },
+  "Perturbation Theory": {
+    "path": "wiki\\perturbation_theory.md",
+    "paper_count": 1
+  },
+  "Phase Transition": {
+    "path": "wiki\\phase_transition.md",
+    "paper_count": 2
+  },
+  "Physics-Informed Neural Networks": {
+    "path": "wiki\\physics_informed_neural_networks.md",
+    "paper_count": 1
+  },
+  "Planar layouts": {
+    "path": "wiki\\planar_layouts.md",
+    "paper_count": 1
+  },
+  "Poisson Brackets": {
+    "path": "wiki\\poisson_brackets.md",
+    "paper_count": 1
+  },
+  "Poisson Process": {
+    "path": "wiki\\poisson_process.md",
+    "paper_count": 1
+  },
+  "Polar Decomposition": {
+    "path": "wiki\\polar_decomposition.md",
+    "paper_count": 1
+  },
+  "Polytropic gas law": {
+    "path": "wiki\\polytropic_gas_law.md",
+    "paper_count": 1
+  },
+  "Pro-Tensor Network": {
+    "path": "wiki\\pro_tensor_network.md",
+    "paper_count": 1
+  },
+  "Protected Quantum Computing": {
+    "path": "wiki\\protected_quantum_computing.md",
+    "paper_count": 1
+  },
+  "Pumping Rate Modulation": {
+    "path": "wiki\\pumping_rate_modulation.md",
+    "paper_count": 1
+  },
+  "Purcell enhancement of single-photon emitters": {
+    "path": "wiki\\purcell_enhancement_of_single_photon_emitters.md",
+    "paper_count": 1
+  },
+  "Quantum Advantage": {
+    "path": "wiki\\quantum_advantage.md",
+    "paper_count": 1
+  },
+  "Quantum Algorithm for Calculating Eigenvalues": {
+    "path": "wiki\\quantum_algorithm_for_calculating_eigenvalues.md",
+    "paper_count": 1
+  },
+  "Quantum Annealing": {
+    "path": "wiki\\quantum_annealing.md",
+    "paper_count": 1
+  },
+  "Quantum Channel": {
+    "path": "wiki\\quantum_channel.md",
+    "paper_count": 1
+  },
+  "Quantum Channel Capacity": {
+    "path": "wiki\\quantum_channel_capacity.md",
+    "paper_count": 1
+  },
+  "Quantum Circuit Decomposition": {
+    "path": "wiki\\quantum_circuit_decomposition.md",
+    "paper_count": 1
+  },
+  "Quantum Computing": {
+    "path": "wiki\\quantum_computing.md",
+    "paper_count": 3
+  },
+  "Quantum Computing and Machine Learning": {
+    "path": "wiki\\quantum_computing_and_machine_learning.md",
+    "paper_count": 1
+  },
+  "Quantum Doeblin Coefficients": {
+    "path": "wiki\\quantum_doeblin_coefficients.md",
+    "paper_count": 1
+  },
+  "Quantum Dynamics": {
+    "path": "wiki\\quantum_dynamics.md",
+    "paper_count": 1
+  },
+  "Quantum Error Correction": {
+    "path": "wiki\\quantum_error_correction.md",
+    "paper_count": 2
+  },
+  "Quantum Error Mitigation": {
+    "path": "wiki\\quantum_error_mitigation.md",
+    "paper_count": 1
+  },
+  "Quantum Estimation Theory": {
+    "path": "wiki\\quantum_estimation_theory.md",
+    "paper_count": 1
+  },
+  "Quantum Fluctuations": {
+    "path": "wiki\\quantum_fluctuations.md",
+    "paper_count": 1
+  },
+  "Quantum Generative Adversarial Networks (QGANs)": {
+    "path": "wiki\\quantum_generative_adversarial_networks_qgans.md",
+    "paper_count": 1
+  },
+  "Quantum Information Processing": {
+    "path": "wiki\\quantum_information_processing.md",
+    "paper_count": 1
+  },
+  "Quantum Integrability": {
+    "path": "wiki\\quantum_integrability.md",
+    "paper_count": 1
+  },
+  "Quantum Key Distribution": {
+    "path": "wiki\\quantum_key_distribution.md",
+    "paper_count": 1
+  },
+  "Quantum Linear System Algebra (QLSA)": {
+    "path": "wiki\\quantum_linear_system_algebra_qlsa.md",
+    "paper_count": 1
+  },
+  "Quantum Machine Learning": {
+    "path": "wiki\\quantum_machine_learning.md",
+    "paper_count": 1
+  },
+  "Quantum Magnonics": {
+    "path": "wiki\\quantum_magnonics.md",
+    "paper_count": 1
+  },
+  "Quantum Magnons": {
+    "path": "wiki\\quantum_magnons.md",
+    "paper_count": 1
+  },
+  "Quantum Mechanics": {
+    "path": "wiki\\quantum_mechanics.md",
+    "paper_count": 1
+  },
+  "Quantum Mechanics and Relational Framework": {
+    "path": "wiki\\quantum_mechanics_and_relational_framework.md",
+    "paper_count": 1
+  },
+  "Quantum Neural Network": {
+    "path": "wiki\\quantum_neural_network.md",
+    "paper_count": 1
+  },
+  "Quantum Neural Networks": {
+    "path": "wiki\\quantum_neural_networks.md",
+    "paper_count": 1
+  },
+  "Quantum Pontus-Mpemba Effect": {
+    "path": "wiki\\quantum_pontus_mpemba_effect.md",
+    "paper_count": 1
+  },
+  "Quantum Process Tomography": {
+    "path": "wiki\\quantum_process_tomography.md",
+    "paper_count": 1
+  },
+  "Quantum Reed Muller codes": {
+    "path": "wiki\\quantum_reed_muller_codes.md",
+    "paper_count": 1
+  },
+  "Quantum Simulation": {
+    "path": "wiki\\quantum_simulation.md",
+    "paper_count": 2
+  },
+  "Quantum Spin Density Matrix": {
+    "path": "wiki\\quantum_spin_density_matrix.md",
+    "paper_count": 1
+  },
+  "Quantum Trotter Error": {
+    "path": "wiki\\quantum_trotter_error.md",
+    "paper_count": 1
+  },
+  "Quantum Walk": {
+    "path": "wiki\\quantum_walk.md",
+    "paper_count": 1
+  },
+  "Quantum computing": {
+    "path": "wiki\\quantum_computing.md",
+    "paper_count": 1
+  },
+  "Quantum error correction": {
+    "path": "wiki\\quantum_error_correction.md",
+    "paper_count": 1
+  },
+  "Quark Gluon Plasma": {
+    "path": "wiki\\quark_gluon_plasma.md",
+    "paper_count": 1
+  },
+  "Quasi-Projectile (QP)": {
+    "path": "wiki\\quasi_projectile_qp.md",
+    "paper_count": 1
+  },
+  "Quasi-homogeneous thermodynamics": {
+    "path": "wiki\\quasi_homogeneous_thermodynamics.md",
+    "paper_count": 1
+  },
+  "Quasinormal Modes": {
+    "path": "wiki\\quasinormal_modes.md",
+    "paper_count": 1
+  },
+  "Quenched Free Energy": {
+    "path": "wiki\\quenched_free_energy.md",
+    "paper_count": 1
+  },
+  "Relativistic Heavy Ion Collider (RHIC)": {
+    "path": "wiki\\relativistic_heavy_ion_collider_rhic.md",
+    "paper_count": 1
+  },
+  "Relativistic Quantum Key Distribution": {
+    "path": "wiki\\relativistic_quantum_key_distribution.md",
+    "paper_count": 1
+  },
+  "Renormalization Group": {
+    "path": "wiki\\renormalization_group.md",
+    "paper_count": 1
+  },
+  "Resonance Points": {
+    "path": "wiki\\resonance_points.md",
+    "paper_count": 1
+  },
+  "Rest-Mass Extraction Scheme": {
+    "path": "wiki\\rest_mass_extraction_scheme.md",
+    "paper_count": 1
+  },
+  "Rhombus Qubit": {
+    "path": "wiki\\rhombus_qubit.md",
+    "paper_count": 1
+  },
+  "Ricci-Gauss-Bonnet Theories": {
+    "path": "wiki\\ricci_gauss_bonnet_theories.md",
+    "paper_count": 1
+  },
+  "Riemannian Optimization": {
+    "path": "wiki\\riemannian_optimization.md",
+    "paper_count": 1
+  },
+  "Rotated Surface Code": {
+    "path": "wiki\\rotated_surface_code.md",
+    "paper_count": 1
+  },
+  "S-matrix bootstrap": {
+    "path": "wiki\\s_matrix_bootstrap.md",
+    "paper_count": 1
+  },
+  "SQCD (Supersymmetric QCD)": {
+    "path": "wiki\\sqcd_supersymmetric_qcd.md",
+    "paper_count": 1
+  },
+  "SU(2) Plate": {
+    "path": "wiki\\su_2_plate.md",
+    "paper_count": 1
+  },
+  "Saddle-center bifurcation": {
+    "path": "wiki\\saddle_center_bifurcation.md",
+    "paper_count": 1
+  },
+  "Saturation Regime": {
+    "path": "wiki\\saturation_regime.md",
+    "paper_count": 1
+  },
+  "Scalar-Tensor Theory": {
+    "path": "wiki\\scalar_tensor_theory.md",
+    "paper_count": 1
+  },
+  "Scaling Symmetry": {
+    "path": "wiki\\scaling_symmetry.md",
+    "paper_count": 1
+  },
+  "Scattering amplitudes": {
+    "path": "wiki\\scattering_amplitudes.md",
+    "paper_count": 1
+  },
+  "Schmidt Spectrum": {
+    "path": "wiki\\schmidt_spectrum.md",
+    "paper_count": 1
+  },
+  "Schr\u00f6dinger Equation": {
+    "path": "wiki\\schr_dinger_equation.md",
+    "paper_count": 1
+  },
+  "Schwarzschild Metric": {
+    "path": "wiki\\schwarzschild_metric.md",
+    "paper_count": 1
+  },
+  "Self-Duality": {
+    "path": "wiki\\self_duality.md",
+    "paper_count": 1
+  },
+  "Self-similarity": {
+    "path": "wiki\\self_similarity.md",
+    "paper_count": 1
+  },
+  "Shutting Down a Quantum Computer": {
+    "path": "wiki\\shutting_down_a_quantum_computer.md",
+    "paper_count": 1
+  },
+  "Signed Path Representation": {
+    "path": "wiki\\signed_path_representation.md",
+    "paper_count": 1
+  },
+  "Single Photon Emission": {
+    "path": "wiki\\single_photon_emission.md",
+    "paper_count": 1
+  },
+  "Single-color centers in silicon carbide": {
+    "path": "wiki\\single_color_centers_in_silicon_carbide.md",
+    "paper_count": 1
+  },
+  "Skew-Hamiltonian Structure": {
+    "path": "wiki\\skew_hamiltonian_structure.md",
+    "paper_count": 1
+  },
+  "Soliton Equations": {
+    "path": "wiki\\soliton_equations.md",
+    "paper_count": 1
+  },
+  "Spatial Dispersion": {
+    "path": "wiki\\spatial_dispersion.md",
+    "paper_count": 1
+  },
+  "Spectral Detuning": {
+    "path": "wiki\\spectral_detuning.md",
+    "paper_count": 1
+  },
+  "Spectral Knee": {
+    "path": "wiki\\spectral_knee.md",
+    "paper_count": 1
+  },
+  "Spin Coefficients": {
+    "path": "wiki\\spin_coefficients.md",
+    "paper_count": 1
+  },
+  "Spin Connection": {
+    "path": "wiki\\spin_connection.md",
+    "paper_count": 1
+  },
+  "Spin Model": {
+    "path": "wiki\\spin_model.md",
+    "paper_count": 1
+  },
+  "Spin Process": {
+    "path": "wiki\\spin_process.md",
+    "paper_count": 1
+  },
+  "Spin-Bath Interaction": {
+    "path": "wiki\\spin_bath_interaction.md",
+    "paper_count": 1
+  },
+  "Spin-Orbit Coupling": {
+    "path": "wiki\\spin_orbit_coupling.md",
+    "paper_count": 1
+  },
+  "Spin-orbit coupled atomic chain": {
+    "path": "wiki\\spin_orbit_coupled_atomic_chain.md",
+    "paper_count": 1
+  },
+  "Spin-photon interface": {
+    "path": "wiki\\spin_photon_interface.md",
+    "paper_count": 1
+  },
+  "Spintronics": {
+    "path": "wiki\\spintronics.md",
+    "paper_count": 1
+  },
+  "Spontaneous Symmetry Breaking": {
+    "path": "wiki\\spontaneous_symmetry_breaking.md",
+    "paper_count": 1
+  },
+  "Squeezing": {
+    "path": "wiki\\squeezing.md",
+    "paper_count": 1
+  },
+  "Squeezing effect in heavy-ion collisions": {
+    "path": "wiki\\squeezing_effect_in_heavy_ion_collisions.md",
+    "paper_count": 1
+  },
+  "Stabilizer Code": {
+    "path": "wiki\\stabilizer_code.md",
+    "paper_count": 1
+  },
+  "Stabilizer Codes": {
+    "path": "wiki\\stabilizer_codes.md",
+    "paper_count": 1
+  },
+  "Stationary Vacuum Solutions": {
+    "path": "wiki\\stationary_vacuum_solutions.md",
+    "paper_count": 1
+  },
+  "Steady-state entanglement entropy": {
+    "path": "wiki\\steady_state_entanglement_entropy.md",
+    "paper_count": 1
+  },
+  "Stochastic Control Theory": {
+    "path": "wiki\\stochastic_control_theory.md",
+    "paper_count": 1
+  },
+  "Stochastic Dynamics": {
+    "path": "wiki\\stochastic_dynamics.md",
+    "paper_count": 1
+  },
+  "Stochastic Gravitational Wave Background": {
+    "path": "wiki\\stochastic_gravitational_wave_background.md",
+    "paper_count": 1
+  },
+  "Stochastic evolution on Nevanlinna functions": {
+    "path": "wiki\\stochastic_evolution_on_nevanlinna_functions.md",
+    "paper_count": 1
+  },
+  "Strange Quark Condensate": {
+    "path": "wiki\\strange_quark_condensate.md",
+    "paper_count": 1
+  },
+  "String Breaking": {
+    "path": "wiki\\string_breaking.md",
+    "paper_count": 1
+  },
+  "Strong-Field Physics": {
+    "path": "wiki\\strong_field_physics.md",
+    "paper_count": 1
+  },
+  "Super-Resolution Imaging": {
+    "path": "wiki\\super_resolution_imaging.md",
+    "paper_count": 1
+  },
+  "Superconducting Qubit": {
+    "path": "wiki\\superconducting_qubit.md",
+    "paper_count": 1
+  },
+  "Superconducting Qubits": {
+    "path": "wiki\\superconducting_qubits.md",
+    "paper_count": 1
+  },
+  "Superconducting quantum interference device (SQUID)": {
+    "path": "wiki\\superconducting_quantum_interference_device_squid.md",
+    "paper_count": 1
+  },
+  "Superdiffusivity": {
+    "path": "wiki\\superdiffusivity.md",
+    "paper_count": 1
+  },
+  "Surface-Electrode Ion Traps": {
+    "path": "wiki\\surface_electrode_ion_traps.md",
+    "paper_count": 1
+  },
+  "SymTFT": {
+    "path": "wiki\\symtft.md",
+    "paper_count": 1
+  },
+  "Symmetry Energy Slope": {
+    "path": "wiki\\symmetry_energy_slope.md",
+    "paper_count": 1
+  },
+  "Symplectic Stiefel Manifold": {
+    "path": "wiki\\symplectic_stiefel_manifold.md",
+    "paper_count": 1
+  },
+  "TT Perturbations": {
+    "path": "wiki\\tt_perturbations.md",
+    "paper_count": 1
+  },
+  "Temporal Coarse-Graining": {
+    "path": "wiki\\temporal_coarse_graining.md",
+    "paper_count": 1
+  },
+  "Temporal Deformation of Cartan Fields": {
+    "path": "wiki\\temporal_deformation_of_cartan_fields.md",
+    "paper_count": 1
+  },
+  "Tensor Network": {
+    "path": "wiki\\tensor_network.md",
+    "paper_count": 1
+  },
+  "Tensor Networks": {
+    "path": "wiki\\tensor_networks.md",
+    "paper_count": 1
+  },
+  "Tetrad": {
+    "path": "wiki\\tetrad.md",
+    "paper_count": 1
+  },
+  "Time-Dependent Quantum Systems": {
+    "path": "wiki\\time_dependent_quantum_systems.md",
+    "paper_count": 1
+  },
+  "Tomimatsu-Sato Spacetime": {
+    "path": "wiki\\tomimatsu_sato_spacetime.md",
+    "paper_count": 1
+  },
+  "Tomita-Takesaki Modular Operator": {
+    "path": "wiki\\tomita_takesaki_modular_operator.md",
+    "paper_count": 1
+  },
+  "Topological Ensemble": {
+    "path": "wiki\\topological_ensemble.md",
+    "paper_count": 1
+  },
+  "Topological Quantum Computing": {
+    "path": "wiki\\topological_quantum_computing.md",
+    "paper_count": 1
+  },
+  "Trace Anomaly": {
+    "path": "wiki\\trace_anomaly.md",
+    "paper_count": 1
+  },
+  "Trapped-Ion Quantum Computer": {
+    "path": "wiki\\trapped_ion_quantum_computer.md",
+    "paper_count": 1
+  },
+  "Traveling wave solutions": {
+    "path": "wiki\\traveling_wave_solutions.md",
+    "paper_count": 1
+  },
+  "Tunable Quantum Devices": {
+    "path": "wiki\\tunable_quantum_devices.md",
+    "paper_count": 1
+  },
+  "Tunneling Ionization": {
+    "path": "wiki\\tunneling_ionization.md",
+    "paper_count": 1
+  },
+  "Vanishing viscosity": {
+    "path": "wiki\\vanishing_viscosity.md",
+    "paper_count": 1
+  },
+  "Variational Circuit Compression": {
+    "path": "wiki\\variational_circuit_compression.md",
+    "paper_count": 1
+  },
+  "Varnad's Theorem": {
+    "path": "wiki\\varnad_s_theorem.md",
+    "paper_count": 1
+  },
+  "Vertical Graphene/hBN/WSe2 Tunnel-Junction LED": {
+    "path": "wiki\\vertical_graphene_hbn_wse2_tunnel_junction_led.md",
+    "paper_count": 1
+  },
+  "Von Neumann Entanglement Entropy": {
+    "path": "wiki\\von_neumann_entanglement_entropy.md",
+    "paper_count": 1
+  },
+  "Voros Period": {
+    "path": "wiki\\voros_period.md",
+    "paper_count": 1
+  },
+  "Vorticity dynamics": {
+    "path": "wiki\\vorticity_dynamics.md",
+    "paper_count": 1
+  },
+  "Wandering Exponent": {
+    "path": "wiki\\wandering_exponent.md",
+    "paper_count": 1
+  },
+  "Weyl Scalar": {
+    "path": "wiki\\weyl_scalar.md",
+    "paper_count": 1
+  },
+  "Wigner Function": {
+    "path": "wiki\\wigner_function.md",
+    "paper_count": 1
+  },
+  "Witten's Large N Approximation": {
+    "path": "wiki\\witten_s_large_n_approximation.md",
+    "paper_count": 1
+  },
+  "YTSF Integrable Structure": {
+    "path": "wiki\\ytsf_integrable_structure.md",
+    "paper_count": 1
+  },
+  "Zak Phase": {
+    "path": "wiki\\zak_phase.md",
+    "paper_count": 1
+  }
+}
