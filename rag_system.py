@@ -36,6 +36,8 @@ TEXTS_PATH = "paper_texts.json"
 DEFAULT_K = 5
 CHUNK_WORDS = 400
 CHUNK_OVERLAP = 50
+MMR_LAMBDA = 0.6   # 0 = max diversity, 1 = max relevance
+MMR_FETCH = 50     # candidate pool size before MMR re-ranks
 
 
 def _split_into_chunks(text: str, chunk_size: int = CHUNK_WORDS, overlap: int = CHUNK_OVERLAP) -> list[str]:
@@ -119,15 +121,49 @@ def _load_index():
     return index, chunks
 
 
+def _mmr(query_emb: np.ndarray, candidate_ids: list[int], index, k: int, lambda_mult: float = MMR_LAMBDA) -> list[int]:
+    """
+    Maximal Marginal Relevance: select k chunks that balance relevance to the
+    query against redundancy with already-selected chunks.
+    """
+    if len(candidate_ids) <= k:
+        return candidate_ids
+
+    # Reconstruct candidate vectors from the FAISS index (already L2-normalised)
+    cand_embs = np.array([index.reconstruct(int(i)) for i in candidate_ids])  # (n, d)
+    query_sims = (cand_embs @ query_emb.T).flatten()  # cosine sim to query
+
+    selected, remaining = [], list(range(len(candidate_ids)))
+    while len(selected) < k and remaining:
+        if not selected:
+            best = int(np.argmax(query_sims[remaining]))
+        else:
+            sel_embs = cand_embs[selected]  # (s, d)
+            scores = [
+                lambda_mult * query_sims[i] - (1 - lambda_mult) * float(np.max(cand_embs[i] @ sel_embs.T))
+                for i in remaining
+            ]
+            best = remaining[int(np.argmax(scores))]
+        selected.append(best)
+        remaining.remove(best)
+
+    return [candidate_ids[i] for i in selected]
+
+
 def query(question: str, k: int = DEFAULT_K) -> dict:
     index, chunks = _load_index()
     embedder = SentenceTransformer(EMBED_MODEL)
 
     q_emb = embedder.encode([question], convert_to_numpy=True).astype("float32")
     faiss.normalize_L2(q_emb)
-    scores, indices = index.search(q_emb, k)
 
-    hits = [(chunks[i], float(scores[0][j])) for j, i in enumerate(indices[0])]
+    # Fetch a larger candidate pool then re-rank with MMR for diversity
+    fetch_n = min(index.ntotal, max(MMR_FETCH, k * 10))
+    raw_scores, raw_indices = index.search(q_emb, fetch_n)
+    candidate_ids = raw_indices[0].tolist()
+
+    selected_ids = _mmr(q_emb, candidate_ids, index, k)
+    hits = [(chunks[i], float(raw_scores[0][candidate_ids.index(i)])) for i in selected_ids]
     context = "\n\n---\n\n".join(c["text"] for c, _ in hits)
 
     prompt = (
@@ -138,7 +174,7 @@ def query(question: str, k: int = DEFAULT_K) -> dict:
         "If the excerpts don't contain enough information, say so."
     )
 
-    print(f"[RAG] Querying {OLLAMA_MODEL} with {k} retrieved chunks...")
+    print(f"[RAG] Querying {OLLAMA_MODEL} with {k} MMR-selected chunks (pool: {fetch_n})...")
     try:
         response = ollama.chat(model=OLLAMA_MODEL, messages=[{"role": "user", "content": prompt}])
     except Exception as e:
