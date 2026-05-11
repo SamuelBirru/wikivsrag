@@ -5,14 +5,16 @@ Instead of retrieving raw chunks at query time, this system builds a persistent,
 synthesized wiki of physics concepts that the LLM maintains and queries.
 
 Three-phase workflow:
-  1. Ingest  — Ollama reads each paper and extracts key concepts + contributions.
+  1. Ingest  — Claude (via Bedrock) reads each paper and extracts key concepts.
                Saves to wiki_extractions.json. Supports resume if interrupted.
-  2. Build   — Ollama synthesizes per-concept markdown wiki pages in ./wiki/
-  3. Query   — TF-IDF search finds relevant wiki pages; Ollama synthesizes an answer.
+  2. Build   — Claude synthesizes per-concept markdown wiki pages in ./wiki/
+  3. Query   — TF-IDF search finds relevant wiki pages; Claude synthesizes an answer.
 
 Setup:
-  pip install ollama scikit-learn
-  ollama pull llama3.2
+  pip install anthropic scikit-learn
+  set AWS_ACCESS_KEY_ID=your_access_key
+  set AWS_SECRET_ACCESS_KEY=your_secret_key
+  set AWS_REGION=us-east-1  (or whichever region has Bedrock enabled)
 
 Usage:
   python wiki_system.py --ingest             # process papers (~2-10 min for 100 papers)
@@ -26,22 +28,38 @@ import os
 import re
 import sys
 
-import ollama
+import anthropic
+from dotenv import load_dotenv
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2")
+load_dotenv()
+
+# Bedrock cross-region inference profile ID — verify in AWS Console > Bedrock > Model access
+CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "us.anthropic.claude-sonnet-4-6-20251031-v1:0")
 PAPERS_PATH = "physics_papers.json"
 TEXTS_PATH = "paper_texts.json"
 EXTRACTIONS_PATH = "wiki_extractions.json"
 WIKI_DIR = "wiki"
 DEFAULT_K = 4
-FULL_TEXT_WORD_LIMIT = 5000  # cap sent to LLM per paper to keep inference fast
 
 
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
+def _bedrock_client() -> anthropic.AnthropicBedrock:
+    if not hasattr(_bedrock_client, "_instance"):
+        try:
+            _bedrock_client._instance = anthropic.AnthropicBedrock(
+                aws_access_key=os.environ["AWS_ACCESS_KEY_ID"],
+                aws_secret_key=os.environ["AWS_SECRET_ACCESS_KEY"],
+                aws_region=os.getenv("AWS_REGION", "us-east-1"),
+            )
+        except KeyError as e:
+            sys.exit(f"Missing AWS credential env var: {e}")
+    return _bedrock_client._instance
+
 
 def _slugify(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", text.lower()).strip("_")
@@ -104,9 +122,8 @@ def ingest(papers_path: str = PAPERS_PATH, texts_path: str = TEXTS_PATH) -> None
 
 def _extract_concepts(paper: dict, full_text: str | None = None) -> list[dict]:
     if full_text:
-        words = full_text.split()
-        body = " ".join(words[:FULL_TEXT_WORD_LIMIT])
-        content_label = "Full paper text (first 5000 words)"
+        body = full_text
+        content_label = "Full paper text"
     else:
         body = paper["abstract"]
         content_label = "Abstract"
@@ -127,12 +144,13 @@ def _extract_concepts(paper: dict, full_text: str | None = None) -> list[dict]:
         'Include 2-4 concepts.'
     )
     try:
-        response = ollama.chat(
-            model=OLLAMA_MODEL,
+        response = _bedrock_client().messages.create(
+            model=CLAUDE_MODEL,
+            max_tokens=1024,
             messages=[{"role": "user", "content": prompt}],
-            format="json",
         )
-        data = json.loads(response.message.content)
+        text = re.sub(r"```(?:json)?\s*|\s*```", "", response.content[0].text).strip()
+        data = json.loads(text)
         return data.get("concepts", [])
     except Exception as e:
         print(f"  Warning: extraction failed ({e}). Skipping concepts for this paper.")
@@ -212,8 +230,12 @@ def _synthesize_page(concept: str, papers: list[dict]) -> str:
     )
 
     try:
-        response = ollama.chat(model=OLLAMA_MODEL, messages=[{"role": "user", "content": prompt}])
-        return response.message.content
+        response = _bedrock_client().messages.create(
+            model=CLAUDE_MODEL,
+            max_tokens=2048,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return response.content[0].text
     except Exception as e:
         print(f"  Warning: synthesis failed for {concept} ({e}). Writing raw notes.")
         return f"# {concept}\n\n" + contributions_text
@@ -282,14 +304,18 @@ def query(question: str, k: int = DEFAULT_K) -> dict:
         f"Question: {question}"
     )
 
-    print(f"[Wiki] Querying {OLLAMA_MODEL} with {len(relevant)} wiki pages...")
+    print(f"[Wiki] Querying {CLAUDE_MODEL} with {len(relevant)} wiki pages...")
     try:
-        response = ollama.chat(model=OLLAMA_MODEL, messages=[{"role": "user", "content": prompt}])
-    except Exception as e:
-        sys.exit(f"Ollama error: {e}\nIs Ollama running? Try: ollama serve")
+        response = _bedrock_client().messages.create(
+            model=CLAUDE_MODEL,
+            max_tokens=2048,
+            messages=[{"role": "user", "content": prompt}],
+        )
+    except anthropic.APIError as e:
+        sys.exit(f"Bedrock API error: {e}")
 
     return {
-        "answer": response.message.content,
+        "answer": response.content[0].text,
         "pages": [{"concept": c, "score": s} for c, _, s in relevant],
     }
 

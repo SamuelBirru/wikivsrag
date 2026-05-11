@@ -2,14 +2,16 @@
 Traditional RAG system for physics papers from ArXiv.
 
 Uses sentence-transformers for embeddings, FAISS for vector search,
-and Ollama (local LLM) for generation.
+and Claude via Amazon Bedrock for generation.
 
 If paper_texts.json exists (from PhysicsScript.py --download), full paper text
 is chunked and indexed. Otherwise falls back to abstracts only.
 
 Setup:
-  pip install sentence-transformers faiss-cpu numpy ollama
-  ollama pull llama3.2
+  pip install sentence-transformers faiss-cpu numpy anthropic
+  set AWS_ACCESS_KEY_ID=your_access_key
+  set AWS_SECRET_ACCESS_KEY=your_secret_key
+  set AWS_REGION=us-east-1  (or whichever region has Bedrock enabled)
 
 Usage:
   python rag_system.py --ingest              # build index
@@ -22,12 +24,16 @@ import os
 import pickle
 import sys
 
+import anthropic
 import faiss
 import numpy as np
-import ollama
+from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
 
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2")
+load_dotenv()
+
+# Bedrock cross-region inference profile ID — verify in AWS Console > Bedrock > Model access
+CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "us.anthropic.claude-sonnet-4-6-20251031-v1:0")
 EMBED_MODEL = "all-MiniLM-L6-v2"
 INDEX_PATH = "rag_index.faiss"
 CHUNKS_PATH = "rag_chunks.pkl"
@@ -174,14 +180,25 @@ def query(question: str, k: int = DEFAULT_K) -> dict:
         "If the excerpts don't contain enough information, say so."
     )
 
-    print(f"[RAG] Querying {OLLAMA_MODEL} with {k} MMR-selected chunks (pool: {fetch_n})...")
+    print(f"[RAG] Querying {CLAUDE_MODEL} with {k} MMR-selected chunks (pool: {fetch_n})...")
     try:
-        response = ollama.chat(model=OLLAMA_MODEL, messages=[{"role": "user", "content": prompt}])
-    except Exception as e:
-        sys.exit(f"Ollama error: {e}\nIs Ollama running? Try: ollama serve")
+        client = anthropic.AnthropicBedrock(
+            aws_access_key=os.environ["AWS_ACCESS_KEY_ID"],
+            aws_secret_key=os.environ["AWS_SECRET_ACCESS_KEY"],
+            aws_region=os.getenv("AWS_REGION", "us-east-1"),
+        )
+        response = client.messages.create(
+            model=CLAUDE_MODEL,
+            max_tokens=2048,
+            messages=[{"role": "user", "content": prompt}],
+        )
+    except KeyError as e:
+        sys.exit(f"Missing AWS credential env var: {e}. Check your .env file.")
+    except anthropic.APIError as e:
+        sys.exit(f"Bedrock API error: {e}\nCheck CLAUDE_MODEL in .env — get the exact ID from AWS Console > Bedrock > Cross-region inference.")
 
     return {
-        "answer": response.message.content,
+        "answer": response.content[0].text,
         "sources": [
             {"title": c["meta"]["title"], "url": c["meta"]["url"], "score": s}
             for c, s in hits

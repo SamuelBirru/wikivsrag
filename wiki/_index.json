@@ -1,1442 +1,1582 @@
 {
-  "ADM Variables": {
-    "path": "wiki\\adm_variables.md",
+  "1/f flux noise as a decoherence mechanism in superconducting qubits": {
+    "path": "wiki\\1_f_flux_noise_as_a_decoherence_mechanism_in_superconducting_qubits.md",
     "paper_count": 1
   },
-  "Accelerating Expansion": {
-    "path": "wiki\\accelerating_expansion.md",
+  "2-Group Symmetry": {
+    "path": "wiki\\2_group_symmetry.md",
     "paper_count": 1
   },
-  "Accessory Parameter": {
-    "path": "wiki\\accessory_parameter.md",
+  "2D Black Hole (SL(2,R)/U(1) Coset) and Hagedorn Thermodynamics": {
+    "path": "wiki\\2d_black_hole_sl_2_r_u_1_coset_and_hagedorn_thermodynamics.md",
     "paper_count": 1
   },
-  "Active Regime": {
-    "path": "wiki\\active_regime.md",
+  "ADM formalism for compact object spacetimes": {
+    "path": "wiki\\adm_formalism_for_compact_object_spacetimes.md",
     "paper_count": 1
   },
-  "Algebraic Ring Framework": {
-    "path": "wiki\\algebraic_ring_framework.md",
+  "AGT Correspondence and Nekrasov\u2013Shatashvili Limit": {
+    "path": "wiki\\agt_correspondence_and_nekrasov_shatashvili_limit.md",
     "paper_count": 1
   },
-  "Altermagnetism": {
-    "path": "wiki\\altermagnetism.md",
+  "Accessory Parameters of Heun Equations": {
+    "path": "wiki\\accessory_parameters_of_heun_equations.md",
     "paper_count": 1
   },
-  "Anomaly theory": {
-    "path": "wiki\\anomaly_theory.md",
+  "Adaptive Numerical Ray Tracing for Non-Kerr Spacetimes": {
+    "path": "wiki\\adaptive_numerical_ray_tracing_for_non_kerr_spacetimes.md",
     "paper_count": 1
   },
-  "Anticommutator": {
-    "path": "wiki\\anticommutator.md",
+  "Adiabatic Annealing in Analog Computing": {
+    "path": "wiki\\adiabatic_annealing_in_analog_computing.md",
     "paper_count": 1
   },
-  "Arithmetic Mean - Geometric Mean (AM-GM) Sequence": {
-    "path": "wiki\\arithmetic_mean_geometric_mean_am_gm_sequence.md",
+  "Adiabatic Elimination and Effective Hamiltonian Derivation": {
+    "path": "wiki\\adiabatic_elimination_and_effective_hamiltonian_derivation.md",
     "paper_count": 1
   },
-  "Asymptotic Quantization": {
-    "path": "wiki\\asymptotic_quantization.md",
+  "Aharonov-Bohm Interference in Josephson Junction Arrays": {
+    "path": "wiki\\aharonov_bohm_interference_in_josephson_junction_arrays.md",
     "paper_count": 1
   },
-  "Axial Modes": {
-    "path": "wiki\\axial_modes.md",
+  "Altermagnetism and Altermagnetic Magnons": {
+    "path": "wiki\\altermagnetism_and_altermagnetic_magnons.md",
     "paper_count": 1
   },
-  "BCFW Recursion": {
-    "path": "wiki\\bcfw_recursion.md",
+  "Analog Quantum Simulation": {
+    "path": "wiki\\analog_quantum_simulation.md",
+    "paper_count": 1
+  },
+  "Ancilla Measurement and Garbage Removal in Quantum Circuits": {
+    "path": "wiki\\ancilla_measurement_and_garbage_removal_in_quantum_circuits.md",
+    "paper_count": 1
+  },
+  "Anderson Localization and Mobility Edges": {
+    "path": "wiki\\anderson_localization_and_mobility_edges.md",
+    "paper_count": 1
+  },
+  "Asymmetric Finite Difference Method for the Dirac Equation": {
+    "path": "wiki\\asymmetric_finite_difference_method_for_the_dirac_equation.md",
+    "paper_count": 1
+  },
+  "Asymptotic Symmetries and Celestial Holography": {
+    "path": "wiki\\asymptotic_symmetries_and_celestial_holography.md",
+    "paper_count": 1
+  },
+  "Atom-photon bound states in structured photonic environments": {
+    "path": "wiki\\atom_photon_bound_states_in_structured_photonic_environments.md",
     "paper_count": 1
   },
   "BRST Cohomology": {
     "path": "wiki\\brst_cohomology.md",
     "paper_count": 1
   },
-  "Back-to-back correlation": {
-    "path": "wiki\\back_to_back_correlation.md",
+  "Baby Universes and Spacetime Wormholes": {
+    "path": "wiki\\baby_universes_and_spacetime_wormholes.md",
     "paper_count": 1
   },
-  "Band Inversion": {
-    "path": "wiki\\band_inversion.md",
+  "Belief Propagation Decoding of Quantum LDPC Codes": {
+    "path": "wiki\\belief_propagation_decoding_of_quantum_ldpc_codes.md",
     "paper_count": 1
   },
-  "Bayesian Inference and Model Parameters": {
-    "path": "wiki\\bayesian_inference_and_model_parameters.md",
+  "Bell-CHSH Inequality in Relativistic Quantum Field Theory": {
+    "path": "wiki\\bell_chsh_inequality_in_relativistic_quantum_field_theory.md",
     "paper_count": 1
   },
-  "Bayesian Inference for Astronomy": {
-    "path": "wiki\\bayesian_inference_for_astronomy.md",
+  "Bernstein functions and subordinators in quantum mechanics": {
+    "path": "wiki\\bernstein_functions_and_subordinators_in_quantum_mechanics.md",
     "paper_count": 1
   },
-  "Belief Propagation Decoding": {
-    "path": "wiki\\belief_propagation_decoding.md",
+  "Bethe Ansatz and Quantum Integrability": {
+    "path": "wiki\\bethe_ansatz_and_quantum_integrability.md",
     "paper_count": 1
   },
-  "Bell-CHSH Inequality": {
-    "path": "wiki\\bell_chsh_inequality.md",
+  "Biased Noise Channels in Quantum Systems": {
+    "path": "wiki\\biased_noise_channels_in_quantum_systems.md",
     "paper_count": 1
   },
-  "Bethe Ansatz": {
-    "path": "wiki\\bethe_ansatz.md",
+  "Biased-Noise Qubits": {
+    "path": "wiki\\biased_noise_qubits.md",
     "paper_count": 1
   },
-  "Bifurcation in Yang-Mills Theory": {
-    "path": "wiki\\bifurcation_in_yang_mills_theory.md",
+  "Biexciton Fine Structure and Electron-Hole Exchange Interaction": {
+    "path": "wiki\\biexciton_fine_structure_and_electron_hole_exchange_interaction.md",
     "paper_count": 1
   },
-  "Bisognano-Wichmann Theorem": {
-    "path": "wiki\\bisognano_wichmann_theorem.md",
+  "Big Bang Singularity Resolution": {
+    "path": "wiki\\big_bang_singularity_resolution.md",
     "paper_count": 1
   },
-  "Black Hole Physics": {
-    "path": "wiki\\black_hole_physics.md",
-    "paper_count": 2
-  },
-  "Black hole thermodynamics": {
-    "path": "wiki\\black_hole_thermodynamics.md",
+  "Binary Encoding and Product Formula Methods for Quantum Simulation": {
+    "path": "wiki\\binary_encoding_and_product_formula_methods_for_quantum_simulation.md",
     "paper_count": 1
   },
-  "Bose-Einstein Condensates": {
-    "path": "wiki\\bose_einstein_condensates.md",
+  "Black Hole Phase Transitions": {
+    "path": "wiki\\black_hole_phase_transitions.md",
     "paper_count": 1
   },
-  "CP1 Geometry": {
-    "path": "wiki\\cp1_geometry.md",
+  "Black Hole Shadow and Photon Ring Structure": {
+    "path": "wiki\\black_hole_shadow_and_photon_ring_structure.md",
     "paper_count": 1
   },
-  "Carbon Nanotubes": {
-    "path": "wiki\\carbon_nanotubes.md",
+  "Bogoliubov-Valatin Transformation in Hot Dense Matter": {
+    "path": "wiki\\bogoliubov_valatin_transformation_in_hot_dense_matter.md",
     "paper_count": 1
   },
-  "Cartan Decomposition": {
-    "path": "wiki\\cartan_decomposition.md",
+  "Boltzmann-Gibbs Distribution": {
+    "path": "wiki\\boltzmann_gibbs_distribution.md",
     "paper_count": 1
   },
-  "Cavity Quantum Electrodynamics": {
-    "path": "wiki\\cavity_quantum_electrodynamics.md",
-    "paper_count": 2
-  },
-  "Cavity-Optomechanics": {
-    "path": "wiki\\cavity_optomechanics.md",
+  "Boltzmann-Uehling-Uhlenbeck (BUU) Transport Theory": {
+    "path": "wiki\\boltzmann_uehling_uhlenbeck_buu_transport_theory.md",
     "paper_count": 1
   },
-  "Cayley Transform": {
-    "path": "wiki\\cayley_transform.md",
+  "Born-Infeld Theory": {
+    "path": "wiki\\born_infeld_theory.md",
     "paper_count": 1
   },
-  "Chain Wavefunctions": {
-    "path": "wiki\\chain_wavefunctions.md",
+  "Bound-State Structure and Ionization Potential in Nonlocal Quantum Dynamics": {
+    "path": "wiki\\bound_state_structure_and_ionization_potential_in_nonlocal_quantum_dynamics.md",
     "paper_count": 1
   },
-  "Chiral Effective Theory (chEFT)": {
-    "path": "wiki\\chiral_effective_theory_cheft.md",
+  "CKM Matrix Unitarity and Flavor Physics": {
+    "path": "wiki\\ckm_matrix_unitarity_and_flavor_physics.md",
     "paper_count": 1
   },
-  "Chiral Symmetry": {
-    "path": "wiki\\chiral_symmetry.md",
+  "Cartan Decomposition of Unitary Groups": {
+    "path": "wiki\\cartan_decomposition_of_unitary_groups.md",
     "paper_count": 1
   },
-  "Chirality-induced spin selectivity": {
-    "path": "wiki\\chirality_induced_spin_selectivity.md",
+  "Causality in Classical Field Theory": {
+    "path": "wiki\\causality_in_classical_field_theory.md",
     "paper_count": 1
   },
-  "Choi Matrix": {
-    "path": "wiki\\choi_matrix.md",
+  "Charge Noise and Spectral Diffusion in Solid-State Emitters": {
+    "path": "wiki\\charge_noise_and_spectral_diffusion_in_solid_state_emitters.md",
     "paper_count": 1
   },
-  "Condensation defect": {
-    "path": "wiki\\condensation_defect.md",
+  "Charge-Parity Protection in Superconducting Circuits": {
+    "path": "wiki\\charge_parity_protection_in_superconducting_circuits.md",
     "paper_count": 1
   },
-  "Conformal Block": {
-    "path": "wiki\\conformal_block.md",
+  "Chemo-Mechanical Coupling and Emergence of Active Matter": {
+    "path": "wiki\\chemo_mechanical_coupling_and_emergence_of_active_matter.md",
     "paper_count": 1
   },
-  "Contamination in Astronomical Data": {
-    "path": "wiki\\contamination_in_astronomical_data.md",
+  "Chirality-Induced Spin Selectivity (CISS)": {
+    "path": "wiki\\chirality_induced_spin_selectivity_ciss.md",
     "paper_count": 1
   },
-  "Contraction Coefficients": {
-    "path": "wiki\\contraction_coefficients.md",
+  "Classical Conformal Blocks and the Zamolodchikov Conjecture": {
+    "path": "wiki\\classical_conformal_blocks_and_the_zamolodchikov_conjecture.md",
     "paper_count": 1
   },
-  "Coprime Numbers": {
-    "path": "wiki\\coprime_numbers.md",
+  "Classical Stability of Dark Energy Perturbations": {
+    "path": "wiki\\classical_stability_of_dark_energy_perturbations.md",
     "paper_count": 1
   },
-  "Coproduct Formula": {
-    "path": "wiki\\coproduct_formula.md",
+  "Cluster Algebras and Symbol Calculus": {
+    "path": "wiki\\cluster_algebras_and_symbol_calculus.md",
     "paper_count": 1
   },
-  "Correlation between Clock and Remaining Degree of Freedom": {
-    "path": "wiki\\correlation_between_clock_and_remaining_degree_of_freedom.md",
+  "Coherent Electron Shuttling in Semiconductor Qubits": {
+    "path": "wiki\\coherent_electron_shuttling_in_semiconductor_qubits.md",
     "paper_count": 1
   },
-  "Cosmic String Ensemble": {
-    "path": "wiki\\cosmic_string_ensemble.md",
+  "Color Superconductivity in Neutron Stars": {
+    "path": "wiki\\color_superconductivity_in_neutron_stars.md",
     "paper_count": 1
   },
-  "Cosmological Constant": {
-    "path": "wiki\\cosmological_constant.md",
+  "Combinatorial Optimization on Graphs": {
+    "path": "wiki\\combinatorial_optimization_on_graphs.md",
     "paper_count": 1
   },
-  "Critical Potentials": {
-    "path": "wiki\\critical_potentials.md",
+  "Conformal Decomposition of the Metric in General Relativity": {
+    "path": "wiki\\conformal_decomposition_of_the_metric_in_general_relativity.md",
     "paper_count": 1
   },
-  "Critical phase": {
-    "path": "wiki\\critical_phase.md",
+  "Conic Optimization in Quantum Information": {
+    "path": "wiki\\conic_optimization_in_quantum_information.md",
     "paper_count": 1
   },
-  "Cryogenic engineering": {
-    "path": "wiki\\cryogenic_engineering.md",
+  "Conifold Transition and Phase Structure of N=2 SQCD": {
+    "path": "wiki\\conifold_transition_and_phase_structure_of_n_2_sqcd.md",
     "paper_count": 1
   },
-  "D-Plate": {
-    "path": "wiki\\d_plate.md",
+  "Contact Geometry and Non-Conservative Field Theory (Herglotz Variational Principle)": {
+    "path": "wiki\\contact_geometry_and_non_conservative_field_theory_herglotz_variational_principle.md",
     "paper_count": 1
   },
-  "Dark Energy": {
-    "path": "wiki\\dark_energy.md",
+  "Continuous-Variable Entanglement and Logarithmic Negativity": {
+    "path": "wiki\\continuous_variable_entanglement_and_logarithmic_negativity.md",
     "paper_count": 1
   },
-  "Data Processing Inequalities": {
-    "path": "wiki\\data_processing_inequalities.md",
+  "Cooper-pair parity symmetry and charge noise protection": {
+    "path": "wiki\\cooper_pair_parity_symmetry_and_charge_noise_protection.md",
     "paper_count": 1
   },
-  "Deflection Potential": {
-    "path": "wiki\\deflection_potential.md",
+  "Cosmological Wavefunction in de Sitter Space": {
+    "path": "wiki\\cosmological_wavefunction_in_de_sitter_space.md",
     "paper_count": 1
   },
-  "Degenerate States and Mode Number Conservation": {
-    "path": "wiki\\degenerate_states_and_mode_number_conservation.md",
+  "Courant-Hilbert Method and Legendre Transform in Self-Dual Field Theory": {
+    "path": "wiki\\courant_hilbert_method_and_legendre_transform_in_self_dual_field_theory.md",
     "paper_count": 1
   },
-  "Detuned Rabi Frequency": {
-    "path": "wiki\\detuned_rabi_frequency.md",
+  "Covering map methods for symmetric orbifold correlators": {
+    "path": "wiki\\covering_map_methods_for_symmetric_orbifold_correlators.md",
     "paper_count": 1
   },
-  "Diffusivity": {
-    "path": "wiki\\diffusivity.md",
+  "Critical and Subcritical Potentials": {
+    "path": "wiki\\critical_and_subcritical_potentials.md",
     "paper_count": 1
   },
-  "Dimensionality": {
-    "path": "wiki\\dimensionality.md",
+  "Dark Energy and Cosmological Constant Problem": {
+    "path": "wiki\\dark_energy_and_cosmological_constant_problem.md",
+    "paper_count": 1
+  },
+  "Dark Matter Structure Probed via Gravitational Lensing": {
+    "path": "wiki\\dark_matter_structure_probed_via_gravitational_lensing.md",
+    "paper_count": 1
+  },
+  "Dark-Matter-Dressed Black Hole Spacetimes": {
+    "path": "wiki\\dark_matter_dressed_black_hole_spacetimes.md",
+    "paper_count": 1
+  },
+  "Density-Assisted Tunneling": {
+    "path": "wiki\\density_assisted_tunneling.md",
+    "paper_count": 1
+  },
+  "Detailed Balance and Fluctuation-Dissipation Relations": {
+    "path": "wiki\\detailed_balance_and_fluctuation_dissipation_relations.md",
+    "paper_count": 1
+  },
+  "Detection Rate Estimation and Search Strategies for Lensed GW Events": {
+    "path": "wiki\\detection_rate_estimation_and_search_strategies_for_lensed_gw_events.md",
+    "paper_count": 1
+  },
+  "Differential Approximation Models (DAM) for Wave Kinetics": {
+    "path": "wiki\\differential_approximation_models_dam_for_wave_kinetics.md",
+    "paper_count": 1
+  },
+  "Differential Phase Shift Keying (DPSK) Protocols": {
+    "path": "wiki\\differential_phase_shift_keying_dpsk_protocols.md",
+    "paper_count": 1
+  },
+  "Directed Polymer in Random Potential": {
+    "path": "wiki\\directed_polymer_in_random_potential.md",
+    "paper_count": 1
+  },
+  "Dissipation and Polarization Relaxation in Quantum-Classical Systems": {
+    "path": "wiki\\dissipation_and_polarization_relaxation_in_quantum_classical_systems.md",
     "paper_count": 1
   },
   "Dissipative Jaynes-Cummings Model": {
     "path": "wiki\\dissipative_jaynes_cummings_model.md",
     "paper_count": 1
   },
-  "Distributor (or Bimodule)": {
-    "path": "wiki\\distributor_or_bimodule.md",
+  "Domain Wall Fermions and Chiral Symmetry on the Lattice": {
+    "path": "wiki\\domain_wall_fermions_and_chiral_symmetry_on_the_lattice.md",
     "paper_count": 1
   },
-  "Domain Wall Fermions": {
-    "path": "wiki\\domain_wall_fermions.md",
+  "Doubly Inhomogeneous Waveplates (d-plates)": {
+    "path": "wiki\\doubly_inhomogeneous_waveplates_d_plates.md",
     "paper_count": 1
   },
-  "Double-Barrier Vertical Graphene/hBN/WSe2 LED": {
-    "path": "wiki\\double_barrier_vertical_graphene_hbn_wse2_led.md",
+  "Duality Defects and Half-Spacetime Gauging": {
+    "path": "wiki\\duality_defects_and_half_spacetime_gauging.md",
     "paper_count": 1
   },
-  "Doubler decoupling conditions": {
-    "path": "wiki\\doubler_decoupling_conditions.md",
+  "Dynamical Mass Gap Generation": {
+    "path": "wiki\\dynamical_mass_gap_generation.md",
     "paper_count": 1
   },
-  "Duality Rotations": {
-    "path": "wiki\\duality_rotations.md",
+  "Dynamical Systems and Bifurcation Theory": {
+    "path": "wiki\\dynamical_systems_and_bifurcation_theory.md",
     "paper_count": 1
   },
-  "Dynamical Stability": {
-    "path": "wiki\\dynamical_stability.md",
+  "Dynamical Systems in Cosmology": {
+    "path": "wiki\\dynamical_systems_in_cosmology.md",
     "paper_count": 1
   },
-  "Dynamical Systems": {
-    "path": "wiki\\dynamical_systems.md",
+  "Dzyaloshinskii-Moriya Interaction": {
+    "path": "wiki\\dzyaloshinskii_moriya_interaction.md",
     "paper_count": 1
   },
-  "Eccentric Stellar Black Hole Binaries": {
-    "path": "wiki\\eccentric_stellar_black_hole_binaries.md",
+  "Effective Field Theory Approach to Quantum Gravity": {
+    "path": "wiki\\effective_field_theory_approach_to_quantum_gravity.md",
     "paper_count": 1
   },
-  "Effective Field Theory": {
-    "path": "wiki\\effective_field_theory.md",
+  "Effective Field Theory UV Completion": {
+    "path": "wiki\\effective_field_theory_uv_completion.md",
     "paper_count": 1
   },
-  "Effective Field Theory (EFT)": {
-    "path": "wiki\\effective_field_theory_eft.md",
+  "Effective single-mode Hamiltonians for multi-junction superconducting circuits": {
+    "path": "wiki\\effective_single_mode_hamiltonians_for_multi_junction_superconducting_circuits.md",
     "paper_count": 1
   },
-  "Effective Nucleon Mass": {
-    "path": "wiki\\effective_nucleon_mass.md",
+  "Eigenfunction Localization and \u2113\u221e-Norms": {
+    "path": "wiki\\eigenfunction_localization_and_norms.md",
     "paper_count": 1
   },
-  "Einstein Relation": {
-    "path": "wiki\\einstein_relation.md",
+  "Eigenstate Thermalization and Quantum Chaos": {
+    "path": "wiki\\eigenstate_thermalization_and_quantum_chaos.md",
     "paper_count": 1
   },
-  "Energy Storage Materials": {
-    "path": "wiki\\energy_storage_materials.md",
+  "Electroluminescence from Localized Excitonic and Defect States": {
+    "path": "wiki\\electroluminescence_from_localized_excitonic_and_defect_states.md",
     "paper_count": 1
   },
-  "Enriched Category Theory": {
-    "path": "wiki\\enriched_category_theory.md",
+  "Electromagnetic Scattering from Finite-Length Cylindrical Conductors (Edge Effects)": {
+    "path": "wiki\\electromagnetic_scattering_from_finite_length_cylindrical_conductors_edge_effects.md",
     "paper_count": 1
   },
-  "Entanglement Entropy": {
-    "path": "wiki\\entanglement_entropy.md",
+  "Electron Screening and Ionic State Effects on Nuclear Processes": {
+    "path": "wiki\\electron_screening_and_ionic_state_effects_on_nuclear_processes.md",
     "paper_count": 1
   },
-  "Entropy production": {
-    "path": "wiki\\entropy_production.md",
+  "Elliptic Partial Differential Equations": {
+    "path": "wiki\\elliptic_partial_differential_equations.md",
     "paper_count": 1
   },
-  "Equidistribution of Eigenfunctions": {
-    "path": "wiki\\equidistribution_of_eigenfunctions.md",
+  "Ensemble Averaging in Holography": {
+    "path": "wiki\\ensemble_averaging_in_holography.md",
     "paper_count": 1
   },
-  "Exchange Symmetry": {
-    "path": "wiki\\exchange_symmetry.md",
+  "Ensemble Decoding and Diversity in Channel Coding": {
+    "path": "wiki\\ensemble_decoding_and_diversity_in_channel_coding.md",
     "paper_count": 1
   },
-  "Exchange interactions": {
-    "path": "wiki\\exchange_interactions.md",
+  "Entangled Two-Photon Absorption (ETPA)": {
+    "path": "wiki\\entangled_two_photon_absorption_etpa.md",
     "paper_count": 1
   },
-  "Exponential Integral": {
-    "path": "wiki\\exponential_integral.md",
+  "Environmental Effects on Binary Evolution (Dynamical Friction)": {
+    "path": "wiki\\environmental_effects_on_binary_evolution_dynamical_friction.md",
     "paper_count": 1
   },
-  "Extended Harper model": {
-    "path": "wiki\\extended_harper_model.md",
+  "Equation of State for Dense Quark Matter": {
+    "path": "wiki\\equation_of_state_for_dense_quark_matter.md",
     "paper_count": 1
   },
-  "Far-Field Linear Optical Imaging": {
-    "path": "wiki\\far_field_linear_optical_imaging.md",
+  "Ernst Equation and Stationary Axisymmetric Gravity": {
+    "path": "wiki\\ernst_equation_and_stationary_axisymmetric_gravity.md",
     "paper_count": 1
   },
-  "Fast-Forwarding in Quantum Simulation": {
-    "path": "wiki\\fast_forwarding_in_quantum_simulation.md",
+  "Exact Classical Solutions in Non-Abelian Yang-Mills Theory": {
+    "path": "wiki\\exact_classical_solutions_in_non_abelian_yang_mills_theory.md",
     "paper_count": 1
   },
-  "Feller-Markov process": {
-    "path": "wiki\\feller_markov_process.md",
+  "Exact Solvability in Quantum Many-Body Systems": {
+    "path": "wiki\\exact_solvability_in_quantum_many_body_systems.md",
     "paper_count": 1
   },
-  "Fermi's Golden Rule": {
-    "path": "wiki\\fermi_s_golden_rule.md",
+  "Exact WKB Analysis and Voros Periods": {
+    "path": "wiki\\exact_wkb_analysis_and_voros_periods.md",
     "paper_count": 1
   },
-  "Feynman Parameterization": {
-    "path": "wiki\\feynman_parameterization.md",
+  "Fermi Polaron Physics and BCS-BEC Crossover": {
+    "path": "wiki\\fermi_polaron_physics_and_bcs_bec_crossover.md",
     "paper_count": 1
   },
-  "Filippov differential inclusion": {
-    "path": "wiki\\filippov_differential_inclusion.md",
+  "Fermion Back-to-Back Correlations (fBBC)": {
+    "path": "wiki\\fermion_back_to_back_correlations_fbbc.md",
     "paper_count": 1
   },
-  "Finite-Time Scaling": {
-    "path": "wiki\\finite_time_scaling.md",
+  "Fermion Doubling and the Nielsen-Ninomiya No-Go Theorem": {
+    "path": "wiki\\fermion_doubling_and_the_nielsen_ninomiya_no_go_theorem.md",
     "paper_count": 1
   },
-  "Finiteness of Perturbative Series": {
-    "path": "wiki\\finiteness_of_perturbative_series.md",
+  "Fermionic Twist and Klein Transformation in Quantum Field Theory": {
+    "path": "wiki\\fermionic_twist_and_klein_transformation_in_quantum_field_theory.md",
     "paper_count": 1
   },
-  "First-Order Phase Transition": {
-    "path": "wiki\\first_order_phase_transition.md",
+  "Feynman-Kac formula for relativistic quantum operators": {
+    "path": "wiki\\feynman_kac_formula_for_relativistic_quantum_operators.md",
     "paper_count": 1
   },
-  "First-Row CKM Unitarity Tests": {
-    "path": "wiki\\first_row_ckm_unitarity_tests.md",
+  "Finite Element Methods": {
+    "path": "wiki\\finite_element_methods.md",
     "paper_count": 1
   },
-  "Flavor Sum Rule": {
-    "path": "wiki\\flavor_sum_rule.md",
+  "Finite-Time Optimal Control": {
+    "path": "wiki\\finite_time_optimal_control.md",
     "paper_count": 1
   },
-  "Floquet Topology": {
-    "path": "wiki\\floquet_topology.md",
+  "First-Order Quantum Phase Transitions (FOQPTs)": {
+    "path": "wiki\\first_order_quantum_phase_transitions_foqpts.md",
     "paper_count": 1
   },
-  "Fluctuation Relations": {
-    "path": "wiki\\fluctuation_relations.md",
+  "Flat-band physics in photonic lattices": {
+    "path": "wiki\\flat_band_physics_in_photonic_lattices.md",
     "paper_count": 1
   },
-  "Flux Noise": {
-    "path": "wiki\\flux_noise.md",
+  "Floquet Topology and Topological Phase Transitions": {
+    "path": "wiki\\floquet_topology_and_topological_phase_transitions.md",
     "paper_count": 1
   },
-  "Flux Ratio": {
-    "path": "wiki\\flux_ratio.md",
+  "Flux Noise and Quasiparticle Tunneling as Relaxation Mechanisms": {
+    "path": "wiki\\flux_noise_and_quasiparticle_tunneling_as_relaxation_mechanisms.md",
     "paper_count": 1
   },
-  "Follow-up Observations in Astronomy": {
-    "path": "wiki\\follow_up_observations_in_astronomy.md",
+  "Forward\u2013Reverse Path Measures and Interference Parity": {
+    "path": "wiki\\forward_reverse_path_measures_and_interference_parity.md",
     "paper_count": 1
   },
-  "Fourier Engineering": {
-    "path": "wiki\\fourier_engineering.md",
+  "Fourier Analysis of Variational Quantum Circuits": {
+    "path": "wiki\\fourier_analysis_of_variational_quantum_circuits.md",
     "paper_count": 1
   },
-  "Fractional Power-Law Dispersion": {
-    "path": "wiki\\fractional_power_law_dispersion.md",
+  "Fourier engineering of Josephson energy-phase relations": {
+    "path": "wiki\\fourier_engineering_of_josephson_energy_phase_relations.md",
     "paper_count": 1
   },
-  "Free Energy Density": {
-    "path": "wiki\\free_energy_density.md",
+  "Frenesy (Time-Symmetric Dynamical Activity)": {
+    "path": "wiki\\frenesy_time_symmetric_dynamical_activity.md",
     "paper_count": 1
   },
-  "Fr\u00eechet Derivative": {
-    "path": "wiki\\fr_chet_derivative.md",
+  "Galois Theory and Solvability by Radicals": {
+    "path": "wiki\\galois_theory_and_solvability_by_radicals.md",
     "paper_count": 1
   },
-  "GLN(C) Brownian motion": {
-    "path": "wiki\\gln_c_brownian_motion.md",
+  "Gate Universality and the Solovay-Kitaev Theorem": {
+    "path": "wiki\\gate_universality_and_the_solovay_kitaev_theorem.md",
     "paper_count": 1
   },
-  "Galilean Expansion": {
-    "path": "wiki\\galilean_expansion.md",
-    "paper_count": 1
-  },
-  "Galois Groups": {
-    "path": "wiki\\galois_groups.md",
-    "paper_count": 1
-  },
-  "Gauge symmetry": {
-    "path": "wiki\\gauge_symmetry.md",
-    "paper_count": 1
-  },
-  "Gauge-Invariant Meson Mass Formula": {
-    "path": "wiki\\gauge_invariant_meson_mass_formula.md",
-    "paper_count": 1
-  },
-  "General Relativity": {
-    "path": "wiki\\general_relativity.md",
+  "Gaussian Measurement Strategies (General-Dyne Detection)": {
+    "path": "wiki\\gaussian_measurement_strategies_general_dyne_detection.md",
     "paper_count": 1
   },
   "Generalized Eigenvalue Problem": {
     "path": "wiki\\generalized_eigenvalue_problem.md",
     "paper_count": 1
   },
-  "Generative Adversarial Networks (GANs)": {
-    "path": "wiki\\generative_adversarial_networks_gans.md",
+  "Generalized Second Law of Thermodynamics in Cosmology": {
+    "path": "wiki\\generalized_second_law_of_thermodynamics_in_cosmology.md",
     "paper_count": 1
   },
-  "Geometric Coupling Efficiency": {
-    "path": "wiki\\geometric_coupling_efficiency.md",
+  "Generalized Transverse Momentum Dependent Parton Distributions (GTMDs)": {
+    "path": "wiki\\generalized_transverse_momentum_dependent_parton_distributions_gtmds.md",
     "paper_count": 1
   },
-  "Geometric Optics": {
-    "path": "wiki\\geometric_optics.md",
+  "Geometrothermodynamics (GTD)": {
+    "path": "wiki\\geometrothermodynamics_gtd.md",
     "paper_count": 1
   },
-  "Gibbs State Generation": {
-    "path": "wiki\\gibbs_state_generation.md",
+  "Gibbs Line Ensembles and Brownian Gibbs Property": {
+    "path": "wiki\\gibbs_line_ensembles_and_brownian_gibbs_property.md",
     "paper_count": 1
   },
-  "Ginsparg-Wilson relation": {
+  "Ginsparg-Wilson Relation": {
     "path": "wiki\\ginsparg_wilson_relation.md",
     "paper_count": 1
   },
-  "Gravitational Field Equations": {
-    "path": "wiki\\gravitational_field_equations.md",
+  "Gravitational Wave Lensing Regimes (Geometric vs. Wave Optics)": {
+    "path": "wiki\\gravitational_wave_lensing_regimes_geometric_vs_wave_optics.md",
     "paper_count": 1
   },
-  "Gravitational Self-Interaction": {
-    "path": "wiki\\gravitational_self_interaction.md",
+  "Gravitational Wave Perturbation Theory and Backreaction": {
+    "path": "wiki\\gravitational_wave_perturbation_theory_and_backreaction.md",
     "paper_count": 1
   },
-  "Gravitational Waves": {
-    "path": "wiki\\gravitational_waves.md",
-    "paper_count": 1
-  },
-  "Gray code ordering": {
-    "path": "wiki\\gray_code_ordering.md",
+  "Gravitational-Wave Cosmology and Bright Sirens": {
+    "path": "wiki\\gravitational_wave_cosmology_and_bright_sirens.md",
     "paper_count": 1
   },
   "Gribov Problem": {
     "path": "wiki\\gribov_problem.md",
     "paper_count": 1
   },
-  "Ground State Existence": {
-    "path": "wiki\\ground_state_existence.md",
+  "Hagedorn Temperature": {
+    "path": "wiki\\hagedorn_temperature.md",
     "paper_count": 1
   },
-  "Half-spacetime gauging": {
-    "path": "wiki\\half_spacetime_gauging.md",
+  "Hamiltonian Engineering via Squeezing": {
+    "path": "wiki\\hamiltonian_engineering_via_squeezing.md",
     "paper_count": 1
   },
-  "Hamiltonian Mechanics": {
-    "path": "wiki\\hamiltonian_mechanics.md",
+  "Hamiltonian Hydrodynamics and Poisson Bracket Structure": {
+    "path": "wiki\\hamiltonian_hydrodynamics_and_poisson_bracket_structure.md",
     "paper_count": 1
   },
-  "Hamiltonian Systems": {
-    "path": "wiki\\hamiltonian_systems.md",
+  "Hamiltonian Integrability": {
+    "path": "wiki\\hamiltonian_integrability.md",
     "paper_count": 1
   },
-  "Hartle-Hawking State": {
-    "path": "wiki\\hartle_hawking_state.md",
+  "Hamiltonian Normal Forms": {
+    "path": "wiki\\hamiltonian_normal_forms.md",
     "paper_count": 1
   },
-  "Heavy Ion Collisions": {
-    "path": "wiki\\heavy_ion_collisions.md",
+  "Heavy Quark Spin Relaxation in the Quark-Gluon Plasma": {
+    "path": "wiki\\heavy_quark_spin_relaxation_in_the_quark_gluon_plasma.md",
     "paper_count": 1
   },
-  "Heavy Quark Spin Relaxation": {
-    "path": "wiki\\heavy_quark_spin_relaxation.md",
+  "Hierarchical Bayesian Inference": {
+    "path": "wiki\\hierarchical_bayesian_inference.md",
     "paper_count": 1
   },
-  "Heavy-ion collision experiments": {
-    "path": "wiki\\heavy_ion_collision_experiments.md",
+  "Higher-Dimensional Spacetime and Extra Dimensions": {
+    "path": "wiki\\higher_dimensional_spacetime_and_extra_dimensions.md",
     "paper_count": 1
   },
-  "Heisenberg Chain": {
-    "path": "wiki\\heisenberg_chain.md",
+  "Hilbert Space Expansion in Quantum Computing": {
+    "path": "wiki\\hilbert_space_expansion_in_quantum_computing.md",
     "paper_count": 1
   },
-  "Herglotz Lagrangian": {
-    "path": "wiki\\herglotz_lagrangian.md",
+  "Hirota Bilinear Formalism and Integrable Systems": {
+    "path": "wiki\\hirota_bilinear_formalism_and_integrable_systems.md",
     "paper_count": 1
   },
-  "Heun Equation": {
-    "path": "wiki\\heun_equation.md",
+  "Homoclinic Chaos and the Melnikov Method": {
+    "path": "wiki\\homoclinic_chaos_and_the_melnikov_method.md",
     "paper_count": 1
   },
-  "Holographic Principle": {
-    "path": "wiki\\holographic_principle.md",
+  "Ho\u0159ava\u2013Lifshitz Gravity": {
+    "path": "wiki\\ho_ava_lifshitz_gravity.md",
     "paper_count": 1
   },
-  "Ho\u00eava-Lifshitz Gravity": {
-    "path": "wiki\\ho_va_lifshitz_gravity.md",
+  "Hybrid Star Mass-Radius Relation": {
+    "path": "wiki\\hybrid_star_mass_radius_relation.md",
     "paper_count": 1
   },
-  "Hugoniot curve": {
-    "path": "wiki\\hugoniot_curve.md",
+  "Hydrodynamics in Quantum Many-Body Systems": {
+    "path": "wiki\\hydrodynamics_in_quantum_many_body_systems.md",
     "paper_count": 1
   },
-  "Hydrodynamic Closure": {
-    "path": "wiki\\hydrodynamic_closure.md",
+  "Imaginary-Time Evolution for Ground-State Preparation": {
+    "path": "wiki\\imaginary_time_evolution_for_ground_state_preparation.md",
     "paper_count": 1
   },
-  "In-medium mass modification": {
-    "path": "wiki\\in_medium_mass_modification.md",
+  "In-Medium Mass Modification of Hadrons": {
+    "path": "wiki\\in_medium_mass_modification_of_hadrons.md",
     "paper_count": 1
   },
-  "Inertial Spin Dynamics": {
-    "path": "wiki\\inertial_spin_dynamics.md",
+  "Inhomogeneous Poisson Point Processes with Selection Effects": {
+    "path": "wiki\\inhomogeneous_poisson_point_processes_with_selection_effects.md",
     "paper_count": 1
   },
-  "Inner Crust Environment": {
-    "path": "wiki\\inner_crust_environment.md",
+  "Integrability and its breakdown in AdS3/CFT2": {
+    "path": "wiki\\integrability_and_its_breakdown_in_ads3_cft2.md",
     "paper_count": 1
   },
-  "Interpolation Threshold": {
-    "path": "wiki\\interpolation_threshold.md",
+  "Integrated Silicon Photonic Quantum Circuits": {
+    "path": "wiki\\integrated_silicon_photonic_quantum_circuits.md",
     "paper_count": 1
   },
-  "Ion Traps": {
-    "path": "wiki\\ion_traps.md",
+  "Ion Micromotion in Paul Traps": {
+    "path": "wiki\\ion_micromotion_in_paul_traps.md",
     "paper_count": 1
   },
-  "Isomer Depletion via NEIES": {
-    "path": "wiki\\isomer_depletion_via_neies.md",
+  "Ion Transport and Shuttling in Surface-Electrode Traps": {
+    "path": "wiki\\ion_transport_and_shuttling_in_surface_electrode_traps.md",
     "paper_count": 1
   },
-  "Isomeric States": {
-    "path": "wiki\\isomeric_states.md",
+  "Isospin Transport and Diffusion in Heavy-Ion Collisions": {
+    "path": "wiki\\isospin_transport_and_diffusion_in_heavy_ion_collisions.md",
     "paper_count": 1
   },
-  "Isospin Transport Ratio": {
-    "path": "wiki\\isospin_transport_ratio.md",
+  "Jacobian Rank and Null Space in Parametric Optimization": {
+    "path": "wiki\\jacobian_rank_and_null_space_in_parametric_optimization.md",
     "paper_count": 1
   },
-  "Ji Spin Sum Rule": {
-    "path": "wiki\\ji_spin_sum_rule.md",
+  "KAM Theory (Kolmogorov-Arnold-Moser)": {
+    "path": "wiki\\kam_theory_kolmogorov_arnold_moser.md",
     "paper_count": 1
   },
-  "Josephson Junction": {
-    "path": "wiki\\josephson_junction.md",
+  "Kernel-Target Alignment": {
+    "path": "wiki\\kernel_target_alignment.md",
     "paper_count": 1
   },
-  "Josephson junction": {
-    "path": "wiki\\josephson_junction.md",
+  "Kibble-Zurek Mechanism (KZM) and Finite-Time Scaling (FTS)": {
+    "path": "wiki\\kibble_zurek_mechanism_kzm_and_finite_time_scaling_fts.md",
     "paper_count": 1
   },
-  "KAM theorem for elliptic non-sticking periodic orbits": {
-    "path": "wiki\\kam_theorem_for_elliptic_non_sticking_periodic_orbits.md",
+  "Kinetically Constrained Models and Emergent Symmetry": {
+    "path": "wiki\\kinetically_constrained_models_and_emergent_symmetry.md",
     "paper_count": 1
   },
-  "Kernel Methods": {
-    "path": "wiki\\kernel_methods.md",
+  "Klein-Gordon Inner Product in Quantum Gravity": {
+    "path": "wiki\\klein_gordon_inner_product_in_quantum_gravity.md",
     "paper_count": 1
   },
-  "Kerr Metric": {
-    "path": "wiki\\kerr_metric.md",
+  "Kubo Linear-Response Theory and Fermi's Golden Rule": {
+    "path": "wiki\\kubo_linear_response_theory_and_fermi_s_golden_rule.md",
     "paper_count": 1
   },
-  "Kibble-Zurek Mechanism": {
-    "path": "wiki\\kibble_zurek_mechanism.md",
+  "Landau Level Quantization of Composite Hadrons": {
+    "path": "wiki\\landau_level_quantization_of_composite_hadrons.md",
     "paper_count": 1
   },
-  "Knowledge Distillation": {
-    "path": "wiki\\knowledge_distillation.md",
+  "Landau-Lifshitz-Gilbert (LLG) Equation and Magnetization Damping": {
+    "path": "wiki\\landau_lifshitz_gilbert_llg_equation_and_magnetization_damping.md",
     "paper_count": 1
   },
-  "Kubo-Ando Theory": {
-    "path": "wiki\\kubo_ando_theory.md",
+  "Large-c (1/c) expansion of general relativity": {
+    "path": "wiki\\large_c_1_c_expansion_of_general_relativity.md",
     "paper_count": 1
   },
-  "Kubo-Thermalization Correspondence": {
-    "path": "wiki\\kubo_thermalization_correspondence.md",
+  "Lattice QCD Continuum and Infinite-Volume Extrapolation": {
+    "path": "wiki\\lattice_qcd_continuum_and_infinite_volume_extrapolation.md",
     "paper_count": 1
   },
-  "LDPC Codes": {
-    "path": "wiki\\ldpc_codes.md",
+  "Legendre Invariance in Thermodynamic Geometry": {
+    "path": "wiki\\legendre_invariance_in_thermodynamic_geometry.md",
     "paper_count": 1
   },
-  "LISA Sensitivity and Detection Thresholds": {
-    "path": "wiki\\lisa_sensitivity_and_detection_thresholds.md",
+  "Light-Cone Smearing by Graviton Fluctuations": {
+    "path": "wiki\\light_cone_smearing_by_graviton_fluctuations.md",
     "paper_count": 1
   },
-  "Landau-Level Projection": {
-    "path": "wiki\\landau_level_projection.md",
+  "Liouvillian Exceptional Points and Spectral Structure": {
+    "path": "wiki\\liouvillian_exceptional_points_and_spectral_structure.md",
     "paper_count": 1
   },
-  "Landau-Lifshitz-Gilbert Equation": {
-    "path": "wiki\\landau_lifshitz_gilbert_equation.md",
+  "Local Quantum Error Correcting Code Layouts for Biased-Noise Qubits": {
+    "path": "wiki\\local_quantum_error_correcting_code_layouts_for_biased_noise_qubits.md",
     "paper_count": 1
   },
-  "Larocca Underparameterization Regime": {
-    "path": "wiki\\larocca_underparameterization_regime.md",
+  "L\u00e9vy-Stable Source Distributions in Heavy-Ion Collisions": {
+    "path": "wiki\\l_vy_stable_source_distributions_in_heavy_ion_collisions.md",
     "paper_count": 1
   },
-  "Lateral Split-Gate p-i-n Junction": {
-    "path": "wiki\\lateral_split_gate_p_i_n_junction.md",
+  "Macroscopic Quantum Entanglement": {
+    "path": "wiki\\macroscopic_quantum_entanglement.md",
     "paper_count": 1
   },
-  "Lattice Gauge Theory": {
-    "path": "wiki\\lattice_gauge_theory.md",
-    "paper_count": 1
-  },
-  "Lattice QCD": {
-    "path": "wiki\\lattice_qcd.md",
-    "paper_count": 1
-  },
-  "Legendre invariant metrics": {
-    "path": "wiki\\legendre_invariant_metrics.md",
-    "paper_count": 1
-  },
-  "Lens Equation": {
-    "path": "wiki\\lens_equation.md",
-    "paper_count": 1
-  },
-  "Lie-Poisson Systems": {
-    "path": "wiki\\lie_poisson_systems.md",
-    "paper_count": 1
-  },
-  "Lift construction": {
-    "path": "wiki\\lift_construction.md",
-    "paper_count": 1
-  },
-  "Linear Regime": {
-    "path": "wiki\\linear_regime.md",
-    "paper_count": 1
-  },
-  "Liouville Theory": {
-    "path": "wiki\\liouville_theory.md",
-    "paper_count": 1
-  },
-  "Liouvillian": {
-    "path": "wiki\\liouvillian.md",
-    "paper_count": 1
-  },
-  "Mach-Zehnder Interferometer": {
-    "path": "wiki\\mach_zehnder_interferometer.md",
-    "paper_count": 1
-  },
-  "Machine Learning": {
-    "path": "wiki\\machine_learning.md",
-    "paper_count": 1
-  },
-  "Machine-assisted algebraic discovery": {
-    "path": "wiki\\machine_assisted_algebraic_discovery.md",
-    "paper_count": 1
-  },
-  "Magnetic Field Generation": {
-    "path": "wiki\\magnetic_field_generation.md",
-    "paper_count": 1
-  },
-  "Magnetic Field in Quantum Chromodynamics": {
-    "path": "wiki\\magnetic_field_in_quantum_chromodynamics.md",
-    "paper_count": 1
-  },
-  "Magnetoelectric Coupling": {
-    "path": "wiki\\magnetoelectric_coupling.md",
-    "paper_count": 1
-  },
-  "Majorana Field": {
-    "path": "wiki\\majorana_field.md",
-    "paper_count": 1
-  },
-  "Many-Body Localization": {
-    "path": "wiki\\many_body_localization.md",
+  "Magic State Distillation": {
+    "path": "wiki\\magic_state_distillation.md",
     "paper_count": 2
   },
-  "Matrix Product States": {
-    "path": "wiki\\matrix_product_states.md",
+  "Magnetic Soliton Dynamics (Spin Waves, Domain Walls, Skyrmions)": {
+    "path": "wiki\\magnetic_soliton_dynamics_spin_waves_domain_walls_skyrmions.md",
     "paper_count": 1
   },
-  "Matrix Sequences and Equidistribution": {
-    "path": "wiki\\matrix_sequences_and_equidistribution.md",
+  "Majorana Fields in 1+1 Dimensions": {
+    "path": "wiki\\majorana_fields_in_1_1_dimensions.md",
     "paper_count": 1
   },
-  "Matter-Radiation Equality": {
-    "path": "wiki\\matter_radiation_equality.md",
+  "Mass Extraction Schemes in Symmetry-Broken Backgrounds": {
+    "path": "wiki\\mass_extraction_schemes_in_symmetry_broken_backgrounds.md",
     "paper_count": 1
   },
-  "Metric geometry": {
-    "path": "wiki\\metric_geometry.md",
+  "Matrix Product Operator Vectorization": {
+    "path": "wiki\\matrix_product_operator_vectorization.md",
     "paper_count": 1
   },
-  "Momentum Sum Rule": {
-    "path": "wiki\\momentum_sum_rule.md",
+  "Matter-Metric Perturbation Coupling": {
+    "path": "wiki\\matter_metric_perturbation_coupling.md",
     "paper_count": 1
   },
-  "Morse Functional": {
-    "path": "wiki\\morse_functional.md",
+  "Maxwell Stress Tensor and Optomechanical Forces on Low-Dimensional Conductors": {
+    "path": "wiki\\maxwell_stress_tensor_and_optomechanical_forces_on_low_dimensional_conductors.md",
     "paper_count": 1
   },
-  "Moyal Residual": {
-    "path": "wiki\\moyal_residual.md",
+  "McLachlan Variational Principle": {
+    "path": "wiki\\mclachlan_variational_principle.md",
     "paper_count": 1
   },
-  "Multiple Polylogarithms": {
-    "path": "wiki\\multiple_polylogarithms.md",
+  "Meson Decay Constants and Chiral Perturbation Theory": {
+    "path": "wiki\\meson_decay_constants_and_chiral_perturbation_theory.md",
     "paper_count": 1
   },
-  "Multiscale Methods": {
-    "path": "wiki\\multiscale_methods.md",
+  "Micropolar and Polar Fluid Theory in Solvation": {
+    "path": "wiki\\micropolar_and_polar_fluid_theory_in_solvation.md",
     "paper_count": 1
   },
-  "Nanosecond Laser Ablation": {
-    "path": "wiki\\nanosecond_laser_ablation.md",
+  "Microwave Squeezed State Generation": {
+    "path": "wiki\\microwave_squeezed_state_generation.md",
     "paper_count": 1
   },
-  "Noisy Intermediate-Scale Quantum (NISQ) Devices": {
-    "path": "wiki\\noisy_intermediate_scale_quantum_nisq_devices.md",
+  "Mixed 't Hooft Anomaly": {
+    "path": "wiki\\mixed_t_hooft_anomaly.md",
     "paper_count": 1
   },
-  "Non-Markovian Dynamics": {
-    "path": "wiki\\non_markovian_dynamics.md",
+  "Mixed Conservative-Dissipative Dynamics": {
+    "path": "wiki\\mixed_conservative_dissipative_dynamics.md",
     "paper_count": 1
   },
-  "Non-Markovian Quantum Metrology": {
-    "path": "wiki\\non_markovian_quantum_metrology.md",
+  "Mixed Quantum-Classical Dynamics": {
+    "path": "wiki\\mixed_quantum_classical_dynamics.md",
     "paper_count": 1
   },
-  "Non-Perturbative Corrections and Wick Contractions": {
-    "path": "wiki\\non_perturbative_corrections_and_wick_contractions.md",
+  "Mori-Zwanzig Projection and Temporal Coarse-Graining": {
+    "path": "wiki\\mori_zwanzig_projection_and_temporal_coarse_graining.md",
     "paper_count": 1
   },
-  "Non-Perturbative Effects in AdS/CFT": {
-    "path": "wiki\\non_perturbative_effects_in_ads_cft.md",
+  "Morse Theory in Gauge Fixing": {
+    "path": "wiki\\morse_theory_in_gauge_fixing.md",
     "paper_count": 1
   },
-  "Non-Unitary Dynamics": {
-    "path": "wiki\\non_unitary_dynamics.md",
+  "Multi-Band Gravitational-Wave Astronomy": {
+    "path": "wiki\\multi_band_gravitational_wave_astronomy.md",
     "paper_count": 1
   },
-  "Non-intersection property": {
-    "path": "wiki\\non_intersection_property.md",
+  "Multifractal Critical Phases in Quasiperiodic Systems": {
+    "path": "wiki\\multifractal_critical_phases_in_quasiperiodic_systems.md",
     "paper_count": 1
   },
-  "Nonequilibrium Temperature Evolution": {
-    "path": "wiki\\nonequilibrium_temperature_evolution.md",
+  "Multiple Polylogarithms and Hopf Algebra Coproduct": {
+    "path": "wiki\\multiple_polylogarithms_and_hopf_algebra_coproduct.md",
     "paper_count": 1
   },
-  "Nonequilibrium Thermodynamics": {
-    "path": "wiki\\nonequilibrium_thermodynamics.md",
+  "Narain Moduli Space": {
+    "path": "wiki\\narain_moduli_space.md",
     "paper_count": 1
   },
-  "Nonlocal Conductivity": {
-    "path": "wiki\\nonlocal_conductivity.md",
+  "Newman-Penrose Formalism": {
+    "path": "wiki\\newman_penrose_formalism.md",
     "paper_count": 1
   },
-  "Nonlocal Kinetic Energy": {
-    "path": "wiki\\nonlocal_kinetic_energy.md",
+  "Non-Abelian Lattice Gauge Theories and Confinement": {
+    "path": "wiki\\non_abelian_lattice_gauge_theories_and_confinement.md",
     "paper_count": 1
   },
-  "Normal Form": {
-    "path": "wiki\\normal_form.md",
+  "Non-Abelian Vortex Strings as Critical Superstrings": {
+    "path": "wiki\\non_abelian_vortex_strings_as_critical_superstrings.md",
     "paper_count": 1
   },
-  "Nuclear Electric Excitation and Scattering (NEIES)": {
-    "path": "wiki\\nuclear_electric_excitation_and_scattering_neies.md",
+  "Non-Canonical Scalar Fields (k-essence)": {
+    "path": "wiki\\non_canonical_scalar_fields_k_essence.md",
     "paper_count": 1
   },
-  "Nuclear Equation of State": {
-    "path": "wiki\\nuclear_equation_of_state.md",
+  "Non-Conservative Hyperbolic Systems and DLM Path Theory": {
+    "path": "wiki\\non_conservative_hyperbolic_systems_and_dlm_path_theory.md",
     "paper_count": 1
   },
-  "Null Infinity": {
-    "path": "wiki\\null_infinity.md",
+  "Non-Invertible Symmetry": {
+    "path": "wiki\\non_invertible_symmetry.md",
     "paper_count": 1
   },
-  "Null Vielbein": {
-    "path": "wiki\\null_vielbein.md",
+  "Non-Markovian Quantum Dynamics and Information Backflow": {
+    "path": "wiki\\non_markovian_quantum_dynamics_and_information_backflow.md",
     "paper_count": 1
   },
-  "Numerical Methods": {
-    "path": "wiki\\numerical_methods.md",
+  "Non-Markovian to Markovian crossover in open quantum systems": {
+    "path": "wiki\\non_markovian_to_markovian_crossover_in_open_quantum_systems.md",
     "paper_count": 1
   },
-  "Open Quantum Systems": {
-    "path": "wiki\\open_quantum_systems.md",
+  "Non-Markovianity in Open Quantum Systems": {
+    "path": "wiki\\non_markovianity_in_open_quantum_systems.md",
     "paper_count": 1
   },
-  "Operator Mean": {
-    "path": "wiki\\operator_mean.md",
+  "Non-Unitary Quantum Operations in Linear Optics": {
+    "path": "wiki\\non_unitary_quantum_operations_in_linear_optics.md",
     "paper_count": 1
   },
-  "Optical Force in Carbon Nanotubes": {
-    "path": "wiki\\optical_force_in_carbon_nanotubes.md",
+  "Non-planar corrections and 1/N expansion in orbifold CFTs": {
+    "path": "wiki\\non_planar_corrections_and_1_n_expansion_in_orbifold_cfts.md",
     "paper_count": 1
   },
-  "Optical Lattices": {
-    "path": "wiki\\optical_lattices.md",
+  "Non-relativistic limit of relativistic quantum mechanics": {
+    "path": "wiki\\non_relativistic_limit_of_relativistic_quantum_mechanics.md",
     "paper_count": 1
   },
-  "Optical Tomography": {
-    "path": "wiki\\optical_tomography.md",
+  "Nonadiabatic Quantum Dynamics": {
+    "path": "wiki\\nonadiabatic_quantum_dynamics.md",
     "paper_count": 1
   },
-  "Optimal Control Theory": {
-    "path": "wiki\\optimal_control_theory.md",
+  "Nonequilibrium Stochastic Thermodynamics": {
+    "path": "wiki\\nonequilibrium_stochastic_thermodynamics.md",
     "paper_count": 1
   },
-  "Optimization Algorithm for Finding Eigenvalues": {
-    "path": "wiki\\optimization_algorithm_for_finding_eigenvalues.md",
+  "Nonlinear Electrodynamics (NLED) and U(1) Duality Invariance": {
+    "path": "wiki\\nonlinear_electrodynamics_nled_and_u_1_duality_invariance.md",
     "paper_count": 1
   },
-  "Optimization Performance": {
-    "path": "wiki\\optimization_performance.md",
+  "Nonlinear Mixing Competition in Josephson Metamaterials": {
+    "path": "wiki\\nonlinear_mixing_competition_in_josephson_metamaterials.md",
     "paper_count": 1
   },
-  "Orbital Angular Momentum (OAM)": {
-    "path": "wiki\\orbital_angular_momentum_oam.md",
+  "Nonlocal (Spatially Dispersive) Conductivity": {
+    "path": "wiki\\nonlocal_spatially_dispersive_conductivity.md",
     "paper_count": 1
   },
-  "Out-of-Time-Order Correlator (OTOC)": {
-    "path": "wiki\\out_of_time_order_correlator_otoc.md",
+  "Nonreciprocal Forces in Nonequilibrium Systems": {
+    "path": "wiki\\nonreciprocal_forces_in_nonequilibrium_systems.md",
     "paper_count": 1
   },
-  "P-Divisibility": {
-    "path": "wiki\\p_divisibility.md",
+  "Nonrelativistic gravity and Newton-Cartan geometry": {
+    "path": "wiki\\nonrelativistic_gravity_and_newton_cartan_geometry.md",
     "paper_count": 1
   },
-  "PQCD": {
-    "path": "wiki\\pqcd.md",
+  "Nuclear Equation of State (EoS) Inference and Bayesian Constraints": {
+    "path": "wiki\\nuclear_equation_of_state_eos_inference_and_bayesian_constraints.md",
     "paper_count": 1
   },
-  "Parameter Space Constraints": {
-    "path": "wiki\\parameter_space_constraints.md",
+  "Nuclear Excitation by Inelastic Electron Scattering (NEIES)": {
+    "path": "wiki\\nuclear_excitation_by_inelastic_electron_scattering_neies.md",
     "paper_count": 1
   },
-  "Parametrized Analog Hamiltonian": {
-    "path": "wiki\\parametrized_analog_hamiltonian.md",
+  "Nuclear Isomer Depletion": {
+    "path": "wiki\\nuclear_isomer_depletion.md",
     "paper_count": 1
   },
-  "Parity Complexity": {
-    "path": "wiki\\parity_complexity.md",
+  "Nuclear Symmetry Energy and Its Density Dependence": {
+    "path": "wiki\\nuclear_symmetry_energy_and_its_density_dependence.md",
     "paper_count": 1
   },
-  "Partition Function": {
-    "path": "wiki\\partition_function.md",
+  "Nuclear Symmetry Energy and its Density Dependence": {
+    "path": "wiki\\nuclear_symmetry_energy_and_its_density_dependence.md",
     "paper_count": 1
   },
-  "Path Integral Representation": {
-    "path": "wiki\\path_integral_representation.md",
+  "Nuclear Transition Multipole Matrix Elements and Selection Rules": {
+    "path": "wiki\\nuclear_transition_multipole_matrix_elements_and_selection_rules.md",
     "paper_count": 1
   },
-  "Pauli Operator": {
-    "path": "wiki\\pauli_operator.md",
+  "Null Surface Formulation (NSF) and Bondi Shear": {
+    "path": "wiki\\null_surface_formulation_nsf_and_bondi_shear.md",
     "paper_count": 1
   },
-  "Perturbation Theory": {
-    "path": "wiki\\perturbation_theory.md",
+  "Numerical Schemes for Compressible Multi-Temperature Plasma Flows": {
+    "path": "wiki\\numerical_schemes_for_compressible_multi_temperature_plasma_flows.md",
     "paper_count": 1
   },
-  "Phase Transition": {
-    "path": "wiki\\phase_transition.md",
-    "paper_count": 2
-  },
-  "Physics-Informed Neural Networks": {
-    "path": "wiki\\physics_informed_neural_networks.md",
+  "Open Quantum Systems and Dissipation Engineering": {
+    "path": "wiki\\open_quantum_systems_and_dissipation_engineering.md",
     "paper_count": 1
   },
-  "Planar layouts": {
-    "path": "wiki\\planar_layouts.md",
+  "Open Quantum Systems and Lebesgue Decomposition": {
+    "path": "wiki\\open_quantum_systems_and_lebesgue_decomposition.md",
     "paper_count": 1
   },
-  "Poisson Brackets": {
-    "path": "wiki\\poisson_brackets.md",
+  "Operator Entanglement and Schmidt Decomposition": {
+    "path": "wiki\\operator_entanglement_and_schmidt_decomposition.md",
     "paper_count": 1
   },
-  "Poisson Process": {
-    "path": "wiki\\poisson_process.md",
+  "Optical Pulling Force (Negative Optical Force)": {
+    "path": "wiki\\optical_pulling_force_negative_optical_force.md",
     "paper_count": 1
   },
-  "Polar Decomposition": {
-    "path": "wiki\\polar_decomposition.md",
+  "Optical Transfer Function Engineering": {
+    "path": "wiki\\optical_transfer_function_engineering.md",
     "paper_count": 1
   },
-  "Polytropic gas law": {
-    "path": "wiki\\polytropic_gas_law.md",
+  "Orbital Angular Momentum (OAM) and Spin-Orbit Coupling in Light": {
+    "path": "wiki\\orbital_angular_momentum_oam_and_spin_orbit_coupling_in_light.md",
     "paper_count": 1
   },
-  "Pro-Tensor Network": {
-    "path": "wiki\\pro_tensor_network.md",
+  "Orbital Eccentricity in Binary Inspiral": {
+    "path": "wiki\\orbital_eccentricity_in_binary_inspiral.md",
     "paper_count": 1
   },
-  "Protected Quantum Computing": {
-    "path": "wiki\\protected_quantum_computing.md",
+  "Ostrogradsky Instability and Higher-Derivative Field Theory": {
+    "path": "wiki\\ostrogradsky_instability_and_higher_derivative_field_theory.md",
     "paper_count": 1
   },
-  "Pumping Rate Modulation": {
-    "path": "wiki\\pumping_rate_modulation.md",
+  "Out-of-Time-Order Correlators (OTOCs) and Information Scrambling": {
+    "path": "wiki\\out_of_time_order_correlators_otocs_and_information_scrambling.md",
     "paper_count": 1
   },
-  "Purcell enhancement of single-photon emitters": {
-    "path": "wiki\\purcell_enhancement_of_single_photon_emitters.md",
+  "Overcomplete Parity-Check Matrices": {
+    "path": "wiki\\overcomplete_parity_check_matrices.md",
     "paper_count": 1
   },
-  "Quantum Advantage": {
-    "path": "wiki\\quantum_advantage.md",
+  "Overdamped Langevin Dynamics with Stochastic Trapping": {
+    "path": "wiki\\overdamped_langevin_dynamics_with_stochastic_trapping.md",
     "paper_count": 1
   },
-  "Quantum Algorithm for Calculating Eigenvalues": {
-    "path": "wiki\\quantum_algorithm_for_calculating_eigenvalues.md",
+  "Overlap Fermions": {
+    "path": "wiki\\overlap_fermions.md",
     "paper_count": 1
   },
-  "Quantum Annealing": {
-    "path": "wiki\\quantum_annealing.md",
+  "Page-Wootters Formalism": {
+    "path": "wiki\\page_wootters_formalism.md",
     "paper_count": 1
   },
-  "Quantum Channel": {
-    "path": "wiki\\quantum_channel.md",
+  "Parton Orbital Angular Momentum": {
+    "path": "wiki\\parton_orbital_angular_momentum.md",
     "paper_count": 1
   },
-  "Quantum Channel Capacity": {
-    "path": "wiki\\quantum_channel_capacity.md",
+  "Pauli operator and spin dynamics": {
+    "path": "wiki\\pauli_operator_and_spin_dynamics.md",
+    "paper_count": 1
+  },
+  "Perturbation Theory in Extended Hilbert Space": {
+    "path": "wiki\\perturbation_theory_in_extended_hilbert_space.md",
+    "paper_count": 1
+  },
+  "Perturbation Theory of Hamiltonian Systems": {
+    "path": "wiki\\perturbation_theory_of_hamiltonian_systems.md",
+    "paper_count": 1
+  },
+  "Perturbative Quantum Gravity": {
+    "path": "wiki\\perturbative_quantum_gravity.md",
+    "paper_count": 1
+  },
+  "Physics-Informed Neural Networks (PINNs)": {
+    "path": "wiki\\physics_informed_neural_networks_pinns.md",
+    "paper_count": 1
+  },
+  "Polarization Harmonics and Initial-State Geometry": {
+    "path": "wiki\\polarization_harmonics_and_initial_state_geometry.md",
+    "paper_count": 1
+  },
+  "Population Mixture Models and Contaminant Classification": {
+    "path": "wiki\\population_mixture_models_and_contaminant_classification.md",
+    "paper_count": 1
+  },
+  "Post-Selection and Logical Error Mitigation in Fault-Tolerant Quantum Computing": {
+    "path": "wiki\\post_selection_and_logical_error_mitigation_in_fault_tolerant_quantum_computing.md",
+    "paper_count": 1
+  },
+  "Potts Model": {
+    "path": "wiki\\potts_model.md",
+    "paper_count": 1
+  },
+  "Pressure Anisotropy in Compact Stars": {
+    "path": "wiki\\pressure_anisotropy_in_compact_stars.md",
+    "paper_count": 1
+  },
+  "Pretzelosity TMD": {
+    "path": "wiki\\pretzelosity_tmd.md",
+    "paper_count": 1
+  },
+  "Projective Hilbert Space / Quantum State Space": {
+    "path": "wiki\\projective_hilbert_space_quantum_state_space.md",
+    "paper_count": 1
+  },
+  "Pseudomode Embedding for Non-Markovian Dynamics": {
+    "path": "wiki\\pseudomode_embedding_for_non_markovian_dynamics.md",
+    "paper_count": 1
+  },
+  "Pulsed Laser Ablation": {
+    "path": "wiki\\pulsed_laser_ablation.md",
+    "paper_count": 1
+  },
+  "Purcell Effect": {
+    "path": "wiki\\purcell_effect.md",
+    "paper_count": 1
+  },
+  "Purcell Enhancement": {
+    "path": "wiki\\purcell_enhancement.md",
+    "paper_count": 1
+  },
+  "Quadrangular Polylogarithms": {
+    "path": "wiki\\quadrangular_polylogarithms.md",
+    "paper_count": 1
+  },
+  "Quantum Channels and Completely Positive Maps": {
+    "path": "wiki\\quantum_channels_and_completely_positive_maps.md",
+    "paper_count": 1
+  },
+  "Quantum Channels on Discrete-Variable Systems": {
+    "path": "wiki\\quantum_channels_on_discrete_variable_systems.md",
+    "paper_count": 1
+  },
+  "Quantum Chaos and Hyperbolic Dynamics": {
+    "path": "wiki\\quantum_chaos_and_hyperbolic_dynamics.md",
+    "paper_count": 1
+  },
+  "Quantum Circuit Compilation and Transpilation": {
+    "path": "wiki\\quantum_circuit_compilation_and_transpilation.md",
     "paper_count": 1
   },
   "Quantum Circuit Decomposition": {
     "path": "wiki\\quantum_circuit_decomposition.md",
     "paper_count": 1
   },
-  "Quantum Computing": {
-    "path": "wiki\\quantum_computing.md",
-    "paper_count": 3
-  },
-  "Quantum Computing and Machine Learning": {
-    "path": "wiki\\quantum_computing_and_machine_learning.md",
+  "Quantum Coherence and Decoherence in Spin Qubits": {
+    "path": "wiki\\quantum_coherence_and_decoherence_in_spin_qubits.md",
     "paper_count": 1
   },
-  "Quantum Doeblin Coefficients": {
-    "path": "wiki\\quantum_doeblin_coefficients.md",
+  "Quantum Corrections to the Newtonian Potential": {
+    "path": "wiki\\quantum_corrections_to_the_newtonian_potential.md",
     "paper_count": 1
   },
-  "Quantum Dynamics": {
-    "path": "wiki\\quantum_dynamics.md",
+  "Quantum Decoherence and Circuit Depth Optimization": {
+    "path": "wiki\\quantum_decoherence_and_circuit_depth_optimization.md",
     "paper_count": 1
   },
-  "Quantum Error Correction": {
-    "path": "wiki\\quantum_error_correction.md",
+  "Quantum Detailed Balance and Primitive Quantum Channels": {
+    "path": "wiki\\quantum_detailed_balance_and_primitive_quantum_channels.md",
+    "paper_count": 1
+  },
+  "Quantum Device Calibration and Fidelity Estimation": {
+    "path": "wiki\\quantum_device_calibration_and_fidelity_estimation.md",
+    "paper_count": 1
+  },
+  "Quantum Entanglement Generation": {
+    "path": "wiki\\quantum_entanglement_generation.md",
+    "paper_count": 1
+  },
+  "Quantum Entanglement and Concurrence in Biphoton States": {
+    "path": "wiki\\quantum_entanglement_and_concurrence_in_biphoton_states.md",
+    "paper_count": 1
+  },
+  "Quantum Ergodicity and Semiclassical Measures": {
+    "path": "wiki\\quantum_ergodicity_and_semiclassical_measures.md",
+    "paper_count": 1
+  },
+  "Quantum Error Correction Thresholds": {
+    "path": "wiki\\quantum_error_correction_thresholds.md",
     "paper_count": 2
   },
-  "Quantum Error Mitigation": {
-    "path": "wiki\\quantum_error_mitigation.md",
+  "Quantum Error Correction and Stabilizer Codes": {
+    "path": "wiki\\quantum_error_correction_and_stabilizer_codes.md",
     "paper_count": 1
   },
-  "Quantum Estimation Theory": {
-    "path": "wiki\\quantum_estimation_theory.md",
+  "Quantum Error-Correcting Codes (Stabilizer / CSS Codes)": {
+    "path": "wiki\\quantum_error_correcting_codes_stabilizer_css_codes.md",
     "paper_count": 1
   },
-  "Quantum Fluctuations": {
-    "path": "wiki\\quantum_fluctuations.md",
+  "Quantum Fisher Information (QFI) in Open Systems": {
+    "path": "wiki\\quantum_fisher_information_qfi_in_open_systems.md",
     "paper_count": 1
   },
-  "Quantum Generative Adversarial Networks (QGANs)": {
-    "path": "wiki\\quantum_generative_adversarial_networks_qgans.md",
+  "Quantum Fisher Information Matrix (QFIM)": {
+    "path": "wiki\\quantum_fisher_information_matrix_qfim.md",
     "paper_count": 1
   },
-  "Quantum Information Processing": {
-    "path": "wiki\\quantum_information_processing.md",
+  "Quantum Fisher Information and Cram\u00e9r-Rao Bound": {
+    "path": "wiki\\quantum_fisher_information_and_cram_r_rao_bound.md",
     "paper_count": 1
   },
-  "Quantum Integrability": {
-    "path": "wiki\\quantum_integrability.md",
+  "Quantum Generative Modeling": {
+    "path": "wiki\\quantum_generative_modeling.md",
     "paper_count": 1
   },
-  "Quantum Key Distribution": {
-    "path": "wiki\\quantum_key_distribution.md",
+  "Quantum Hilbert Space Expressivity": {
+    "path": "wiki\\quantum_hilbert_space_expressivity.md",
     "paper_count": 1
   },
-  "Quantum Linear System Algebra (QLSA)": {
-    "path": "wiki\\quantum_linear_system_algebra_qlsa.md",
+  "Quantum Hypothesis Testing and Error Bounds": {
+    "path": "wiki\\quantum_hypothesis_testing_and_error_bounds.md",
     "paper_count": 1
   },
-  "Quantum Machine Learning": {
-    "path": "wiki\\quantum_machine_learning.md",
+  "Quantum Information Geometry and Fidelity": {
+    "path": "wiki\\quantum_information_geometry_and_fidelity.md",
     "paper_count": 1
   },
-  "Quantum Magnonics": {
-    "path": "wiki\\quantum_magnonics.md",
+  "Quantum Kernel Methods": {
+    "path": "wiki\\quantum_kernel_methods.md",
     "paper_count": 1
   },
-  "Quantum Magnons": {
-    "path": "wiki\\quantum_magnons.md",
+  "Quantum Key Distribution Security Proofs": {
+    "path": "wiki\\quantum_key_distribution_security_proofs.md",
     "paper_count": 1
   },
-  "Quantum Mechanics": {
-    "path": "wiki\\quantum_mechanics.md",
+  "Quantum Linear Systems Algorithms": {
+    "path": "wiki\\quantum_linear_systems_algorithms.md",
     "paper_count": 1
   },
-  "Quantum Mechanics and Relational Framework": {
-    "path": "wiki\\quantum_mechanics_and_relational_framework.md",
+  "Quantum Markov Chain Mixing and Convergence": {
+    "path": "wiki\\quantum_markov_chain_mixing_and_convergence.md",
     "paper_count": 1
   },
-  "Quantum Neural Network": {
-    "path": "wiki\\quantum_neural_network.md",
+  "Quantum Mpemba Effect": {
+    "path": "wiki\\quantum_mpemba_effect.md",
     "paper_count": 1
   },
-  "Quantum Neural Networks": {
-    "path": "wiki\\quantum_neural_networks.md",
+  "Quantum Noise and Decoherence": {
+    "path": "wiki\\quantum_noise_and_decoherence.md",
     "paper_count": 1
   },
-  "Quantum Pontus-Mpemba Effect": {
-    "path": "wiki\\quantum_pontus_mpemba_effect.md",
+  "Quantum Phase Diagrams in Bipartite Hexagonal Lattices with Sublattice Asymmetry": {
+    "path": "wiki\\quantum_phase_diagrams_in_bipartite_hexagonal_lattices_with_sublattice_asymmetry.md",
     "paper_count": 1
   },
-  "Quantum Process Tomography": {
-    "path": "wiki\\quantum_process_tomography.md",
+  "Quantum Phase Interference in Feature Maps": {
+    "path": "wiki\\quantum_phase_interference_in_feature_maps.md",
     "paper_count": 1
   },
-  "Quantum Reed Muller codes": {
+  "Quantum Reed-Muller Codes": {
     "path": "wiki\\quantum_reed_muller_codes.md",
     "paper_count": 1
   },
-  "Quantum Simulation": {
-    "path": "wiki\\quantum_simulation.md",
-    "paper_count": 2
-  },
-  "Quantum Spin Density Matrix": {
-    "path": "wiki\\quantum_spin_density_matrix.md",
+  "Quantum Regression Theorem (QRT)": {
+    "path": "wiki\\quantum_regression_theorem_qrt.md",
     "paper_count": 1
   },
-  "Quantum Trotter Error": {
-    "path": "wiki\\quantum_trotter_error.md",
+  "Quantum Scarring": {
+    "path": "wiki\\quantum_scarring.md",
     "paper_count": 1
   },
-  "Quantum Walk": {
-    "path": "wiki\\quantum_walk.md",
+  "Quantum Shell Effects in Neutron Star Crusts": {
+    "path": "wiki\\quantum_shell_effects_in_neutron_star_crusts.md",
     "paper_count": 1
   },
-  "Quantum computing": {
-    "path": "wiki\\quantum_computing.md",
+  "Quantum Simulation of High-Energy Physics Phenomena": {
+    "path": "wiki\\quantum_simulation_of_high_energy_physics_phenomena.md",
     "paper_count": 1
   },
-  "Quantum error correction": {
-    "path": "wiki\\quantum_error_correction.md",
+  "Quantum Simulation of Non-Unitary Dynamics": {
+    "path": "wiki\\quantum_simulation_of_non_unitary_dynamics.md",
     "paper_count": 1
   },
-  "Quark Gluon Plasma": {
-    "path": "wiki\\quark_gluon_plasma.md",
+  "Quantum Spin Density Matrix Formalism": {
+    "path": "wiki\\quantum_spin_density_matrix_formalism.md",
     "paper_count": 1
   },
-  "Quasi-Projectile (QP)": {
-    "path": "wiki\\quasi_projectile_qp.md",
+  "Quantum Spinodal Point and Metastability": {
+    "path": "wiki\\quantum_spinodal_point_and_metastability.md",
     "paper_count": 1
   },
-  "Quasi-homogeneous thermodynamics": {
+  "Quantum State Encoding of Classical Data": {
+    "path": "wiki\\quantum_state_encoding_of_classical_data.md",
+    "paper_count": 1
+  },
+  "Quantum State Space Geometry (CP\u00b9 Manifold)": {
+    "path": "wiki\\quantum_state_space_geometry_cp_manifold.md",
+    "paper_count": 1
+  },
+  "Quantum State Tomography via Dispersive Coupling": {
+    "path": "wiki\\quantum_state_tomography_via_dispersive_coupling.md",
+    "paper_count": 1
+  },
+  "Quantum Thermalization": {
+    "path": "wiki\\quantum_thermalization.md",
+    "paper_count": 1
+  },
+  "Quantum chaos and random matrix statistics in holographic systems": {
+    "path": "wiki\\quantum_chaos_and_random_matrix_statistics_in_holographic_systems.md",
+    "paper_count": 1
+  },
+  "Quantum f-Divergences": {
+    "path": "wiki\\quantum_f_divergences.md",
+    "paper_count": 1
+  },
+  "Quantum-Confined Stark Effect": {
+    "path": "wiki\\quantum_confined_stark_effect.md",
+    "paper_count": 1
+  },
+  "Quantum-to-Classical Emergence of Irreversibility": {
+    "path": "wiki\\quantum_to_classical_emergence_of_irreversibility.md",
+    "paper_count": 1
+  },
+  "Quasi-Homogeneous Thermodynamics": {
     "path": "wiki\\quasi_homogeneous_thermodynamics.md",
     "paper_count": 1
   },
-  "Quasinormal Modes": {
-    "path": "wiki\\quasinormal_modes.md",
+  "Quasi-Normal Modes (QNMs) of Black Holes": {
+    "path": "wiki\\quasi_normal_modes_qnms_of_black_holes.md",
     "paper_count": 1
   },
-  "Quenched Free Energy": {
-    "path": "wiki\\quenched_free_energy.md",
+  "Quasi-Normal Modes of Neutron Stars": {
+    "path": "wiki\\quasi_normal_modes_of_neutron_stars.md",
     "paper_count": 1
   },
-  "Relativistic Heavy Ion Collider (RHIC)": {
-    "path": "wiki\\relativistic_heavy_ion_collider_rhic.md",
+  "Quasiparticle Picture of Entanglement Dynamics": {
+    "path": "wiki\\quasiparticle_picture_of_entanglement_dynamics.md",
     "paper_count": 1
   },
-  "Relativistic Quantum Key Distribution": {
-    "path": "wiki\\relativistic_quantum_key_distribution.md",
+  "Quasiparticle Residues and Wave-Function Renormalization in Magnetic Backgrounds": {
+    "path": "wiki\\quasiparticle_residues_and_wave_function_renormalization_in_magnetic_backgrounds.md",
+    "paper_count": 1
+  },
+  "Quasistatic Optimality and Its Breakdown": {
+    "path": "wiki\\quasistatic_optimality_and_its_breakdown.md",
+    "paper_count": 1
+  },
+  "Qudit Quantum Computing and Hardware-Efficient Encoding": {
+    "path": "wiki\\qudit_quantum_computing_and_hardware_efficient_encoding.md",
+    "paper_count": 1
+  },
+  "Quenched Free Energy of Disordered Systems": {
+    "path": "wiki\\quenched_free_energy_of_disordered_systems.md",
+    "paper_count": 1
+  },
+  "Rankine-Hugoniot Shock Conditions": {
+    "path": "wiki\\rankine_hugoniot_shock_conditions.md",
+    "paper_count": 1
+  },
+  "Rayleigh Criterion for Instability": {
+    "path": "wiki\\rayleigh_criterion_for_instability.md",
+    "paper_count": 1
+  },
+  "Regge Theory": {
+    "path": "wiki\\regge_theory.md",
+    "paper_count": 1
+  },
+  "Relativistic Mean-Field Theory": {
+    "path": "wiki\\relativistic_mean_field_theory.md",
     "paper_count": 1
   },
   "Renormalization Group": {
     "path": "wiki\\renormalization_group.md",
     "paper_count": 1
   },
-  "Resonance Points": {
-    "path": "wiki\\resonance_points.md",
+  "Replica Symmetry Breaking (RSB)": {
+    "path": "wiki\\replica_symmetry_breaking_rsb.md",
     "paper_count": 1
   },
-  "Rest-Mass Extraction Scheme": {
-    "path": "wiki\\rest_mass_extraction_scheme.md",
+  "R\u00e9nyi Coherent Information": {
+    "path": "wiki\\r_nyi_coherent_information.md",
     "paper_count": 1
   },
-  "Rhombus Qubit": {
-    "path": "wiki\\rhombus_qubit.md",
+  "R\u00e9nyi Entropy and Variable-Length Key Distillation": {
+    "path": "wiki\\r_nyi_entropy_and_variable_length_key_distillation.md",
     "paper_count": 1
   },
-  "Ricci-Gauss-Bonnet Theories": {
-    "path": "wiki\\ricci_gauss_bonnet_theories.md",
-    "paper_count": 1
-  },
-  "Riemannian Optimization": {
-    "path": "wiki\\riemannian_optimization.md",
-    "paper_count": 1
-  },
-  "Rotated Surface Code": {
-    "path": "wiki\\rotated_surface_code.md",
-    "paper_count": 1
-  },
-  "S-matrix bootstrap": {
+  "S-Matrix Bootstrap": {
     "path": "wiki\\s_matrix_bootstrap.md",
     "paper_count": 1
   },
-  "SQCD (Supersymmetric QCD)": {
-    "path": "wiki\\sqcd_supersymmetric_qcd.md",
+  "SU(2) Symmetry in Polarization Optics": {
+    "path": "wiki\\su_2_symmetry_in_polarization_optics.md",
     "paper_count": 1
   },
-  "SU(2) Plate": {
-    "path": "wiki\\su_2_plate.md",
+  "Savvidy Vacuum Instability and Tachyonic Suppression": {
+    "path": "wiki\\savvidy_vacuum_instability_and_tachyonic_suppression.md",
     "paper_count": 1
   },
-  "Saddle-center bifurcation": {
-    "path": "wiki\\saddle_center_bifurcation.md",
+  "Scalar-Field Reconstruction of Dark Energy": {
+    "path": "wiki\\scalar_field_reconstruction_of_dark_energy.md",
     "paper_count": 1
   },
-  "Saturation Regime": {
-    "path": "wiki\\saturation_regime.md",
+  "Scalar-Tensor Gravity": {
+    "path": "wiki\\scalar_tensor_gravity.md",
     "paper_count": 1
   },
-  "Scalar-Tensor Theory": {
-    "path": "wiki\\scalar_tensor_theory.md",
+  "Scaling Laws in Deep Learning": {
+    "path": "wiki\\scaling_laws_in_deep_learning.md",
     "paper_count": 1
   },
-  "Scaling Symmetry": {
-    "path": "wiki\\scaling_symmetry.md",
+  "Schmidt Decomposition and Separability": {
+    "path": "wiki\\schmidt_decomposition_and_separability.md",
     "paper_count": 1
   },
-  "Scattering amplitudes": {
-    "path": "wiki\\scattering_amplitudes.md",
+  "Schr\u00f6dinger\u2013Newton Equation": {
+    "path": "wiki\\schr_dinger_newton_equation.md",
     "paper_count": 1
   },
-  "Schmidt Spectrum": {
-    "path": "wiki\\schmidt_spectrum.md",
+  "Schwinger-Keldysh Field Theory (SKFT) for Open Quantum-Classical Systems": {
+    "path": "wiki\\schwinger_keldysh_field_theory_skft_for_open_quantum_classical_systems.md",
     "paper_count": 1
   },
-  "Schr\u00f6dinger Equation": {
-    "path": "wiki\\schr_dinger_equation.md",
+  "Self-Similar Solutions and Blowup Theory in Nonlinear PDEs": {
+    "path": "wiki\\self_similar_solutions_and_blowup_theory_in_nonlinear_pdes.md",
     "paper_count": 1
   },
-  "Schwarzschild Metric": {
-    "path": "wiki\\schwarzschild_metric.md",
+  "Sequential Measurement Statistics in Open Systems": {
+    "path": "wiki\\sequential_measurement_statistics_in_open_systems.md",
     "paper_count": 1
   },
-  "Self-Duality": {
-    "path": "wiki\\self_duality.md",
+  "Shot Noise in Photon-Starved Imaging": {
+    "path": "wiki\\shot_noise_in_photon_starved_imaging.md",
     "paper_count": 1
   },
-  "Self-similarity": {
-    "path": "wiki\\self_similarity.md",
-    "paper_count": 1
-  },
-  "Shutting Down a Quantum Computer": {
-    "path": "wiki\\shutting_down_a_quantum_computer.md",
-    "paper_count": 1
-  },
-  "Signed Path Representation": {
-    "path": "wiki\\signed_path_representation.md",
-    "paper_count": 1
-  },
-  "Single Photon Emission": {
+  "Single-Photon Emission": {
     "path": "wiki\\single_photon_emission.md",
     "paper_count": 1
   },
-  "Single-color centers in silicon carbide": {
-    "path": "wiki\\single_color_centers_in_silicon_carbide.md",
+  "Space-Fractional Quantum Mechanics (Riesz Fractional Laplacian)": {
+    "path": "wiki\\space_fractional_quantum_mechanics_riesz_fractional_laplacian.md",
     "paper_count": 1
   },
-  "Skew-Hamiltonian Structure": {
-    "path": "wiki\\skew_hamiltonian_structure.md",
+  "Spatial Localization and Position Moments of Eigenstates": {
+    "path": "wiki\\spatial_localization_and_position_moments_of_eigenstates.md",
     "paper_count": 1
   },
-  "Soliton Equations": {
-    "path": "wiki\\soliton_equations.md",
+  "Spectral Diffusion in Solid-State Emitters": {
+    "path": "wiki\\spectral_diffusion_in_solid_state_emitters.md",
     "paper_count": 1
   },
-  "Spatial Dispersion": {
-    "path": "wiki\\spatial_dispersion.md",
+  "Speed of Sound in Dense Matter": {
+    "path": "wiki\\speed_of_sound_in_dense_matter.md",
     "paper_count": 1
   },
-  "Spectral Detuning": {
-    "path": "wiki\\spectral_detuning.md",
+  "Spin-Glass Models and Hopfield Networks": {
+    "path": "wiki\\spin_glass_models_and_hopfield_networks.md",
     "paper_count": 1
   },
-  "Spectral Knee": {
-    "path": "wiki\\spectral_knee.md",
+  "Spin-quadrupole coupling in stationary axisymmetric spacetimes": {
+    "path": "wiki\\spin_quadrupole_coupling_in_stationary_axisymmetric_spacetimes.md",
     "paper_count": 1
   },
-  "Spin Coefficients": {
-    "path": "wiki\\spin_coefficients.md",
-    "paper_count": 1
-  },
-  "Spin Connection": {
-    "path": "wiki\\spin_connection.md",
-    "paper_count": 1
-  },
-  "Spin Model": {
-    "path": "wiki\\spin_model.md",
-    "paper_count": 1
-  },
-  "Spin Process": {
-    "path": "wiki\\spin_process.md",
-    "paper_count": 1
-  },
-  "Spin-Bath Interaction": {
-    "path": "wiki\\spin_bath_interaction.md",
-    "paper_count": 1
-  },
-  "Spin-Orbit Coupling": {
-    "path": "wiki\\spin_orbit_coupling.md",
-    "paper_count": 1
-  },
-  "Spin-orbit coupled atomic chain": {
-    "path": "wiki\\spin_orbit_coupled_atomic_chain.md",
-    "paper_count": 1
-  },
-  "Spin-photon interface": {
-    "path": "wiki\\spin_photon_interface.md",
-    "paper_count": 1
-  },
-  "Spintronics": {
-    "path": "wiki\\spintronics.md",
+  "Spin\u2013Dark Matter Parameter Degeneracy in Black Hole Imaging": {
+    "path": "wiki\\spin_dark_matter_parameter_degeneracy_in_black_hole_imaging.md",
     "paper_count": 1
   },
   "Spontaneous Symmetry Breaking": {
     "path": "wiki\\spontaneous_symmetry_breaking.md",
     "paper_count": 1
   },
-  "Squeezing": {
-    "path": "wiki\\squeezing.md",
+  "Spontaneous Symmetry Breaking and Goldstone Bosons in Strongly Coupled SQCD": {
+    "path": "wiki\\spontaneous_symmetry_breaking_and_goldstone_bosons_in_strongly_coupled_sqcd.md",
     "paper_count": 1
   },
-  "Squeezing effect in heavy-ion collisions": {
-    "path": "wiki\\squeezing_effect_in_heavy_ion_collisions.md",
+  "Squeezed Graviton States from Inflation": {
+    "path": "wiki\\squeezed_graviton_states_from_inflation.md",
     "paper_count": 1
   },
-  "Stabilizer Code": {
-    "path": "wiki\\stabilizer_code.md",
+  "Standard Sirens and Hubble Constant Measurement": {
+    "path": "wiki\\standard_sirens_and_hubble_constant_measurement.md",
     "paper_count": 1
   },
-  "Stabilizer Codes": {
-    "path": "wiki\\stabilizer_codes.md",
+  "Steepest-Entropy-Ascent Quantum Thermodynamics (SEAQT)": {
+    "path": "wiki\\steepest_entropy_ascent_quantum_thermodynamics_seaqt.md",
     "paper_count": 1
   },
-  "Stationary Vacuum Solutions": {
-    "path": "wiki\\stationary_vacuum_solutions.md",
+  "Stochastic Differential Equations with Logarithmic Interaction": {
+    "path": "wiki\\stochastic_differential_equations_with_logarithmic_interaction.md",
     "paper_count": 1
   },
-  "Steady-state entanglement entropy": {
-    "path": "wiki\\steady_state_entanglement_entropy.md",
+  "Stochastic Gravitational-Wave Background (SGWB)": {
+    "path": "wiki\\stochastic_gravitational_wave_background_sgwb.md",
     "paper_count": 1
   },
-  "Stochastic Control Theory": {
-    "path": "wiki\\stochastic_control_theory.md",
+  "Stochastic Partial Differential Equations with Multiplicative Noise": {
+    "path": "wiki\\stochastic_partial_differential_equations_with_multiplicative_noise.md",
     "paper_count": 1
   },
-  "Stochastic Dynamics": {
-    "path": "wiki\\stochastic_dynamics.md",
+  "Stochastic Zeta Functions and Random Entire Functions": {
+    "path": "wiki\\stochastic_zeta_functions_and_random_entire_functions.md",
     "paper_count": 1
   },
-  "Stochastic Gravitational Wave Background": {
-    "path": "wiki\\stochastic_gravitational_wave_background.md",
+  "String Density of States and Thermodynamic Fluctuations": {
+    "path": "wiki\\string_density_of_states_and_thermodynamic_fluctuations.md",
     "paper_count": 1
   },
-  "Stochastic evolution on Nevanlinna functions": {
-    "path": "wiki\\stochastic_evolution_on_nevanlinna_functions.md",
+  "Strong Data-Processing Inequalities (SDPI) in Quantum Channels": {
+    "path": "wiki\\strong_data_processing_inequalities_sdpi_in_quantum_channels.md",
     "paper_count": 1
   },
-  "Strange Quark Condensate": {
-    "path": "wiki\\strange_quark_condensate.md",
+  "Structure-Preserving Numerical Methods": {
+    "path": "wiki\\structure_preserving_numerical_methods.md",
     "paper_count": 1
   },
-  "String Breaking": {
-    "path": "wiki\\string_breaking.md",
+  "Su-Schrieffer-Heeger (SSH) Model under Periodic Driving": {
+    "path": "wiki\\su_schrieffer_heeger_ssh_model_under_periodic_driving.md",
     "paper_count": 1
   },
-  "Strong-Field Physics": {
-    "path": "wiki\\strong_field_physics.md",
+  "Subharmonic Comparison Principle for Schr\u00f6dinger Operators": {
+    "path": "wiki\\subharmonic_comparison_principle_for_schr_dinger_operators.md",
     "paper_count": 1
   },
-  "Super-Resolution Imaging": {
-    "path": "wiki\\super_resolution_imaging.md",
+  "Subsystem Information Capacity (SIC)": {
+    "path": "wiki\\subsystem_information_capacity_sic.md",
     "paper_count": 1
   },
-  "Superconducting Qubit": {
-    "path": "wiki\\superconducting_qubit.md",
+  "Superexchange and Schrieffer-Wolff Transformation": {
+    "path": "wiki\\superexchange_and_schrieffer_wolff_transformation.md",
     "paper_count": 1
   },
-  "Superconducting Qubits": {
-    "path": "wiki\\superconducting_qubits.md",
+  "Superfluid-Mott Insulator Quantum Phase Transition": {
+    "path": "wiki\\superfluid_mott_insulator_quantum_phase_transition.md",
     "paper_count": 1
   },
-  "Superconducting quantum interference device (SQUID)": {
-    "path": "wiki\\superconducting_quantum_interference_device_squid.md",
+  "Surface Contamination and Defect Formation in Microfabricated Ion Traps": {
+    "path": "wiki\\surface_contamination_and_defect_formation_in_microfabricated_ion_traps.md",
     "paper_count": 1
   },
-  "Superdiffusivity": {
-    "path": "wiki\\superdiffusivity.md",
+  "Swampland Distance Conjecture": {
+    "path": "wiki\\swampland_distance_conjecture.md",
     "paper_count": 1
   },
-  "Surface-Electrode Ion Traps": {
-    "path": "wiki\\surface_electrode_ion_traps.md",
+  "Symmetry Topological Field Theory (SymTFT)": {
+    "path": "wiki\\symmetry_topological_field_theory_symtft.md",
     "paper_count": 1
   },
-  "SymTFT": {
-    "path": "wiki\\symtft.md",
+  "Symmetry breaking and band engineering in tight-binding models": {
+    "path": "wiki\\symmetry_breaking_and_band_engineering_in_tight_binding_models.md",
     "paper_count": 1
   },
-  "Symmetry Energy Slope": {
-    "path": "wiki\\symmetry_energy_slope.md",
+  "Symplectic Geometry and Canonical Transformations": {
+    "path": "wiki\\symplectic_geometry_and_canonical_transformations.md",
     "paper_count": 1
   },
-  "Symplectic Stiefel Manifold": {
-    "path": "wiki\\symplectic_stiefel_manifold.md",
+  "Symplectic Geometry and Hamiltonian Mechanics": {
+    "path": "wiki\\symplectic_geometry_and_hamiltonian_mechanics.md",
     "paper_count": 1
   },
-  "TT Perturbations": {
-    "path": "wiki\\tt_perturbations.md",
+  "Symplectic Mechanics and Area-Preserving Maps": {
+    "path": "wiki\\symplectic_mechanics_and_area_preserving_maps.md",
     "paper_count": 1
   },
-  "Temporal Coarse-Graining": {
-    "path": "wiki\\temporal_coarse_graining.md",
+  "Symplectic Model Reduction": {
+    "path": "wiki\\symplectic_model_reduction.md",
     "paper_count": 1
   },
-  "Temporal Deformation of Cartan Fields": {
-    "path": "wiki\\temporal_deformation_of_cartan_fields.md",
+  "Syndrome Probability Distribution in Stabilizer Codes": {
+    "path": "wiki\\syndrome_probability_distribution_in_stabilizer_codes.md",
     "paper_count": 1
   },
-  "Tensor Network": {
-    "path": "wiki\\tensor_network.md",
+  "Synge's World Function as a Quantum Operator": {
+    "path": "wiki\\synge_s_world_function_as_a_quantum_operator.md",
+    "paper_count": 1
+  },
+  "Tensor Network State Preparation": {
+    "path": "wiki\\tensor_network_state_preparation.md",
     "paper_count": 1
   },
   "Tensor Networks": {
     "path": "wiki\\tensor_networks.md",
     "paper_count": 1
   },
-  "Tetrad": {
-    "path": "wiki\\tetrad.md",
+  "Teukolsky Equation for Gravitational Perturbations": {
+    "path": "wiki\\teukolsky_equation_for_gravitational_perturbations.md",
     "paper_count": 1
   },
-  "Time-Dependent Quantum Systems": {
-    "path": "wiki\\time_dependent_quantum_systems.md",
+  "Thermalization and the Ultraviolet Catastrophe in Classical Wave Systems": {
+    "path": "wiki\\thermalization_and_the_ultraviolet_catastrophe_in_classical_wave_systems.md",
     "paper_count": 1
   },
-  "Tomimatsu-Sato Spacetime": {
-    "path": "wiki\\tomimatsu_sato_spacetime.md",
+  "Thermodynamic Admissibility and Entropy Production in Shocks": {
+    "path": "wiki\\thermodynamic_admissibility_and_entropy_production_in_shocks.md",
     "paper_count": 1
   },
-  "Tomita-Takesaki Modular Operator": {
-    "path": "wiki\\tomita_takesaki_modular_operator.md",
+  "Threshold Bound States in Quantum Mechanics": {
+    "path": "wiki\\threshold_bound_states_in_quantum_mechanics.md",
     "paper_count": 1
   },
-  "Topological Ensemble": {
-    "path": "wiki\\topological_ensemble.md",
+  "Tight-Binding and Bose-Hubbard Model Validity in Continuous-Space Lattices": {
+    "path": "wiki\\tight_binding_and_bose_hubbard_model_validity_in_continuous_space_lattices.md",
     "paper_count": 1
   },
-  "Topological Quantum Computing": {
-    "path": "wiki\\topological_quantum_computing.md",
+  "Tomimatsu\u2013Sato Solutions": {
+    "path": "wiki\\tomimatsu_sato_solutions.md",
     "paper_count": 1
   },
-  "Trace Anomaly": {
-    "path": "wiki\\trace_anomaly.md",
+  "Tomita-Takesaki Modular Theory and Modular Localization": {
+    "path": "wiki\\tomita_takesaki_modular_theory_and_modular_localization.md",
     "paper_count": 1
   },
-  "Trapped-Ion Quantum Computer": {
-    "path": "wiki\\trapped_ion_quantum_computer.md",
+  "Topological Code Design for Hardware-Specific Noise": {
+    "path": "wiki\\topological_code_design_for_hardware_specific_noise.md",
     "paper_count": 1
   },
-  "Traveling wave solutions": {
-    "path": "wiki\\traveling_wave_solutions.md",
+  "Topological Defects and Anyonic Excitations": {
+    "path": "wiki\\topological_defects_and_anyonic_excitations.md",
     "paper_count": 1
   },
-  "Tunable Quantum Devices": {
-    "path": "wiki\\tunable_quantum_devices.md",
+  "Topological Holography and Symmetry": {
+    "path": "wiki\\topological_holography_and_symmetry.md",
     "paper_count": 1
   },
-  "Tunneling Ionization": {
-    "path": "wiki\\tunneling_ionization.md",
+  "Topological Order and Levin-Wen String-Net Models": {
+    "path": "wiki\\topological_order_and_levin_wen_string_net_models.md",
     "paper_count": 1
   },
-  "Vanishing viscosity": {
-    "path": "wiki\\vanishing_viscosity.md",
+  "Topological Solitons and Derrick's Theorem Evasion": {
+    "path": "wiki\\topological_solitons_and_derrick_s_theorem_evasion.md",
     "paper_count": 1
   },
-  "Variational Circuit Compression": {
-    "path": "wiki\\variational_circuit_compression.md",
+  "Trace (Conformal) Anomaly and Anomaly-Induced Effective Action": {
+    "path": "wiki\\trace_conformal_anomaly_and_anomaly_induced_effective_action.md",
     "paper_count": 1
   },
-  "Varnad's Theorem": {
-    "path": "wiki\\varnad_s_theorem.md",
+  "Transversal Gates and the Clifford Hierarchy": {
+    "path": "wiki\\transversal_gates_and_the_clifford_hierarchy.md",
     "paper_count": 1
   },
-  "Vertical Graphene/hBN/WSe2 Tunnel-Junction LED": {
-    "path": "wiki\\vertical_graphene_hbn_wse2_tunnel_junction_led.md",
+  "Traveling-Wave Parametric Amplification": {
+    "path": "wiki\\traveling_wave_parametric_amplification.md",
     "paper_count": 1
   },
-  "Von Neumann Entanglement Entropy": {
-    "path": "wiki\\von_neumann_entanglement_entropy.md",
+  "Trotterized Digital Quantum Simulation": {
+    "path": "wiki\\trotterized_digital_quantum_simulation.md",
     "paper_count": 1
   },
-  "Voros Period": {
-    "path": "wiki\\voros_period.md",
+  "Tunneling Ionization and ADK/PPT Theory": {
+    "path": "wiki\\tunneling_ionization_and_adk_ppt_theory.md",
     "paper_count": 1
   },
-  "Vorticity dynamics": {
-    "path": "wiki\\vorticity_dynamics.md",
+  "Two-Mode Squeezing Interaction": {
+    "path": "wiki\\two_mode_squeezing_interaction.md",
     "paper_count": 1
   },
-  "Wandering Exponent": {
-    "path": "wiki\\wandering_exponent.md",
+  "Ultraviolet Divergences and Renormalization": {
+    "path": "wiki\\ultraviolet_divergences_and_renormalization.md",
     "paper_count": 1
   },
-  "Weyl Scalar": {
-    "path": "wiki\\weyl_scalar.md",
+  "Ultraviolet Regularization via Quantum Gravity": {
+    "path": "wiki\\ultraviolet_regularization_via_quantum_gravity.md",
     "paper_count": 1
   },
-  "Wigner Function": {
-    "path": "wiki\\wigner_function.md",
+  "Unimodular Gravity and Reduced Diffeomorphism Symmetry": {
+    "path": "wiki\\unimodular_gravity_and_reduced_diffeomorphism_symmetry.md",
     "paper_count": 1
   },
-  "Witten's Large N Approximation": {
-    "path": "wiki\\witten_s_large_n_approximation.md",
+  "Unitary Quantum Circuits and Amplitude Encoding": {
+    "path": "wiki\\unitary_quantum_circuits_and_amplitude_encoding.md",
     "paper_count": 1
   },
-  "YTSF Integrable Structure": {
-    "path": "wiki\\ytsf_integrable_structure.md",
+  "Universal Relations in Gravitational-Wave Asteroseismology": {
+    "path": "wiki\\universal_relations_in_gravitational_wave_asteroseismology.md",
     "paper_count": 1
   },
-  "Zak Phase": {
-    "path": "wiki\\zak_phase.md",
+  "Vacuum States in Curved Spacetime (Boulware Vacuum)": {
+    "path": "wiki\\vacuum_states_in_curved_spacetime_boulware_vacuum.md",
+    "paper_count": 1
+  },
+  "Valence-Bond and Resonating-Valence-Bond States": {
+    "path": "wiki\\valence_bond_and_resonating_valence_bond_states.md",
+    "paper_count": 1
+  },
+  "Valley Optical Selection Rules in Transition Metal Dichalcogenides": {
+    "path": "wiki\\valley_optical_selection_rules_in_transition_metal_dichalcogenides.md",
+    "paper_count": 1
+  },
+  "Variational Fast-Forwarding": {
+    "path": "wiki\\variational_fast_forwarding.md",
+    "paper_count": 1
+  },
+  "Variational Quantum Algorithms": {
+    "path": "wiki\\variational_quantum_algorithms.md",
+    "paper_count": 2
+  },
+  "Variational Quantum Algorithms and Quantum Machine Learning": {
+    "path": "wiki\\variational_quantum_algorithms_and_quantum_machine_learning.md",
+    "paper_count": 1
+  },
+  "Vector Meson Spin Alignment (\u03c1\u2080\u2080)": {
+    "path": "wiki\\vector_meson_spin_alignment.md",
+    "paper_count": 1
+  },
+  "Virtual States and Resonance Poles": {
+    "path": "wiki\\virtual_states_and_resonance_poles.md",
+    "paper_count": 1
+  },
+  "WKB Semiclassical Action for Tunneling": {
+    "path": "wiki\\wkb_semiclassical_action_for_tunneling.md",
+    "paper_count": 1
+  },
+  "Wandering Exponent and Superdiffusivity": {
+    "path": "wiki\\wandering_exponent_and_superdiffusivity.md",
+    "paper_count": 1
+  },
+  "Wave Turbulence and Wave Kinetic Equations": {
+    "path": "wiki\\wave_turbulence_and_wave_kinetic_equations.md",
+    "paper_count": 1
+  },
+  "Weighted Stochastic Phase-Space Representations": {
+    "path": "wiki\\weighted_stochastic_phase_space_representations.md",
+    "paper_count": 1
+  },
+  "Wheeler-DeWitt Equation and Quantum Cosmology": {
+    "path": "wiki\\wheeler_dewitt_equation_and_quantum_cosmology.md",
+    "paper_count": 1
+  },
+  "Wiener Filter and Image Reconstruction": {
+    "path": "wiki\\wiener_filter_and_image_reconstruction.md",
+    "paper_count": 1
+  },
+  "Wigner Function Negativity": {
+    "path": "wiki\\wigner_function_negativity.md",
+    "paper_count": 1
+  },
+  "Wigner Function and Phase-Space Quantum Mechanics": {
+    "path": "wiki\\wigner_function_and_phase_space_quantum_mechanics.md",
+    "paper_count": 1
+  },
+  "Wigner\u2013Moyal Equation and Fokker\u2013Planck Incompatibility": {
+    "path": "wiki\\wigner_moyal_equation_and_fokker_planck_incompatibility.md",
+    "paper_count": 1
+  },
+  "ZXW-Calculus / Graphical Quantum Calculus": {
+    "path": "wiki\\zxw_calculus_graphical_quantum_calculus.md",
+    "paper_count": 1
+  },
+  "Zeeman Effect in Spin-Photon Interfaces": {
+    "path": "wiki\\zeeman_effect_in_spin_photon_interfaces.md",
+    "paper_count": 1
+  },
+  "Zitterbewegung in Periodically Driven Systems": {
+    "path": "wiki\\zitterbewegung_in_periodically_driven_systems.md",
+    "paper_count": 1
+  },
+  "\u03c0-\u03c1 Mixing in External Magnetic Fields": {
+    "path": "wiki\\mixing_in_external_magnetic_fields.md",
     "paper_count": 1
   }
 }

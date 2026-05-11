@@ -79,6 +79,9 @@ def run() -> None:
     print("Next: python eval.py --report   (paste output to Claude for judging)")
 
 
+REPORT_PATH = "eval_report.md"
+
+
 def report() -> None:
     if not os.path.exists(RESULTS_PATH):
         sys.exit(f"{RESULTS_PATH} not found. Run: python eval.py --run")
@@ -86,9 +89,7 @@ def report() -> None:
     with open(RESULTS_PATH, encoding="utf-8") as f:
         results = json.load(f)
 
-    print("=" * 70)
-    print("EVALUATION REPORT — paste this to Claude for judging")
-    print("=" * 70)
+    lines = ["# Evaluation Report — RAG vs Wiki\n"]
 
     by_type = {"specific": [], "synthesis": [], "factual": []}
     for r in results.values():
@@ -97,17 +98,24 @@ def report() -> None:
     for qtype, items in by_type.items():
         if not items:
             continue
-        print(f"\n{'='*70}")
-        print(f"QUESTION TYPE: {qtype.upper()}")
-        print(f"{'='*70}")
+        lines.append(f"\n## Question Type: {qtype.capitalize()}\n")
 
         for r in items:
-            print(f"\n[{r['id']}] {r['question']}")
-            print(f"\n  RAG ({r['rag']['time']}s) — sources: {', '.join(r['rag']['sources'][:3])}")
-            print(f"  {r['rag']['answer']}")
-            print(f"\n  WIKI ({r['wiki']['time']}s) — pages: {', '.join(r['wiki']['pages'][:3])}")
-            print(f"  {r['wiki']['answer']}")
-            print(f"\n  {'─'*60}")
+            lines.append(f"### [{r['id']}] {r['question']}\n")
+
+            lines.append(f"**RAG** ({r['rag']['time']}s) — sources: {', '.join(r['rag']['sources'][:3])}\n")
+            lines.append(f"{r['rag']['answer']}\n")
+
+            lines.append(f"**Wiki** ({r['wiki']['time']}s) — pages: {', '.join(r['wiki']['pages'][:3])}\n")
+            lines.append(f"{r['wiki']['answer']}\n")
+
+            lines.append("---\n")
+
+    content = "\n".join(lines)
+    with open(REPORT_PATH, "w", encoding="utf-8") as f:
+        f.write(content)
+
+    print(f"Report saved to {REPORT_PATH}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,15 @@
+.env
+
+# data files
+physics_papers.json
+paper_texts.json
+wiki_extractions.json
+eval_results.json
+rag_index.faiss
+rag_chunks.pkl
+wiki/
+
+# python
+__pycache__/
+*.pyc
+.venv/
