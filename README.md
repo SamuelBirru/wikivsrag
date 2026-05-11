@@ -96,30 +96,49 @@ python compare.py -k 6 "your question"
 
 ## Evaluation
 
-Four questions were tested head-to-head across both systems.
+### Systematic test — 20 questions judged by Claude
 
-### Results summary
+A structured evaluation was run across 20 questions covering three types: specific paper lookup, broad synthesis, and factual recall. Both systems were run on every question and Claude judged each pair of answers.
 
-| # | Question type | Winner | Reason |
+**Final score: RAG 13 — Wiki 3 — Tie 4**
+
+| Question type | RAG wins | Wiki wins | Ties |
 |---|---|---|---|
-| 1 | Experimental results across papers | Neither | Papers in dataset were mostly theoretical — data problem, not a system problem |
-| 2 | Broad synthesis — first run ("How is ML applied to quantum computing?") | **Wiki** | Retrieved 5 distinct concept pages; RAG flooded from one paper (pre-MMR) |
-| 3 | Specific paper lookup ("What technique does the rhombus qubit use?") | **RAG** | Found verbatim details; Wiki conflated two similar papers and named the wrong technique |
-| 4 | Broad synthesis — second run ("How is ML applied to quantum computing?") | **RAG** | MMR now working; Wiki retrieved duplicate pages and pulled off-topic results due to weak TF-IDF retrieval |
+| Specific (10 questions) | 9 | 0 | 1 |
+| Synthesis (6 questions) | 2 | 3 | 1 |
+| Factual (4 questions) | 2 | 0 | 2 |
 
-**Final score: RAG 2 — Wiki 1 — Draw 1**
+### What went wrong with Wiki
 
-### Verdict for physics paper Q&A
+Wiki's failures fell into two distinct categories:
 
-**RAG with MMR is the better approach for this use case.** Here is why:
+**1. Hallucination during `--build`** — The synthesis step produced confident but fabricated content. Examples: inventing "Hořava-Lifshitz gravity" as the framework for the altermagnetic magnon paper (it uses Schwinger-Keldysh field theory), fabricating a "Rayleigh-Faber-Kraichnan condition" with a made-up formula, and attributing Fourier engineering from one qubit paper to a different qubit paper. These errors were then stored as ground truth in the wiki pages and returned confidently at query time.
 
-Physics papers are dense with specific terminology, equations, methods, and results. The questions most worth asking — "what did this paper find?", "what method was used?", "what are the experimental parameters?" — all require faithfulness to the source text. RAG preserves that. Wiki rewrites it, and in a field as precise as physics, rewriting introduces errors.
+**2. TF-IDF retrieval failures** — Wiki's keyword-based retrieval consistently landed on the wrong concept pages for specific questions. Embedding search (used by RAG) understands question intent semantically; TF-IDF matches keywords and gets confused when physics terminology overlaps across unrelated topics.
 
-Wiki's core weakness showed up consistently: its TF-IDF retrieval cannot understand question intent the way embedding search can, and its synthesis step blends papers that use similar terminology but make different claims. In physics, conflating two papers is worse than returning no answer.
+**Root cause** — llama3.2 (3B parameters) is not large or capable enough to reliably synthesise dense physics content into accurate wiki pages. The LLM Wiki approach is sound in principle, but it places a high demand on the synthesis model. A weak model produces plausible-sounding but wrong notes, and those errors compound at query time.
 
-Wiki's theoretical advantage — cross-paper synthesis — did not materialise in practice because the concept pages were too general and the retrieval too noisy to focus on the right concepts for a given question.
+### What Wiki got right
 
-**RAG is recommended** unless your questions are deliberately broad overviews ("summarise all approaches to quantum error correction") where faithfulness to individual papers matters less than a high-level map of the field.
+Wiki won all three of its wins on synthesis questions, which is where it has a structural advantage. When its concept pages happened to be accurate and TF-IDF retrieved the right pages, its pre-synthesised answers were more structured and readable than RAG's on-the-fly generation. The potential is real — it just wasn't realised reliably with a 3B model.
+
+### Would a stronger model change the outcome?
+
+Yes — significantly. With a frontier model like Claude Sonnet 4.6 or 4.7:
+
+- The `--build` hallucinations would largely disappear. A larger model reads dense physics accurately and writes faithful summaries rather than plausible fabrications.
+- Concept extraction during `--ingest` would produce cleaner, more consistent concept names, reducing the duplicate-page problem (e.g. "Quantum computing" vs "Quantum Computing") and improving TF-IDF retrieval.
+- Cross-paper synthesis would become genuinely useful — a capable model can identify non-obvious connections between papers that a 3B model misses entirely.
+
+**With a frontier model, Wiki would likely match or beat RAG on synthesis questions and close the gap significantly on specific questions.** RAG would still hold an edge on precise factual recall (specific numbers, exact methods) because it returns verbatim text rather than a rewrite — but the catastrophic hallucination failures that cost Wiki most of its points would be eliminated.
+
+The TF-IDF retrieval weakness would remain regardless of model size — that is an architectural limitation. Replacing TF-IDF with embedding-based wiki page retrieval (the same approach RAG uses for chunks) would close that gap and make the comparison genuinely competitive.
+
+### Verdict for physics paper Q&A with a small local model
+
+**RAG with MMR is the better approach when using a small local model (≤7B parameters).** It is safer, more faithful to sources, and does not depend on the synthesis model being accurate. Wiki's advantage requires synthesis quality the small model cannot reliably provide.
+
+**With a frontier model (Claude Sonnet/Opus, GPT-4o), the comparison becomes genuinely close.** Wiki's structural advantages — compounding knowledge, pre-synthesised concept pages, cross-paper connections — materialise properly when the synthesis model is capable enough to write accurate notes.
 
 ### Key tradeoffs
 
@@ -129,9 +148,10 @@ Wiki's theoretical advantage — cross-paper synthesis — did not materialise i
 | Query time | Fast | Moderate |
 | Source fidelity | High — verbatim paper text | Lower — LLM rewrites and can blend papers |
 | Retrieval quality | Strong — semantic embedding search | Weaker — TF-IDF keyword matching |
-| Hallucination risk | Low at retrieval; only at generation | Higher — synthesis step introduces errors |
-| Cross-paper synthesis | Weaker — retrieves chunks, not concepts | Stronger in theory; inconsistent in practice |
-| Best question type | Specific lookup, factual, paper-targeted | Broad overview of a well-defined concept |
+| Hallucination risk | Low at retrieval; only at generation | Higher with weak models; low with frontier models |
+| Cross-paper synthesis | Weaker — retrieves chunks, not concepts | Weak with small models; strong with frontier models |
+| Model dependency | Low — embedding model is separate from generation | High — synthesis quality determines everything |
+| Best question type | Specific lookup, factual, paper-targeted | Broad synthesis, especially with a capable model |
 
 ---
 

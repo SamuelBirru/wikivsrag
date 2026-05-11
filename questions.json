@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q01",
+    "type": "specific",
+    "question": "What experimental system was used to confirm the Kubo-Thermalization correspondence?"
+  },
+  {
+    "id": "q02",
+    "type": "factual",
+    "question": "What is the exact numerical value of F_K/F_pi reported in the lattice QCD paper?"
+  },
+  {
+    "id": "q03",
+    "type": "specific",
+    "question": "What noise sources dominate relaxation in the rhombus qubit at low frequencies?"
+  },
+  {
+    "id": "q04",
+    "type": "specific",
+    "question": "What machine learning technique do Fedin and Morozov use to construct quantum circuits for diagonal matrices?"
+  },
+  {
+    "id": "q05",
+    "type": "specific",
+    "question": "What does the Schrodinger-Newton model paper find about entanglement generation when there is mass asymmetry between two particles?"
+  },
+  {
+    "id": "q06",
+    "type": "specific",
+    "question": "How does the tree tensor network paper trade circuit fidelity for reduced circuit depth?"
+  },
+  {
+    "id": "q07",
+    "type": "specific",
+    "question": "What is the role of the Hagedorn temperature as a dynamical bottleneck in string thermodynamics?"
+  },
+  {
+    "id": "q08",
+    "type": "specific",
+    "question": "What framework does the altermagnetic magnon paper use to derive its extended Landau-Lifshitz-Gilbert equation?"
+  },
+  {
+    "id": "q09",
+    "type": "specific",
+    "question": "What phase structure does the paper on N=2 supersymmetric QCD identify for the Higgs and hadronic phases?"
+  },
+  {
+    "id": "q10",
+    "type": "specific",
+    "question": "What is the Rayleigh criterion introduced in the chemo-mechanical coupling paper and what does it govern?"
+  },
+  {
+    "id": "q11",
+    "type": "synthesis",
+    "question": "What approaches to quantum error correction are described across these papers?"
+  },
+  {
+    "id": "q12",
+    "type": "synthesis",
+    "question": "How do multiple papers in this dataset use tensor networks as a computational tool?"
+  },
+  {
+    "id": "q13",
+    "type": "synthesis",
+    "question": "What methods are used across these papers to study or characterise quantum entanglement?"
+  },
+  {
+    "id": "q14",
+    "type": "synthesis",
+    "question": "How do papers in this dataset connect quantum mechanics to gravitational phenomena?"
+  },
+  {
+    "id": "q15",
+    "type": "synthesis",
+    "question": "What role does noise play in the quantum computing papers and how do different papers propose to address it?"
+  },
+  {
+    "id": "q16",
+    "type": "synthesis",
+    "question": "What are the main techniques used for quantum state preparation described across these papers?"
+  },
+  {
+    "id": "q17",
+    "type": "synthesis",
+    "question": "How is machine learning used in physics research across these papers?"
+  },
+  {
+    "id": "q18",
+    "type": "synthesis",
+    "question": "What approaches to black hole thermodynamics appear across these papers?"
+  },
+  {
+    "id": "q19",
+    "type": "factual",
+    "question": "What lattice spacings and pion mass range does the Domain Wall Fermion lattice QCD paper use in its ensembles?"
+  },
+  {
+    "id": "q20",
+    "type": "factual",
+    "question": "What specific mathematical structure do Kim and Koirala use to prove equidistribution of quantum cat map eigenfunctions?"
+  }
+]
