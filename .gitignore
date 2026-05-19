@@ -7,7 +7,12 @@ wiki_extractions.json
 eval_results.json
 rag_index.faiss
 rag_chunks.pkl
+rag_metadata.json
 wiki/
+
+# LaTeX source archives
+sources/
+source_index.json
 
 # python
 __pycache__/

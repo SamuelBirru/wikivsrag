@@ -7,6 +7,10 @@ and Claude via Amazon Bedrock for generation.
 If paper_texts.json exists (from PhysicsScript.py --download), full paper text
 is chunked and indexed. Otherwise falls back to abstracts only.
 
+For the LaTeX-first pipeline (recommended), use --ingest-sources instead of
+--ingest.  This reads source_index.json produced by PhysicsScript.py
+--download-source and routes each paper through the LaTeX parser or PDF fallback.
+
 Setup:
   pip install sentence-transformers faiss-cpu numpy anthropic
   set AWS_ACCESS_KEY_ID=your_access_key
@@ -14,7 +18,8 @@ Setup:
   set AWS_REGION=us-east-1  (or whichever region has Bedrock enabled)
 
 Usage:
-  python rag_system.py --ingest              # build index
+  python rag_system.py --ingest              # build index from PDFs / abstracts
+  python rag_system.py --ingest-sources      # build index from LaTeX sources (Phase 1)
   python rag_system.py "your question"       # query
   python rag_system.py -k 8 "your question" # query with 8 retrieved chunks
 """
@@ -30,6 +35,16 @@ import numpy as np
 from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
 
+# Phase 1 imports (only used by --ingest-sources)
+try:
+    from ingest.parse_latex import parse_latex_file
+    from store.chunk_store import ChunkStore
+    from store.metadata_index import MetadataIndex
+    from embed.embedder import Embedder
+    _PHASE1_AVAILABLE = True
+except ImportError:
+    _PHASE1_AVAILABLE = False
+
 load_dotenv()
 
 # Bedrock cross-region inference profile ID — verify in AWS Console > Bedrock > Model access
@@ -44,6 +59,10 @@ CHUNK_WORDS = 400
 CHUNK_OVERLAP = 50
 MMR_LAMBDA = 0.6   # 0 = max diversity, 1 = max relevance
 MMR_FETCH = 50     # candidate pool size before MMR re-ranks
+
+# Phase 1 paths
+SOURCE_INDEX_PATH = "source_index.json"
+METADATA_INDEX_PATH = "rag_metadata.json"
 
 
 def _split_into_chunks(text: str, chunk_size: int = CHUNK_WORDS, overlap: int = CHUNK_OVERLAP) -> list[str]:
@@ -116,6 +135,114 @@ def ingest(papers_path: str = PAPERS_PATH, texts_path: str = TEXTS_PATH) -> None
 
     print(f"Saved: {INDEX_PATH}, {CHUNKS_PATH}")
     print(f"Done — {len(chunks)} chunks indexed ({len(papers)} papers).")
+
+
+def ingest_sources(
+    source_index_path: str = SOURCE_INDEX_PATH,
+    papers_path: str = PAPERS_PATH,
+    texts_path: str = TEXTS_PATH,
+) -> None:
+    """
+    Phase 1 ingestion: parse LaTeX source files where available, fall back to
+    PDF text or abstract otherwise.  Produces the same rag_index.faiss and
+    rag_chunks.pkl as --ingest, plus rag_metadata.json for label lookups.
+    """
+    if not _PHASE1_AVAILABLE:
+        sys.exit("Phase 1 modules not found. Make sure ingest/, store/, embed/ directories exist.")
+
+    if not os.path.exists(source_index_path):
+        sys.exit(f"{source_index_path} not found. Run: python PhysicsScript.py --download-source")
+
+    if not os.path.exists(papers_path):
+        sys.exit(f"{papers_path} not found. Run: python PhysicsScript.py")
+
+    with open(source_index_path, encoding="utf-8") as fh:
+        source_index = json.load(fh)
+
+    with open(papers_path, encoding="utf-8") as fh:
+        papers = json.load(fh)
+
+    full_texts: dict = {}
+    if os.path.exists(texts_path):
+        with open(texts_path, encoding="utf-8") as fh:
+            full_texts = json.load(fh)
+
+    # Build a lookup: arxiv_id -> paper metadata
+    paper_meta = {
+        p["arxiv_id"]: {"id": p["arxiv_id"], "title": p["title"], "url": p["url"]}
+        for p in papers
+    }
+
+    store = ChunkStore()
+    tex_count = pdf_count = abstract_count = 0
+
+    for paper in papers:
+        arxiv_id = paper["arxiv_id"]
+        meta = paper_meta[arxiv_id]
+        entry = source_index.get(arxiv_id, {})
+        status = entry.get("status", "missing")
+
+        if status == "tex" and entry.get("main_tex"):
+            # --- LaTeX path ---
+            try:
+                chunks = parse_latex_file(entry["main_tex"], meta)
+                if chunks:
+                    store.chunks.extend(chunks)
+                    tex_count += 1
+                    print(f"  [tex]  {arxiv_id}  {len(chunks)} chunks")
+                    continue
+            except Exception as exc:
+                print(f"  [tex-err]  {arxiv_id}: {exc} — falling back")
+
+        if arxiv_id in full_texts:
+            # --- PDF text fallback ---
+            header = _paper_header(paper)
+            body_chunks = _split_into_chunks(full_texts[arxiv_id])
+            for ci, body in enumerate(body_chunks):
+                store.chunks.append({
+                    "text": header + body,
+                    "meta": {**meta, "chunk": ci + 1, "total_chunks": len(body_chunks),
+                             "chunk_type": "prose", "section_path": []},
+                })
+            pdf_count += 1
+            print(f"  [pdf]  {arxiv_id}  {len(body_chunks)} chunks")
+            continue
+
+        # --- Abstract-only fallback ---
+        store.chunks.append({
+            "text": _paper_header(paper) + f"Abstract: {paper['abstract']}",
+            "meta": {**meta, "chunk": 1, "total_chunks": 1,
+                     "chunk_type": "prose", "section_path": []},
+        })
+        abstract_count += 1
+
+    print(f"\nIngested: {tex_count} tex  |  {pdf_count} pdf  |  {abstract_count} abstract-only")
+    print(f"Total chunks: {len(store)}")
+    print(f"Type breakdown: {store.stats()}")
+
+    # Embed
+    embedder = Embedder()
+    rag_list = store.to_rag_list()
+    texts = [c["text"] for c in rag_list]
+    print(f"\nEncoding {len(texts)} chunks with {embedder.model_name}...")
+    embeddings = embedder.encode(texts, show_progress_bar=True)
+
+    # Build FAISS index
+    index = faiss.IndexFlatIP(embedder.dimension)
+    index.add(embeddings)
+    faiss.write_index(index, INDEX_PATH)
+
+    # Save chunks (store format, backwards-compatible with _load_index)
+    with open(CHUNKS_PATH, "wb") as fh:
+        pickle.dump(rag_list, fh)
+
+    # Save metadata index for label / equation-number lookups
+    meta_idx = MetadataIndex()
+    meta_idx.build(store.chunks)
+    meta_idx.save(METADATA_INDEX_PATH)
+
+    print(f"\nSaved: {INDEX_PATH}, {CHUNKS_PATH}, {METADATA_INDEX_PATH}")
+    print(f"Done — {len(texts)} chunks from {len(papers)} papers.")
 
 
 def _load_index():
@@ -226,7 +353,9 @@ if __name__ == "__main__":
         print(__doc__)
         sys.exit(0)
 
-    if args[0] == "--ingest":
+    if args[0] == "--ingest-sources":
+        ingest_sources()
+    elif args[0] == "--ingest":
         ingest()
     else:
         k = DEFAULT_K

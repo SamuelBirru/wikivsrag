@@ -1,13 +1,14 @@
 """
 Fetches 100 physics papers from ArXiv using the official ArXiv API.
 Saves results to both JSON and CSV.
-Optionally downloads full PDFs and extracts their text.
+Optionally downloads full PDFs and extracts their text, or downloads LaTeX source archives.
 
 Install dependencies: pip install arxiv requests pymupdf
 
 Usage:
-  python PhysicsScript.py             # fetch metadata -> physics_papers.json
-  python PhysicsScript.py --download  # download PDFs and extract full text -> paper_texts.json
+  python PhysicsScript.py                # fetch metadata -> physics_papers.json
+  python PhysicsScript.py --download     # download PDFs and extract full text -> paper_texts.json
+  python PhysicsScript.py --download-source  # download LaTeX source archives -> sources/, source_index.json
 """
 
 import arxiv
@@ -165,7 +166,13 @@ def download_and_extract(
 if __name__ == "__main__":
     args = sys.argv[1:]
 
-    if "--download" in args:
+    if "--download-source" in args:
+        from ingest.fetch_source import fetch_all_sources
+        if not os.path.exists(PAPERS_PATH):
+            sys.exit(f"{PAPERS_PATH} not found. Run PhysicsScript.py first.")
+        fetch_all_sources(papers_path=PAPERS_PATH)
+        print("\nNext step: python rag_system.py --ingest-sources")
+    elif "--download" in args:
         download_and_extract()
     else:
         print(f"Fetching 100 physics papers from ArXiv ({datetime.now().strftime('%Y-%m-%d %H:%M:%S')})...")
@@ -173,4 +180,6 @@ if __name__ == "__main__":
         print(f"Retrieved {len(papers)} papers.")
         save_json(papers)
         save_csv(papers)
-        print("\nNext step: python PhysicsScript.py --download  (fetch full paper text)")
+        print("\nNext steps:")
+        print("  python PhysicsScript.py --download         (PDF text extraction)")
+        print("  python PhysicsScript.py --download-source  (LaTeX source — preferred)")

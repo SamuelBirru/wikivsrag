@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture Review — wikivsrag</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #22263a;
+      --border: #2e3350;
+      --accent: #7c8cf8;
+      --accent2: #a78bfa;
+      --green: #34d399;
+      --yellow: #fbbf24;
+      --red: #f87171;
+      --text: #e2e8f0;
+      --muted: #8892b0;
+      --code-bg: #141720;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* ── Layout ── */
+    .page-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Header ── */
+    .page-header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 32px;
+      margin-bottom: 48px;
+    }
+    .page-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+    }
+    .page-header .subtitle {
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: 0.95rem;
+    }
+    .page-header .tag-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .tag {
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    .tag-blue  { background: #1e2d6b; color: #93c5fd; border: 1px solid #2d4a9e; }
+    .tag-green { background: #064e3b; color: #6ee7b7; border: 1px solid #065f46; }
+    .tag-amber { background: #451a03; color: #fde68a; border: 1px solid #78350f; }
+
+    /* ── Section titles ── */
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 48px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent2);
+      margin: 24px 0 10px;
+    }
+
+    p { margin: 10px 0; color: var(--text); }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+    .card.warning {
+      border-left: 4px solid var(--yellow);
+      background: #1c1a0e;
+    }
+    .card.info {
+      border-left: 4px solid var(--accent);
+      background: #111827;
+    }
+    .card.good {
+      border-left: 4px solid var(--green);
+      background: #0a1a14;
+    }
+    .card-title {
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .card.warning .card-title { color: var(--yellow); }
+    .card.info .card-title    { color: var(--accent); }
+    .card.good .card-title    { color: var(--green); }
+
+    /* ── Code blocks ── */
+    pre {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 20px;
+      overflow-x: auto;
+      font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: #a8b3cf;
+      margin: 14px 0;
+    }
+    code {
+      font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-size: 0.83em;
+      color: #93c5fd;
+    }
+    pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: inherit;
+      color: inherit;
+    }
+
+    /* ── Tables ── */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 16px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    thead th {
+      background: var(--surface2);
+      color: var(--accent);
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 2px solid var(--border);
+      white-space: nowrap;
+    }
+    tbody td {
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    tbody tr:hover td { background: var(--surface2); }
+    tbody td:first-child { color: #93c5fd; font-weight: 600; }
+
+    /* ── Lists ── */
+    ul, ol {
+      margin: 10px 0 10px 20px;
+    }
+    li { margin: 5px 0; }
+    li::marker { color: var(--accent); }
+
+    /* ── Flow diagram ── */
+    .flow {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+      margin: 16px 0;
+      font-family: 'Cascadia Code', monospace;
+      font-size: 0.8rem;
+      color: #a8b3cf;
+      line-height: 1.8;
+      overflow-x: auto;
+    }
+    .flow .flow-step { color: var(--accent2); font-weight: 600; }
+    .flow .flow-bad  { color: var(--red); }
+    .flow .flow-good { color: var(--green); }
+    .flow .flow-arrow{ color: var(--muted); }
+
+    /* ── Badges for verdict table ── */
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .badge-keep   { background: #064e3b; color: #6ee7b7; }
+    .badge-replace{ background: #450a0a; color: #fca5a5; }
+    .badge-augment{ background: #1e1b4b; color: #c4b5fd; }
+
+    /* ── Step list ── */
+    .steps { list-style: none; margin: 0; padding: 0; }
+    .steps li {
+      display: flex;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+    .steps li:last-child { border-bottom: none; }
+    .step-num {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      background: var(--surface2);
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .step-body { flex: 1; }
+    .step-body strong { color: var(--accent2); }
+    .step-phase {
+      display: inline-block;
+      padding: 1px 7px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .phase-1 { background: #1e2d6b; color: #93c5fd; }
+    .phase-2 { background: #312e81; color: #c4b5fd; }
+    .phase-3 { background: #064e3b; color: #6ee7b7; }
+    .phase-4 { background: #451a03; color: #fde68a; }
+    .phase-5 { background: #450a0a; color: #fca5a5; }
+    .phase-6 { background: #1c1917; color: #d6d3d1; }
+
+    /* ── Verdict section ── */
+    .verdict-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .verdict-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+    .verdict-card .v-label { font-size: 0.75rem; color: var(--muted); font-weight: 600; text-transform: uppercase; }
+    .verdict-card .v-value { font-size: 1.1rem; font-weight: 700; margin-top: 4px; }
+    .verdict-card.keep    .v-value { color: var(--green); }
+    .verdict-card.replace .v-value { color: var(--red); }
+    .verdict-card.augment .v-value { color: var(--accent2); }
+
+    /* ── Risk severity ── */
+    .sev-high   { color: var(--red); font-weight: 700; }
+    .sev-medium { color: var(--yellow); font-weight: 600; }
+    .sev-low    { color: var(--green); font-weight: 600; }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .toc h3 { margin-top: 0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); }
+    .toc ol { margin: 10px 0 0 18px; }
+    .toc li { margin: 4px 0; }
+    .toc a { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .toc a:hover { text-decoration: underline; }
+
+    /* ── Skill box ── */
+    .skill-box {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 14px 0;
+      font-family: 'Cascadia Code', monospace;
+      font-size: 0.82rem;
+      line-height: 1.8;
+    }
+    .skill-key   { color: var(--accent); font-weight: 700; }
+    .skill-value { color: #a8b3cf; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- ── Header ── -->
+  <div class="page-header">
+    <h1>Architecture Review: wikivsrag</h1>
+    <div class="subtitle">Physics wiki creation system — LaTeX-first upgrade proposal</div>
+    <div class="tag-row">
+      <span class="tag tag-blue">Python</span>
+      <span class="tag tag-blue">FAISS</span>
+      <span class="tag tag-blue">Amazon Bedrock</span>
+      <span class="tag tag-green">LaTeX-First Ingestion</span>
+      <span class="tag tag-green">SPECTER2</span>
+      <span class="tag tag-amber">Datalab OCR</span>
+      <span class="tag tag-amber">Gemini Vision</span>
+    </div>
+  </div>
+
+  <!-- ── TOC ── -->
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#s1">What the Repo Currently Is</a></li>
+      <li><a href="#s2">Current File Inventory</a></li>
+      <li><a href="#s3">How Ingestion Currently Works</a></li>
+      <li><a href="#s4">How Embeddings and FAISS Currently Work</a></li>
+      <li><a href="#s5">What Breaks for LaTeX-Heavy Content</a></li>
+      <li><a href="#s6">Proposed Architecture</a>
+        <ol style="margin-top:4px;">
+          <li><a href="#s6-fetch">ArXiv Source Fetching</a></li>
+          <li><a href="#s6a">LaTeX-First Ingestion</a></li>
+          <li><a href="#s6b">PDF / OCR Fallback</a></li>
+          <li><a href="#s6c">Embedding Strategy</a></li>
+          <li><a href="#s6d">Image / Figure Handling</a></li>
+          <li><a href="#s6e">Bibliography Handling</a></li>
+          <li><a href="#s6f">AWS Deployment</a></li>
+          <li><a href="#s6g">Claude Skill</a></li>
+        </ol>
+      </li>
+      <li><a href="#s7">Should You Keep FAISS?</a></li>
+      <li><a href="#s8">Proposed File / Module Plan</a></li>
+      <li><a href="#s9">Step-by-Step Implementation Plan</a></li>
+      <li><a href="#s10">Risks and Tradeoffs</a></li>
+      <li><a href="#s11">One Honest Uncertainty</a></li>
+    </ol>
+  </div>
+
+  <!-- ── 1 ── -->
+  <h2 id="s1"><span class="num">1</span> What the Repo Currently Is</h2>
+  <p>
+    This is a research prototype that compares two Q&amp;A strategies over 100 ArXiv physics papers:
+    <strong>RAG</strong> (vector search + generation) versus <strong>LLM Wiki</strong>
+    (pre-synthesized concept pages + TF-IDF + generation). The core question it answers is:
+    which pattern produces better physics answers?
+  </p>
+  <div class="card info">
+    <div class="card-title">Root Problem</div>
+    The project works well for its stated goal. The problem is that it was built for
+    <strong>abstract/full-text PDFs from ArXiv</strong>, not for <strong>LaTeX-heavy academic source
+    material</strong>. The pipeline loses almost all mathematical structure before anything gets embedded.
+  </div>
+
+  <!-- ── 2 ── -->
+  <h2 id="s2"><span class="num">2</span> Current File Inventory</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>File</th><th>Role</th><th>Core Problem</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PhysicsScript.py</td>
+          <td>Fetches ArXiv metadata, downloads PDFs, extracts text via PyMuPDF</td>
+          <td>PyMuPDF produces garbled equations, loses all structure</td>
+        </tr>
+        <tr>
+          <td>rag_system.py</td>
+          <td>Chunks text → embeds with <code>all-MiniLM-L6-v2</code> → FAISS → MMR → Claude via Bedrock</td>
+          <td>General-purpose model; blind word-count chunking; no hierarchy; no image awareness</td>
+        </tr>
+        <tr>
+          <td>wiki_system.py</td>
+          <td>Claude reads papers → extracts concepts → synthesizes wiki pages → TF-IDF query</td>
+          <td>Wiki query uses TF-IDF, not vector search; concept extraction works on garbled text</td>
+        </tr>
+        <tr>
+          <td>compare.py / eval.py</td>
+          <td>Evaluation harness</td>
+          <td>Fine as-is</td>
+        </tr>
+        <tr>
+          <td>wiki/</td>
+          <td>100+ pre-synthesized markdown pages</td>
+          <td>Good output format — keep it</td>
+        </tr>
+        <tr>
+          <td>rag_index.faiss + rag_chunks.pkl</td>
+          <td>Serialized vector index + chunk store</td>
+          <td>No structure metadata in chunks</td>
+        </tr>
+        <tr>
+          <td>paper_texts.json</td>
+          <td><code>{arxiv_id: raw_text_string}</code> from PyMuPDF</td>
+          <td>This is the central bad artifact — flat string, no sections, no equation labels</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── 3 ── -->
+  <h2 id="s3"><span class="num">3</span> How Ingestion Currently Works</h2>
+  <div class="flow">
+<span class="flow-step">ArXiv API</span> → physics_papers.json (metadata)
+    ↓
+<span class="flow-step">PDF download</span> (requests → pdfs/*.pdf)
+    ↓
+<span class="flow-step">PyMuPDF page.get_text()</span>  <span class="flow-bad">← equations become "∂2ψ/∂x2" or mangled Unicode or just blank</span>
+    ↓
+<span class="flow-step">paper_texts.json</span>  <span class="flow-bad">← flat string, no sections, no equation labels, no figure positions</span>
+    ↓
+<span class="flow-step">word-count chunker</span> (400 words, 50 overlap)  <span class="flow-bad">← splits mid-equation, mid-theorem</span>
+    ↓
+<span class="flow-step">all-MiniLM-L6-v2</span>  <span class="flow-bad">← general-purpose English model, poor LaTeX domain knowledge</span>
+    ↓
+<span class="flow-good">FAISS IndexFlatIP</span>  ← stores 384-dim float32 vectors
+<span class="flow-good">rag_chunks.pkl</span>     ← stores {text, meta: {id, title, url, chunk, total_chunks}}
+  </div>
+
+  <h3>What is lost at each step</h3>
+  <ul>
+    <li><code>page.get_text()</code> — equation structure, subscript/superscript ordering, figure positions, table cells, caption text</li>
+    <li><strong>word-count chunker</strong> — section boundaries, theorem/proof pairings, equation numbers and their surrounding prose</li>
+    <li><strong>all-MiniLM-L6-v2</strong> — mathematical semantics (no LaTeX training)</li>
+    <li><strong>FAISS</strong> — no document hierarchy, no section metadata, no equation labels, no figure references</li>
+  </ul>
+
+  <!-- ── 4 ── -->
+  <h2 id="s4"><span class="num">4</span> How Embeddings and FAISS Currently Work</h2>
+  <div class="card info">
+    <div class="card-title">Key Clarification</div>
+    <strong>FAISS is a vector index, not an embedder.</strong> The embedding model
+    (<code>all-MiniLM-L6-v2</code>) converts text to 384-dim float32 vectors — this is the step
+    that "reads" meaning. FAISS stores those vectors and provides fast nearest-neighbor search.
+    It never reads text; it only computes distances between float arrays.
+    "Can FAISS store LaTeX embeddings?" means: after you embed LaTeX-preprocessed text through
+    <em>some model</em>, FAISS stores those vectors just like any others. The index is format-agnostic.
+  </div>
+
+  <h3>Current FAISS setup</h3>
+  <ul>
+    <li><code>IndexFlatIP</code> — exact inner-product search, no approximation. Fine for a few thousand chunks, scales to ~1M vectors before needing <code>IndexIVFFlat</code> or HNSW.</li>
+    <li>L2-normalized embeddings → inner product = cosine similarity</li>
+    <li>No metadata in FAISS — metadata lives in the parallel <code>rag_chunks.pkl</code></li>
+    <li>No hierarchy — every chunk is a flat peer in the same index</li>
+  </ul>
+  <div class="card good">
+    <div class="card-title">Verdict</div>
+    FAISS is not the bottleneck. The bottleneck is upstream: the embedding model and the quality of text fed into it.
+  </div>
+
+  <!-- ── 5 ── -->
+  <h2 id="s5"><span class="num">5</span> What Breaks for LaTeX-Heavy Content</h2>
+
+  <h3>1. Equations</h3>
+  <p><code>page.get_text()</code> on a PDF equation like the wave equation produces something like
+  <code>∂2ψ ∂x2 = 1 v2 ∂2ψ ∂t2</code> — direction/ordering often wrong, missing formatting.
+  A query for "wave equation" or "equation 4" cannot locate it semantically.</p>
+
+  <h3>2. Equation Numbers</h3>
+  <p>"(4)" in a PDF is just a parenthesized number. The chunker separates it from the equation it
+  labels. Queries like "equation 4" have no path to the right chunk.</p>
+
+  <h3>3. Figures</h3>
+  <p>PyMuPDF's <code>page.get_text()</code> does not return image bytes or alt text. Figures simply
+  disappear. Captions sometimes survive but are severed from their figure.</p>
+
+  <h3>4. Tables</h3>
+  <p>Multi-column PDF table cells are linearized in reading order — often producing nonsense row ordering.</p>
+
+  <h3>5. Section Hierarchy</h3>
+  <p><code>page.get_text()</code> returns a flat string. "Section 3.2 — Renormalization" becomes just
+  more text. The chunker does not know where section boundaries are.</p>
+
+  <h3>6. Bibliography</h3>
+  <p><code>\cite{key}</code> becomes a bare <code>[12]</code> in the PDF text. Citation keys are lost.
+  Cross-referencing is impossible.</p>
+
+  <!-- ── 6 ── -->
+  <h2 id="s6"><span class="num">6</span> Proposed Architecture</h2>
+
+  <h3>Component Map</h3>
+  <pre>Input sources
+├── .tex files (ideal)
+│   ├── Main .tex + \input{} / \include{} resolution
+│   └── .bib / compiled .bbl
+├── PDF (fallback)
+│   ├── Structured OCR (Datalab)
+│   └── Vision model for images (Gemini)
+└── Images / Figures (from either path)
+
+Ingestion pipeline
+├── A. LaTeX Parser         → structured chunks with metadata
+├── B. OCR/PDF Fallback     → structured chunks with metadata
+└── C. Image Describer      → caption + description chunks
+
+Embedding + Storage
+├── D. Text Chunker         → hierarchy-aware chunks
+├── E. Embedding            → scientific-domain model
+├── F. FAISS Index          → one per content type (or filtered by type)
+└── G. Metadata Store       → JSON / SQLite / Postgres / DynamoDB
+
+Retrieval
+├── H. Query Router         → metadata lookup first (eq/fig by label), semantic second
+└── I. MMR re-ranker        → already implemented, keep it
+
+Generation
+└── J. Wiki Builder         → keep wiki_system.py pattern, improve inputs</pre>
+
+  <!-- 0: Source Fetching -->
+  <h3 id="s6-fetch">0. ArXiv Source Fetching — New Script Required</h3>
+
+  <div class="card warning">
+    <div class="card-title">Gap in Current Code</div>
+    The existing <code>PhysicsScript.py --download</code> flag only hits the PDF endpoint
+    (<code>paper["pdf_url"]</code>). It has no knowledge of the ArXiv source endpoint.
+    A new fetch function is required before any LaTeX-first ingestion can happen.
+  </div>
+
+  <h3>The Source Endpoint</h3>
+  <p>ArXiv publishes raw source files at a separate HTTP endpoint — not surfaced by the metadata API:</p>
+  <pre>https://arxiv.org/e-print/{arxiv_id}</pre>
+  <p>
+    The <code>arxiv</code> Python library (already installed) exposes this as
+    <code>result.download_source()</code> in v2.x, but you can also hit it directly with
+    <code>requests.get()</code> — the same pattern already used for PDFs in
+    <code>PhysicsScript.py</code>.
+  </p>
+
+  <h3>Three Cases the Fetcher Must Handle</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Response type</th><th>How to detect</th><th>Action</th><th>Routing</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>.tar.gz</code> archive</td>
+          <td><code>Content-Type: application/x-eprint-tar</code> or magic bytes <code>1f 8b</code> + tar header</td>
+          <td>Extract with <code>tarfile</code>; locate main <code>.tex</code> file; collect images and <code>.bib</code></td>
+          <td><code>status: "tex"</code> → LaTeX parser</td>
+        </tr>
+        <tr>
+          <td>Single gzipped <code>.tex</code></td>
+          <td><code>Content-Type: application/x-eprint</code> or <code>.gz</code> containing plain text</td>
+          <td>Decompress with <code>gzip</code>; write as <code>main.tex</code></td>
+          <td><code>status: "tex"</code> → LaTeX parser</td>
+        </tr>
+        <tr>
+          <td>PDF-only source</td>
+          <td><code>Content-Type: application/pdf</code> or magic bytes <code>25 50 44 46</code> (<code>%PDF</code>)</td>
+          <td>Save to <code>pdfs/</code> — no <code>.tex</code> exists for this paper</td>
+          <td><code>status: "pdf_only"</code> → Datalab / Gemini OCR fallback</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Identifying the Main .tex File</h3>
+  <p>
+    Multi-file projects can contain 10+ <code>.tex</code> files. The reliable detection order is:
+  </p>
+  <ol>
+    <li>Scan all <code>.tex</code> files for one containing <code>\begin{document}</code> — there should be exactly one.</li>
+    <li>If none found (rare malformed submission), fall back to a file named <code>main.tex</code>, <code>paper.tex</code>, or <code>{arxiv_id}.tex</code>.</li>
+    <li>If still ambiguous, pick the largest <code>.tex</code> file by byte size and log a warning.</li>
+  </ol>
+  <p>
+    Once the entry point is identified, rename or record it as the canonical <code>main.tex</code> for
+    that paper. The <code>\input{}</code>/<code>\include{}</code> resolver in
+    <code>parse_latex.py</code> uses this as its root.
+  </p>
+
+  <h3>Output: sources/ Directory + source_index.json</h3>
+  <p>The fetcher writes a structured directory per paper and a routing index:</p>
+  <pre>sources/
+  2605.05537v1/
+    main.tex
+    sections/
+      intro.tex
+      methods.tex
+    figures/
+      fig1.pdf
+      fig2.png
+    bibliography.bib
+  2605.05538v1/
+    (pdf_only — no .tex extracted)</pre>
+  <p>And a companion <code>source_index.json</code> that the ingestion pipeline reads to route each paper:</p>
+  <pre>{
+  "2605.05537v1": {
+    "status": "tex",
+    "main_tex": "sources/2605.05537v1/main.tex",
+    "bib_file": "sources/2605.05537v1/bibliography.bib",
+    "image_files": [
+      "sources/2605.05537v1/figures/fig1.pdf",
+      "sources/2605.05537v1/figures/fig2.png"
+    ]
+  },
+  "2605.05538v1": {
+    "status": "pdf_only",
+    "main_tex": null,
+    "pdf_fallback": "pdfs/2605.05538v1.pdf"
+  }
+}</pre>
+
+  <h3>Rate Limiting</h3>
+  <p>
+    ArXiv's bulk access policy requires a delay between requests on the source endpoint — the same
+    constraint as PDF downloads. The existing <code>DOWNLOAD_DELAY = 4</code> constant in
+    <code>PhysicsScript.py</code> already satisfies this and should carry over unchanged.
+    Do not parallelize requests; ArXiv will temporarily block the IP.
+  </p>
+
+  <h3>Where This Lives in the Codebase</h3>
+  <p>
+    Add a <code>--download-source</code> flag to <code>PhysicsScript.py</code>, parallel to the
+    existing <code>--download</code> flag. Internally it calls a new function
+    <code>fetch_source()</code> in the same file or extracted to
+    <code>ingest/fetch_source.py</code> if you prefer the module layout. Either works — the important
+    thing is that it runs <em>before</em> the ingestion pipeline and produces
+    <code>source_index.json</code> that every downstream step reads.
+  </p>
+
+  <!-- A -->
+  <h3 id="s6a">A. LaTeX-First Ingestion</h3>
+  <div class="card">
+    <div class="card-title">Where it plugs in</div>
+    Replaces <code>PhysicsScript.py</code>'s <code>download_and_extract()</code> and the
+    <code>_split_into_chunks()</code> function in <code>rag_system.py</code>.
+    New module: <code>ingest/parse_latex.py</code>
+  </div>
+  <p>Recommended libraries: <code>pylatexenc</code> or <code>plasTeX</code> to parse <code>.tex</code>
+  source to a structured tree without running a LaTeX compiler. A regex/state-machine approach on raw
+  <code>.tex</code> text is practical for a prototype.</p>
+  <ul>
+    <li>Detect entry point — find the <code>.tex</code> file containing <code>\begin{document}</code></li>
+    <li>Recursively resolve <code>\input{}</code> and <code>\include{}</code></li>
+    <li>Walk the parse tree extracting: section hierarchy, equations with labels, theorems/definitions/proofs, figures with captions, tables, citations</li>
+  </ul>
+  <p><strong>Metadata per chunk:</strong></p>
+  <pre>{
+  "source_file": "main.tex",
+  "source_line": 342,
+  "section_path": ["2. Methods", "2.3 Hamiltonian"],
+  "chunk_type": "equation",
+  "latex_raw": "\\begin{equation}\n H = \\sum_i ...\n\\end{equation}",
+  "label": "eq:hamiltonian",
+  "equation_number": "3",
+  "caption": null
+}</pre>
+
+  <!-- B -->
+  <h3 id="s6b">B. PDF / OCR Fallback</h3>
+  <p><em>Used when no <code>.tex</code> file is available.</em></p>
+
+  <h3>Option 1 — Datalab (recommended)</h3>
+  <p>Datalab's document parser outputs structured Markdown or JSON with section headers preserved,
+  equations converted to LaTeX, tables reconstructed, and figure bounding boxes with captions.
+  This is significantly better than raw PyMuPDF for academic papers. The output slots directly into the
+  same metadata schema as the LaTeX parser.</p>
+
+  <h3>Option 2 — Gemini 2.0 Flash (vision fallback)</h3>
+  <p>For pages where OCR fails or figure-heavy documents, pass each PDF page as an image to Gemini:
+  <em>"Extract all text, equations (as LaTeX), table content, figure captions, and describe any figures
+  on this page. Return structured JSON."</em></p>
+  <div class="card warning">
+    <div class="card-title">Practical Recommendation</div>
+    Try Datalab first. If it handles equations and tables well, reserve Gemini for image description only.
+    Gemini is more flexible but more expensive per page.
+  </div>
+
+  <!-- C -->
+  <h3 id="s6c">C. Embedding Strategy</h3>
+  <div class="card warning">
+    <div class="card-title">Current Model Problem</div>
+    <code>all-MiniLM-L6-v2</code> is a general English sentence model with no scientific paper training.
+    It may fail to recognize that <code>H = Σ_i ε_i a†_i a_i</code> is "the Hamiltonian of the system."
+    For a physics wiki this matters.
+  </div>
+  <p><strong>Recommended replacement:</strong> <code>allenai/specter2_base</code> — trained specifically
+  on scientific paper abstracts and citation relationships. Drop-in replacement for
+  <code>SentenceTransformer</code>. Dimension is 768 instead of 384, so rebuild the FAISS index.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Chunk Type</th><th>Boundary</th><th>How to Embed</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Paragraph prose</td><td>Sentence-level, ~300 words</td><td>Clean text</td></tr>
+        <tr><td>Equation block</td><td>One equation = one chunk</td><td>Raw LaTeX + surrounding prose sentence</td></tr>
+        <tr><td>Theorem / Proof</td><td>Theorem + proof = one chunk</td><td>Keep together</td></tr>
+        <tr><td>Figure</td><td>Caption + generated description = one chunk</td><td>Text only</td></tr>
+        <tr><td>Table</td><td>Caption + table text = one chunk</td><td>Linearize rows</td></tr>
+        <tr><td>Bibliography entry</td><td>One entry = one chunk</td><td>BibTeX text</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Hierarchical Retrieval</h3>
+  <p>FAISS does not do hierarchy — it only does nearest-neighbor over flat vectors. Store parent-child
+  relationships in your metadata store <strong>outside</strong> FAISS:</p>
+  <pre>Document → Section → Subsection → Chunk</pre>
+  <p>At query time: search FAISS for top-k matching chunks → look up each hit's section in the metadata
+  store → optionally search at section level separately → re-rank combining both. This is sometimes
+  called <em>parent document retrieval</em>: retrieve the chunk for scoring, expand context to the full
+  parent section before sending to the LLM.</p>
+
+  <!-- D -->
+  <h3 id="s6d">D. Image / Figure Handling</h3>
+  <p>For each extracted image, pass to Gemini (or Claude with vision) with a physics-aware prompt.
+  Store:</p>
+  <pre>{
+  "chunk_type": "figure",
+  "image_path": "figures/fig3.png",
+  "label": "fig:phase_diagram",
+  "figure_number": "3",
+  "original_caption": "Phase diagram of the Kitaev model...",
+  "generated_description": "A 2D plot with axes J/K and h/K showing...",
+  "surrounding_text": "As shown in Figure 3, the topological phase...",
+  "section_path": ["3. Results", "3.1 Phase Structure"]
+}</pre>
+  <p>Embed <code>original_caption + generated_description + surrounding_text</code> as a single chunk.</p>
+  <div class="card info">
+    <div class="card-title">Exact Query Shortcut</div>
+    Queries like "equation 4" or "figure 2" should bypass semantic search entirely. Before running
+    FAISS, check if the query matches a label pattern (<code>eq:\w+</code>, <code>equation \d+</code>,
+    <code>fig:\d+</code>). If yes, do a direct metadata lookup — O(1) and always correct.
+  </div>
+
+  <!-- E -->
+  <h3 id="s6e">E. Bibliography Handling</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Scenario</th><th>Strategy</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Small .bib (&lt; 500 entries)</td>
+          <td>Parse and embed every entry using <code>pybtex</code> or a simple regex parser. Each entry = one chunk of type <code>"bibliography"</code>.</td>
+        </tr>
+        <tr>
+          <td>Large .bib (500+ entries)</td>
+          <td>Run <code>pdflatex</code> or <code>latexmk</code> to produce a <code>.bbl</code> file. Parse <code>.bbl</code> — only cited references are included. Embed only those.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>When parsing LaTeX, record which cite keys appear in which chunk. Store cross-references in the
+  metadata store. Queries like "what does the paper cite when discussing decoherence" then become
+  answerable.</p>
+
+  <!-- F -->
+  <h3 id="s6f">F. AWS Deployment</h3>
+  <pre>User uploads .tex + images (or .pdf)
+    ↓
+S3 bucket (raw input storage)
+    ↓
+Lambda (small jobs) or ECS Fargate (large jobs / GPU)
+    ↓
+Ingestion pipeline:
+  - LaTeX parser OR Datalab OCR
+  - Image describer (Gemini API or Bedrock Titan)
+  - Chunker + SPECTER2 embedder
+    ↓
+FAISS index saved to S3  (prototype)
+OR OpenSearch Serverless  (multi-user / persistent)
+    ↓
+Metadata store:
+  DynamoDB  (NoSQL, cheap, serverless)
+  OR RDS Postgres + pgvector  (if consolidating vector + metadata)
+    ↓
+Bedrock (Claude) for generation</pre>
+
+  <!-- G -->
+  <h3 id="s6g">G. Claude Skill for Physics Wiki Creation</h3>
+  <div class="skill-box">
+    <div><span class="skill-key">Skill name:   </span><span class="skill-value">physics-wiki-create</span></div>
+    <br>
+    <div><span class="skill-key">Description:</span></div>
+    <div class="skill-value" style="padding-left:16px; margin-top:4px;">
+      Given one or more LaTeX source files or a PDF, ingests the content into a structured physics
+      knowledge base and produces a browsable wiki with definitions, equations, diagrams, references,
+      and explanations.
+    </div>
+    <br>
+    <div><span class="skill-key">Inputs:</span></div>
+    <div class="skill-value" style="padding-left:16px; margin-top:4px;">
+      source_path · bib_path (optional) · output_dir · ocr_mode: datalab|gemini|none · embed_model: specter2|minilm
+    </div>
+    <br>
+    <div><span class="skill-key">Ingestion workflow:</span></div>
+    <div class="skill-value" style="padding-left:16px; margin-top:4px;">
+      1. Detect source type (tex / pdf / dir)<br>
+      2. If .tex → LaTeX parser → structured chunks<br>
+      3. If .pdf → Datalab OCR or Gemini page-by-page<br>
+      4. Extract images → vision description<br>
+      5. Parse .bib or compile .bbl → bibliography chunks<br>
+      6. Embed all chunks with SPECTER2<br>
+      7. Build FAISS index + metadata store
+    </div>
+    <br>
+    <div><span class="skill-key">Wiki generation:</span></div>
+    <div class="skill-value" style="padding-left:16px; margin-top:4px;">
+      8. Group chunks by section hierarchy<br>
+      9. Claude synthesizes one wiki page per section<br>
+      10. Preserve raw LaTeX in equation blocks<br>
+      11. Include figure descriptions + captions<br>
+      12. Write markdown to output_dir with _index.json
+    </div>
+    <br>
+    <div><span class="skill-key">Retrieval workflow:</span></div>
+    <div class="skill-value" style="padding-left:16px; margin-top:4px;">
+      13. Check for label/number pattern → metadata lookup (O(1))<br>
+      14. Otherwise → embed query → FAISS search<br>
+      15. Expand to parent section context<br>
+      16. MMR re-rank → Claude generates answer
+    </div>
+    <br>
+    <div><span class="skill-key">Quality checks:</span></div>
+    <div class="skill-value" style="padding-left:16px; margin-top:4px;">
+      Verify equation count · verify \label{} references resolve · flag figures missing descriptions · warn on large .bib without .bbl
+    </div>
+    <br>
+    <div><span class="skill-key">Failure modes:</span></div>
+    <div class="skill-value" style="padding-left:16px; margin-top:4px;">
+      Nested \input{} loops · malformed .tex · image description API timeout · scanned PDF with no text
+    </div>
+  </div>
+
+  <!-- ── 7 ── -->
+  <h2 id="s7"><span class="num">7</span> Should You Keep FAISS?</h2>
+  <div class="verdict-grid">
+    <div class="verdict-card keep">
+      <div class="v-label">Short-term (prototype)</div>
+      <div class="v-value">Keep FAISS</div>
+    </div>
+    <div class="verdict-card augment">
+      <div class="v-label">Medium-term (structured queries)</div>
+      <div class="v-value">Augment with metadata store</div>
+    </div>
+    <div class="verdict-card replace">
+      <div class="v-label">Long-term (production / multi-user)</div>
+      <div class="v-value">Migrate to pgvector</div>
+    </div>
+  </div>
+
+  <p>Keep FAISS for the prototype because it already works, is CPU-only with no infrastructure,
+  uses exact search, and is fine for up to ~100K chunks. The real improvements are <strong>upstream
+  of FAISS</strong>: better text (LaTeX parser or Datalab) and a better embedding model (SPECTER2).</p>
+
+  <h3>When to Replace</h3>
+  <ul>
+    <li><strong>Multi-user / always-on deployment</strong> → pgvector on RDS (combines metadata queries with vector search in SQL)</li>
+    <li><strong>Need to filter by chunk_type before search</strong> → pgvector handles this natively; FAISS requires post-filtering</li>
+    <li><strong>Incremental updates</strong> → FAISS requires full index rebuild; pgvector supports <code>INSERT</code></li>
+  </ul>
+
+  <!-- ── 8 ── -->
+  <h2 id="s8"><span class="num">8</span> Proposed File / Module Plan</h2>
+  <p>Minimal new files added, everything existing preserved:</p>
+  <pre>wikivsrag/
+├── PhysicsScript.py          (keep — add --download-source flag, calls fetch_source)
+├── rag_system.py             (keep — wire new chunks in)
+├── wiki_system.py            (keep — improve with structured chunks)
+├── compare.py                (keep)
+├── eval.py                   (keep)
+│
+├── ingest/                   ← NEW
+│   ├── __init__.py
+│   ├── fetch_source.py       hit arxiv.org/e-print/{id}, detect response type,
+│   │                         extract .tar.gz / .gz / pdf-only, write sources/ dir,
+│   │                         produce source_index.json
+│   ├── detect_source.py      given sources/{id}/, find main .tex entry point
+│   ├── parse_latex.py        parse .tex → structured chunks with metadata
+│   ├── ocr_fallback.py       Datalab or Gemini OCR path (for pdf_only papers)
+│   ├── image_describe.py     extract images, call vision model for descriptions
+│   └── parse_bib.py          parse .bib/.bbl → bibliography chunks
+│
+├── store/                    ← NEW
+│   ├── __init__.py
+│   ├── chunk_store.py        replaces rag_chunks.pkl — adds type, hierarchy, labels
+│   └── metadata_index.py    label → chunk lookup, section hierarchy tree
+│
+├── embed/                    ← NEW
+│   ├── __init__.py
+│   └── embedder.py           wraps SentenceTransformer, switchable model
+│
+├── sources/                  ← GENERATED (gitignored)
+│   └── {arxiv_id}/
+│       ├── main.tex
+│       ├── *.tex             included files
+│       ├── figures/
+│       └── *.bib
+│
+├── source_index.json         ← GENERATED routing map: id → {status, main_tex, bib, images}
+│
+└── wiki/                     (existing — keep)</pre>
+  <div class="card info">
+    <div class="card-title">What Does NOT Change in Phase 1</div>
+    <code>rag_system.py</code>'s FAISS logic, <code>wiki_system.py</code>'s LLM synthesis logic,
+    <code>compare.py</code>, <code>eval.py</code>. You are only replacing the upstream ingestion
+    and the chunk metadata schema.
+  </div>
+
+  <!-- ── 9 ── -->
+  <h2 id="s9"><span class="num">9</span> Step-by-Step Implementation Plan</h2>
+  <ul class="steps">
+    <li>
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>fetch_source.py + --download-source flag</strong> <span class="step-phase phase-1">Phase 1</span><br>
+        Add to <code>PhysicsScript.py</code>. Hit <code>arxiv.org/e-print/{id}</code> for each paper
+        in <code>physics_papers.json</code>. Detect response type (tar.gz / single .gz / pdf-only),
+        extract to <code>sources/{id}/</code>, write <code>source_index.json</code>.
+        Reuse the existing 4-second rate-limit delay.
+      </div>
+    </li>
+    <li>
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>detect_source.py</strong> <span class="step-phase phase-1">Phase 1</span><br>
+        Given <code>sources/{id}/</code>, scan all <code>.tex</code> files for
+        <code>\begin{document}</code> to identify the main entry point. Fall back to filename
+        heuristics if needed. Log a warning if ambiguous.
+      </div>
+    </li>
+    <li>
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>parse_latex.py</strong> <span class="step-phase phase-1">Phase 1</span><br>
+        Recursively resolve <code>\input{}</code>/<code>\include{}</code>, walk the document emitting
+        structured chunks. Start with sections and equations; add figures and tables second.
+      </div>
+    </li>
+    <li>
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <strong>chunk_store.py</strong> <span class="step-phase phase-1">Phase 1</span><br>
+        Replaces the bare <code>{text, meta}</code> dict with the full structured schema:
+        type, section_path, label, equation_number, figure_number, caption, latex_raw.
+      </div>
+    </li>
+    <li>
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <strong>Wire into rag_system.py</strong> <span class="step-phase phase-1">Phase 1</span><br>
+        Add a <code>--source-tex</code> flag that reads <code>source_index.json</code>, routes
+        each paper to the LaTeX parser or PDF fallback, and builds the FAISS index from structured chunks.
+      </div>
+    </li>
+    <li>
+      <div class="step-num">6</div>
+      <div class="step-body">
+        <strong>Test on real .tex source</strong> <span class="step-phase phase-1">Phase 1</span><br>
+        Run <code>--download-source</code> on a handful of papers from <code>physics_papers.json</code>.
+        Manually inspect the extracted <code>sources/</code> directories and spot-check equation and
+        section output from the parser.
+      </div>
+    </li>
+    <li>
+      <div class="step-num">7</div>
+      <div class="step-body">
+        <strong>embedder.py — swap to SPECTER2</strong> <span class="step-phase phase-2">Phase 2</span><br>
+        Replace <code>all-MiniLM-L6-v2</code> with <code>allenai/specter2_base</code>. Rebuild the index.
+        Re-run <code>eval.py</code> to measure improvement.
+      </div>
+    </li>
+    <li>
+      <div class="step-num">8</div>
+      <div class="step-body">
+        <strong>parse_bib.py</strong> <span class="step-phase phase-3">Phase 3</span><br>
+        Detect <code>.bib</code> size. Parse small ones directly; compile large ones to <code>.bbl</code>
+        and parse that. Add bibliography chunk type to the store.
+      </div>
+    </li>
+    <li>
+      <div class="step-num">9</div>
+      <div class="step-body">
+        <strong>image_describe.py</strong> <span class="step-phase phase-4">Phase 4</span><br>
+        Extract images from <code>sources/{id}/figures/</code>. Call Gemini / Claude vision for
+        descriptions. Add figure chunk type with generated description.
+      </div>
+    </li>
+    <li>
+      <div class="step-num">10</div>
+      <div class="step-body">
+        <strong>ocr_fallback.py</strong> <span class="step-phase phase-5">Phase 5</span><br>
+        Datalab API call for papers with <code>status: "pdf_only"</code> in
+        <code>source_index.json</code>. Parse structured output, map to the same chunk schema.
+      </div>
+    </li>
+    <li>
+      <div class="step-num">11</div>
+      <div class="step-body">
+        <strong>AWS deployment</strong> <span class="step-phase phase-6">Phase 6</span><br>
+        S3 for uploads, Lambda/Fargate for ingestion jobs, DynamoDB or Postgres for metadata,
+        OpenSearch or pgvector if replacing FAISS.
+      </div>
+    </li>
+  </ul>
+
+  <!-- ── 10 ── -->
+  <h2 id="s10"><span class="num">10</span> Risks and Tradeoffs</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Risk</th><th>Severity</th><th>Mitigation</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ArXiv .tex source not always available</td>
+          <td><span class="sev-high">High</span></td>
+          <td>Many papers publish source; <code>source_index.json</code> routes pdf-only papers to OCR automatically — fallback must be seamless</td>
+        </tr>
+        <tr>
+          <td>ArXiv source endpoint returns unexpected formats</td>
+          <td><span class="sev-medium">Medium</span></td>
+          <td>Detect by magic bytes, not just Content-Type header (headers are sometimes wrong). Log and skip on unrecognised format.</td>
+        </tr>
+        <tr>
+          <td>Multi-file .tex projects can be complex</td>
+          <td><span class="sev-medium">Medium</span></td>
+          <td>Depth-limit \input{} recursion; log unresolved includes</td>
+        </tr>
+        <tr>
+          <td>Datalab API cost on many papers</td>
+          <td><span class="sev-medium">Medium</span></td>
+          <td>Cache results; only call once per paper</td>
+        </tr>
+        <tr>
+          <td>SPECTER2 is 768-dim vs 384-dim — slower to embed</td>
+          <td><span class="sev-low">Low</span></td>
+          <td>Acceptable for a prototype; use GPU if needed</td>
+        </tr>
+        <tr>
+          <td>Gemini vision descriptions can hallucinate</td>
+          <td><span class="sev-medium">Medium</span></td>
+          <td>Keep original caption alongside; tell LLM to prefer caption</td>
+        </tr>
+        <tr>
+          <td>.bib compilation requires pdflatex installed</td>
+          <td><span class="sev-medium">Medium</span></td>
+          <td>Make optional; warn if not available; fall back to full .bib</td>
+        </tr>
+        <tr>
+          <td>FAISS does not support metadata filtering natively</td>
+          <td><span class="sev-medium">Medium</span></td>
+          <td>Post-filter after retrieval for now; migrate to pgvector for production</td>
+        </tr>
+        <tr>
+          <td>pylatexenc / plasTeX may not handle all macros</td>
+          <td><span class="sev-medium">Medium</span></td>
+          <td>Fall back to regex extraction for unknown envs; log warnings</td>
+        </tr>
+        <tr>
+          <td>Wiki quality depends entirely on upstream chunk quality</td>
+          <td><span class="sev-high">High</span></td>
+          <td>Measure end-to-end, not just embedding quality; test on real papers early</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── 11 ── -->
+  <h2 id="s11"><span class="num">11</span> One Honest Uncertainty</h2>
+  <div class="card warning">
+    <div class="card-title">Datalab Accuracy on Real Physics Papers</div>
+    <p>Datalab's documentation advertises structured Markdown/JSON output with LaTeX equation
+    conversion for scientific PDFs, but real-world accuracy on complex physics papers — dense notation,
+    custom macros, multi-column layouts — may vary.</p>
+    <p style="margin-top:10px;"><strong>Before committing to Datalab as the OCR fallback, test it
+    on 3–5 representative papers from your corpus and manually inspect the equation extraction.</strong>
+    Gemini 2.0 Flash is a known-good alternative that is more flexible (you can prompt it precisely)
+    but costs more per page.</p>
+  </div>
+
+  <hr>
+  <p style="color: var(--muted); font-size: 0.85rem; text-align: center;">
+    wikivsrag architecture review &nbsp;·&nbsp; generated 2026-05-19
+  </p>
+
+</div>
+</body>
+</html>
