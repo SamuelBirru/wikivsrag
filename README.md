@@ -1,16 +1,17 @@
 # wikivsrag
 
-Compares two approaches to question-answering over 100 physics papers from ArXiv:
+Compares three approaches to question-answering over 100 physics papers from ArXiv:
 
-- **RAG** — retrieves raw paper chunks at query time using vector search, then generates an answer
-- **LLM Wiki** — pre-builds a synthesized knowledge base of physics concepts, then answers from that
+- **RAG** — retrieves raw LaTeX chunks at query time using SPECTER2 + FAISS, with structural lookup for equation labels
+- **Concept Wiki** — pre-builds a synthesized knowledge base of physics concepts (one page per concept, cross-paper)
+- **Section Wiki** — pre-builds LaTeX-fidelity pages per paper section (equations, theorems, figures preserved)
 
 ---
 
 ## Requirements
 
 ```
-pip install arxiv requests pymupdf sentence-transformers faiss-cpu numpy anthropic python-dotenv scikit-learn
+pip install -r requirements.txt
 ```
 
 ---
@@ -23,7 +24,7 @@ Create a `.env` file in the project root:
 AWS_ACCESS_KEY_ID=your_access_key_here
 AWS_SECRET_ACCESS_KEY=your_secret_key_here
 AWS_REGION=us-east-1
-CLAUDE_MODEL=us.anthropic.claude-sonnet-4-6
+CLAUDE_MODEL=us.anthropic.claude-sonnet-4-6-20251031-v1:0
 ```
 
 The model ID must match a cross-region inference profile enabled in your AWS account. Check **AWS Console → Bedrock → Cross-region inference** for the exact ID.
@@ -38,41 +39,41 @@ python PhysicsScript.py
 ```
 Outputs: `physics_papers.json`, `physics_papers.csv`
 
-### 2. Download full paper PDFs and extract text
-```
-python PhysicsScript.py --download
-```
-Outputs: `paper_texts.json`, `pdfs/`  
-Takes ~7 minutes (rate-limited to respect ArXiv). Resumes safely if interrupted.
-
-### 3. Build the RAG index
-
-**Recommended — LaTeX-first pipeline (Phase 1):**
+### 2. Download LaTeX source archives
 ```
 python PhysicsScript.py --download-source
+```
+Downloads `.tar.gz` source archives from ArXiv into `sources/`, extracts LaTeX and bib files.  
+Outputs: `sources/`, `source_index.json`
+
+### 3. Build the RAG index
+```
 python rag_system.py --ingest-sources
 ```
-Downloads LaTeX source archives and parses them structure-aware: equations, theorems, figures, and proofs become typed chunks with section paths and LaTeX labels preserved. Falls back to PDF text or abstract when source is unavailable.  
+Parses LaTeX structure-aware: equations, theorems, figures, proofs, and prose become typed chunks with section paths and LaTeX labels preserved. Falls back to PDF text or abstract when source is unavailable. Embeds with `allenai/specter2_base`.  
 Outputs: `rag_index.faiss`, `rag_chunks.pkl`, `rag_metadata.json`
 
-`rag_metadata.json` is a structural index enabling direct lookups by equation number, LaTeX label (`eq:hamiltonian`), chunk type, or section path — bypassing FAISS for exact-reference queries.
+`rag_metadata.json` enables direct lookups by LaTeX label (`eq:hamiltonian`) or unambiguous equation number — bypassing FAISS entirely for exact-reference queries.
 
-**Legacy — PDF pipeline:**
+### 4a. Build the Section Wiki (recommended)
 ```
-python rag_system.py --ingest
+python wiki_generate.py --output-dir wiki_output
 ```
-Chunks each paper into ~400-word pieces and embeds them. No structure awareness.  
-Outputs: `rag_index.faiss`, `rag_chunks.pkl`
+Synthesizes one markdown page per paper section from the LaTeX chunks. Preserves equations in `$$ ... $$`, figures with captions, theorems and definitions. Resumes safely if interrupted.  
+Outputs: `wiki_output/`, `wiki_output/_index.json`
 
-### 4. Build the Wiki
+Or use the Claude Code skill if you have Claude Code installed:
+```
+/physics-wiki-create --output-dir wiki_output
+```
+
+### 4b. Build the Concept Wiki (optional, for comparison)
 ```
 python wiki_system.py --ingest
 python wiki_system.py --build
 ```
-`--ingest`: Claude reads each paper in full and extracts key physics concepts + contributions. Saves to `wiki_extractions.json`. Resumes if interrupted.  
-`--build`: Synthesizes one markdown wiki page per concept into `wiki/`.
-
-Note: The ingest step makes one Claude API call per paper (100 calls total). This is the most expensive step — monitor your Bedrock usage.
+Claude reads each paper and extracts key physics concepts, then synthesizes one page per concept into `wiki/`. Makes one LLM call per paper at ingest time.  
+Outputs: `wiki_extractions.json`, `wiki/`
 
 ---
 
@@ -81,39 +82,61 @@ Note: The ingest step makes one Claude API call per paper (100 calls total). Thi
 ### Query RAG
 ```
 python rag_system.py "What methods are used to study quantum entanglement?"
+python rag_system.py "eq:hamiltonian"          # direct label lookup
+python rag_system.py -k 8 "your question"
 ```
 
-### Query Wiki
+### Query Section Wiki
+```
+python wiki_generate.py "What methods are used to study quantum entanglement?"
+python wiki_generate.py --output-dir wiki_output -k 6 "your question"
+```
+
+### Query Concept Wiki
 ```
 python wiki_system.py "What methods are used to study quantum entanglement?"
 ```
 
-### Compare both side-by-side
+### Compare all three side-by-side
 ```
 python compare.py "What methods are used to study quantum entanglement?"
-```
-
-### Adjust how many results are retrieved (default: 5 for RAG, 4 for Wiki)
-```
-python rag_system.py -k 8 "your question"
-python wiki_system.py -k 6 "your question"
+python compare.py --no-concept "your question"   # skip concept wiki if not built
 python compare.py -k 6 "your question"
 ```
+
+---
+
+## Claude Code skill
+
+If you have [Claude Code](https://claude.ai/code) installed, the `/physics-wiki-create` skill is available after cloning:
+
+```
+/physics-wiki-create --dry-run                        # preview pages without API calls
+/physics-wiki-create --output-dir wiki_output         # full generation
+/physics-wiki-create --ingest --output-dir wiki_output  # re-ingest then generate
+/physics-wiki-create --paper 2301.12345               # single paper only
+```
+
+The skill handles ingestion checks, progress reporting, and error guidance automatically.
 
 ---
 
 ## How each system works
 
 ### RAG
-1. At ingest (LaTeX path): papers are parsed into typed chunks — equations, theorems, figures, proofs, prose — with section paths and LaTeX labels preserved. Chunks are embedded with `allenai/specter2_base` (trained on scientific papers) into a FAISS index. A structural `MetadataIndex` is also built for exact-reference lookups.
-2. At query: if the question looks like a direct reference (`"equation 4"`, `"eq:hamiltonian"`), the structural index resolves it immediately without FAISS. Otherwise the question is embedded and a pool of 50 candidates is retrieved from FAISS.
-3. **MMR (Maximal Marginal Relevance)** re-ranks the pool to select `k` chunks that balance relevance against redundancy — ensuring diversity across papers
-4. Claude reads those chunks and generates an answer
+1. **Ingest**: papers are parsed into typed chunks — equations, theorems, figures, proofs, prose — with section paths and LaTeX labels preserved. Chunks are embedded with `allenai/specter2_base` into a FAISS index. A `MetadataIndex` is built for structural lookups.
+2. **Query**: if the question matches a LaTeX label or unambiguous equation number, the structural index resolves it directly. Otherwise the question is embedded and 50 candidates are retrieved from FAISS.
+3. **MMR** re-ranks the candidate pool to select `k` chunks balancing relevance against redundancy across papers.
+4. Claude generates an answer from the selected chunks.
 
-### LLM Wiki
-1. **Ingest**: Claude reads each paper in full and extracts key physics concepts + what the paper contributes to each. Saves to `wiki_extractions.json`
-2. **Build**: Contributions are grouped by concept; Claude writes a synthesized markdown page per concept into `wiki/`
-3. At query: TF-IDF search finds the `k` most relevant concept pages; Claude synthesizes an answer from them
+### Section Wiki
+1. **Build**: each paper section's LaTeX chunks are assembled in type-priority order (prose → theorem → equation → figure) and fed to Claude, which writes a structured markdown page preserving all equations and figures. Pages are written to `wiki_output/<paper_id>/<section>.md`. Resumes from `_index.json` if interrupted.
+2. **Query**: uses the same FAISS index as RAG — no separate embeddings needed. Top-k chunk hits are mapped to their corresponding wiki pages; Claude synthesizes an answer from the synthesized pages rather than raw chunks.
+
+### Concept Wiki
+1. **Ingest**: Claude reads each paper in full and extracts key physics concepts + contributions. Saves to `wiki_extractions.json`.
+2. **Build**: contributions are grouped by concept; Claude writes one synthesized page per concept into `wiki/`. Cross-paper synthesis is pre-computed at build time.
+3. **Query**: TF-IDF finds the `k` most relevant concept pages; Claude synthesizes an answer.
 
 ---
 
@@ -121,62 +144,51 @@ python compare.py -k 6 "your question"
 
 ### Systematic test — 20 questions judged by Claude
 
-A structured evaluation was run across 20 questions covering three types: specific paper lookup, broad synthesis, and factual recall. Both systems were evaluated using Claude Sonnet 4.6 via Amazon Bedrock.
+Questions cover three types: specific paper lookup, broad synthesis, and factual recall.
 
-Run it yourself:
 ```
-python eval.py --run
-python eval.py --report   # writes eval_report.md
+python eval.py --run               # run all three systems (resumes per-system)
+python eval.py --run --no-concept  # skip concept wiki if not built
+python eval.py --report            # writes eval_report.md
 ```
 
-### Results with Claude Sonnet 4.6
+Paste `eval_report.md` to Claude for three-way judgment.
 
-**Wiki is the stronger system overall**, but each has a clear niche.
+### Results with Claude Sonnet 4.6 (RAG vs Concept Wiki)
 
-**Wiki wins on synthesis questions** — almost every time. It identifies cross-paper patterns, provides structured tables, and connects concepts across the dataset. On questions like "How do multiple papers use tensor networks?" or "What approaches to quantum error correction appear across these papers?", Wiki gave structured, multi-angle answers that RAG couldn't match because it retrieves chunks from individual papers rather than pre-synthesized concept pages.
+**Concept Wiki wins on synthesis** — identifies cross-paper patterns, connects concepts across the dataset. On questions like "How do multiple papers use tensor networks?", Wiki gave structured multi-angle answers that RAG couldn't match.
 
-**RAG wins on specific direct lookups** — when the answer lives in one paper, RAG pulls the exact text. On q04 (what ML technique does a specific paper use), Wiki explicitly admitted it didn't know; RAG quoted the paper directly. For precise numerical facts and specific experimental parameters, RAG is more reliable because it returns verbatim source text rather than a rewrite.
+**RAG wins on specific lookups** — verbatim source text for precise facts and direct paper questions. Also benefits from structural label lookup (phase 2) for exact equation references.
 
-**Key failure modes:**
-- RAG failed q10 (Rayleigh criterion) because the relevant section wasn't in the retrieved chunks — a fundamental limitation of chunking
-- Wiki failed q04 because the extraction step didn't capture the specific ML method — a limitation of what Claude chose to summarize at ingest time
-
-### Verdict
-
-| Question type | Better system |
-|---|---|
-| Broad synthesis, cross-paper connections | Wiki |
-| Specific lookup in a single paper | RAG |
-| Precise numerical facts | RAG |
-| Conceptual explanations | Wiki |
-
-A hybrid approach — use Wiki for exploration, RAG to verify specific claims — would outperform either alone.
+| Question type | RAG | Concept Wiki | Section Wiki |
+|---|---|---|---|
+| Broad synthesis, cross-paper | Weaker | Strong | TBD |
+| Specific lookup, single paper | Strong | Weaker | Strong |
+| Precise numerical facts | Strong | Weaker | Strong |
+| Equation/label references | Strong (structural lookup) | Weaker | Strong |
+| Conceptual explanations | Moderate | Strong | TBD |
 
 ### Key tradeoffs
 
-| | RAG | LLM Wiki |
-|---|---|---|
-| Setup cost | Cheap — embedding only, no LLM calls | Expensive — one LLM call per paper at ingest |
-| Query time | Fast | Moderate |
-| Source fidelity | High — verbatim paper text | Lower — Claude rewrites and can blend papers |
-| Retrieval quality | Strong — semantic embedding search | Weaker — TF-IDF keyword matching |
-| Hallucination risk | Low at retrieval; only at generation | Depends on model quality |
-| Cross-paper synthesis | Weaker — retrieves chunks, not concepts | Strong — pre-synthesized concept pages |
-| Model dependency | Low — embedding model is separate from LLM | High — synthesis quality determines everything |
-| Best question type | Specific lookup, factual, paper-targeted | Broad synthesis, conceptual questions |
+| | RAG | Concept Wiki | Section Wiki |
+|---|---|---|---|
+| Setup cost | Low — no LLM at ingest | High — 1 LLM call/paper | High — 1 LLM call/section |
+| Equation fidelity | High — LaTeX preserved | Low — PDF-extracted | High — LaTeX preserved |
+| Structural lookup | Yes (labels, eq numbers) | No | No |
+| Cross-paper synthesis | Weaker | Strong (pre-computed) | Moderate (query-time) |
+| Retrieval | FAISS + MMR | TF-IDF | FAISS + MMR (shared index) |
+| Hallucination risk | Low at retrieval | Moderate | Moderate |
 
 ---
 
 ## Configuration
 
-Create or edit `.env` in the project root to set credentials and model:
-
-| Variable | Default in `.env` | Description |
-|---|---|---|
-| `AWS_ACCESS_KEY_ID` | — | AWS access key |
-| `AWS_SECRET_ACCESS_KEY` | — | AWS secret key |
-| `AWS_REGION` | `us-east-1` | Region with Bedrock enabled |
-| `CLAUDE_MODEL` | `us.anthropic.claude-sonnet-4-6` | Bedrock cross-region inference profile ID |
+| Variable | Description |
+|---|---|
+| `AWS_ACCESS_KEY_ID` | AWS access key |
+| `AWS_SECRET_ACCESS_KEY` | AWS secret key |
+| `AWS_REGION` | Region with Bedrock enabled (default: `us-east-1`) |
+| `CLAUDE_MODEL` | Bedrock cross-region inference profile ID |
 
 Tunable constants in `rag_system.py`:
 
@@ -184,8 +196,8 @@ Tunable constants in `rag_system.py`:
 |---|---|---|
 | `MMR_LAMBDA` | `0.6` | Relevance/diversity balance (0 = max diversity, 1 = max relevance) |
 | `MMR_FETCH` | `50` | Candidate pool size before MMR re-ranks |
-| `CHUNK_WORDS` | `400` | Words per chunk |
-| `CHUNK_OVERLAP` | `50` | Overlap between consecutive chunks |
+| `CHUNK_WORDS` | `400` | Words per chunk (legacy PDF pipeline only) |
+| `CHUNK_OVERLAP` | `50` | Overlap between chunks (legacy PDF pipeline only) |
 
 ---
 
@@ -193,17 +205,23 @@ Tunable constants in `rag_system.py`:
 
 | File | Description |
 |---|---|
-| `PhysicsScript.py` | Fetches papers from ArXiv API, downloads PDFs |
-| `rag_system.py` | RAG pipeline with MMR (ingest + query) |
-| `wiki_system.py` | LLM Wiki pipeline (ingest + build + query) |
-| `compare.py` | Runs both systems on the same question side-by-side |
-| `eval.py` | Runs both systems on all questions in `questions.json`, writes `eval_report.md` |
-| `.env` | AWS credentials and model config (not committed to git) |
+| `PhysicsScript.py` | Fetches papers from ArXiv, downloads PDFs or LaTeX sources |
+| `rag_system.py` | RAG pipeline — LaTeX ingest, FAISS+MMR+structural query |
+| `wiki_generate.py` | Section wiki — builds and queries LaTeX-fidelity section pages |
+| `wiki_system.py` | Concept wiki — builds and queries cross-paper concept pages |
+| `compare.py` | Three-way comparison: RAG vs concept wiki vs section wiki |
+| `eval.py` | Systematic evaluation across 20 questions, per-system resume |
+| `ingest/parse_latex.py` | LaTeX parser — extracts typed chunks with labels and section paths |
+| `ingest/parse_bib.py` | BibTeX parser — resolves `\cite{}` keys to human-readable references |
+| `ingest/fetch_source.py` | Downloads LaTeX source archives from ArXiv |
+| `embed/embedder.py` | SPECTER2 wrapper for scientific paper embeddings |
+| `store/chunk_store.py` | In-memory chunk collection with type stats |
+| `store/metadata_index.py` | Structural index for label/equation/section lookups |
+| `.claude/commands/physics-wiki-create.md` | Claude Code skill definition |
 | `physics_papers.json` | Paper metadata (title, abstract, authors, URLs) |
-| `paper_texts.json` | Full extracted text per paper |
-| `wiki_extractions.json` | Raw concept extractions (intermediate file) |
-| `wiki/` | Synthesized concept pages in markdown |
-| `rag_index.faiss` | FAISS vector index |
-| `rag_chunks.pkl` | Chunk text + metadata for RAG |
-| `eval_results.json` | Raw evaluation results |
+| `source_index.json` | Maps arxiv IDs to local LaTeX source paths |
+| `rag_metadata.json` | Structural lookup index (labels, equation numbers, sections) |
+| `wiki_output/` | Section wiki pages + `_index.json` |
+| `wiki/` | Concept wiki pages |
+| `eval_results.json` | Raw evaluation results (all three systems) |
 | `eval_report.md` | Formatted evaluation report |
