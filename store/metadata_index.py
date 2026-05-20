@@ -21,7 +21,7 @@ class MetadataIndex:
         self._by_label: dict[str, int] = {}
         self._by_type: dict[str, list[int]] = {}
         self._by_section: dict[str, list[int]] = {}
-        self._by_eq_number: dict[str, int] = {}
+        self._by_eq_number: dict[str, list[int]] = {}
 
     # ------------------------------------------------------------------
     # Build
@@ -60,7 +60,7 @@ class MetadataIndex:
                 self._by_section.setdefault(key, []).append(i)
 
             if eq_num:
-                self._by_eq_number[eq_num] = i
+                self._by_eq_number.setdefault(str(eq_num), []).append(i)
 
     # ------------------------------------------------------------------
     # Lookup
@@ -69,8 +69,8 @@ class MetadataIndex:
     def lookup_label(self, label: str) -> int | None:
         return self._by_label.get(label)
 
-    def lookup_equation_number(self, num: str) -> int | None:
-        return self._by_eq_number.get(str(num))
+    def lookup_equation_number(self, num: str) -> list[int]:
+        return self._by_eq_number.get(str(num), [])
 
     def lookup_type(self, chunk_type: str) -> list[int]:
         return self._by_type.get(chunk_type, [])
@@ -90,10 +90,12 @@ class MetadataIndex:
         """
         q = query.strip().lower()
 
-        # "equation N" or "eq. N"
+        # "equation N" or "eq. N" — only resolve if unambiguous (one paper has it)
         m_eq = __import__("re").match(r"(?:equation|eq\.?)\s+(\d+)", q)
         if m_eq:
-            return self.lookup_equation_number(m_eq.group(1))
+            matches = self.lookup_equation_number(m_eq.group(1))
+            if len(matches) == 1:
+                return matches[0]
 
         # Raw label pattern like eq:..., fig:..., tab:...
         if ":" in q and not q.startswith("http"):
@@ -125,8 +127,10 @@ class MetadataIndex:
         idx._by_label = data.get("by_label", {})
         idx._by_type = data.get("by_type", {})
         idx._by_section = data.get("by_section", {})
-        idx._by_eq_number = data.get("by_eq_number", {})
-        # JSON serialises int dict keys as strings, convert type/section lists back
-        idx._by_type = {k: v for k, v in idx._by_type.items()}
-        idx._by_section = {k: v for k, v in idx._by_section.items()}
+        # Migrate legacy format where eq numbers were stored as ints, not lists
+        raw_eq = data.get("by_eq_number", {})
+        idx._by_eq_number = {
+            k: v if isinstance(v, list) else [v]
+            for k, v in raw_eq.items()
+        }
         return idx

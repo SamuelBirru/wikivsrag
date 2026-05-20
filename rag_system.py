@@ -33,14 +33,14 @@ import anthropic
 import faiss
 import numpy as np
 from dotenv import load_dotenv
-from sentence_transformers import SentenceTransformer
+from embed.embedder import Embedder
 
 # Phase 1 imports (only used by --ingest-sources)
 try:
     from ingest.parse_latex import parse_latex_file
+    from ingest.parse_bib import parse_bib_file, resolve_citations
     from store.chunk_store import ChunkStore
     from store.metadata_index import MetadataIndex
-    from embed.embedder import Embedder
     _PHASE1_AVAILABLE = True
 except ImportError:
     _PHASE1_AVAILABLE = False
@@ -49,7 +49,6 @@ load_dotenv()
 
 # Bedrock cross-region inference profile ID — verify in AWS Console > Bedrock > Model access
 CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "us.anthropic.claude-sonnet-4-6-20251031-v1:0")
-EMBED_MODEL = "all-MiniLM-L6-v2"
 INDEX_PATH = "rag_index.faiss"
 CHUNKS_PATH = "rag_chunks.pkl"
 PAPERS_PATH = "physics_papers.json"
@@ -119,14 +118,13 @@ def ingest(papers_path: str = PAPERS_PATH, texts_path: str = TEXTS_PATH) -> None
             # Fallback: abstract only
             chunks.append({"text": header + f"Abstract: {paper['abstract']}", "meta": {**meta, "chunk": 1, "total_chunks": 1}})
 
-    print(f"Encoding {len(chunks)} chunks from {len(papers)} papers with {EMBED_MODEL}...")
-    embedder = SentenceTransformer(EMBED_MODEL)
+    embedder = Embedder()
+    print(f"Encoding {len(chunks)} chunks from {len(papers)} papers with {embedder.model_name}...")
     texts = [c["text"] for c in chunks]
 
-    embeddings = embedder.encode(texts, show_progress_bar=True, convert_to_numpy=True).astype("float32")
-    faiss.normalize_L2(embeddings)
+    embeddings = embedder.encode(texts, show_progress_bar=True)
 
-    index = faiss.IndexFlatIP(embeddings.shape[1])  # cosine similarity via inner product
+    index = faiss.IndexFlatIP(embedder.dimension)
     index.add(embeddings)
 
     faiss.write_index(index, INDEX_PATH)
@@ -187,9 +185,19 @@ def ingest_sources(
             try:
                 chunks = parse_latex_file(entry["main_tex"], meta)
                 if chunks:
+                    # Resolve \cite{} keys to human-readable references
+                    bib: dict = {}
+                    if entry.get("bib_file"):
+                        bib = parse_bib_file(entry["bib_file"])
+                    if bib:
+                        for c in chunks:
+                            if isinstance(c, dict):
+                                c["text"] = resolve_citations(c["text"], bib)
+                            else:
+                                c.text = resolve_citations(c.text, bib)
                     store.chunks.extend(chunks)
                     tex_count += 1
-                    print(f"  [tex]  {arxiv_id}  {len(chunks)} chunks")
+                    print(f"  [tex]  {arxiv_id}  {len(chunks)} chunks  ({len(bib)} bib entries)")
                     continue
             except Exception as exc:
                 print(f"  [tex-err]  {arxiv_id}: {exc} — falling back")
@@ -285,18 +293,30 @@ def _mmr(query_emb: np.ndarray, candidate_ids: list[int], index, k: int, lambda_
 
 def query(question: str, k: int = DEFAULT_K) -> dict:
     index, chunks = _load_index()
-    embedder = SentenceTransformer(EMBED_MODEL)
+    embedder = Embedder()
 
-    q_emb = embedder.encode([question], convert_to_numpy=True).astype("float32")
-    faiss.normalize_L2(q_emb)
+    # Try structural lookup (equation numbers, LaTeX labels, section paths) before FAISS
+    pinned_ids = []
+    if _PHASE1_AVAILABLE and os.path.exists(METADATA_INDEX_PATH):
+        meta_idx = MetadataIndex.load(METADATA_INDEX_PATH)
+        direct_hit = meta_idx.try_direct_lookup(question)
+        if direct_hit is not None and direct_hit < len(chunks):
+            pinned_ids = [direct_hit]
+            print(f"[RAG] Direct structural match at chunk {direct_hit}")
+
+    q_emb = embedder.encode([question])
 
     # Fetch a larger candidate pool then re-rank with MMR for diversity
     fetch_n = min(index.ntotal, max(MMR_FETCH, k * 10))
     raw_scores, raw_indices = index.search(q_emb, fetch_n)
-    candidate_ids = raw_indices[0].tolist()
+    # Exclude pinned chunk from MMR candidates to avoid duplicate
+    candidate_ids = [i for i in raw_indices[0].tolist() if i not in pinned_ids]
 
-    selected_ids = _mmr(q_emb, candidate_ids, index, k)
-    hits = [(chunks[i], float(raw_scores[0][candidate_ids.index(i)])) for i in selected_ids]
+    semantic_k = max(0, k - len(pinned_ids))
+    selected_ids = pinned_ids + (_mmr(q_emb, candidate_ids, index, semantic_k) if semantic_k else [])
+
+    score_map = {i: float(raw_scores[0][j]) for j, i in enumerate(raw_indices[0].tolist())}
+    hits = [(chunks[i], score_map.get(i, 1.0)) for i in selected_ids]
     context = "\n\n---\n\n".join(c["text"] for c, _ in hits)
 
     prompt = (

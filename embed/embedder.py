@@ -1,29 +1,32 @@
 """
 Thin wrapper around SentenceTransformer to make the model swappable.
 
-Phase 1: all-MiniLM-L6-v2  (384-dim, already installed, no changes)
-Phase 2: allenai/specter2_base  (768-dim, scientific domain, pip install)
+Current: allenai/specter2_base  (768-dim, trained on scientific papers)
 
-To swap: change DEFAULT_MODEL below, delete rag_index.faiss + rag_chunks.pkl,
-and re-run --ingest-sources.  The FAISS index dimension is set automatically
-from the first batch of embeddings.
+To swap model: change DEFAULT_MODEL, delete rag_index.faiss + rag_chunks.pkl,
+and re-run --ingest-sources.  The FAISS index dimension is set automatically.
 """
 
 import numpy as np
+import torch
 from sentence_transformers import SentenceTransformer
 
-DEFAULT_MODEL = "all-MiniLM-L6-v2"
-# Phase 2 swap: DEFAULT_MODEL = "allenai/specter2_base"
+DEFAULT_MODEL = "allenai/specter2_base"
 
 
 class Embedder:
     def __init__(self, model_name: str = DEFAULT_MODEL):
         self.model_name = model_name
-        self._model = SentenceTransformer(model_name)
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        self._model = SentenceTransformer(model_name, device=device)
+        print(f"[Embedder] {model_name} loaded on {device.upper()}")
 
     @property
     def dimension(self) -> int:
-        return self._model.get_sentence_embedding_dimension()
+        # Handle sentence-transformers API rename across versions
+        getter = getattr(self._model, "get_embedding_dimension", None) \
+              or getattr(self._model, "get_sentence_embedding_dimension")
+        return getter()
 
     def encode(
         self,

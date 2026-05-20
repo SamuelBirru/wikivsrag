@@ -46,10 +46,22 @@ Outputs: `paper_texts.json`, `pdfs/`
 Takes ~7 minutes (rate-limited to respect ArXiv). Resumes safely if interrupted.
 
 ### 3. Build the RAG index
+
+**Recommended — LaTeX-first pipeline (Phase 1):**
+```
+python PhysicsScript.py --download-source
+python rag_system.py --ingest-sources
+```
+Downloads LaTeX source archives and parses them structure-aware: equations, theorems, figures, and proofs become typed chunks with section paths and LaTeX labels preserved. Falls back to PDF text or abstract when source is unavailable.  
+Outputs: `rag_index.faiss`, `rag_chunks.pkl`, `rag_metadata.json`
+
+`rag_metadata.json` is a structural index enabling direct lookups by equation number, LaTeX label (`eq:hamiltonian`), chunk type, or section path — bypassing FAISS for exact-reference queries.
+
+**Legacy — PDF pipeline:**
 ```
 python rag_system.py --ingest
 ```
-Chunks each paper into ~400-word pieces and embeds them into a FAISS vector index using `sentence-transformers`. No LLM calls — this step is fast and free.  
+Chunks each paper into ~400-word pieces and embeds them. No structure awareness.  
 Outputs: `rag_index.faiss`, `rag_chunks.pkl`
 
 ### 4. Build the Wiki
@@ -93,9 +105,9 @@ python compare.py -k 6 "your question"
 ## How each system works
 
 ### RAG
-1. At ingest: each paper is split into ~400-word chunks and embedded into a FAISS vector index using `sentence-transformers` (no LLM involved)
-2. At query: the question is embedded and a pool of 50 candidate chunks is retrieved from FAISS
-3. **MMR (Maximal Marginal Relevance)** re-ranks the pool to select `k` chunks that balance relevance to the query against redundancy with each other — ensuring diversity across papers
+1. At ingest (LaTeX path): papers are parsed into typed chunks — equations, theorems, figures, proofs, prose — with section paths and LaTeX labels preserved. Chunks are embedded with `allenai/specter2_base` (trained on scientific papers) into a FAISS index. A structural `MetadataIndex` is also built for exact-reference lookups.
+2. At query: if the question looks like a direct reference (`"equation 4"`, `"eq:hamiltonian"`), the structural index resolves it immediately without FAISS. Otherwise the question is embedded and a pool of 50 candidates is retrieved from FAISS.
+3. **MMR (Maximal Marginal Relevance)** re-ranks the pool to select `k` chunks that balance relevance against redundancy — ensuring diversity across papers
 4. Claude reads those chunks and generates an answer
 
 ### LLM Wiki

@@ -14,7 +14,13 @@ wiki/
 sources/
 source_index.json
 
+# generated wiki
+wiki_output/
+
 # python
 __pycache__/
 *.pyc
 .venv/
+
+# claude code
+.claude/

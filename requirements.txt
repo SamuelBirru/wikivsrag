@@ -1,0 +1,23 @@
+# Install PyTorch with CUDA first (before this file):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+
+# Core ML
+sentence-transformers
+faiss-cpu
+numpy
+
+# AWS / LLM
+anthropic[bedrock]
+
+# ArXiv + data
+arxiv
+requests
+
+# Scikit-learn (wiki_system)
+scikit-learn
+
+# PDF text extraction (optional, for --download)
+pymupdf
+
+# Env vars
+python-dotenv
