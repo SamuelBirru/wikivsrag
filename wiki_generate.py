@@ -220,6 +220,30 @@ def _quality_report(groups: dict, chunks: list[dict]) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Sleep prevention (Windows)
+# ---------------------------------------------------------------------------
+
+def _wake_lock_acquire() -> None:
+    try:
+        import ctypes
+        ES_CONTINUOUS = 0x80000000
+        ES_SYSTEM_REQUIRED = 0x00000001
+        ctypes.windll.kernel32.SetThreadExecutionState(ES_CONTINUOUS | ES_SYSTEM_REQUIRED)
+        print("[wake lock] system sleep disabled for duration of generation")
+    except Exception:
+        pass
+
+
+def _wake_lock_release() -> None:
+    try:
+        import ctypes
+        ctypes.windll.kernel32.SetThreadExecutionState(0x80000000)  # ES_CONTINUOUS only
+        print("[wake lock] system sleep re-enabled")
+    except Exception:
+        pass
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -244,6 +268,9 @@ def generate(output_dir: str, paper_filter: str | None = None, dry_run: bool = F
         return
 
     os.makedirs(output_dir, exist_ok=True)
+
+    # Prevent Windows from sleeping mid-generation
+    _wake_lock_acquire()
 
     # Load existing index to resume — pages already on disk are skipped
     index_path = os.path.join(output_dir, "_index.json")
@@ -308,6 +335,7 @@ def generate(output_dir: str, paper_filter: str | None = None, dry_run: bool = F
 
     _quality_report(groups, chunks)
     print(f"\nDone — {len(index_entries)} wiki pages written to {output_dir}/")
+    _wake_lock_release()
 
 
 # ---------------------------------------------------------------------------

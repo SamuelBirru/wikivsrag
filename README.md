@@ -154,19 +154,29 @@ python eval.py --report            # writes eval_report.md
 
 Paste `eval_report.md` to Claude for three-way judgment.
 
-### Results with Claude Sonnet 4.6 (RAG vs Concept Wiki)
+### Results with Claude Sonnet 4.6 (three-way, 20 questions)
 
-**Concept Wiki wins on synthesis** — identifies cross-paper patterns, connects concepts across the dataset. On questions like "How do multiple papers use tensor networks?", Wiki gave structured multi-angle answers that RAG couldn't match.
+| System | Wins | Ties | Losses |
+|---|---|---|---|
+| **Section Wiki** | **14** | 2 | 4 |
+| Concept Wiki | 3 | 2 | 15 |
+| RAG | 1 | 1 | 18 |
 
-**RAG wins on specific lookups** — verbatim source text for precise facts and direct paper questions. Also benefits from structural label lookup (phase 2) for exact equation references.
+**Section Wiki dominates** — because it retrieves actual paper sections with LaTeX formulas, exact numerical values, and direct quotes rather than summaries. On specific lookups it gives the actual Fermi's Golden Rule expressions, exact Zeeman sublevel labels, or precise convergence-rate formulas. On synthesis questions it finds content the other two systems miss entirely.
+
+**Section Wiki's failure mode is retrieval miss** — when FAISS returns irrelevant pages it honestly returns "not in these pages" rather than hallucinating. This cost it 4 questions where Concept Wiki or RAG retrieved correctly.
+
+**Concept Wiki wins on cross-paper synthesis when Section Wiki misfires** — its pre-computed concept pages are reliable when the question spans many papers and Section Wiki's per-section retrieval doesn't land on the right pages.
+
+**RAG wins only on narrow verbatim lookups** — the one question RAG won (ML technique in a specific paper) was one both wikis failed to index at all.
 
 | Question type | RAG | Concept Wiki | Section Wiki |
 |---|---|---|---|
-| Broad synthesis, cross-paper | Weaker | Strong | TBD |
-| Specific lookup, single paper | Strong | Weaker | Strong |
-| Precise numerical facts | Strong | Weaker | Strong |
+| Broad synthesis, cross-paper | Weaker | Strong | Strong |
+| Specific lookup, single paper | Strong | Weaker | Strong (with exact formulas) |
+| Precise numerical facts | Moderate | Moderate | Strong |
 | Equation/label references | Strong (structural lookup) | Weaker | Strong |
-| Conceptual explanations | Moderate | Strong | TBD |
+| Conceptual explanations | Moderate | Strong | Strong |
 
 ### Key tradeoffs
 
@@ -175,7 +185,7 @@ Paste `eval_report.md` to Claude for three-way judgment.
 | Setup cost | Low — no LLM at ingest | High — 1 LLM call/paper | High — 1 LLM call/section |
 | Equation fidelity | High — LaTeX preserved | Low — PDF-extracted | High — LaTeX preserved |
 | Structural lookup | Yes (labels, eq numbers) | No | No |
-| Cross-paper synthesis | Weaker | Strong (pre-computed) | Moderate (query-time) |
+| Cross-paper synthesis | Weaker | Strong (pre-computed) | Strong (query-time, with source fidelity) |
 | Retrieval | FAISS + MMR | TF-IDF | FAISS + MMR (shared index) |
 | Hallucination risk | Low at retrieval | Moderate | Moderate |
 

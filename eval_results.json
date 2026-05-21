@@ -23,6 +23,19 @@
         "Kubo Linear-Response Theory and Fermi's Golden Rule"
       ],
       "time": 6.0
+    },
+    "section_wiki": {
+      "answer": "## Experimental System for the Kubo-Thermalization Correspondence\n\nBased on the provided wiki pages, the Kubo-Thermalization correspondence was confirmed using a **highly imbalanced uniform Fermi gas of $^6$Li atoms**.\n\nThe key experimental details are:\n\n- An **incoherent mixture** of the first and third lowest Zeeman sublevels of $^6$Li, denoted $|\\uparrow\\rangle$ and $|\\circledast\\rangle$, was prepared in a **red-detuned optical dipole trap**\n- The impurity spin-$1/2$ states were encoded as:\n$$|\\uparrow\\rangle \\equiv |F=1/2,\\, m_F=+1/2\\rangle, \\qquad |\\downarrow\\rangle \\equiv |F=1/2,\\, m_F=-1/2\\rangle$$\n- The bath atoms occupied $|\\circledast\\rangle \\equiv |F=3/2,\\, m_F=-3/2\\rangle$\n- The mixture was confined in a **cylindrical optical box trap** with an initial impurity fraction $x = n_\\downarrow^{(0)}/n_\\circledast \\lesssim 0.15$\n- Experiments were conducted at a magnetic field $B \\approx 700\\ \\mathrm{G}$, where the impurity–bath interaction strength satisfies $k_F a_{\\downarrow\\circledast} \\approx 0.2$\n- The bath temperature was $T = 0.25(2)\\, T_F$, measured via **time-of-flight** of the bath atoms",
+      "pages": [
+        "The Kubo-Thermalization Correspondence / Methods",
+        "The General Structure of Trilinear Equations / Mathematica Verification",
+        "Lecture Notes on Statistical Physics and Neural Networks / Basics of Statistical Physics",
+        "On the non-radial oscillations of realistic anisotropic neutron stars: Axial modes / Equations",
+        "Comparative Study of Potts Machine Dynamics and Performance for Max-k-Cut / Benchmarking model performance",
+        "A Comparative Study of Mass Extraction Schemes and $π^\\pm-ρ^\\pm$ Mixing / Common Microscopic Input",
+        "Scalar-Field Reconstruction of Ricci--Gauss--Bonnet Dark Energy in Hořava--Lifshitz Cosmology / Stability and Thermodynamics"
+      ],
+      "time": 13.9
     }
   },
   "q02": {
@@ -49,6 +62,20 @@
         "Exact Solvability in Quantum Many-Body Systems"
       ],
       "time": 4.3
+    },
+    "section_wiki": {
+      "answer": "Based on the provided wiki pages, two specific numerical values of $F_K/F_\\pi$ are reported in the fit results table from the \"Details of the extrapolation\" section:\n\n- Model `nnlo_ratio_ct`: $F_K/F_\\pi = 1.1989(17)$\n- Model `nnlo_ratio_ct_a4`: $F_K/F_\\pi = 1.2007(30)$\n\nThese are the only two explicit numerical results given in the provided content. The full table of all 16 models is referenced but not completely reproduced in the wiki pages, so additional values from the other 14 models are not available from the provided material.",
+      "pages": [
+        "Beating noise in frequency estimation with squeezing and memory in continuous-variable systems / Computation of QFI for the parameter $\\omega$, with special cases",
+        "Hadrons in $\\mathcal{N}=2$ supersymmetric QCD from non-Abelian string on 2D black hole / Introduction",
+        "Gravitational Lensing of Gravitational Waves from Astrophysical Sources: Theory, Detection, and Applications / Basic theory",
+        "$F_K/F_π$ as a precision test of a new four flavor Domain Wall Fermion action / Details of the lattice computation",
+        "A Comparative Study of Mass Extraction Schemes and $π^\\pm-ρ^\\pm$ Mixing / Outlook",
+        "$F_K/F_π$ as a precision test of a new four flavor Domain Wall Fermion action / Details of the extrapolation",
+        "Dzyaloshinskii-Moriya interaction as a coherence diagnostic for chirality-induced spin selectivity / Perturbative sensitivity analysis",
+        "Probing the density dependence of nuclear symmetry energy through isospin transport in heavy-ion reactions / Symmetry Energy Constraints from Combined Experimental and Theoretical Analysis"
+      ],
+      "time": 5.9
     }
   },
   "q03": {
@@ -75,6 +102,20 @@
         "Aharonov-Bohm Interference in Josephson Junction Arrays"
       ],
       "time": 9.1
+    },
+    "section_wiki": {
+      "answer": "## Dominant Relaxation Noise Sources in the Rhombus Qubit\n\nBased on the provided wiki pages, two noise sources are identified as the dominant relaxation mechanisms in the rhombus qubit, particularly near the half-flux-quantum sweet spot (flux frustration point).\n\n### 1. Flux Noise\n\nFlux noise is identified as a primary relaxation channel. The coupling Hamiltonian for flux noise is:\n\n$$\\hat{H}_c^\\mathrm{flux} = \\hat{\\mathcal{O}}_\\Phi \\cdot \\delta\\Phi_\\mathrm{ext}(t)$$\n\nwith the relaxation rate given by:\n\n$$\\Gamma_1^\\mathrm{flux} = \\frac{1}{\\hbar^2}\\left|\\langle 0|\\hat{\\mathcal{O}}_\\Phi|1\\rangle\\right|^2 \\frac{4\\pi A_\\Phi^2}{\\omega_{01}}$$\n\nusing a $1/f$ noise spectral density $S_{\\Phi_\\mathrm{ext}}(\\omega) = 2\\pi A_\\Phi^2/|\\omega|$.\n\n### 2. Quasiparticle Tunneling\n\nQuasiparticle tunneling across the Josephson junctions is the second dominant channel, with relaxation rate:\n\n$$\\Gamma_1^\\mathrm{qp,i} = \\left|\\langle 0|\\sin\\frac{\\hat\\varphi_i}{2}|1\\rangle\\right|^2 \\frac{32E_J^{(i)}}{h}\\,x_\\mathrm{qp} \\times \\sqrt{\\frac{2\\Delta}{\\pi k_BT}}\\,K_0\\!\\left(\\frac{\\hbar\\omega_{01}}{2k_BT}\\right)\\cosh\\!\\left(\\frac{\\hbar\\omega_{01}}{2k_BT}\\right)$$\n\n### Key Conclusion\n\nThe **Loss Models of the Soft-Rhombus** section explicitly states:\n\n> **Both flux noise and quasiparticle tunneling are responsible for the reduced relaxation times at the sweet spot.**\n\nThis is further confirmed in the **Discussion** section, which notes that both loss channels are **reduced away from frustration**, which is why operating the soft-rhombus qubit away from the half-flux-quantum point achieves relaxation times in the **hundreds of microseconds** regime.",
+      "pages": [
+        "Revisiting the multi-mode rhombus circuit as a biased-noise qubit / Discussion",
+        "A Rayleigh criterion for mechanical instability: inducing activity by chemo-mechanical coupling / Calculation of the reduced dynamics",
+        "Revisiting the multi-mode rhombus circuit as a biased-noise qubit / Loss models of the soft-rhombus",
+        "Pontus-Mpemba effect in cavity quantum electrodynamics / Emergence of the quantum Pontus--Mpemba effect",
+        "Coherence limitations of a Fourier-engineered $\\cos(2\\varphi)$ transmon qubit / Noise sources derivation",
+        "Universal Analog Quantum Simulation / Numerical Results",
+        "A Comparative Study of Mass Extraction Schemes and $π^\\pm-ρ^\\pm$ Mixing / Common Microscopic Input",
+        "Revisiting the multi-mode rhombus circuit as a biased-noise qubit / Circuit quantization on the rhombus qubit"
+      ],
+      "time": 13.4
     }
   },
   "q04": {
@@ -101,6 +142,19 @@
         "Overcomplete Parity-Check Matrices"
       ],
       "time": 4.3
+    },
+    "section_wiki": {
+      "answer": "The provided wiki pages do not contain information about Fedin and Morozov or their technique for constructing quantum circuits for diagonal matrices. This topic is not covered in any of the wiki pages provided.",
+      "pages": [
+        "Quantum Kernels for Parity-Structured Classification: A Hybrid Pipeline / Related Work",
+        "Matrix encoding method in variational algorithm of calculating eigenvalues and generalized eigenvalues / Variational algorithm for constructing generalized eigenvalues",
+        "Variationally Compressing Quantum Circuits to Approximate Nonadiabatic Molecular Quantum Dynamics / Quantum Assisted Quantum Compiling",
+        "Practical Log-Depth Quantum State Preparation and Circuit Verification via Tree Tensor Network Compilation / Background",
+        "Architecture Shape Governs QNN Trainability: Jacobian Null Space Growth and Parameter Efficiency / Theoretical Background",
+        "Quantum Kernels for Parity-Structured Classification: A Hybrid Pipeline / Method",
+        "Affine Subcode Ensemble Decoding for Degeneracy-Aware Quantum Error Correction / Degeneracy Sets and Decoding"
+      ],
+      "time": 3.6
     }
   },
   "q05": {
@@ -127,6 +181,20 @@
         "Wigner Function Negativity"
       ],
       "time": 7.7
+    },
+    "section_wiki": {
+      "answer": "## Entanglement Generation Under Mass Asymmetry in the Schrödinger–Newton Model\n\nBased on the provided wiki pages, the two-body Schrödinger–Newton paper reports the following findings regarding mass asymmetry:\n\n### For Dispersive Gaussian Initial States\n\nWhen the two particles begin in dispersive Gaussian states, mass asymmetry produces particularly dramatic effects. As stated in the Introduction's summary of numerical results:\n\n> \"For **dispersive Gaussian initial states**, mass asymmetry shatters the lighter particle, producing Wigner negativity and rapid entanglement growth.\"\n\nThe Conclusions section elaborates on the physical mechanism:\n\n> \"**Asymmetric collisions** — in which the two masses differ — produce particularly striking effects: the gravitational field of the heavier mass spatially disrupts the lighter wavepacket, producing pronounced **Wigner negativity** and rapid entanglement growth.\"\n\n### For Localized-Product Initial States\n\nThe behavior is qualitatively different when the particles begin in localized states. The Introduction notes:\n\n> \"For **localized-product initial states** in a mass-asymmetry scan, highly localized stationary profiles strongly suppress disruption, and the system remains weakly entangled across all simulated mass ratios.\"\n\n### Underlying Driver\n\nIn both cases, the paper identifies that entanglement growth is driven specifically by the **nonadditive Newtonian pair potential**, not by the semiclassical self-localization term.\n\nIn summary, mass asymmetry is a key amplifier of entanglement, but only when the particles are spatially dispersed — localization suppresses this effect regardless of the mass ratio.",
+      "pages": [
+        "Entanglement generation in a two-body Schrödinger--Newton model / Introduction",
+        "Finite-size general security for differential phase shift keying via variable-length quantum key distribution / Numerical results",
+        "Gravitational Lensing of Gravitational Waves from Astrophysical Sources: Theory, Detection, and Applications / Basic theory",
+        "Universal Analog Quantum Simulation / Expressivity and entanglement capability of parametrized analog Hamiltonian",
+        "Non-relativistic limit of generalized relativistic Pauli operators by Feynman-Kac formulae / Non-relativistic limit of generalized Pauli operators",
+        "Macroscopic entanglement between two magnon modes via two-tone driving of a superconducting qubit / Magnonic entanglement and its detection",
+        "Beating noise in frequency estimation with squeezing and memory in continuous-variable systems / Competition between non-Markovianity and squeezing in parameter estimation",
+        "Entanglement generation in a two-body Schrödinger--Newton model / Conclusions and Outlook"
+      ],
+      "time": 10.3
     }
   },
   "q06": {
@@ -153,6 +221,20 @@
         "Quantum Device Calibration and Fidelity Estimation"
       ],
       "time": 10.2
+    },
+    "section_wiki": {
+      "answer": "## Fidelity-Depth Trade-off in the Tree Tensor Network Paper\n\nBased on the **Log-Depth State Preparation** wiki page, the trade-off is achieved through **truncation of bond dimensions during the SVD steps** of the renormalisation procedure.\n\n### The Mechanism\n\nDuring the MPS-to-TTN renormalisation, at each iteration neighbouring sites are blocked together and an SVD is performed. The key control parameter is:\n\n> \"The number of singular values retained during the SVD controls the trade-off between circuit depth and fidelity. As with the bond dimension χ, truncation is always performed to a power of 2 to retain the quantum circuit interpretation.\"\n\nBy keeping fewer singular values (i.e., truncating to a smaller bond dimension), the resulting TTN nodes have smaller tensor dimensions, which directly reduces the size of the unitary gates needed to embed the isometries — and hence reduces circuit depth.\n\n### The Exact vs. Approximate Comparison\n\n- **Exact decomposition**: No truncation is applied, but bond dimensions grow during renormalisation up to a maximum of χ², producing gates acting on up to **4log(χ) qubits**, with transpilation overhead leading to circuit depths reaching \"thousands to millions of gates\" — prohibitive for real hardware.\n\n- **Approximate decomposition**: Bond dimensions are truncated (in the demonstration case, fixed to a maximum of 2, yielding only 2-qubit gates). The cost is reduced fidelity, characterised as follows:\n  - Fidelity **decays linearly** with the number of qubits N\n  - For up to 20 qubits, fidelity remains above approximately **0.97**\n  - Even extrapolating to over 100 qubits, fidelity remains above **0.8** for the worst case χ = 2\n  - For a 200-site MPS on heavy-hex topology, circuit depth is reduced to just over **200**, compared to the potentially millions of gates in the exact case\n\n### Summary\n\nThe trade-off is thus directly tuneable: the user chooses a maximum bond dimension for the SVD truncations, which simultaneously sets both the maximum gate size in the circuit and the approximation error introduced into the prepared state.",
+      "pages": [
+        "Practical Log-Depth Quantum State Preparation and Circuit Verification via Tree Tensor Network Compilation / Background",
+        "Architecture Shape Governs QNN Trainability: Jacobian Null Space Growth and Parameter Efficiency / Structural Gradient Starvation in Serial Architectures",
+        "Practical Log-Depth Quantum State Preparation and Circuit Verification via Tree Tensor Network Compilation / Verifier Circuits",
+        "Quantum Kernels for Parity-Structured Classification: A Hybrid Pipeline / Method",
+        "Practical Log-Depth Quantum State Preparation and Circuit Verification via Tree Tensor Network Compilation / Log-Depth State Preparation",
+        "Pro-Tensor Network / Pro-tensor network: Basic ingredients and tools",
+        "Surface-Code Thresholds and Qubit Footprints in Shuttling-Based Spin-Qubit Railways / VII. Conclusion",
+        "de Sitter Wavefunction from Quadrangular Polylogarithms: Chain Graphs / Mathematics: Rudenko's Quadrangular Polylogarithms"
+      ],
+      "time": 15.8
     }
   },
   "q07": {
@@ -179,6 +261,20 @@
         "Swampland Distance Conjecture"
       ],
       "time": 15.0
+    },
+    "section_wiki": {
+      "answer": "## The Hagedorn Temperature as a Dynamical Bottleneck\n\nBased on the provided wiki pages, the Hagedorn temperature plays a rich dynamical role that goes well beyond its standard equilibrium interpretation as a limiting temperature of string thermodynamics.\n\n---\n\n### Standard Background\n\nThe starting point is the asymptotic growth of the string density of states:\n\n$$\\Omega(E) \\sim E^{-a} e^{\\beta_H E}, \\qquad E \\to \\infty$$\n\nThis exponential growth makes $\\beta_H$ the **abscissa of convergence** of the canonical partition function $Z(\\beta) = \\int dE\\, \\Omega(E) e^{-\\beta E}$, and the microcanonical inverse temperature approaches $\\beta_H$ from below:\n\n$$\\beta_{\\rm micro}(E) = \\frac{\\partial S}{\\partial E} = \\beta_H - \\frac{a}{E} + \\mathcal{O}(E^{-2})$$\n\n---\n\n### The SEAQT Reframing\n\nWithin the SEAQT framework, the effective inverse temperature is promoted to an **instantaneous, state-dependent quantity**:\n\n$$\\beta(t) = \\frac{1}{k_B} \\frac{\\mathcal{A}_{ES}}{\\mathcal{A}_{EE}} = \\frac{1}{k_B} \\frac{\\mathrm{Cov}(\\hat{H}, \\hat{S})}{\\mathrm{Var}(\\hat{H})}$$\n\nIts scalar evolution equation has the general structure:\n\n$$\\mathcal{A}_{EE}\\, \\dot{\\beta} = \\mathcal{C}_2 \\beta^2 + \\mathcal{C}_1 \\beta + \\mathcal{C}_0$$\n\nThe critical observation is that **$\\mathrm{Var}(\\hat{H})$ appears as a prefactor on the left-hand side**, acting as a thermodynamic inertia or inverse mobility for the intensive variable.\n\n---\n\n### The Bottleneck Mechanism (Isolated System)\n\nBecause the string density of states grows exponentially, a nonequilibrium distribution can develop a **broad high-energy tail**. When this tail is sufficiently broad, $\\mathrm{Var}(\\hat{H})$ becomes large, and the scalar evolution of $\\beta$ is **slowed by the prefactor $1/\\mathrm{Var}(\\hat{H})$**:\n\n> Because the string density of states grows exponentially, the nonequilibrium distribution can develop a broad high-energy tail. In sectors or coarse-grained descriptions for which this tail is sufficiently broad, the energy variance $\\mathrm{Var}(\\hat{H})$ becomes large and the scalar evolution of $\\beta$ is correspondingly **slowed by the prefactor $1/\\mathrm{Var}(\\hat{H})$**.\n\nThus $\\beta_H$ acts as an **effective dynamical attractor** — the system approaches it ever more slowly as the Hagedorn sector is entered.\n\n---\n\n### Open-System Extension: Hagedorn Pinning\n\nThe mechanism sharpens considerably in the open-system setting. The general $\\beta_S$-evolution equation becomes:\n\n$$k_B \\mathrm{Var}_S(H_S)\\, \\frac{d\\beta_S}{dt} = \\mathcal{N}_{\\rm int}[\\rho_S] + \\mathcal{N}_R[\\rho_S; \\beta_R]$$\n\nor equivalently:\n\n$$\\frac{d\\beta_S}{dt} = \\frac{\\mathcal{N}_{\\rm int}[\\rho_S] + \\mathcal{N}_R[\\rho_S; \\beta_R]}{k_B\\, \\mathrm{Var}_S(H_S)}$$\n\nThe **Hagedorn bottleneck condition** is formally:\n\n$$\\mathrm{Var}_S(H_S) \\to \\infty, \\qquad \\mathcal{N}_{\\rm int} + \\mathcal{N}_R = o\\!\\left(k_B\\, \\mathrm{Var}_S(H_S)\\right)$$\n\nwhich implies $d\\beta_S/dt \\to 0$, **even if the reservoir continues to inject energy** into the subsystem. The incoming energy is redirected into the proliferation of string states (the long-string branch) rather than producing a change in temperature.\n\n---\n\n### Role of the Algebraic Exponent $a$\n\nThe strength of the bottleneck is **not universal** — it depends critically on the algebraic exponent $a$ in $\\Omega(E) \\sim E^{-a} e^{\\beta_H E}$. Defining $\\delta = \\lambda - \\beta_H > 0$ as the distance from the Hagedorn point, the variance scales as:\n\n$$\\mathrm{Var}_S(H_S) \\sim \\begin{cases} \\delta^{-2}, & a < 1 \\\\ \\delta^{-2}/|\\ln\\delta|, & a = 1 \\\\ \\delta^{a-3}, & 1 < a < 3 \\\\ -\\ln\\delta, & a = 3 \\\\ \\mathrm{finite}, & a > 3 \\end{cases}$$\n\nSectors with $a \\leq 3$ generate a **divergent thermodynamic inertia** as $\\delta \\to 0^+$, while sectors with $a > 3$ do not produce a universal divergence. For reference, explicit string theory examples give $a = 10$ for type-II strings and $a = 18$ for heterotic strings.\n\n---\n\n### Physical Interpretation\n\nThe overall conclusion of the pages is:\n\n> The Hagedorn temperature is not only a limiting scale of equilibrium string thermodynamics, but also a distinguished dynamical threshold for nonequilibrium string evolution. In the SEAQT framework, it appears as a bottleneck in the response of the effective inverse temperature itself, and in open-system settings this bottleneck can become an effective **pinning mechanism** under external driving.\n\nThis is fully consistent with the microcanonical long-string picture: additional energy fed into the system is absorbed by the exponentially dense string sector, while the intensive variable $\\beta$ remains effectively **pinned near $\\beta_H$**, responding only weakly to continued energy injection.",
+      "pages": [
+        "The Hagedorn Temperature as a Nonequilibrium Dynamical Bottleneck in String Thermodynamics / Nonequilibrium thermodynamics framework",
+        "Squeezed Gravitons and One-Loop Self-Energy under Light-Cone Smearing / Squeezed gravitons in inflationary cosmology",
+        "The Hagedorn Temperature as a Nonequilibrium Dynamical Bottleneck in String Thermodynamics / Construction of the density of states in string theory",
+        "Dynamical cooling driven by self-similar fronts in the 2D nonlinear Schrödinger model / The kinematics of cooling",
+        "The Hagedorn Temperature as a Nonequilibrium Dynamical Bottleneck in String Thermodynamics / Open-system extension and Hagedorn pinning",
+        "Finite-size general security for differential phase shift keying via variable-length quantum key distribution / Mathematical prolegomena",
+        "The Hagedorn Temperature as a Nonequilibrium Dynamical Bottleneck in String Thermodynamics / Conclusions",
+        "Non-Abelian String-Breaking Dynamics on a Qudit Quantum Computer / Hamiltonian in the computational basis"
+      ],
+      "time": 29.3
     }
   },
   "q08": {
@@ -205,6 +301,20 @@
         "Altermagnetism and Altermagnetic Magnons"
       ],
       "time": 6.4
+    },
+    "section_wiki": {
+      "answer": "The provided wiki pages do not contain any information about an altermagnetic magnon paper or an extended Landau-Lifshitz-Gilbert equation. None of the wiki pages cover this topic — they address subjects such as Potts machine models, neutron star inner crust calculations, Floquet dynamics perturbation theory, open-system string thermodynamics, frictional field equations in general relativity, universal analog quantum simulation, non-relativistic limits of Pauli operators, and SEAQT nonequilibrium thermodynamics.\n\nTherefore, I cannot answer this question based on the provided pages.",
+      "pages": [
+        "Comparative Study of Potts Machine Dynamics and Performance for Max-k-Cut / Rescaling and deriving governing equations",
+        "Relativistic mean-field study of the neutron star inner crust using the asymmetric finite difference method / Numerical results and discussions",
+        "Dynamical Signatures of Floquet Topology in Wave Packet Dynamics / Perturbation theory for the Floquet dynamics",
+        "The Hagedorn Temperature as a Nonequilibrium Dynamical Bottleneck in String Thermodynamics / Open-system extension and Hagedorn pinning",
+        "Classical General Relativity as a Non-Conservative Action-Dependent Field Theory / Frictional Field Equations",
+        "Universal Analog Quantum Simulation / Numerical Results",
+        "Non-relativistic limit of generalized relativistic Pauli operators by Feynman-Kac formulae / Non-relativistic limit of generalized Pauli operators",
+        "The Hagedorn Temperature as a Nonequilibrium Dynamical Bottleneck in String Thermodynamics / Nonequilibrium thermodynamics framework"
+      ],
+      "time": 5.5
     }
   },
   "q09": {
@@ -231,6 +341,19 @@
         "Multifractal Critical Phases in Quasiperiodic Systems"
       ],
       "time": 6.3
+    },
+    "section_wiki": {
+      "answer": "## Phase Structure of $\\mathcal{N}=2$ SQCD\n\nBased on the wiki pages, the paper identifies a **two-phase structure** for $\\mathcal{N}=2$ SQCD with gauge group $U(N)$ and $N_f = 2N$, separated by a **conifold transition**.\n\n---\n\n### The Two Phases\n\n**1. Higgs Phase (weak coupling)**\n\nAt small $g^2$ (large $\\mathrm{Im}\\,\\tau_{SW}$), the theory is in a perturbative Higgs phase where:\n- The physical spectrum consists of a **finite number** of screened quarks and Higgsed gauge bosons together with their superpartners\n- Massless states are the \"extra\" quark flavors $q^{kA}$, $\\tilde{q}_{Ak}$ with $A = (N+1), \\ldots, 2N$, belonging to the bifundamental representations $(\\mathbf{\\bar{N}, N})$ and $(\\mathbf{N, \\bar{N}})$ of the global color-flavor symmetry group\n\n**2. Stringy/Hadronic Phase (strong coupling)**\n\nAt strong coupling $g^2 \\sim 1$, specifically at the \"super strong\" point $\\tau_{SW} = 1$:\n- A non-perturbative Higgs branch develops where the massless stringy baryon $b$ (associated with the complex-structure modulus of the conifold) develops a VEV\n- The spectrum features **towers of massive string states** typical of string theory spectra\n- The only massless state is the lightest baryon with $j = -1/2$, $m = \\pm 1/2$, belonging to the $\\frac{1}{2}N(N-1)$-dimensional antisymmetric representation of $SU(N)$:\n\n$$\\Yvcentermath1 \\yng(1,1)$$\n\n---\n\n### The Phase Transition\n\nThe two phases are **not analytically connected** and are separated by a genuine phase transition. The key argument is that the massless states in each phase belong to **different representations** of the global symmetry group:\n\n- Higgs phase: bifundamental representations\n- Stringy phase: antisymmetric representation\n\nThis challenges the Fradkin–Shenker proposal that no phase transition separates the Higgs and confinement phases in scalar QCD.\n\nFrom the string theory perspective, the transition is identified as a **conifold transition** — the transition point from the resolved conifold ($\\beta \\neq 0$, $\\langle b \\rangle = 0$) to the deformed conifold ($\\beta = 0$, $\\langle b \\rangle \\neq 0$).\n\nThe phase diagram is controlled by the complexified gauge coupling:\n\n$$\\tau_{SW} = i\\frac{8\\pi}{g^2} + \\frac{\\theta_{4D}}{\\pi}$$",
+      "pages": [
+        "Hadrons in $\\mathcal{N}=2$ supersymmetric QCD from non-Abelian string on 2D black hole / Introduction",
+        "A Comparative Study of Mass Extraction Schemes and $π^\\pm-ρ^\\pm$ Mixing / Common Microscopic Input",
+        "From Baby Universes to Narain Moduli: Topological Boundary Averaging in SymTFTs / Toward JT Gravity and 3D Gravity",
+        "The Phases of the Scalar S-Matrix Island / Outlook",
+        "Systematic Extraction of Exact Yang-Mills Solutions via Algebraic Tensor Ring Decomposition / Discussion and Phenomenological Implications",
+        "Hadrons in $\\mathcal{N}=2$ supersymmetric QCD from non-Abelian string on 2D black hole / Mass deformation",
+        "Spin and Quadrupole Sectors in Nonrelativistic Gravity / Stationary vacuum solutions in the Galilean expansion"
+      ],
+      "time": 18.6
     }
   },
   "q10": {
@@ -257,6 +380,20 @@
         "Frenesy (Time-Symmetric Dynamical Activity)"
       ],
       "time": 9.3
+    },
+    "section_wiki": {
+      "answer": "The provided wiki pages do not contain any information about a \"Rayleigh criterion\" in the context of chemo-mechanical coupling. The wiki page on \"Coupling diffusion to reaction\" covers topics such as semi-reciprocity, local detailed balance, flashing ratchets, rocking ratchets, and molecular motor models, but it does not introduce or mention a Rayleigh criterion at any point.\n\nTherefore, based solely on the provided pages, this question cannot be answered.",
+      "pages": [
+        "A Rayleigh criterion for mechanical instability: inducing activity by chemo-mechanical coupling / Coupling diffusion to reaction",
+        "Beating noise in frequency estimation with squeezing and memory in continuous-variable systems / Single parameter estimation theory in Gaussian framework",
+        "Machine Learning Approaches to Building Quantum Circuits for Sets of Matrices / Methodology",
+        "Pontus-Mpemba effect in cavity quantum electrodynamics / Emergence of the quantum Pontus--Mpemba effect",
+        "Finite-Time Optimal Control by Noisy Traps / Stiffening/softening trap",
+        "Gravitational Lensing of Gravitational Waves from Astrophysical Sources: Theory, Detection, and Applications / Basic theory",
+        "The Hagedorn Temperature as a Nonequilibrium Dynamical Bottleneck in String Thermodynamics / Nonequilibrium thermodynamics framework",
+        "Comparative Study of Potts Machine Dynamics and Performance for Max-k-Cut / Rescaling and deriving governing equations"
+      ],
+      "time": 4.8
     }
   },
   "q11": {
@@ -283,6 +420,20 @@
         "Squeezed Graviton States from Inflation"
       ],
       "time": 8.6
+    },
+    "section_wiki": {
+      "answer": "Based on the provided wiki pages, only one paper directly addresses quantum error correction: the **Qubit Mapping and Shuttling Protocol** section. The other pages focus on different topics (quantum simulation, classification, imaging, QKD, etc.). Here is what is described:\n\n## Quantum Error Correction Content\n\n### Rotated Surface Code (RSC)\n\nThe paper describes two variants of the rotated surface code $[[d^2; 1; d]]_2$:\n\n**CSS Rotated Surface Code** with stabilizers:\n$$S_X^p=\\prod_i X_i, \\quad S_Z^q=\\prod_i Z_i$$\n\n**XZZX Rotated Surface Code** with stabilizers:\n$$S^p= X_iZ_jZ_kX_l$$\n\n### Railway Architecture Mapping\n\nA 2×N \"railway\" architecture is described where:\n- Check qubits occupy the **middle rail**\n- Data qubits occupy a **side rail**\n- Entangling operations occur only *across* rails\n- Shuttling occurs only *along* rails\n\n### Hook Error Mitigation\n\nThe paper addresses **hook errors** — correlated weight-2 errors from single mid-cycle faults on check qubits — and describes how careful syndrome extraction ordering mitigates them.\n\n### Train Schedule Protocol\n\nA unidirectional shuttling protocol for syndrome extraction, yielding per round:\n- $2d$ entanglement instances\n- $2d-1$ shuttling instances\n- $2d-2$ entangling operations per instance\n\n### Snake Order\n\nA positional ordering of data qubits satisfying all commutation constraints while minimizing shuttling overhead.\n\n---\n\nThe remaining wiki pages do not describe quantum error correction approaches.",
+      "pages": [
+        "Universal Analog Quantum Simulation / Numerical Results",
+        "Quantum Kernels for Parity-Structured Classification: A Hybrid Pipeline / Method",
+        "Passive Imaging with Quantum Advantage / Supplimentary Information",
+        "Finite-size general security for differential phase shift keying via variable-length quantum key distribution / Protocol outline (relativistic QKD)",
+        "The General Structure of Trilinear Equations / Mathematica Verification",
+        "Variationally Compressing Quantum Circuits to Approximate Nonadiabatic Molecular Quantum Dynamics / The Global Minimum",
+        "Surface-Code Thresholds and Qubit Footprints in Shuttling-Based Spin-Qubit Railways / IV. Qubit Mapping and Shuttling Protocol",
+        "Beating noise in frequency estimation with squeezing and memory in continuous-variable systems / Preliminaries on Gaussian quantum states"
+      ],
+      "time": 12.4
     }
   },
   "q12": {
@@ -309,6 +460,20 @@
         "Spin-Glass Models and Hopfield Networks"
       ],
       "time": 10.6
+    },
+    "section_wiki": {
+      "answer": "Based on the provided wiki pages, I can identify two papers that explicitly use tensor networks as a computational tool, with a third having a tangential connection.\n\n## 1. Pro-Tensor Networks (Primary Focus)\n\nThe pro-tensor network papers (\"A First Encounter\" and \"Basic Ingredients and Tools\") develop tensor networks as a **categorified computational framework**. Classical tensor networks are used as the foundational analogy:\n\n- **Nodes** are assigned linear maps (tensors), and **edges** are labeled by vector spaces\n- **Contraction** of tensors sharing common edges is computed as:\n$$\\sum_{b \\in E} T^{cd}_{ab}\\, S^{be}_{fg}$$\nwhich corresponds to composition of linear maps $V \\otimes V \\otimes V \\xrightarrow{1 \\otimes S} V \\otimes V \\otimes V \\xrightarrow{T \\otimes 1} V \\otimes V \\otimes V$\n\nThe pro-tensor network framework then **lifts this computational tool one categorical level**, replacing complex numbers with vector spaces, vector spaces with $\\mathbb{C}$-linear categories, and tensor contraction with the coend construction:\n$$\\int^{b \\in \\mathcal{C}} T_{ab}^{cd} \\otimes S_{fg}^{be}$$\n\n## 2. Quantum-Enhanced LLMs (Applied Use)\n\nThe Extended Data paper (arXiv:2605.05914) uses tensor networks more implicitly as a structural tool. The notation **\"TN 210L\"** refers to a compressed backbone with 210-layer sign-constrained Cayley unitary adapters, and Extended Data Table 7 characterizes trained unitaries via **operator Schmidt decomposition** — a tensor-network-adjacent technique analyzing entanglement across bipartitions. The paper reports metrics like effective bond dimension and entropy ratios, which are standard tensor network diagnostics.\n\n## Limitations\n\nThe other pages (lensed gravitational waves, power distributions, quantum kernels) do not use tensor networks as a computational tool. The information provided is insufficient to make broader claims beyond these two papers.",
+      "pages": [
+        "Pro-Tensor Network / Pro-tensor network: Basic ingredients and tools",
+        "Syndrome resampling enhances quantum error correction thresholds / Approximating powers of distributions from data",
+        "Geometric Means and Lebesgue-type Decomposition of Completely Positive Maps / Acknowledgements",
+        "Quantum-enhanced Large Language Models on Quantum Hardware via Cayley Unitary Adapters / Extended Data",
+        "Pro-Tensor Network / Pro-tensor network: A first encounter",
+        "Gravitational Lensing of Gravitational Waves from Astrophysical Sources: Theory, Detection, and Applications / Cosmological Application",
+        "Quantum Kernels for Parity-Structured Classification: A Hybrid Pipeline / Background",
+        "Quantum Kernels for Parity-Structured Classification: A Hybrid Pipeline / Method"
+      ],
+      "time": 15.9
     }
   },
   "q13": {
@@ -335,6 +500,20 @@
         "Quantum Kernel Methods"
       ],
       "time": 16.8
+    },
+    "section_wiki": {
+      "answer": "Based on the provided wiki pages, several distinct methods are used to study or characterise quantum entanglement across the different works:\n\n## Direct Entanglement Measures\n\n**Von Neumann Entropy** is the primary entanglement measure in the Schrödinger-Newton numerical results paper. It is used to track entanglement generation during two-body collisions across all four initial configurations (Ψ_I through Ψ_IV), with the entropy hierarchy ranging from $S_{\\rm vN} \\approx 0.19$ for localized product states up to $S_{\\rm vN} \\approx 1.67$ for anticorrelated superpositions.\n\n**Schmidt Decomposition / Schmidt Spectrum** is computed via singular value decomposition (SVD) directly on the discretized two-particle wavefunction. The decay of $\\lambda_1$ and growth of $\\lambda_2, \\lambda_3$ are tracked to monitor occupation of spatial modes beyond the initial left/right subspace.\n\n## Phase-Space Methods\n\nThe **relative-coordinate Wigner function** $W_{\\rm rel}$ is used to diagnose entanglement generation and non-Gaussian phase-space structure. The growth of Wigner negativity:\n$$\\mathcal{V}_{-} = \\int dx\\, dp\\, |\\min(W, 0)|$$\nis explicitly identified as accompanying growth of entanglement entropy.\n\n## Quantum Circuit / Tensor Network Methods\n\nIn the quantum circuit synthesis paper, entanglement structure is characterised implicitly through **bond dimension** $\\chi$ of matrix product states, which controls the entanglement content a tensor network can represent. The paper also discusses **verifier circuits** built from MPOs that compute overlaps $|\\langle\\phi|U|\\psi\\rangle|^2$, providing a circuit-level entanglement diagnostic.\n\n**Tree tensor networks (TTNs)** provide an alternative structural representation of entanglement, enabling log-depth circuit preparation via canonicalisation and isometry-to-unitary embedding.\n\n## Kernel-Based / Hilbert Space Methods\n\nIn the quantum kernel paper, entanglement is implicitly characterised through the **quantum kernel function**:\n$$K_q(x,y) = |\\langle\\phi(x)|\\phi(y)\\rangle|^2$$\nand the **Kernel-Target Alignment (KTA)**:\n$$\\text{KTA}(K,y) = \\frac{\\langle K, yy^\\top\\rangle_F}{\\|K\\|_F \\|yy^\\top\\|_F}$$\nThe ZZ feature map with its $Z_iZ_j$ entangling gates creates entanglement between qubit registers that is leveraged for classification.\n\n## Entanglement Analysis in LLM Adapters\n\nIn the quantum LLM paper, **entanglement analysis of trained unitaries** is mentioned as part of the systematic SmolLM2 study, used to characterise the properties of the Cayley-parameterised block-diagonal unitary adapters, though detailed methodology is not provided in the introduction section.\n\n## Summary\n\nThe methods span: information-theoretic measures (von Neumann entropy, Schmidt spectra), phase-space diagnostics (Wigner functions and negativity), tensor-network bond dimension as a structural entanglement proxy, and quantum circuit overlap measurements. The Schrödinger-Newton paper provides the most detailed and quantitative entanglement characterisation of any work covered.",
+      "pages": [
+        "Practical Log-Depth Quantum State Preparation and Circuit Verification via Tree Tensor Network Compilation / Background",
+        "Entanglement generation in a two-body Schrödinger--Newton model / Numerical results",
+        "Quantum Kernels for Parity-Structured Classification: A Hybrid Pipeline / Background",
+        "Quantum Kernels for Parity-Structured Classification: A Hybrid Pipeline / Method",
+        "Passive Imaging with Quantum Advantage / Supplimentary Information",
+        "Quantum-enhanced Large Language Models on Quantum Hardware via Cayley Unitary Adapters / Introduction",
+        "Quasi-normal modes of a multi-dimensional rotating Kerr black hole / The basics of multispinor formalism",
+        "Multitime memory beyond the quantum regression theorem in sequential measurement statistics / Open quantum dynamics"
+      ],
+      "time": 21.2
     }
   },
   "q14": {
@@ -361,6 +540,20 @@
         "Bound-State Structure and Ionization Potential in Nonlocal Quantum Dynamics"
       ],
       "time": 11.6
+    },
+    "section_wiki": {
+      "answer": "Based on the provided wiki pages, there are several connections between quantum mechanics and gravitational phenomena:\n\n## 1. JT Gravity and Quantum Mechanics (BF Theory / Schwarzian)\n\nThe JT gravity section establishes a direct connection via the BF-theory formulation:\n\n$$S_{\\mathrm{BF}} = i \\int_Y \\mathrm{Tr}\\, \\Phi F_A$$\n\nIntegrating over the adjoint scalar $\\Phi$ imposes flatness of the $SL(2,\\mathbb{R})$ connection $A$, reducing the gravitational path integral to boundary degrees of freedom. The **asymptotic AdS₂ boundary condition** then produces the **Schwarzian boundary mode** — a quantum mechanical observable $\\mathrm{Tr}\\, e^{-\\beta H}$. Thus a 2D gravitational theory maps onto 1D quantum mechanics.\n\n## 2. Gravitational Ensembles as Quantum Topological Averages\n\nThe SymTFT framework connects gravity to quantum field theory through ensemble averaging. A physical boundary prepares a quantum state:\n\n$$|\\Psi_{\\mathrm{phys}}(M;J)\\rangle \\in \\mathcal{H}_{\\mathrm{sym}}(M)$$\n\nand topological boundary conditions supply Hilbert spaces on which quantum Hamiltonians act. For 3D gravity, the gravitational Hilbert space is explicitly a tensor product of quantum objects:\n\n$$\\mathcal{H}_{\\mathrm{grav}}(\\Sigma) = \\mathcal{H}_{\\mathrm{Vir}}(\\Sigma) \\otimes \\overline{\\mathcal{H}}_{\\mathrm{Vir}}(\\Sigma)$$\n\nwith the Virasoro Hamiltonian $H_{\\mathrm{phys}} = L_0 + \\overline{L}_0 - \\frac{c}{12}$.\n\n## 3. Gravitational Lensing of Gravitational Waves\n\nThe cosmological applications section connects quantum gravity indirectly through graviton mass constraints. Gravitational lensing time-delays and waveform modifications set limits on the **graviton mass** and probe the fundamental nature of gravity. The time-delay formula:\n\n$$\\Delta t_{i,j}=\\frac{D_{\\rm l}D_{\\rm s}}{D_{\\rm ls}}\\frac{(1+z_{\\rm l})}{c}\\Delta\\phi_{i,j}$$\n\nconnects spacetime geometry (angular diameter distances) to observable quantum-field-like wave propagation.\n\n## 4. Quantum Brownian Motion and Curved-Space Analogy\n\nWhile the QBM paper focuses on open quantum systems rather than gravity directly, its master equation structure — particularly the non-Markovian regime where the QFI **exceeds the unitary curve** — reflects how environmental memory (analogous to a gravitational background with finite correlation time $\\tau_B \\sim \\Lambda_c^{-1}$) can enhance quantum parameter estimation beyond naive unitary bounds.\n\n## Summary\n\nThe deepest connections in these papers run through the **SymTFT/holographic framework**: gravitational path integrals over bulk topologies are reinterpreted as quantum averages over topological boundary conditions, with the gravitational Hilbert space emerging from quantization of boundary degrees of freedom. The BF/Chern-Simons structure bridges classical gravity (flat connections, moduli spaces) to quantum mechanical observables (partition functions, spectral data).",
+      "pages": [
+        "From Baby Universes to Narain Moduli: Topological Boundary Averaging in SymTFTs / Toward JT Gravity and 3D Gravity",
+        "Systematic Extraction of Exact Yang-Mills Solutions via Algebraic Tensor Ring Decomposition / Discussion and Phenomenological Implications",
+        "Machine Learning Approaches to Building Quantum Circuits for Sets of Matrices / Introduction",
+        "Gravitational Lensing of Gravitational Waves from Astrophysical Sources: Theory, Detection, and Applications / Cosmological Application",
+        "Beating noise in frequency estimation with squeezing and memory in continuous-variable systems / Competition between non-Markovianity and squeezing in parameter estimation",
+        "From Baby Universes to Narain Moduli: Topological Boundary Averaging in SymTFTs / Averaging over Topological Boundary Conditions as Summing over Topologies",
+        "Pro-Tensor Network / Pro-tensor network: Basic ingredients and tools",
+        "Machine Learning Approaches to Building Quantum Circuits for Sets of Matrices / Methodology"
+      ],
+      "time": 21.6
     }
   },
   "q15": {
@@ -387,6 +580,20 @@
         "Quantum Kernel Methods"
       ],
       "time": 13.5
+    },
+    "section_wiki": {
+      "answer": "## Role of Noise in the Quantum Computing Papers\n\nThe provided wiki pages address noise from several distinct angles across different quantum computing contexts.\n\n---\n\n### 1. Protected Qubits and the Rhombus Circuit\n\nThe rhombus qubit paper treats noise as the central design challenge. The key noise channels identified are:\n\n- **Flux noise**\n- **Quasiparticle-tunneling-induced processes**\n\nA surprising finding is that **strict theoretical protection can be counterproductive** in practice. The charge-parity protected regime guards only against relaxation from *local operators in charge space*, leaving flux noise and quasiparticle noise — which couple states with different charge parity — unmitigated. The proposed solution is deliberately **breaking junction symmetry** by introducing asymmetries among the junctions, which reduces coupling to both problematic noise channels even at the cost of strict charge-parity protection.\n\nThe resulting \"soft-rhombus qubit,\" operated away from flux frustration in a **biased-noise regime**, achieves:\n- Relaxation times in the **hundreds of microseconds**\n- A deliberate trade-off accepting shorter dephasing times in exchange for suppressed relaxation noise\n\n---\n\n### 2. Quantum Circuit Decomposition (Machine Learning Paper)\n\nThis paper addresses noise indirectly through **circuit depth minimization**. Deeper circuits accumulate more gate errors, so reducing complexity directly mitigates noise accumulation. The paper achieves:\n\n$$\\sim\\mathcal{O}(2^n) \\text{ vs. } \\sim\\mathcal{O}(2.5^n) \\text{ (Qiskit)} \\text{ for diagonal operators}$$\n\nFor example, at 8 qubits the optimized decomposition requires only 509 operations compared to 8,192 for the Qiskit diagonal method. This represents a purely architectural approach to noise mitigation — fewer gates means fewer opportunities for errors.\n\n---\n\n### 3. Surface Code Fault-Tolerance (Spin-Qubit Railway Architecture)\n\nThis paper addresses noise most directly and quantitatively through **fault-tolerant quantum error correction**. A hybrid biased-depolarizing circuit-level noise model is employed with distinct noise characterizations per operation type:\n\n| Error Type | Probability | Bias |\n|---|---|---|\n| CZ gate | $p$ | $\\eta$ (Z-bias) |\n| Shuttling | $p/10$ | X-bias or Z-bias |\n| Measurement | $2p$ | Bit flip |\n\nThe key insight is **exploiting noise bias** rather than treating all noise equally. The **XZZX surface code** is specifically tailored to bias-preserving noise, and under check shuttling with Z-bias achieves the highest threshold of $p_{th} \\approx 4.0 \\times 10^{-3}$ — compared to $\\approx 2.2 \\times 10^{-3}$ for symmetric noise. The functional threshold is defined as:\n\n$$p_{th} = \\min\\{p_{th}^H, p_{th}^V\\}$$\n\nHole-spin architectures are noted to exhibit more pronounced noise bias due to strong spin-orbit coupling, making them particularly suited to bias-tailored codes.\n\n---\n\n### 4. Non-Markovian Metrology (QBM Paper)\n\nThis paper reframes environmental noise as a potential **resource** rather than purely a hindrance. In the non-Markovian regime ($r = \\Lambda_c/\\omega \\ll 1$), the QFI can **exceed the unitary curve** in certain time intervals due to information backflow from the environment. The $\\omega$-dependence distributes across both first moments and the covariance matrix, enriching parameter encoding.\n\nHowever, the paper concludes that **squeezing (Hamiltonian engineering) is generally more robust** than relying on non-Markovian effects:\n\n> Non-Markovianity can outperform squeezing only in a restricted regime of small squeezing strength $\\beta$ and small coherent amplitude $\\alpha$. As either increases, Hamiltonian engineering rapidly surpasses the memory-induced gain.\n\n---\n\n### Common Themes\n\nAcross all papers, noise is addressed through one or more of:\n\n1. **Structural/architectural redesign** — breaking symmetry (rhombus), reducing circuit depth (ML paper), bias-tailored codes (surface code)\n2. **Exploitation of noise structure** — using bias to advantage rather than treating noise as isotropic\n3. **Deliberate trade-offs** — accepting one noise channel (dephasing) to suppress another (relaxation) rather than pursuing idealized full protection\n\nThe overarching lesson, stated explicitly in the rhombus paper, applies broadly: *\"realistic noise sources must be carefully accounted for, and taking well-informed compromises in circuit design is essential.\"*",
+      "pages": [
+        "Revisiting the multi-mode rhombus circuit as a biased-noise qubit / Discussion",
+        "Finite-size general security for differential phase shift keying via variable-length quantum key distribution / Protocol outline (relativistic QKD)",
+        "Weighted Phase-Space Paths for Exact Wigner Dynamics / Relation to fluctuation theorems and implementation",
+        "Machine Learning Approaches to Building Quantum Circuits for Sets of Matrices / Introduction",
+        "Comparative Study of Potts Machine Dynamics and Performance for Max-k-Cut / Rescaling and deriving governing equations",
+        "Beating noise in frequency estimation with squeezing and memory in continuous-variable systems / Competition between non-Markovianity and squeezing in parameter estimation",
+        "Practical Log-Depth Quantum State Preparation and Circuit Verification via Tree Tensor Network Compilation / Background",
+        "Surface-Code Thresholds and Qubit Footprints in Shuttling-Based Spin-Qubit Railways / V. Simulation with circuit level noise: Results"
+      ],
+      "time": 27.7
     }
   },
   "q16": {
@@ -413,6 +620,19 @@
         "Quantum Generative Modeling"
       ],
       "time": 9.6
+    },
+    "section_wiki": {
+      "answer": "Based on the provided wiki pages, several techniques for quantum state preparation are described:\n\n## 1. Cartan Decomposition into Quantum Circuits (Methodology paper)\n\nThe decomposition $U = K_1 D K_2$ where $K_1, K_2$ belong to the Clifford subgroup and $D$ is diagonal. Any unitary can be parametrized via:\n\n$$D = \\exp\\!\\left(\\sum_{k=1}^{N-1} \\theta_k H_k\\right)$$\n\nThis is implemented numerically using `qiskit`, with the key finding that **XYX decompositions** converge more reliably than ZYZ, since:\n\n$$R_X\\!\\left(-\\tfrac{\\pi}{2}\\right) R_Y(\\theta)\\, R_X\\!\\left(\\tfrac{\\pi}{2}\\right) = R_Z(\\theta)$$\n\nThe approach yields simplified circuits, e.g., requiring only **2 CNOTs and 3 $R_Z$ gates** for two-qubit diagonal unitaries.\n\n## 2. MPS/TTN-to-Circuit Mappings (Background paper)\n\nTwo main approaches are described:\n\n- **Staircase circuits**: An MPS in canonical form is decomposed into a linear-depth $\\mathcal{O}(N)$ circuit, requiring gates acting on $1 + \\log\\chi$ qubits, where $\\chi$ is the bond dimension.\n\n- **Tree Tensor Network (TTN) log-depth circuits**: A canonicalized TTN maps directly to a **log-depth circuit** using isometry-to-unitary embedding, where each isometry tensor is padded with orthonormal vectors to form a full unitary gate. This achieves $\\mathcal{O}(\\log N)$ depth, optimal for translation-invariant normal MPS per Malz et al.\n\n## 3. Imaginary-Time Propagation (Numerical Results — SN paper and UAQS paper)\n\n- **Single-particle SN ground states** are prepared via imaginary-time propagation starting from a Gaussian seed, solving:\n\n$$\\omega\\,\\phi_{\\rm SN}(x) = \\left[-\\frac{1}{2\\mu}\\partial_x^2 - \\kappa\\mu^2 \\int U_\\epsilon(x-x')\\; |\\phi_{\\rm SN}(x')|^2\\; dx'\\right]\\phi_{\\rm SN}(x)$$\n\n- **UAQS imaginary-time evolution** uses analog hardware to drive states toward ground states, with energy converging monotonically and fidelity remaining close to 1.\n\n## 4. Universal Analog Quantum Simulation (UAQS) (Numerical Results — UAQS paper)\n\nStates are prepared using piecewise-constant control Hamiltonians over an analog platform:\n\n$$f_l(t) = \\begin{cases} 1, & (l-1)\\frac{T}{d} \\leq t < l\\frac{T}{d} \\\\ 0, & \\text{others} \\end{cases}$$\n\nAccuracy is governed by the compatibility between the target Hamiltonian and the **dynamical Lie algebra** of the platform, with the Rydberg XY ansatz performing best due to its larger reachable unitary manifold.\n\n## Key Distinction\n\nThe Background paper notes that mid-circuit measurement approaches exist for constant-depth preparation but remain hardware-challenging, while the MPS/TTN analytical decomposition requires **no classical optimization**, unlike variational methods.",
+      "pages": [
+        "Machine Learning Approaches to Building Quantum Circuits for Sets of Matrices / Methodology",
+        "A Comparative Study of Mass Extraction Schemes and $π^\\pm-ρ^\\pm$ Mixing / Common Microscopic Input",
+        "Entanglement generation in a two-body Schrödinger--Newton model / Numerical results",
+        "Finite-size general security for differential phase shift keying via variable-length quantum key distribution / Numerical results",
+        "Practical Log-Depth Quantum State Preparation and Circuit Verification via Tree Tensor Network Compilation / Background",
+        "Universal Analog Quantum Simulation / Numerical Results",
+        "$F_K/F_π$ as a precision test of a new four flavor Domain Wall Fermion action / Introduction"
+      ],
+      "time": 20.6
     }
   },
   "q17": {
@@ -439,6 +659,20 @@
         "Combinatorial Optimization on Graphs"
       ],
       "time": 11.3
+    },
+    "section_wiki": {
+      "answer": "## Machine Learning in Physics Research Across These Papers\n\nThe wiki pages reveal several distinct ways ML is applied in physics research, ranging from circuit design to classification problems.\n\n---\n\n### 1. Interpretable ML for Quantum Circuit Decomposition\n\nThe most explicit treatment of ML methodology appears in the quantum circuits paper. Here, ML serves as a **hypothesis-generation tool** rather than a black-box predictor:\n\n> \"The methodology of the paper is to use interpretable ML to formulate a mathematical hypothesis, and then rigorously prove it using a formal mathematical or physical derivation of all significant results originally proposed or discovered during the analysis of the ML model.\"\n\nThe key constraint is intentional interpretability — for example, a linear model is chosen specifically because \"maps between coordinates in linear spaces — such as algebras of unitary groups and tensor products of these algebras — can be linear.\" The ML model weights are then directly analyzed to construct theoretical results. This workflow produced a new diagonal matrix decomposition achieving $\\sim\\mathcal{O}(2^n)$ complexity, compared to Qiskit's $\\sim\\mathcal{O}(2.5^n)$.\n\n---\n\n### 2. Quantum Kernels for Parity-Structured Classification\n\nThe quantum kernel paper applies quantum computing as a form of ML kernel method, using the ZZ feature map:\n\n$$K_q(x, y) = |\\langle \\phi(x) | \\phi(y) \\rangle|^2$$\n\nThe physics motivation is structural: parity functions require $2^n$-dimensional feature spaces, and \"a quantum kernel operates natively in a $2^n$-dimensional Hilbert space, providing a natural structural match to the problem.\" Classical ML methods (RBF SVM, Random Forest, XGBoost, polynomial SVM) serve as baselines, and a key finding is that standard feature selection via Recursive Feature Elimination completely fails because \"parity functions carry zero marginal information per individual feature.\"\n\n---\n\n### 3. Tensor Networks as a Bridge Between Physics and ML\n\nThe tensor network paper uses physically motivated structures (MPS, MPO) derived from quantum many-body physics — specifically the DMRG algorithm — as tools for quantum state preparation and circuit synthesis. While not ML in the conventional sense, DMRG is described as \"a variational algorithm over the manifold of MPSs,\" and variational ML methods for loading MPSs onto quantum computers are explicitly contrasted with the paper's analytical approach.\n\n---\n\n### 4. ML Not Directly Present in Other Papers\n\nThe remaining papers — on NJL model meson properties in magnetic fields, $\\mathcal{N}=2$ SQCD hadron spectra, and Potts machine optimization — **do not use ML methods**. They rely on field-theoretic, string-theoretic, and dynamical systems approaches respectively. The acknowledgements section of one paper notes only that \"Gemini and ChatGPT\" were used for \"English language editing and mathematical information retrieval,\" not for physics research itself.\n\n---\n\n### Summary\n\nAcross these papers, ML appears in physics research in two substantive ways: (1) as an **interpretable discovery tool** whose outputs are validated by formal derivation, and (2) as a **quantum kernel method** whose structure is motivated by the mathematical geometry of the problem. Both uses emphasize that ML gains credibility in physics when its structure is grounded in physical principles rather than applied as a generic black box.",
+      "pages": [
+        "Machine Learning Approaches to Building Quantum Circuits for Sets of Matrices / Introduction",
+        "A Comparative Study of Mass Extraction Schemes and $π^\\pm-ρ^\\pm$ Mixing / Common Microscopic Input",
+        "Geometric Means and Lebesgue-type Decomposition of Completely Positive Maps / Acknowledgements",
+        "Hadrons in $\\mathcal{N}=2$ supersymmetric QCD from non-Abelian string on 2D black hole / Introduction",
+        "Quantum Kernels for Parity-Structured Classification: A Hybrid Pipeline / Background",
+        "Practical Log-Depth Quantum State Preparation and Circuit Verification via Tree Tensor Network Compilation / Background",
+        "Quantum Kernels for Parity-Structured Classification: A Hybrid Pipeline / Method",
+        "Comparative Study of Potts Machine Dynamics and Performance for Max-k-Cut / Rescaling and deriving governing equations"
+      ],
+      "time": 22.3
     }
   },
   "q18": {
@@ -465,6 +699,20 @@
         "Dark-Matter-Dressed Black Hole Spacetimes"
       ],
       "time": 13.1
+    },
+    "section_wiki": {
+      "answer": "## Approaches to Black Hole Thermodynamics Across the Papers\n\nSeveral distinct but partially overlapping approaches to black hole thermodynamics appear across these wiki pages:\n\n---\n\n### 1. Geometrothermodynamics (GTD)\n\nThe GTD paper presents a differential-geometric framework where equilibrium states are represented as points on a Riemannian manifold, and **phase transitions are encoded in curvature singularities**. The equilibrium space metrics $g^I$, $g^{II}$, $g^{III}$ are constructed to be invariant under Legendre transformations. For black holes specifically, GTD identifies quasi-homogeneity as a \"mandatory requirement,\" with the consequence that gravitational coupling constants (such as the cosmological constant) must be treated as independent thermodynamic variables, \"necessitating an extended thermodynamic framework.\" The curvature singularity conditions reproduce and extend Davies' classical criterion for second-order phase transitions based on heat capacity divergences.\n\n---\n\n### 2. Hagedorn/String-Theoretic Thermodynamics\n\nThe density of states paper approaches black hole thermodynamics through the **2D black hole entropy** computed via string theory. Key elements include:\n\n- The thermal interpretation of the compact cigar geometry dimension, with temperature $T = (2\\pi R)^{-1}$\n- The identification of $k=1$ with the **Hagedorn temperature** $T_H$, where the density of states grows as $\\omega(E) \\sim E^\\alpha e^{E/T_H}$, causing partition function divergence\n- The **black hole/excited string transition** at critical temperature\n- The **thermal scalar** (identified with the $b$-baryon) becoming massless as $T \\to T_H$, signaling instability\n- Entropy contributions from the thermal scalar that diverge near $T \\to T_H$ and encode multiplicity as a function of baryonic charge\n\nThe SEAQT paper connects to this by treating the **Hagedorn temperature as a dynamical bottleneck**: because the string density of states grows exponentially, the energy variance $\\mathrm{Var}(\\hat{H})$ becomes large, slowing the evolution of the nonequilibrium inverse temperature $\\beta$ via the prefactor $1/\\mathrm{Var}(\\hat{H})$, making $\\beta_H$ \"an effective dynamical attractor.\"\n\n---\n\n### 3. Generalized Second Law and Horizon Thermodynamics\n\nThe stability and thermodynamics paper applies the **Generalized Second Law (GSLT)** to a modified gravity (Hořava–Lifshitz) cosmological model. The total entropy is:\n$$S_{\\rm tot} = S_h + S_{\\rm DE}$$\nwhere the horizon entropy uses an effective gravitational coupling $G_{\\rm eff}$:\n$$S_h = \\frac{\\pi R_A^2}{G_{\\rm eff}}$$\nThe first law of thermodynamics is applied at the apparent horizon, and the Gibbs equation governs fluid entropy. The horizon temperature is $T_h = \\frac{1}{2\\pi R_A}$. While focused on cosmology rather than black holes directly, this framework applies standard black hole thermodynamics methodology (horizon entropy, Hawking-like temperature) to the cosmological apparent horizon.\n\n---\n\n### 4. Rotating Black Hole Thermodynamics (Implicit)\n\nThe rotating dark-matter-dressed black hole paper does not explicitly develop thermodynamics, but constructs the geometric backgrounds (including horizon structure, ergoregions, and extremal conditions) that are prerequisite to black hole thermodynamic analysis. The horizon function $\\Delta_i(R)$ and extremal conditions are identified, and a \"formal effective matter source\" is defined through $T^{\\rm eff}_{\\mu\\nu} = \\frac{1}{8\\pi}G_{\\mu\\nu}$, though detailed thermodynamic analysis is noted as beyond scope.\n\n---\n\n### Common Threads\n\n- **Phase transitions** are addressed in both GTD (via curvature singularities) and the string/Hagedorn papers (via the black hole/string transition at $T_H$)\n- **Entropy** is central to GTD, SEAQT, the GSLT analysis, and the density-of-states counting\n- The **Hagedorn temperature** appears as a distinguished thermodynamic threshold in both the density-of-states and SEAQT papers, though approached from static (microcanonical/canonical) and dynamical (nonequilibrium evolution) perspectives respectively\n\nThe remaining papers (field equations, fluctuation theorems, tightness of bounds) do not directly address black hole thermodynamics.",
+      "pages": [
+        "Quasi-homogeneous black hole geometrothermodynamics in Einstein-Maxwell theory / Review of geometrothermodynamics",
+        "The Hagedorn Temperature as a Nonequilibrium Dynamical Bottleneck in String Thermodynamics / Nonequilibrium thermodynamics framework",
+        "Hadrons in $\\mathcal{N}=2$ supersymmetric QCD from non-Abelian string on 2D black hole / Density of states and black hole entropy",
+        "Scalar-Field Reconstruction of Ricci--Gauss--Bonnet Dark Energy in Hořava--Lifshitz Cosmology / Stability and Thermodynamics",
+        "Adaptive ray tracing and photon ring signatures of rotating dark-matter-dressed black holes / Rotating dark-matter-dressed black hole geometries",
+        "Weighted Phase-Space Paths for Exact Wigner Dynamics / Relation to fluctuation theorems and implementation",
+        "Spin and Quadrupole Sectors in Nonrelativistic Gravity / Field equations",
+        "Tight Contraction Rates for Primitive Channels under Quantum $f$-Divergences / Tightness of the upper bound"
+      ],
+      "time": 27.1
     }
   },
   "q19": {
@@ -491,6 +739,20 @@
         "CKM Matrix Unitarity and Flavor Physics"
       ],
       "time": 6.8
+    },
+    "section_wiki": {
+      "answer": "Based on the provided wiki pages, the paper described does **not** use Domain Wall Fermions. The lattice QCD paper described in the \"Details of the Lattice Computation\" section uses ensembles generated at several values of the inverse coupling $\\beta$, but the specific fermion formulation is not explicitly named in the provided content.\n\nWhat the pages **do** tell us about the ensembles is:\n\n- **Lattice spacings** are characterized by the inverse coupling values $\\beta \\in \\{4.008, 4.068, 4.160, 4.238, 4.333\\}$ (with $t_0$ used as a physical length scale proxy), but explicit physical values of the lattice spacing $a$ in physical units (e.g., fm) are not provided in the excerpts shown.\n\n- **Pion mass range**: The ensembles were initially generated with $m_\\pi L \\approx 3.5$, with additional larger boxes generated in regions of interest, but specific pion mass values in MeV are not quoted in the provided text.\n\nThe pages mention **chiral fermions** (since $Z_A = Z_V$ is stated, which holds for chiral fermions), and the paper focuses on extracting $F_K/F_\\pi$, but there is insufficient information in the provided pages to answer specifically about Domain Wall Fermions or give precise lattice spacing and pion mass ranges.",
+      "pages": [
+        "$F_K/F_π$ as a precision test of a new four flavor Domain Wall Fermion action / Details of the lattice computation",
+        "Quantum phase diagrams for bosons in hexagonal optical potentials: A continuous-space quantum Monte Carlo study / Tight-binding models",
+        "A Comparative Study of Mass Extraction Schemes and $π^\\pm-ρ^\\pm$ Mixing / Outlook",
+        "From Baby Universes to Narain Moduli: Topological Boundary Averaging in SymTFTs / A SymTFT Realization of Averaging over Narain Moduli",
+        "From Baby Universes to Narain Moduli: Topological Boundary Averaging in SymTFTs / Introduction",
+        "Universal Analog Quantum Simulation / Numerical Results",
+        "Accessory Parameter of Confluent Heun Equations, Voros Periods and classical irregular conformal blocks / Introduction",
+        "Lattice fermion formulation via Physics-Informed Neural Networks: Ginsparg-Wilson relation and Overlap fermions / Review of the Ginsparg-Wilson relation and Overlap fermions"
+      ],
+      "time": 10.6
     }
   },
   "q20": {
@@ -517,6 +779,20 @@
         "Quantum Scarring"
       ],
       "time": 8.4
+    },
+    "section_wiki": {
+      "answer": "Based on the provided wiki pages, the proof of equidistribution (Theorem 1) by Kim and Koirala uses the following specific mathematical structures:\n\n## Core Mathematical Structure\n\nThe proof proceeds by **testing against torus Fourier modes** and applying the **Egorov identity**:\n\n$$M_{N,\\theta}^{-1}\\operatorname{Op}_{N,\\theta}(a)M_{N,\\theta} = \\operatorname{Op}_{N,\\theta}(a \\circ A)$$\n\nThis reduces the equidistribution statement to estimating matrix elements of the form:\n\n$$\\langle \\operatorname{Op}_{N,0}\\!\\bigl(e^{2\\pi i(m_1 x + m_2 \\xi)}\\bigr) e_{(A^\\mathsf{T})^s m}^0\\, M^{r-s} e_j^0,\\, e_j^0\\rangle, \\qquad m = (m_1, m_2) \\in \\mathbb{Z}^2$$\n\n## Two Key Estimates\n\n**Off-diagonal terms** ($r \\neq s$) are controlled by a **higher-power version of the dispersive Gauss-sum estimate** from Kim–Koirala (2023), combined with arithmetic estimates for the short-period sequence $N_k = N'_{2k+1}$.\n\n**Diagonal terms** reduce to counting resonant times $0 \\leq s < t_k$ for which the second component of $(A^\\mathsf{T})^s m$ vanishes modulo $N_k$. The key observation is that this component grows like $\\lambda^{|s|}$, while $N_k \\asymp \\lambda^{(t_k+1)/2}$, yielding a **logarithmic bound** on the number of resonant times, which produces the $O_a\\!\\left(\\frac{1}{\\log N_k}\\right)$ convergence rate.",
+      "pages": [
+        "Tight Contraction Rates for Primitive Channels under Quantum $f$-Divergences / Tightness of the upper bound",
+        "The General Structure of Trilinear Equations / Mathematica Verification",
+        "Equidistribution of Eigenfunctions of Quantum Cat Maps / Introduction",
+        "Geometric Means and Lebesgue-type Decomposition of Completely Positive Maps / Geometric mean and Parallel sum of completely positive maps",
+        "Half-Spacetime Gauging of 2-Group Symmetry in 3d / Parent Theory and its Descendants",
+        "Surface-Code Thresholds and Qubit Footprints in Shuttling-Based Spin-Qubit Railways / IV. Qubit Mapping and Shuttling Protocol",
+        "GTMDs, orbital angular momentum, and pretzelosity / Introduction",
+        "Machine Learning Approaches to Building Quantum Circuits for Sets of Matrices / Introduction"
+      ],
+      "time": 14.5
     }
   }
 }
