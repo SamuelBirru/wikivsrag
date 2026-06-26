@@ -25,9 +25,12 @@ AWS_ACCESS_KEY_ID=your_access_key_here
 AWS_SECRET_ACCESS_KEY=your_secret_key_here
 AWS_REGION=us-east-1
 CLAUDE_MODEL=us.anthropic.claude-sonnet-4-6-20251031-v1:0
+DATALAB_API_KEY=your_datalab_key_here   # optional — OCR fallback for PDF-only papers
 ```
 
 The model ID must match a cross-region inference profile enabled in your AWS account. Check **AWS Console → Bedrock → Cross-region inference** for the exact ID.
+
+`DATALAB_API_KEY` is only needed if your corpus contains papers with no LaTeX source (see [PDF OCR fallback](#pdf-ocr-fallback)).
 
 ---
 
@@ -50,7 +53,7 @@ Outputs: `sources/`, `source_index.json`
 ```
 python rag_system.py --ingest-sources
 ```
-Parses LaTeX structure-aware: equations, theorems, figures, proofs, and prose become typed chunks with section paths and LaTeX labels preserved. Falls back to PDF text or abstract when source is unavailable. Embeds with `allenai/specter2_base`.  
+Parses LaTeX structure-aware: equations, theorems, figures, proofs, and prose become typed chunks with section paths and LaTeX labels preserved. For papers with **no LaTeX source**, falls back to **Datalab OCR** (if `DATALAB_API_KEY` is set) — which reconstructs equations as LaTeX — then plain PDF text, then abstract. See [PDF OCR fallback](#pdf-ocr-fallback). Embeds with `allenai/specter2_base`.  
 Outputs: `rag_index.faiss`, `rag_chunks.pkl`, `rag_metadata.json`
 
 `rag_metadata.json` enables direct lookups by LaTeX label (`eq:hamiltonian`) or unambiguous equation number — bypassing FAISS entirely for exact-reference queries.
@@ -191,6 +194,40 @@ Paste `eval_report.md` to Claude for three-way judgment.
 
 ---
 
+## PDF OCR fallback
+
+Most papers ship LaTeX source, but some are **PDF-only**. Since the entire pipeline depends on equation fidelity, a PDF-only paper needs an extractor that reconstructs equations as LaTeX — otherwise it pollutes the index and the wikis with garbled math. We evaluated two extractors as the fallback.
+
+### Evaluated: OpenDataLoader vs Datalab
+
+Both were run on a representative PDF-only physics paper (`2605.05785v1`, *Optical Pulling Force in Carbon Nanotubes*, 23 pages) via `compare_ocr.py`:
+
+| Metric | OpenDataLoader | Datalab `/convert` |
+|---|---|---|
+| Latency | **8.5 s** | 30.9 s |
+| Output size | 65.8 KB | 79.7 KB |
+| Inline math (`$…$`) | 0 | **231** |
+| Block equations (`$$…$$`) | 0 | **62** |
+| LaTeX commands | 0 | **1327** |
+| Greek glyphs | dropped (lost) | preserved |
+| Cost | free, local, offline | per-page API |
+
+**Finding: Datalab wins decisively, OpenDataLoader is unusable for physics.** OpenDataLoader is a fast, free, local layout/text extractor — but it performs **no LaTeX equation reconstruction**. It produced *zero* math markup and even dropped Greek glyphs entirely (PDFBox `No glyph for code 0` warnings), shredding equations into fragments like `zz(,q) =i(,q)− (0,q)/`. Datalab reconstructed the same nonlocal-conductivity equation faithfully as
+
+```latex
+\sigma_{zz}(\omega, q) = i[\Pi(\omega, q) - \Pi(0, q)]/\omega
+```
+
+with the full polarizability tensor, both interband/intraband conductivity integrals, and equation numbers preserved. The 3.6× latency and per-page cost are irrelevant when the alternative output is unusable — and PDF-only papers are rare (1 in 100 in this corpus).
+
+> OpenDataLoader's JAR requires **Java 11+**; the comparison harness auto-points at a JDK 11+ install (override with `OCR_JDK_BIN`). It's kept in `requirements.txt` for `compare_ocr.py` only — it is **not** used in the production pipeline.
+
+### How the fallback works
+
+`rag_system.py --ingest-sources` routes each non-LaTeX paper through Datalab `/convert`, caches the markdown to `ocr_cache/<id>.md` (the API is billed **once per paper**, even across re-ingests), and parses it into the **same typed chunks** (`prose` / `equation` / `figure`) the LaTeX parser produces — with section paths and equation numbers preserved. Those chunks land in the shared `rag_index.faiss` / `rag_chunks.pkl` / `rag_metadata.json`, so a single ingest feeds **RAG, the metadata index, and the section wiki** identically. Re-run the comparison yourself with `python compare_ocr.py`.
+
+---
+
 ## Configuration
 
 | Variable | Description |
@@ -199,6 +236,8 @@ Paste `eval_report.md` to Claude for three-way judgment.
 | `AWS_SECRET_ACCESS_KEY` | AWS secret key |
 | `AWS_REGION` | Region with Bedrock enabled (default: `us-east-1`) |
 | `CLAUDE_MODEL` | Bedrock cross-region inference profile ID |
+| `DATALAB_API_KEY` | Optional — Datalab `/convert` key for the PDF OCR fallback |
+| `OCR_JDK_BIN` | Optional — path to a Java 11+ `bin/` dir for OpenDataLoader (`compare_ocr.py` only) |
 
 Tunable constants in `rag_system.py`:
 
@@ -222,8 +261,11 @@ Tunable constants in `rag_system.py`:
 | `compare.py` | Three-way comparison: RAG vs concept wiki vs section wiki |
 | `eval.py` | Systematic evaluation across 20 questions, per-system resume |
 | `ingest/parse_latex.py` | LaTeX parser — extracts typed chunks with labels and section paths |
+| `ingest/parse_markdown.py` | Parses Datalab OCR markdown into the same typed chunks as the LaTeX parser |
 | `ingest/parse_bib.py` | BibTeX parser — resolves `\cite{}` keys to human-readable references |
+| `ingest/ocr_fallback.py` | OCR backends — Datalab `/convert` (production) and OpenDataLoader (comparison only) |
 | `ingest/fetch_source.py` | Downloads LaTeX source archives from ArXiv |
+| `compare_ocr.py` | Benchmarks OCR backends on real PDFs (latency + equation-fidelity proxies) |
 | `embed/embedder.py` | SPECTER2 wrapper for scientific paper embeddings |
 | `store/chunk_store.py` | In-memory chunk collection with type stats |
 | `store/metadata_index.py` | Structural index for label/equation/section lookups |

@@ -19,5 +19,11 @@ scikit-learn
 # PDF text extraction (optional, for --download)
 pymupdf
 
+# OCR fallback for PDF-only papers (no LaTeX source).
+#   Datalab /convert API uses `requests` above + DATALAB_API_KEY; it
+#   reconstructs equations as LaTeX. OpenDataLoader is local/free but does NOT
+#   reconstruct equations — used only by compare_ocr.py (needs Java 11+).
+opendataloader-pdf
+
 # Env vars
 python-dotenv

@@ -39,6 +39,8 @@ from embed.embedder import Embedder
 try:
     from ingest.parse_latex import parse_latex_file
     from ingest.parse_bib import parse_bib_file, resolve_citations
+    from ingest.parse_markdown import parse_datalab_markdown
+    from ingest.ocr_fallback import extract_datalab
     from store.chunk_store import ChunkStore
     from store.metadata_index import MetadataIndex
     _PHASE1_AVAILABLE = True
@@ -62,6 +64,21 @@ MMR_FETCH = 50     # candidate pool size before MMR re-ranks
 # Phase 1 paths
 SOURCE_INDEX_PATH = "source_index.json"
 METADATA_INDEX_PATH = "rag_metadata.json"
+OCR_CACHE_DIR = "ocr_cache"  # Datalab markdown cached here; call the API once per paper
+
+
+def _ocr_markdown(arxiv_id: str, pdf_path: str) -> str:
+    """Return Datalab markdown for a PDF, caching to OCR_CACHE_DIR so the
+    paid API is called at most once per paper across re-ingests."""
+    os.makedirs(OCR_CACHE_DIR, exist_ok=True)
+    cache_path = os.path.join(OCR_CACHE_DIR, f"{arxiv_id}.md")
+    if os.path.exists(cache_path):
+        with open(cache_path, encoding="utf-8") as fh:
+            return fh.read()
+    md = extract_datalab(pdf_path)
+    with open(cache_path, "w", encoding="utf-8") as fh:
+        fh.write(md)
+    return md
 
 
 def _split_into_chunks(text: str, chunk_size: int = CHUNK_WORDS, overlap: int = CHUNK_OVERLAP) -> list[str]:
@@ -172,7 +189,7 @@ def ingest_sources(
     }
 
     store = ChunkStore()
-    tex_count = pdf_count = abstract_count = 0
+    tex_count = pdf_count = abstract_count = ocr_count = 0
 
     for paper in papers:
         arxiv_id = paper["arxiv_id"]
@@ -202,8 +219,27 @@ def ingest_sources(
             except Exception as exc:
                 print(f"  [tex-err]  {arxiv_id}: {exc} — falling back")
 
+        # --- Datalab OCR fallback (no LaTeX source) ---
+        # PDF-only papers must still be parsed into LaTeX-fidelity typed chunks
+        # so RAG, the metadata index, and the wikis can build off them. Datalab
+        # reconstructs equations as LaTeX; OpenDataLoader does not (see compare_ocr.py).
+        pdf_path = entry.get("pdf_fallback") or os.path.join("pdfs", f"{arxiv_id}.pdf")
+        if os.getenv("DATALAB_API_KEY") and pdf_path and os.path.exists(pdf_path):
+            try:
+                md = _ocr_markdown(arxiv_id, pdf_path)
+                ocr_chunks = parse_datalab_markdown(md, meta)
+                if ocr_chunks:
+                    store.chunks.extend(ocr_chunks)
+                    ocr_count += 1
+                    eqs = sum(1 for c in ocr_chunks
+                              if c["meta"].get("chunk_type") == "equation")
+                    print(f"  [ocr]  {arxiv_id}  {len(ocr_chunks)} chunks  ({eqs} equations)")
+                    continue
+            except Exception as exc:
+                print(f"  [ocr-err]  {arxiv_id}: {exc} — falling back to plain text")
+
         if arxiv_id in full_texts:
-            # --- PDF text fallback ---
+            # --- Plain PDF-text fallback (no OCR key / OCR failed) ---
             header = _paper_header(paper)
             body_chunks = _split_into_chunks(full_texts[arxiv_id])
             for ci, body in enumerate(body_chunks):
@@ -224,7 +260,7 @@ def ingest_sources(
         })
         abstract_count += 1
 
-    print(f"\nIngested: {tex_count} tex  |  {pdf_count} pdf  |  {abstract_count} abstract-only")
+    print(f"\nIngested: {tex_count} tex  |  {ocr_count} ocr  |  {pdf_count} pdf  |  {abstract_count} abstract-only")
     print(f"Total chunks: {len(store)}")
     print(f"Type breakdown: {store.stats()}")
 

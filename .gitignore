@@ -17,6 +17,10 @@ source_index.json
 # generated wiki
 wiki_output/
 
+# OCR fallback — cached Datalab markdown + comparison outputs (regenerate via compare_ocr.py)
+ocr_cache/
+ocr_compare_out/
+
 # python
 __pycache__/
 *.pyc
